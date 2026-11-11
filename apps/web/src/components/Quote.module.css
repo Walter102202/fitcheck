@@ -1,0 +1,64 @@
+/* Mockup fitcheck.css lines 324-359 (citation) and 388-407 (nothing to quote). */
+.cite {
+  border-left: 2px solid var(--line-strong);
+  padding: 2px 0 2px var(--s-3);
+}
+
+.cite[data-tone="broken"] {
+  border-left-color: var(--broken);
+}
+
+.cite[data-tone="clash"] {
+  border-left-color: var(--clash);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2);
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+.path {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
+.cite blockquote {
+  font-size: var(--t-sm);
+  color: var(--ink);
+  quotes: "\201C" "\201D";
+}
+
+.cite blockquote::before {
+  content: open-quote;
+}
+
+.cite blockquote::after {
+  content: close-quote;
+}
+
+.cite[data-tone="none"] {
+  border-left: 2px dashed var(--ask);
+}
+
+.looked {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.looked li {
+  font-size: var(--t-xs);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-chip);
+  padding: 1px 7px;
+  color: var(--ink-2);
+  background: var(--surface);
+}

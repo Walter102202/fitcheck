@@ -1,0 +1,52 @@
+/* Mockup fitcheck.css lines 409-460, and the 980 px part from 1354-1360. */
+.versus {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--s-3);
+  align-items: stretch;
+}
+
+.side {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  padding: var(--s-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.reads {
+  margin-top: auto;
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.reads b {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--t-xl);
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.neq {
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--clash);
+  color: #fff;
+}
+
+@media (max-width: 980px) {
+  .versus {
+    grid-template-columns: 1fr;
+  }
+
+  .neq {
+    justify-self: center;
+  }
+}
