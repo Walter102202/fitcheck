@@ -106,6 +106,40 @@ test('the record line says when Channel3 was asked again', async () => {
   ).toBe(2);
 });
 
+test('a record from the recorded copy never says it was fetched again', async () => {
+  const run = structuredClone(runDryerSpain);
+  for (const attempt of run.attempts) {
+    const record = attempt.review.record;
+    if (record) attempt.review.record = { ...record, source: 'recorded', recordedOn: '2026-11-10' };
+  }
+  renderApp({
+    route: '/run/dryer-spain',
+    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'dryer-spain': run } }),
+  });
+  expect(
+    (await screen.findAllByText('Copy recorded from Channel3 on 2026-11-10.', { exact: false }))
+      .length,
+  ).toBe(2);
+  expect(screen.queryByText(/fetched again/)).toBeNull();
+});
+
+test('a failed-closed attempt shows no record line, since no fresh record was read', async () => {
+  // Lane C keeps the pick-time record on an attempt whose re-fetch failed.
+  const run = failedClosedRun();
+  const first = run.attempts[0];
+  if (!first) throw new Error('failedClosedRun has no attempt');
+  first.review.record = { fetchedAt: '2026-11-10T22:39:58.000Z', source: 'live' };
+  renderApp({
+    route: '/run/dryer-spain',
+    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'dryer-spain': run } }),
+  });
+  expect(
+    (await screen.findAllByText('Fitcheck could not check this listing.')).length,
+  ).toBeGreaterThan(0);
+  expect(screen.queryByText(/fetched again|Copy recorded/)).toBeNull();
+  expect(screen.queryByText(/Nothing is taken from the agent’s word/)).toBeNull();
+});
+
 test('tv-sony: the pair, then yes captures the price', async () => {
   const price = formatUsd(runSonyAsk.attempts[0]?.pick.priceCents ?? 0);
   renderApp({ route: '/run/tv-sony', api: withCap() });
