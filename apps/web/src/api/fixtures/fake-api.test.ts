@@ -186,6 +186,16 @@ test('review off pays the first pick with no review', async () => {
   expect(run.review).toBe('off');
   expect(run.attempts).toHaveLength(1);
   expect(run.attempts[0]?.outcome).toEqual({ decision: 'capture', amountCents: 2929 });
+  // As apps/backend/src/runs/cap-only.ts capOnlyReview sends it: nothing was checked.
+  const review = run.attempts[0]?.review;
+  expect(review).toMatchObject({
+    decision: 'capture',
+    results: [],
+    reasons: [],
+    summary: { backed: 0, unbacked: 0, never_asked: 0, contradictory: 0, broken: 0 },
+  });
+  expect(review?.card).toBeUndefined();
+  expect(review?.agentMessage).toBeUndefined();
   expect(run.events.map((e) => e.type)).toEqual(['authorized', 'captured']);
   expect(run.events.at(-1)).toMatchObject({ type: 'captured', amountCents: 2929 });
   expect(run.cap).toMatchObject({ capturedCents: 2929, heldCents: 0, availableCents: 297071 });
@@ -224,7 +234,7 @@ test('config plays the simulated fallback with the $3,000.00 cap', async () => {
     paypalMode: 'simulated',
     channel3Mode: 'recorded',
     reviewModel: 'claude-sonnet-5-5',
-    reviewSource: 'recorded',
+    reviewSource: 'scripted',
     capAmountCents: 300000,
   });
 });

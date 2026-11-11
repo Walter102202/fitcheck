@@ -1,6 +1,6 @@
 import { runDryerSpain, runSonyAsk } from '@fitcheck/contracts';
 import { render, screen } from '@testing-library/react';
-import { expect, test } from 'vitest';
+import { afterEach, expect, test, vi } from 'vitest';
 import { meterWidths, PaypalPanel } from './PaypalPanel.js';
 
 const capOnlySentence = runDryerSpain.attempts[0]?.capOnly.sentence as string;
@@ -115,4 +115,25 @@ test('the spending-cap-only box shows its sentence, or nothing', () => {
   unmount();
   renderDryer(0, null);
   expect(screen.queryByText('With a spending cap only')).toBeNull();
+});
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
+test('when the panel scrolls inside, the keyboard can reach and scroll it', () => {
+  vi.spyOn(HTMLElement.prototype, 'scrollHeight', 'get').mockReturnValue(960);
+  vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockReturnValue(768);
+  renderDryer();
+  const panel = screen.getByRole('complementary', { name: 'What PayPal did' });
+  expect(panel).toHaveAttribute('tabindex', '0');
+});
+
+test('a panel that fits takes no tab stop', () => {
+  vi.spyOn(HTMLElement.prototype, 'scrollHeight', 'get').mockReturnValue(500);
+  vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockReturnValue(500);
+  renderDryer();
+  expect(screen.getByRole('complementary', { name: 'What PayPal did' })).not.toHaveAttribute(
+    'tabindex',
+  );
 });

@@ -1,5 +1,5 @@
 import { type Cap, formatUsd, type PaymentEvent, type PaymentEventType } from '@fitcheck/contracts';
-import type { CSSProperties } from 'react';
+import { type CSSProperties, useEffect, useRef, useState } from 'react';
 import { formatClock } from '../lib/format.js';
 import styles from './PaypalPanel.module.css';
 
@@ -113,8 +113,25 @@ export function PaypalPanel({
     capOnlySentence !== null && !events.some((e) => e.sentence === capOnlySentence)
       ? capOnlySentence
       : null;
+  // Capped to the viewport, the panel may scroll inside; then the keyboard needs a way in.
+  const ref = useRef<HTMLElement>(null);
+  const [scrolls, setScrolls] = useState(false);
+  // biome-ignore lint/correctness/useExhaustiveDependencies: new events or the box change the height
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const check = () => setScrolls(el.scrollHeight > el.clientHeight + 1);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, [events.length, capOnly]);
   return (
-    <aside className={styles.ledger} aria-label="What PayPal did">
+    <aside
+      ref={ref}
+      className={styles.ledger}
+      aria-label="What PayPal did"
+      {...(scrolls ? { tabIndex: 0 } : {})}
+    >
       <div className={styles.head}>
         <h2>PayPal</h2>
         <span>{cap.mode}</span>

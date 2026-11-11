@@ -81,6 +81,21 @@ test('step 1 says Claude read the requirements, and that recorded answers are re
   ).toBeInTheDocument();
 });
 
+test('step 1 says scripted requirements were written by hand', () => {
+  render(
+    <ChecksStep
+      checks={runDryerSpain.checks}
+      notChecked={[]}
+      reader={{ model: 'claude-sonnet-5-5', source: 'scripted' }}
+    />,
+  );
+  expect(
+    screen.getByText(
+      'These requirements were written by hand for the four demo requests. With a model key, Claude Sonnet 5.5 reads them from the request.',
+    ),
+  ).toBeInTheDocument();
+});
+
 test('a request that could not be read names no reader', () => {
   render(
     <ChecksStep

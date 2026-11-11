@@ -10,7 +10,7 @@ import { RequirementChip } from '../../components/RequirementChip.js';
 import { ScenarioRow } from '../../components/ScenarioRow.js';
 import { SquareRow } from '../../components/SquareRow.js';
 import { RESET_NOTICE, StartOverButton } from '../../components/StartOver.js';
-import { modelName } from '../../lib/model.js';
+import { heroLine } from '../../lib/model.js';
 import styles from './HomeScreen.module.css';
 import { Specimen } from './Specimen.js';
 
@@ -67,10 +67,9 @@ export function HomeScreen() {
             fetches the product record again and checks every requirement you have, including the
             ones nobody asked about. Each one has to be backed by a line of the store’s listing.
           </p>
-          <p className={styles.engine}>
-            {config ? modelName(config.reviewModel) : 'Claude'} turns your request into
-            requirements, code checks each one against the listing, and only then does PayPal
-            capture the money.
+          {/* The box keeps its room while /api/config loads, so the button below does not jump. */}
+          <p className={styles.engine} data-testid="hero-engine">
+            {config && heroLine(config.reviewModel, config.reviewSource)}
           </p>
           <div className={styles.actions}>
             <ButtonLink to={`/run/${list[0]?.id ?? 'dryer-spain'}`}>

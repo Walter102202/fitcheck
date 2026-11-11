@@ -1,4 +1,4 @@
-import type { RunResponse, Scenario } from '@fitcheck/contracts';
+import { capStopIn, type RunResponse, type Scenario } from '@fitcheck/contracts';
 import { Fragment, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useAppConfig } from '../../api/config.js';
@@ -7,6 +7,7 @@ import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button } from '../../components/Button.js';
 import { Notices } from '../../components/Notices.js';
+import { PENDING_SENTENCE } from '../../components/OutcomeStrip.js';
 import { PaypalPanel } from '../../components/PaypalPanel.js';
 import { ReviewSwitch } from '../../components/ReviewSwitch.js';
 import { StartOverButton } from '../../components/StartOver.js';
@@ -26,19 +27,31 @@ function NextLink({ scenarios, current }: { scenarios: Scenario[]; current: numb
   return <Link to={`/run/${next.id}`}>Next purchase: {next.title}</Link>;
 }
 
-// The ledger's sentences when the cap stops a purchase (SENTENCES in apps/backend/src/ledger/
-// events.ts). The agent gets them as "Not paid. <sentence>", with the review on or off.
-const CAP_SHORT = /^Not paid\. The spending cap has \$[\d,]+\.\d{2} left\.$/;
-const CAP_INACTIVE = 'Not paid. The spending cap is no longer active.';
-
-/** Did the cap stop the run's last purchase: too little left, or no longer active? */
+/**
+ * Did the cap stop the run's last purchase: too little left, or no longer active? The message to
+ * the agent ends with the ledger's cap sentence, shared through @fitcheck/contracts.
+ */
 export function capStop(run: RunResponse): 'short' | 'inactive' | null {
   const last = run.attempts.at(-1);
   if (last?.outcome?.decision !== 'return_to_agent') return null;
-  const message = last.outcome.agentMessage ?? '';
-  if (message === CAP_INACTIVE) return 'inactive';
-  if (CAP_SHORT.test(message)) return 'short';
-  return null;
+  return capStopIn(last.outcome.agentMessage ?? '');
+}
+
+// Run notices (apps/backend/src/runs/attempt.ts) that a strip below already says in its own words.
+const NEW_CAP_NOTICE = 'Approve a new spending cap to keep buying.';
+
+/** The run's notices minus those a strip already says, so each idea shows once. */
+export function bannerNotices(run: RunResponse, stop: 'short' | 'inactive' | null): string[] {
+  const sentToAgent = run.attempts.flatMap((a) => a.outcome?.agentMessage ?? []);
+  const pending = run.attempts.some(
+    (a) => a.outcome?.decision === 'capture' && a.outcome.amountCents === 0,
+  );
+  return run.notices.filter((notice) => {
+    if (sentToAgent.some((message) => message.includes(notice))) return false;
+    if (pending && notice === PENDING_SENTENCE) return false;
+    if (stop && notice === NEW_CAP_NOTICE) return false;
+    return true;
+  });
 }
 
 function StartOverAction({ stop }: { stop: 'short' | 'inactive' }) {
@@ -122,7 +135,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
         {request && <h1 className={styles.request}>{request}</h1>}
       </div>
 
-      {ready && <Notices notices={run.notices} />}
+      {ready && <Notices notices={bannerNotices(run, stop)} />}
 
       <div className={styles.grid}>
         <div className={styles.steps} data-testid="steps">

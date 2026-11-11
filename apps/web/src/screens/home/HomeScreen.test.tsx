@@ -27,13 +27,48 @@ test('the hero shows the headline and the dryer that does not work in Spain', ()
   ).toBeInTheDocument();
 });
 
-test('one hero sentence names the reviewing model and PayPal', async () => {
+const PRODUCT =
+  'Claude Sonnet 5.5 turns your request into requirements, code checks each one against the listing, and only then does PayPal capture the money.';
+
+function withSource(reviewSource: 'live' | 'recorded' | 'scripted') {
+  const api = createFakeApi();
+  vi.spyOn(api, 'getConfig').mockResolvedValue({
+    paypalMode: 'simulated',
+    channel3Mode: 'recorded',
+    reviewModel: 'claude-sonnet-5-5',
+    reviewSource,
+    capAmountCents: 300000,
+  });
+  return api;
+}
+
+test('the hero names the model and PayPal, then says the requirements here are written by hand', async () => {
   renderApp({ route: '/' });
   expect(
     await screen.findByText(
-      'Claude Sonnet 5.5 turns your request into requirements, code checks each one against the listing, and only then does PayPal capture the money.',
+      `${PRODUCT} On this site, the requirements for the four demo requests are written by hand.`,
     ),
   ).toBeInTheDocument();
+});
+
+test('with recorded answers the hero says they are replayed; live adds nothing', async () => {
+  const recorded = renderApp({ route: '/', api: withSource('recorded') });
+  expect(
+    await screen.findByText(
+      `${PRODUCT} On this site, its answers to the four demo requests were recorded earlier and are replayed.`,
+    ),
+  ).toBeInTheDocument();
+  recorded.unmount();
+  renderApp({ route: '/', api: withSource('live') });
+  expect(await screen.findByText(PRODUCT)).toBeInTheDocument();
+});
+
+test('the hero names no model until the config is in', () => {
+  const api = createFakeApi();
+  vi.spyOn(api, 'getConfig').mockReturnValue(new Promise(() => {}));
+  renderApp({ route: '/', api });
+  expect(screen.queryByText(/turns your request into requirements/)).toBeNull();
+  expect(document.querySelector('[data-testid="hero-engine"]')).not.toBeNull();
 });
 
 test('the specimen quote says where the line comes from, without the field path', () => {

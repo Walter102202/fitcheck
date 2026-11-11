@@ -1,5 +1,6 @@
 import {
   type Answer,
+  type Attempt,
   type Cap,
   CapSchema,
   type Cents,
@@ -27,8 +28,8 @@ const CONFIG: ConfigResponse = {
   paypalMode: 'simulated',
   channel3Mode: 'recorded',
   reviewModel: 'claude-sonnet-5-5',
-  // The server says recorded whenever LLM_PROVIDER is not anthropic, as in fixture mode.
-  reviewSource: 'recorded',
+  // As the server reports it with LLM_PROVIDER=mock and the hand-written recordings.
+  reviewSource: 'scripted',
   capAmountCents: CAP_CENTS,
 };
 
@@ -154,10 +155,19 @@ export function createFakeApi(opts: FakeApiOptions = {}): FitcheckApi {
     const price = first.pick.priceCents;
     const { answers: _answers, ...attempt } = first;
     const cap = { ...run.cap, capturedCents: 0, heldCents: 0, availableCents: run.cap.amountCents };
+    // apps/backend/src/runs/cap-only.ts capOnlyReview: nothing checked, the record kept.
+    const { record } = first.review;
+    const review: Attempt['review'] = {
+      decision: 'capture',
+      results: [],
+      summary: { backed: 0, unbacked: 0, never_asked: 0, contradictory: 0, broken: 0 },
+      reasons: [],
+      ...(record ? { record } : {}),
+    };
     return {
       ...run,
       review: 'off',
-      attempts: [{ ...attempt, outcome: { decision: 'capture', amountCents: price } }],
+      attempts: [{ ...attempt, review, outcome: { decision: 'capture', amountCents: price } }],
       status: 'done',
       cap: moveCents(cap, { captured: price }),
       events: [...(authorized ? [authorized] : []), capturedEvent(price, cap)],

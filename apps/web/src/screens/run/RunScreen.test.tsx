@@ -93,8 +93,26 @@ test('dryer-spain: broken first pick, then the LURA captured', async () => {
   expect(within(panel).getByText('With a spending cap only')).toBeInTheDocument();
 });
 
-test('step 1 says the requirements are Claude’s recorded answer', async () => {
+test('step 1 says scripted requirements were written by hand', async () => {
   renderApp({ route: '/run/dryer-spain', api: withCap() });
+  expect(
+    await screen.findByText(
+      'These requirements were written by hand for the four demo requests. With a model key, Claude Sonnet 5.5 reads them from the request.',
+    ),
+  ).toBeInTheDocument();
+  expect(screen.queryByText(/read these requirements/)).toBeNull();
+});
+
+test('step 1 says recorded requirements are Claude’s recorded answer', async () => {
+  const api = withCap();
+  vi.spyOn(api, 'getConfig').mockResolvedValue({
+    paypalMode: 'simulated',
+    channel3Mode: 'recorded',
+    reviewModel: 'claude-sonnet-5-5',
+    reviewSource: 'recorded',
+    capAmountCents: 300000,
+  });
+  renderApp({ route: '/run/dryer-spain', api });
   expect(
     await screen.findByText(
       'Claude Sonnet 5.5 read these requirements from this request earlier. This page replays its recorded answer.',
@@ -528,6 +546,37 @@ test('switching the review off runs the same purchase as spending cap only', asy
   expect(screen.queryByText('With a spending cap only')).toBeNull();
   expect(screen.getByRole('radio', { name: 'Off: spending cap only' })).toBeChecked();
   expect(screen.getByTestId('location').textContent).toMatch(/review=off/);
+});
+
+test('a pending capture says so once, in the strip, not again in the notices', async () => {
+  renderApp({ route: '/run/dryer-spain', api: withRun('dryer-spain', pendingCaptureRun()) });
+  await screen.findByText('Second pick');
+  expect(screen.getAllByText('PayPal is still confirming this capture.')).toHaveLength(1);
+  expect(
+    document
+      .querySelector('[data-kind="pending"]')
+      ?.textContent?.includes('PayPal is still confirming this capture.'),
+  ).toBe(true);
+});
+
+test('a cap stop says the cap sentence and the new-cap step once, in the strip', async () => {
+  const run = sonyYesRefused('The spending cap is no longer active.', {
+    status: 'expired',
+    heldCents: 0,
+  });
+  run.notices = [
+    'The spending cap is no longer active.',
+    'Approve a new spending cap to keep buying.',
+    'Channel3 did not answer. Showing the copy recorded on 2026-11-10.',
+  ];
+  renderApp({ route: '/run/tv-sony', api: withRun('tv-sony', run) });
+  await screen.findByRole('button', { name: 'Start over' });
+  expect(screen.queryByText('Approve a new spending cap to keep buying.')).toBeNull();
+  const banner = screen
+    .getByText('Channel3 did not answer. Showing the copy recorded on 2026-11-10.')
+    .closest('ul');
+  expect(banner?.textContent).not.toMatch(/no longer active/);
+  expect(screen.getAllByText(/The spending cap is no longer active\./)).toHaveLength(1);
 });
 
 test('notices from the run are shown', async () => {

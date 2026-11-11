@@ -25,6 +25,9 @@ const ICON = {
   pending: Clock,
 };
 
+/** The strip's words for a capture PayPal has not confirmed; the run notice says the same. */
+export const PENDING_SENTENCE = 'PayPal is still confirming this capture.';
+
 function sentences(
   kind: Kind,
   reason: Reason,
@@ -34,7 +37,7 @@ function sentences(
 ): [bold: string, rest: string] {
   if (kind === 'pending')
     return [
-      'PayPal is still confirming this capture.',
+      PENDING_SENTENCE,
       'Nothing counts as captured until PayPal confirms it. Reload this page to see how it ended.',
     ];
   if (kind === 'unchecked')
