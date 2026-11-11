@@ -101,6 +101,28 @@ test('step 1 says the requirements are Claude’s recorded answer', async () => 
   ).toBeInTheDocument();
 });
 
+test('step 3 folds the backed every-purchase rows; flagged rows and the verdict stay in view', async () => {
+  renderApp({ route: '/run/dryer-spain', api: withCap() });
+  await screen.findByText('Second pick');
+  const step3 = document.querySelector('[data-step="3"]') as HTMLElement;
+  const results = (runDryerSpain.attempts[0]?.review.results ?? []).filter(
+    (r) => r.state !== 'not_applicable',
+  );
+  const routine = results.filter((r) => r.state === 'backed' && r.origin === 'always');
+  const fold = step3.querySelector('details') as HTMLElement;
+  expect(fold).not.toHaveAttribute('open');
+  expect(fold.querySelector('summary')).toHaveTextContent(
+    `${routine.length} more checked on every purchase, all backed`,
+  );
+  for (const r of routine) expect(within(fold).getByText(r.name)).toBeInTheDocument();
+  // The broken row and the buyer's own backed row stay outside the fold.
+  for (const r of results.filter((x) => !routine.includes(x))) {
+    expect(within(step3).getByText(r.name)).toBeInTheDocument();
+    expect(within(fold).queryByText(r.name)).toBeNull();
+  }
+  expect(within(step3).getByText('9 backed, 1 broken.')).toBeInTheDocument();
+});
+
 test('steps number on across picks instead of starting again at 1', async () => {
   renderApp({ route: '/run/dryer-spain', api: withCap() });
   await screen.findByText('Second pick');

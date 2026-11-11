@@ -22,6 +22,9 @@ export function ChecksStep({
   /** The review model from /api/config; absent while the config loads. */
   reader?: { model: string; source: ReviewSource };
 }) {
+  // The buyer's own requirements get a row each; the ones on every purchase fold into one line.
+  const own = checks.filter((c) => c.origin !== 'always');
+  const always = checks.filter((c) => c.origin === 'always');
   return (
     <Step n={1} title="What Fitcheck will check">
       {checks.length === 0 ? (
@@ -31,14 +34,26 @@ export function ChecksStep({
           {reader && (
             <p className={`note ${styles.reader}`}>{reviewerLine(reader.model, reader.source)}</p>
           )}
-          <ul className={styles.wants}>
-            {checks.map((check) => (
-              <li key={check.requirement} className={styles.want}>
-                <b>{check.name}</b>
-                <span>{originText(check)}</span>
-              </li>
-            ))}
-          </ul>
+          {own.length > 0 && (
+            <ul className={styles.wants}>
+              {own.map((check) => (
+                <li key={check.requirement} className={styles.want}>
+                  <b>{check.name}</b>
+                  <span>{originText(check)}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {always.length > 0 && (
+            <details className={styles.always}>
+              <summary>Plus {always.length} checked on every purchase</summary>
+              <ul>
+                {always.map((check) => (
+                  <li key={check.requirement}>{check.name}</li>
+                ))}
+              </ul>
+            </details>
+          )}
           {notChecked.length > 0 && (
             <p className={`note ${styles.notChecked}`}>Not checked: {notChecked.join(', ')}.</p>
           )}

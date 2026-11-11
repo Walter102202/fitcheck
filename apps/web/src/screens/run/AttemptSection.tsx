@@ -1,4 +1,11 @@
-import type { Answer, Attempt, Category, Cents, Decision } from '@fitcheck/contracts';
+import type {
+  Answer,
+  Attempt,
+  Category,
+  Cents,
+  Decision,
+  RequirementResult,
+} from '@fitcheck/contracts';
 import type { ReactNode } from 'react';
 import { OutcomeStrip } from '../../components/OutcomeStrip.js';
 import { PaymentChip, type PaymentState } from '../../components/PaymentChip.js';
@@ -17,6 +24,16 @@ const VERDICT: Record<Decision, { chip: PaymentState; note: string }> = {
     note: 'The listing itself answers the question, so the buyer is not asked.',
   },
 };
+
+/** A backed check that runs on every purchase: it folds away so the verdict comes up sooner. */
+export function isRoutine(r: RequirementResult): boolean {
+  return r.state === 'backed' && r.origin === 'always';
+}
+
+/** The rows shown in step 3 before the fold: everything but routine and not-applicable rows. */
+export function shownRows(results: RequirementResult[]): RequirementResult[] {
+  return results.filter((r) => r.state !== 'not_applicable' && !isRoutine(r));
+}
 
 function RecordLine({ record }: { record: Attempt['review']['record'] }) {
   if (!record) return null;
@@ -86,12 +103,24 @@ export function AttemptSection({
       </>
     );
   } else {
+    const shown = shownRows(result.results);
+    const routine = result.results.filter(isRoutine);
     checked = (
       <>
         <div className={styles.checks}>
-          {result.results.map((r, i) => (
+          {shown.map((r, i) => (
             <RequirementRow key={r.requirement} result={r} index={i} />
           ))}
+          {routine.length > 0 && (
+            <details className={styles.routine}>
+              <summary>{routine.length} more checked on every purchase, all backed</summary>
+              <div className={styles.checks}>
+                {routine.map((r, i) => (
+                  <RequirementRow key={r.requirement} result={r} index={i} />
+                ))}
+              </div>
+            </details>
+          )}
         </div>
         <Verdict
           text={summaryLine(result.summary)}

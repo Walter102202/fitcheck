@@ -1,5 +1,5 @@
 import { runDryerSpain } from '@fitcheck/contracts';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { expect, test } from 'vitest';
 import { ChecksStep, originText } from './ChecksStep.js';
 
@@ -34,16 +34,25 @@ test('origin lines', () => {
   );
 });
 
-test('one row per check, with its name and origin', () => {
-  render(<ChecksStep checks={runDryerSpain.checks} notChecked={[]} />);
+test('the buyer’s own requirements get a row each; the every-purchase checks fold into one line', () => {
+  const { container } = render(<ChecksStep checks={runDryerSpain.checks} notChecked={[]} />);
   expect(screen.getByRole('heading', { name: 'What Fitcheck will check' })).toBeInTheDocument();
   expect(screen.getByText('Works on 220-240 V outlets abroad')).toBeInTheDocument();
   expect(
     screen.getByText('You said “trip to Spain”. Nobody mentioned voltage.'),
   ).toBeInTheDocument();
-  expect(screen.getAllByText('Checked on every purchase')).toHaveLength(
-    runDryerSpain.checks.filter((c) => c.origin === 'always').length,
+  const always = runDryerSpain.checks.filter((c) => c.origin === 'always');
+  expect(always.length).toBeGreaterThan(1);
+  expect(screen.queryByText('Checked on every purchase')).toBeNull();
+  const fold = container.querySelector('details');
+  expect(fold).not.toBeNull();
+  expect(fold).not.toHaveAttribute('open');
+  expect(fold?.querySelector('summary')).toHaveTextContent(
+    `Plus ${always.length} checked on every purchase`,
   );
+  for (const check of always)
+    expect(within(fold as HTMLElement).getByText(check.name)).toBeInTheDocument();
+  expect(within(fold as HTMLElement).queryByText('Works on 220-240 V outlets abroad')).toBeNull();
 });
 
 test('step 1 says Claude read the requirements, and that recorded answers are recorded', () => {

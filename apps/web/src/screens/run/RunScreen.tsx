@@ -11,7 +11,7 @@ import { PaypalPanel } from '../../components/PaypalPanel.js';
 import { ReviewSwitch } from '../../components/ReviewSwitch.js';
 import { pickLabel } from '../../lib/format.js';
 import { ledgerDelayMs } from '../../lib/motion.js';
-import { AttemptSection } from './AttemptSection.js';
+import { AttemptSection, shownRows } from './AttemptSection.js';
 import { ChecksStep } from './ChecksStep.js';
 import styles from './RunScreen.module.css';
 import { Step } from './Step.js';
@@ -68,8 +68,8 @@ function RunView({ scenarioId }: { scenarioId: string }) {
 
   const request = run?.intent.request ?? scenario?.request;
   const lastAttempt = run?.attempts.at(-1);
-  const shownRows =
-    lastAttempt?.review.results.filter((r) => r.state !== 'not_applicable').length ?? 0;
+  // The ledger waits for the rows in view; the folded ones do not animate in.
+  const revealedRows = lastAttempt ? shownRows(lastAttempt.review.results).length : 0;
   const ready = run !== null && !loading;
   // With the review off nothing is checked, so there is no step 1; the picks number on from there.
   const reviewOn = (run?.review ?? review) === 'on';
@@ -167,7 +167,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
               capOnlySentence={
                 run.review === 'on' ? (run.attempts[0]?.capOnly.sentence ?? null) : null
               }
-              eventDelayMs={ledgerDelayMs(shownRows)}
+              eventDelayMs={ledgerDelayMs(revealedRows)}
             />
           )}
         </div>
