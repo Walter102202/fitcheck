@@ -9,6 +9,7 @@ import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { createLogger } from './logger.js';
 import { createPaypalGateways } from './paypal/index.js';
+import { createPorts } from './runs/ports.js';
 
 // `pnpm dev` runs this package from `apps/backend`; the shared `.env` lives at the
 // repo root, so the nearest one wins: the cwd, then up to two parents.
@@ -25,7 +26,8 @@ const paypal = createPaypalGateways(env, {
   bootId: randomBytes(4).toString('hex'),
   deliverWebhook: async () => {},
 });
-const deps: Deps = { env, logger, db, now, newId: randomUUID, paypal };
+const ports = createPorts(env, { now, logger });
+const deps: Deps = { env, logger, db, now, newId: randomUUID, paypal, ...ports };
 const app = createApp(deps);
 const server = serve({ fetch: app.fetch, port: env.PORT }, () => {
   logger.info('server.listening', { port: env.PORT, appUrl: env.APP_URL });

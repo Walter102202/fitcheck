@@ -6,6 +6,7 @@ import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { createLogger } from './logger.js';
 import { createPaypalGateways } from './paypal/index.js';
+import { createRecordedChannel3, createStubReviewPort } from './runs/review-stub.js';
 
 function testDeps(source: Record<string, string> = {}): Deps {
   const env = loadEnv(source);
@@ -18,6 +19,8 @@ function testDeps(source: Record<string, string> = {}): Deps {
     db: {} as Db,
     newId: () => 'id',
     paypal: createPaypalGateways(env, { logger, bootId: 'test0000', deliverWebhook: undefined }),
+    channel3: createRecordedChannel3(),
+    review: createStubReviewPort(),
   };
 }
 

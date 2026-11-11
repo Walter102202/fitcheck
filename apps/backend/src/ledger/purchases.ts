@@ -476,6 +476,19 @@ export async function findPurchaseForCapture(
   return row;
 }
 
+/** The purchase of one run attempt (unique by run and attempt number). */
+export async function purchaseFor(
+  db: Db,
+  i: { runId: string; attemptNo: number },
+): Promise<PurchaseRow> {
+  const [row] = await db
+    .select()
+    .from(purchases)
+    .where(and(eq(purchases.runId, i.runId), eq(purchases.attemptNo, i.attemptNo)));
+  if (!row) throw new AppError('not_found', 'Purchase not found', { status: 404 });
+  return row;
+}
+
 /** A run's view of the ledger: the cap-level events and this run's purchases, in order. */
 export async function listRunEvents(
   db: Db,

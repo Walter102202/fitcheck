@@ -7,6 +7,8 @@ import { loadEnv } from '../env.js';
 import { createCap } from '../ledger/caps.js';
 import { createLogger } from '../logger.js';
 import { createPaypalGateways, type MockPaypalGateway } from '../paypal/index.js';
+import type { Channel3Port, ReviewPort } from './ports.js';
+import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
 
 export const HARNESS_NOW = new Date('2026-11-11T12:00:00.000Z');
 
@@ -24,7 +26,12 @@ export function sequentialIds(): () => string {
  * sequential ids and the in-memory PayPal gateway (the `mock` env default).
  */
 export async function createHarness(
-  o: { env?: Partial<Record<string, string>>; now?: Date } = {},
+  o: {
+    env?: Partial<Record<string, string>>;
+    now?: Date;
+    review?: ReviewPort;
+    channel3?: Channel3Port;
+  } = {},
 ): Promise<{
   deps: Deps;
   paypal: MockPaypalGateway;
@@ -42,7 +49,16 @@ export async function createHarness(
     now,
     deliverWebhook: async () => {},
   });
-  const deps: Deps = { env, now, logger, db, newId: sequentialIds(), paypal };
+  const deps: Deps = {
+    env,
+    now,
+    logger,
+    db,
+    newId: sequentialIds(),
+    paypal,
+    channel3: o.channel3 ?? createRecordedChannel3(),
+    review: o.review ?? createStubReviewPort(),
+  };
   return {
     deps,
     // The gateway behind mock and simulated caps. Reassigning deps.paypal.simulated (a
