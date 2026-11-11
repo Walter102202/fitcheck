@@ -95,6 +95,44 @@ test('not captured after answers says not every line was accepted', () => {
   expect(screen.queryByText('Sent to the agent:')).toBeNull();
 });
 
+test('a yes the payment refused says so, and does not blame the buyer', () => {
+  const msg = 'Not paid. The spending cap has $168.81 left.';
+  render(
+    <OutcomeStrip
+      kind="not_captured"
+      amountCents={0}
+      capAmountCents={300000}
+      product="TV"
+      reason="payment"
+      agentMessage={msg}
+    />,
+  );
+  const strip = screen.getByRole('status');
+  expect(screen.getByText('PayPal captured nothing for this TV.')).toBeInTheDocument();
+  expect(strip).toHaveTextContent(
+    'You answered yes to every line, but the payment did not go through.',
+  );
+  expect(strip).toHaveTextContent(`Sent to the agent: ${msg}`);
+  expect(strip.textContent).not.toMatch(/did not accept/);
+});
+
+test('a capture PayPal has not confirmed yet is pending, never "captured $0.00"', () => {
+  render(
+    <OutcomeStrip
+      kind="pending"
+      amountCents={0}
+      capAmountCents={300000}
+      product="hair dryer"
+      reason="review"
+    />,
+  );
+  const strip = screen.getByRole('status');
+  expect(strip).toHaveAttribute('data-kind', 'pending');
+  expect(screen.getByText('PayPal is still confirming this capture.')).toBeInTheDocument();
+  expect(strip.textContent).not.toMatch(/\$0\.00/);
+  expect(strip.textContent).not.toMatch(/captured \$/i);
+});
+
 test('failed closed says Fitcheck could not check this listing', () => {
   render(
     <OutcomeStrip

@@ -4,6 +4,7 @@ export {
   CircleDashed,
   CircleHelp,
   CircleSlash,
+  Clock,
   EqualNot,
   Lock,
   Pause,

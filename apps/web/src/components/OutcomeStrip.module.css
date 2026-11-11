@@ -65,6 +65,16 @@
   color: var(--ask);
 }
 
+/* PayPal accepted the capture but has not confirmed it: neutral, neither green nor black. */
+.outcome[data-kind="pending"] {
+  border-color: var(--line-strong);
+}
+
+.outcome[data-kind="pending"] .label {
+  background: var(--sunk);
+  color: var(--ink);
+}
+
 .returned {
   margin-top: var(--s-2);
   padding: var(--s-3);

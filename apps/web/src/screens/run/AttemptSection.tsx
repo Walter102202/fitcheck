@@ -94,6 +94,14 @@ export function AttemptSection({
     outcome?.decision === 'return_to_agent' &&
     !attempt.answers &&
     result.decision !== 'return_to_agent';
+  // A real capture is never $0: a capture of 0 is one PayPal has not confirmed yet.
+  const pending = outcome?.decision === 'capture' && outcome.amountCents === 0;
+  // Every line of the card was a yes: a refusal after that is the payment's, not the buyer's.
+  const lines = result.card?.lines ?? [];
+  const everyYes =
+    attempt.answers !== undefined &&
+    lines.length > 0 &&
+    lines.every((line) => attempt.answers?.[line.lineId] === 'yes');
 
   let checked: ReactNode;
   if (off) {
@@ -127,9 +135,19 @@ export function AttemptSection({
         </div>
         <Verdict
           text={summaryLine(result.summary)}
-          chip={refused ? 'not_captured' : VERDICT[result.decision].chip}
+          chip={
+            refused
+              ? 'not_captured'
+              : pending && result.decision === 'capture'
+                ? 'held'
+                : VERDICT[result.decision].chip
+          }
           note={
-            refused ? 'Nothing was captured. The reason is below.' : VERDICT[result.decision].note
+            refused
+              ? 'Nothing was captured. The reason is below.'
+              : pending && result.decision === 'capture'
+                ? 'PayPal is still confirming the capture.'
+                : VERDICT[result.decision].note
           }
         />
       </>
@@ -143,7 +161,7 @@ export function AttemptSection({
     const offMessage = outcome?.agentMessage;
     ending = (
       <OutcomeStrip
-        kind={paid ? 'unchecked' : 'not_captured'}
+        kind={pending ? 'pending' : paid ? 'unchecked' : 'not_captured'}
         amountCents={outcome ? outcome.amountCents : capOnly.amountCents}
         capAmountCents={capAmountCents}
         product={product}
@@ -171,11 +189,19 @@ export function AttemptSection({
     const agentMessage = outcome.agentMessage ?? result.agentMessage;
     ending = (
       <OutcomeStrip
-        kind={outcome.decision === 'capture' ? 'captured' : 'not_captured'}
+        kind={pending ? 'pending' : outcome.decision === 'capture' ? 'captured' : 'not_captured'}
         amountCents={outcome.amountCents}
         capAmountCents={capAmountCents}
         product={product}
-        reason={result.failedClosed ? 'failed_closed' : attempt.answers ? 'answers' : 'review'}
+        reason={
+          result.failedClosed
+            ? 'failed_closed'
+            : !attempt.answers
+              ? 'review'
+              : everyYes && outcome.decision === 'return_to_agent'
+                ? 'payment'
+                : 'answers'
+        }
         {...(agentMessage === undefined ? {} : { agentMessage })}
         {...(action ? { action } : {})}
       >

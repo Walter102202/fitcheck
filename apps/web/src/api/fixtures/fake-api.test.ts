@@ -3,7 +3,7 @@ import { beforeEach, expect, test, vi } from 'vitest';
 import { goTo } from '../../lib/browser.js';
 import { activeFixtureCap, createFakeApi, FIXTURE_STORAGE_KEY } from './fake-api.js';
 import { FIXTURE_RESULTS } from './results.js';
-import { failedClosedRun, fixtureRun } from './runs.js';
+import { failedClosedRun, fixtureRun, pendingCaptureRun } from './runs.js';
 import { FIXTURE_SCENARIOS } from './scenarios.js';
 
 vi.mock('../../lib/browser.js', () => ({ goTo: vi.fn(), postForm: vi.fn() }));
@@ -95,6 +95,10 @@ test('every fixture run and the failed-closed run parse with RunResponseSchema',
   for (const s of FIXTURE_SCENARIOS)
     expect(() => RunResponseSchema.parse(fixtureRun(s.id))).not.toThrow();
   expect(RunResponseSchema.parse(failedClosedRun()).attempts[0]?.review.failedClosed).toBe(true);
+  expect(RunResponseSchema.parse(pendingCaptureRun()).attempts[1]?.outcome).toEqual({
+    decision: 'capture',
+    amountCents: 0,
+  });
 });
 
 test('the failed-closed run returns to the agent with no card and nothing captured', () => {

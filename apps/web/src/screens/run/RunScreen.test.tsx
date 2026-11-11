@@ -10,7 +10,7 @@ import { expect, test, vi } from 'vitest';
 import { ZodError } from 'zod';
 import { ApiRequestError } from '../../api/errors.js';
 import { activeFixtureCap, createFakeApi } from '../../api/fixtures/fake-api.js';
-import { failedClosedRun, fixtureRun } from '../../api/fixtures/runs.js';
+import { failedClosedRun, fixtureRun, pendingCaptureRun } from '../../api/fixtures/runs.js';
 import { FIXTURE_SCENARIOS } from '../../api/fixtures/scenarios.js';
 import { goTo } from '../../lib/browser.js';
 import { renderApp } from '../../test/render.js';
@@ -222,6 +222,7 @@ test('tv-sony: a no ends not captured and shows what was sent to the agent', asy
   expect(strip).toHaveTextContent(
     `Sent to the agent: Not paid. The buyer did not accept: ${sonyLine?.text}`,
   );
+  expect(strip).toHaveTextContent('You did not accept every line');
   const panel = screen.getByRole('complementary', { name: 'What PayPal did' });
   expect(panel.querySelector('[data-type="not_captured"]')).not.toBeNull();
   expect(
@@ -387,10 +388,19 @@ test('when the cap has too little left, the run offers Start over with one line 
   expect(reset).toHaveBeenCalledTimes(1);
 });
 
-test('a refusal with enough cap left, or one the review made, offers no Start over', async () => {
+test('a refusal that is not the cap, or one the review made, offers no Start over', async () => {
+  const declined = sonyRefusedByCap();
+  const attempt = declined.attempts[0];
+  if (attempt) {
+    attempt.outcome = {
+      decision: 'return_to_agent',
+      amountCents: 0,
+      agentMessage: 'Not paid. PayPal declined the capture.',
+    };
+  }
   const first = renderApp({
     route: '/run/tv-sony',
-    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'tv-sony': sonyRefusedByCap() } }),
+    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'tv-sony': declined } }),
   });
   await waitFor(() => expect(document.querySelector('[data-kind="not_captured"]')).not.toBeNull());
   expect(screen.queryByRole('button', { name: 'Start over' })).toBeNull();
@@ -398,6 +408,94 @@ test('a refusal with enough cap left, or one the review made, offers no Start ov
   renderApp({ route: '/run/dryer-spain', api: withCap() });
   await screen.findByText('Second pick');
   expect(screen.queryByRole('button', { name: 'Start over' })).toBeNull();
+});
+
+/** tv-sony after an all-yes card that the ledger refused: answers kept, outcome not paid. */
+function sonyYesRefused(sentence: string, cap: Partial<RunResponse['cap']>): RunResponse {
+  const run = sonyRefusedByCap();
+  const first = run.attempts[0];
+  const line = first?.review.card?.lines[0];
+  if (!first || !line) throw new Error('runSonyAsk has no card');
+  first.answers = { [line.lineId]: 'yes' };
+  first.outcome = {
+    decision: 'return_to_agent',
+    amountCents: 0,
+    agentMessage: `Not paid. ${sentence}`,
+  };
+  return { ...run, cap: { ...run.cap, ...cap }, notices: [sentence] };
+}
+
+const withRun = (scenarioId: string, run: RunResponse) =>
+  createFakeApi({ cap: activeFixtureCap(), runs: { [scenarioId]: run } });
+
+test('an all-yes card the cap refused says the payment did not go through, and offers Start over', async () => {
+  const run = sonyYesRefused('The spending cap has $168.81 left.', {
+    heldCents: 0,
+    capturedCents: 300000 - 16881,
+    availableCents: 16881,
+  });
+  renderApp({ route: '/run/tv-sony', api: withRun('tv-sony', run) });
+  const button = await screen.findByRole('button', { name: 'Start over' });
+  const strip = document.querySelector('[data-kind="not_captured"]');
+  expect(strip).toContainElement(button);
+  expect(strip).toHaveTextContent(
+    'You answered yes to every line, but the payment did not go through.',
+  );
+  expect(strip).toHaveTextContent(
+    'Sent to the agent: Not paid. The spending cap has $168.81 left.',
+  );
+  expect(strip?.textContent).not.toMatch(/did not accept/);
+});
+
+test('a cap that is no longer active offers Start over that asks for a new cap', async () => {
+  const run = sonyYesRefused('The spending cap is no longer active.', {
+    status: 'expired',
+    heldCents: 0,
+  });
+  renderApp({ route: '/run/tv-sony', api: withRun('tv-sony', run) });
+  const button = await screen.findByRole('button', { name: 'Start over' });
+  const strip = document.querySelector('[data-kind="not_captured"]');
+  expect(strip).toContainElement(button);
+  expect(strip).toHaveTextContent('Starting over asks you to approve a new cap.');
+});
+
+test('the README path: a later purchase the short cap refuses also offers Start over', async () => {
+  // Purchases 1-3, then the Sony again with the review off: the wall TV's hold is refused.
+  const wall = fixtureRun('tv-wall');
+  const first = wall.attempts[0];
+  if (!first) throw new Error('tv-wall has no attempt');
+  const sentence = 'The spending cap has $163.60 left.';
+  const run: RunResponse = {
+    ...wall,
+    attempts: [
+      {
+        ...first,
+        outcome: {
+          decision: 'return_to_agent',
+          amountCents: 0,
+          agentMessage: `Not paid. ${sentence}`,
+        },
+      },
+    ],
+    status: 'done',
+    cap: { ...wall.cap, heldCents: 0, capturedCents: 300000 - 16360, availableCents: 16360 },
+    notices: [sentence],
+  };
+  renderApp({ route: '/run/tv-wall', api: withRun('tv-wall', run) });
+  expect(await screen.findByRole('button', { name: 'Start over' })).toBeInTheDocument();
+});
+
+test('a capture PayPal is still confirming shows as pending, not as captured $0.00', async () => {
+  renderApp({ route: '/run/dryer-spain', api: withRun('dryer-spain', pendingCaptureRun()) });
+  await screen.findByText('Second pick');
+  const strip = document.querySelector('[data-kind="pending"]');
+  expect(strip).toHaveTextContent('PayPal is still confirming this capture.');
+  expect(strip?.textContent).not.toMatch(/\$0\.00/);
+  expect(document.querySelector('[data-kind="captured"]')).toBeNull();
+  expect(screen.queryByText(/PayPal captured \$0\.00/)).toBeNull();
+  // Step 5's verdict does not claim a capture either.
+  const step5 = document.querySelector('[data-step="5"]') as HTMLElement;
+  expect(within(step5).queryByText('Captured')).toBeNull();
 });
 
 test('with the review off, the strip follows what PayPal did, not the cap-only forecast', async () => {

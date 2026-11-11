@@ -26,27 +26,29 @@ function NextLink({ scenarios, current }: { scenarios: Scenario[]; current: numb
   return <Link to={`/run/${next.id}`}>Next purchase: {next.title}</Link>;
 }
 
-/**
- * The ledger refused what the review allowed (no answers, and the review did not send it back),
- * and the cap is the reason: too little left, or no longer active. Only a new cap goes on.
- */
-export function capRanOut(run: RunResponse): boolean {
+// The ledger's sentences when the cap stops a purchase (SENTENCES in apps/backend/src/ledger/
+// events.ts). The agent gets them as "Not paid. <sentence>", with the review on or off.
+const CAP_SHORT = /^Not paid\. The spending cap has \$[\d,]+\.\d{2} left\.$/;
+const CAP_INACTIVE = 'Not paid. The spending cap is no longer active.';
+
+/** Did the cap stop the run's last purchase: too little left, or no longer active? */
+export function capStop(run: RunResponse): 'short' | 'inactive' | null {
   const last = run.attempts.at(-1);
-  if (last?.outcome?.decision !== 'return_to_agent' || last.answers) return false;
-  if (
-    run.review === 'on' &&
-    (last.review.failedClosed || last.review.decision === 'return_to_agent')
-  )
-    return false;
-  return run.cap.status !== 'active' || run.cap.availableCents < last.pick.priceCents;
+  if (last?.outcome?.decision !== 'return_to_agent') return null;
+  const message = last.outcome.agentMessage ?? '';
+  if (message === CAP_INACTIVE) return 'inactive';
+  if (CAP_SHORT.test(message)) return 'short';
+  return null;
 }
 
-function StartOverAction() {
+function StartOverAction({ stop }: { stop: 'short' | 'inactive' }) {
   return (
     <>
       <StartOverButton variant="primary">Start over</StartOverButton>
       <span className="note">
-        Starting over releases this cap and asks you to approve a new one.
+        {stop === 'inactive'
+          ? 'Starting over asks you to approve a new cap.'
+          : 'Starting over releases this cap and asks you to approve a new one.'}
       </span>
     </>
   );
@@ -98,6 +100,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
   // The ledger waits for the rows in view; the folded ones do not animate in.
   const revealedRows = lastAttempt ? shownRows(lastAttempt.review.results).length : 0;
   const ready = run !== null && !loading;
+  const stop = run ? capStop(run) : null;
   // With the review off nothing is checked, so there is no step 1; the picks number on from there.
   const reviewOn = (run?.review ?? review) === 'on';
   const firstPickStep = reviewOn ? 2 : 1;
@@ -164,7 +167,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
                       review={run.review}
                       canAnswer={run.status === 'awaiting_answers' && last}
                       onAnswer={sendAnswers}
-                      {...(last && capRanOut(run) ? { action: <StartOverAction /> } : {})}
+                      {...(last && stop ? { action: <StartOverAction stop={stop} /> } : {})}
                       {...(last && run.status === 'done' && list
                         ? { next: <NextLink scenarios={list} current={index} /> }
                         : {})}

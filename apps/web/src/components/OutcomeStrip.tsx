@@ -1,16 +1,28 @@
 import { type Cents, formatUsd } from '@fitcheck/contracts';
 import type { ReactNode } from 'react';
-import { Check, CircleSlash, ICON_PROPS, TriangleAlert, Undo2 } from './icons.js';
+import { Check, CircleSlash, Clock, ICON_PROPS, TriangleAlert, Undo2 } from './icons.js';
 import styles from './OutcomeStrip.module.css';
 
-type Reason = 'review' | 'answers' | 'failed_closed';
-/** `unchecked`: captured with the review off, so nothing vouches for the listing. */
-type Kind = 'captured' | 'not_captured' | 'unchecked';
+/** `payment`: the buyer said yes to every line, but the cap or PayPal did not take the payment. */
+type Reason = 'review' | 'answers' | 'payment' | 'failed_closed';
+/**
+ * `unchecked`: captured with the review off, so nothing vouches for the listing.
+ * `pending`: PayPal accepted the capture but has not confirmed it; nothing counts as captured yet.
+ */
+type Kind = 'captured' | 'not_captured' | 'unchecked' | 'pending';
 
 const LABEL: Record<Kind, string> = {
   captured: 'Captured',
   not_captured: 'Not captured',
   unchecked: 'Captured, unchecked',
+  pending: 'Confirming',
+};
+
+const ICON = {
+  captured: Check,
+  not_captured: CircleSlash,
+  unchecked: TriangleAlert,
+  pending: Clock,
 };
 
 function sentences(
@@ -20,6 +32,11 @@ function sentences(
   cap: string,
   product: string,
 ): [bold: string, rest: string] {
+  if (kind === 'pending')
+    return [
+      'PayPal is still confirming this capture.',
+      'Nothing counts as captured until PayPal confirms it. Reload this page to see how it ended.',
+    ];
   if (kind === 'unchecked')
     return [
       `Captured ${amount}. Nobody checked the listing.`,
@@ -41,7 +58,9 @@ function sentences(
     `PayPal captured nothing for this ${product}.`,
     reason === 'answers'
       ? 'You did not accept every line, so the purchase went back to the agent.'
-      : 'It went back to the agent with the reason.',
+      : reason === 'payment'
+        ? 'You answered yes to every line, but the payment did not go through.'
+        : 'It went back to the agent with the reason.',
   ];
 }
 
@@ -66,8 +85,9 @@ export function OutcomeStrip({
   action?: ReactNode;
   children?: ReactNode;
 }) {
-  const captured = kind !== 'not_captured';
-  const Icon = kind === 'unchecked' ? TriangleAlert : captured ? Check : CircleSlash;
+  const Icon = ICON[kind];
+  // A capture shows its amount; a refusal shows $0.00; a pending one shows no number yet.
+  const shown = kind === 'pending' ? null : kind === 'not_captured' ? 0 : amountCents;
   const [bold, rest] = sentences(
     kind,
     reason,
@@ -80,7 +100,7 @@ export function OutcomeStrip({
       <div className={styles.label}>
         <Icon {...ICON_PROPS} size={28} strokeWidth={2.2} />
         {LABEL[kind]}
-        <span className="mono">{formatUsd(captured ? amountCents : 0)}</span>
+        {shown !== null && <span className="mono">{formatUsd(shown)}</span>}
       </div>
       <div className={styles.body}>
         <p>

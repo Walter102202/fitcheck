@@ -312,3 +312,28 @@ export function failedClosedRun(opts: { intentFailed?: boolean } = {}): RunRespo
   }
   return failed;
 }
+
+/** The run notice while PayPal has not confirmed a capture (apps/backend/src/runs/attempt.ts). */
+export const PENDING_NOTICE = 'PayPal is still confirming this capture.';
+
+/**
+ * dryer-spain with the second pick's capture accepted by PayPal but not confirmed yet: the
+ * backend stores it as a capture of 0 and adds the pending notice until a later read settles it.
+ */
+export function pendingCaptureRun(): RunResponse {
+  const run = structuredClone(runDryerSpain);
+  const second = run.attempts[1];
+  if (!second) throw new Error('runDryerSpain has no second attempt');
+  second.outcome = { decision: 'capture', amountCents: 0 };
+  return {
+    ...run,
+    cap: {
+      ...run.cap,
+      capturedCents: 0,
+      heldCents: second.pick.priceCents,
+      availableCents: run.cap.amountCents - second.pick.priceCents,
+    },
+    events: run.events.filter((e) => e.type !== 'captured'),
+    notices: [PENDING_NOTICE],
+  };
+}
