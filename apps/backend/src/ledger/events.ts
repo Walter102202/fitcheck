@@ -14,6 +14,7 @@ export const SENTENCES = {
     `PayPal captured ${formatUsd(amount)} from the ${formatUsd(cap)} cap.`,
   notSent: 'No capture sent to PayPal.',
   capShort: (available: Cents) => `The spending cap has ${formatUsd(available)} left.`,
+  capInactive: 'The spending cap is no longer active.',
   declined: 'PayPal declined the capture.',
   voided: (amount: Cents) => `Fitcheck released the ${formatUsd(amount)} left on the cap.`,
   released: (amount: Cents) =>

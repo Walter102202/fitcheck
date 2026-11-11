@@ -60,8 +60,9 @@ deploys only after its CI run passes (`autoDeployTrigger: checksPass`).
 
 - **Sessions.** Each visitor gets an anonymous session cookie and their own cap. A cap left idle
   is voided by the sweep; **Start over** voids it at once.
-- **Redeploys.** Sessions live in Postgres and survive a redeploy. A pending simulated cap that a
-  restart forgot is expired, and the visitor is asked to approve a new one.
+- **Redeploys.** Sessions live in Postgres and survive a redeploy. A simulated cap that a restart
+  forgot (pending or approved) expires the next time it is read, and the visitor is asked to
+  approve a new one before the next purchase. Sandbox caps live at PayPal and are kept.
 - **Rollback.** Render dashboard → the service → Events → pick the previous deploy → Rollback.
 - **Logs.** Render dashboard → the service → Logs. Lines are JSON. Secrets are redacted by key
   name: token, secret, password and api key.

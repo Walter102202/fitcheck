@@ -5,7 +5,7 @@ import { pickFor } from '../agent/scripted-agent.js';
 import { AppError } from '../api/errors.js';
 import { caps, purchases, runs } from '../db/schema.js';
 import type { Deps } from '../deps.js';
-import { getCap, latestCapForSession } from '../ledger/caps.js';
+import { currentCapForSession, getCap } from '../ledger/caps.js';
 import { SENTENCES } from '../ledger/events.js';
 import { listRunEvents, purchaseFor, releaseHold } from '../ledger/purchases.js';
 import { answerAttempt, PENDING_NOTICE, processAttempt } from './attempt.js';
@@ -226,23 +226,26 @@ export async function startRun(
   }
   return singleFlight(`run:${i.sessionId}:${i.scenarioId}:${i.review}`, async () => {
     const now = d.now();
+    // A repeat of the session's latest run (a double click, a reload) gets that run back. Any
+    // other run started since (the switch turned off and on again) means a fresh run.
     const [recent] = await d.db
       .select()
       .from(runs)
       .where(
         and(
           eq(runs.sessionId, i.sessionId),
-          eq(runs.scenarioId, i.scenarioId),
-          eq(runs.review, i.review),
           gt(runs.createdAt, new Date(now.getTime() - RUN_DEDUPE_MS)),
         ),
       )
       .orderBy(desc(runs.createdAt))
       .limit(1);
-    if (recent) return toResponse(d, recent);
+    if (recent && recent.scenarioId === i.scenarioId && recent.review === i.review) {
+      return toResponse(d, recent);
+    }
 
-    const cap = await latestCapForSession(d, i.sessionId);
-    if (!cap || cap.status === 'pending_approval') {
+    // Only a cap that can still pay starts a run; an exhausted one still runs and says so.
+    const cap = await currentCapForSession(d, i.sessionId);
+    if (!cap || (cap.status !== 'active' && cap.status !== 'exhausted')) {
       throw new AppError('cap_not_active', 'Approve a spending cap first.', { status: 409 });
     }
     await abandonWaitingRuns(d, i.sessionId);

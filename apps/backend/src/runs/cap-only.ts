@@ -29,7 +29,9 @@ export function capOnlyCheck(i: {
   }
   if (i.currency !== 'USD') return refuse(`The offer is in ${i.currency}. The cap is in USD.`);
   if (i.cap.status !== 'active' || i.amountCents > i.cap.availableCents) {
-    return refuse(SENTENCES.capShort(i.cap.status === 'active' ? i.cap.availableCents : 0));
+    return refuse(
+      i.cap.status === 'active' ? SENTENCES.capShort(i.cap.availableCents) : SENTENCES.capInactive,
+    );
   }
   const amount = formatUsd(i.amountCents);
   return {

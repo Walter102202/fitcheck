@@ -5,6 +5,7 @@ import type { Deps } from '../../deps.js';
 import {
   type CapRow,
   completeApproval,
+  currentCapForSession,
   expireCap,
   findCapByOrder,
   latestCapForSession,
@@ -58,7 +59,7 @@ async function expireIfForgotten(deps: Deps, row: OwnCap, error: PaypalError): P
 
 export function capRoutes(deps: Deps): Hono<ApiEnv> {
   return new Hono<ApiEnv>()
-    .get(API.cap, async (c) => c.json(await latestCapForSession(deps, c.var.sessionId)))
+    .get(API.cap, async (c) => c.json(await currentCapForSession(deps, c.var.sessionId)))
     .post(API.cap, async (c) => {
       const { scenarioId } = await parseBody(c, CapCreateRequestSchema);
       if (scenarioId !== undefined && !scenarioById(scenarioId)) {

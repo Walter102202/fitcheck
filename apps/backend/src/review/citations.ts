@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { factOf, type ReviewChecklist } from './checklist.js';
 import { TEXT_NORMALIZERS, type Value, valueKey } from './normalize.js';
 import { type ProductContext, readPath } from './paths.js';
-import { findQuote, MAX_EXCERPT } from './text.js';
+import { findQuote, MAX_EXCERPT, makeExcerpt } from './text.js';
 
 export const CitationDraftSchema = z.strictObject({
   citations: z.array(
@@ -71,6 +71,8 @@ export function verifyCitation(
   const at = findQuote(field.text, p.quote);
   if (!at) return { ok: false, error: `quote "${p.quote}" is not in ${p.path}` };
   const quote = field.text.slice(at.start, at.end);
+  // The field is shown around the quote (whole when short), so a short quote keeps its context.
+  const shown = makeExcerpt(field.text, at.start, at.end);
 
   const result = results.find((r) => r.requirement === p.requirement);
   const samePath = (result?.evidence ?? []).filter((e) => e.path === p.path);
@@ -82,7 +84,13 @@ export function verifyCitation(
       return {
         ok: true,
         requirement: p.requirement,
-        evidence: { ...existing, label: field.label, text: quote, start: m.start, end: m.end },
+        evidence: {
+          ...existing,
+          label: field.label,
+          text: shown.text,
+          start: shown.start + m.start,
+          end: shown.start + m.end,
+        },
       };
     }
   }

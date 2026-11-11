@@ -64,7 +64,8 @@ export const SCENARIOS: ScenarioScript[] = [
         productId: 'Qxt4Ypf',
         domain: 'newegg.com',
         quantity: 1,
-        agentSays: 'You said no, so here is a Conair travel dryer at {price} from newegg.com.',
+        agentSays:
+          'That one was not approved, so here is a Conair travel dryer at {price} from newegg.com.',
       },
     ],
   },
@@ -107,7 +108,7 @@ export const SCENARIOS: ScenarioScript[] = [
         domain: 'lg.com',
         quantity: 1,
         agentSays:
-          'You said no, so here is the LG B6 65-inch at {price} from lg.com. Its mount pattern is 200 x 200 mm.',
+          'That one was not approved, so here is the LG B6 65-inch at {price} from lg.com. Its mount pattern is 200 x 200 mm.',
       },
     ],
   },

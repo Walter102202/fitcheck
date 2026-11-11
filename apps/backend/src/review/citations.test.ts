@@ -16,6 +16,7 @@ const tv = getChecklist('tv');
 const dryer = getChecklist('hair_dryer');
 const sonyCtx = ctxFor('UXXAg59', 'pcrichard.com');
 const aniqCtx = ctxFor('cv7t721', 'walmart.com');
+const SONY_TITLE = 'Sony BRAVIA 8 K65XR80 65 inch 4K HDR Smart OLED TV (2024)';
 const replayPort = createReplayModelPort(createFileRecordingStore(DEFAULT_RECORDINGS_DIR));
 
 function inputFor(id: string, domain: string, intent: ReviewInput['intent']): ReviewInput {
@@ -180,7 +181,13 @@ describe('applyCitations', () => {
     if (!v.ok) throw new Error(v.error);
     const out = applyCitations(sonyResults, [{ requirement: v.requirement, evidence: v.evidence }]);
     const size = out.find((r) => r.requirement === 'tv.screen_size');
-    expect(size?.evidence[0]).toMatchObject({ path: 'title', text: '65 inch', start: 0, end: 7 });
+    // The whole field is shown, with the cited value highlighted inside it.
+    expect(size?.evidence[0]).toMatchObject({
+      path: 'title',
+      text: SONY_TITLE,
+      start: 22,
+      end: 29,
+    });
     expect(size?.evidence[1]).toEqual(
       sonyResults.find((r) => r.requirement === 'tv.screen_size')?.evidence[1],
     );
@@ -198,7 +205,7 @@ describe('the citation step in review()', () => {
     expect(withC.results.map((r) => r.state)).toEqual(without.results.map((r) => r.state));
     expect(withC.card).toEqual(without.card);
     const size = withC.results.find((r) => r.requirement === 'tv.screen_size');
-    expect(size?.evidence.map((e) => e.text)).toEqual(['65 inch', 'Screen Size Class: 55 Inch']);
+    expect(size?.evidence.map((e) => e.text)).toEqual([SONY_TITLE, 'Screen Size Class: 55 Inch']);
   });
 
   it('the ANIQ recording cites the description sentence', async () => {

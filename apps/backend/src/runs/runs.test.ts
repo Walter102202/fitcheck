@@ -10,7 +10,8 @@ import {
 import { afterEach, describe, expect, it } from 'vitest';
 import { FIXTURES_DIR } from '../agent/scenarios.js';
 import { createSession } from '../db/sessions.js';
-import { createCap } from '../ledger/caps.js';
+import { createCap, currentCapForSession, voidCap } from '../ledger/caps.js';
+import { MockPaypalGateway } from '../paypal/mock.js';
 import { PENDING_NOTICE, processAttempt } from './attempt.js';
 import { activeCap, createHarness } from './harness.js';
 import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
@@ -231,6 +232,22 @@ describe('runs', () => {
     expect(h.paypal.calls('capture')).toEqual([]);
   });
 
+  it('review on, off and on again inside the dedupe window starts a fresh card', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    const at = (s: number) =>
+      h.clock.set(new Date(Date.parse('2026-11-11T12:00:00.000Z') + s * 1000));
+    const first = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    at(2);
+    await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'off' });
+    at(4);
+    const again = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    expect(again.runId).not.toBe(first.runId);
+    expect(again.status).toBe('awaiting_answers');
+    expect(again.attempts[0]?.review.card?.lines).toHaveLength(1);
+    expect(again.cap.heldCents).toBe(139800);
+  });
+
   it('answers to a purchase released by a new run change nothing', async () => {
     h = await createHarness();
     const { sessionId } = await activeCap(h.deps);
@@ -263,6 +280,23 @@ describe('runs', () => {
     await expect(
       startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' }),
     ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+  });
+
+  it('a run on a voided cap, or on a cap a restart forgot, is refused before any review', async () => {
+    h = await createHarness();
+    const voided = await activeCap(h.deps);
+    await voidCap(h.deps, { capId: voided.cap.capId, reason: 'reset' });
+    await expect(
+      startRun(h.deps, { sessionId: voided.sessionId, scenarioId: 'tv-sony', review: 'on' }),
+    ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+
+    const forgotten = await activeCap(h.deps);
+    h.deps.paypal.simulated = new MockPaypalGateway({ webhookSecret: 'x' });
+    await expect(
+      startRun(h.deps, { sessionId: forgotten.sessionId, scenarioId: 'tv-sony', review: 'on' }),
+    ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+    expect((await currentCapForSession(h.deps, forgotten.sessionId))?.status).toBe('expired');
+    expect(h.paypal.calls('capture')).toEqual([]);
   });
 
   it('an unknown scenario is 404', async () => {
