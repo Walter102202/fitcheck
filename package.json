@@ -1,0 +1,31 @@
+{
+  "name": "fitcheck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fitcheck holds an AI shopping agent's PayPal payment until every buyer requirement is backed by the product listing.",
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --if-present dev",
+    "build": "pnpm -r --if-present build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest run",
+    "measure": "pnpm --filter @fitcheck/eval exec tsx --conditions=development run.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.6",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

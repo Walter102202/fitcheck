@@ -1,0 +1,27 @@
+# Local only: plan, research and submission material. Never committed.
+docs/hackathon/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local data (PGlite)
+.data/
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Tooling scratch
+.superpowers/
+.playwright-mcp/
+
+# OS
+.DS_Store
+
+# Private per-developer notes and permission rules for Claude Code
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/worktrees/
