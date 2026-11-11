@@ -13,7 +13,7 @@ import { createSession } from '../db/sessions.js';
 import { createCap } from '../ledger/caps.js';
 import { activeCap, createHarness } from './harness.js';
 import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
-import { startRun, submitAnswers } from './runs.js';
+import { getRun, startRun, submitAnswers } from './runs.js';
 
 type Harness = Awaited<ReturnType<typeof createHarness>>;
 let h: Harness;
@@ -203,6 +203,43 @@ describe('runs', () => {
     ).toHaveLength(1);
     const again = await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
     expect(again.runId).toBe(a.runId);
+  });
+
+  it('a new run releases the hold of a purchase left on its question card', async () => {
+    h = await createHarness();
+    const { sessionId, cap } = await activeCap(h.deps);
+    const first = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    expect(first.status).toBe('awaiting_answers');
+    // Within the dedupe window the same run comes back, hold and all.
+    const same = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    expect(same.runId).toBe(first.runId);
+    expect(same.cap.heldCents).toBe(139800);
+    h.clock.set(new Date(Date.parse('2026-11-11T12:00:00.000Z') + 60_000));
+    const second = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    expect(second.runId).not.toBe(first.runId);
+    expect(second.cap.heldCents).toBe(139800);
+    expect(second.cap.availableCents).toBe(cap.amountCents - 139800);
+    const left = await getRun(h.deps, { sessionId, runId: first.runId });
+    expect(left.status).toBe('done');
+    expect(left.attempts[0]?.outcome).toEqual({
+      decision: 'return_to_agent',
+      amountCents: 0,
+      agentMessage: 'Not paid. The buyer left this purchase without answering.',
+    });
+    expect(left.events.at(-1)).toMatchObject({ type: 'not_captured', paypalCall: null });
+    expect(h.paypal.calls('capture')).toEqual([]);
+  });
+
+  it('answers to a purchase released by a new run change nothing', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    const first = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    h.clock.set(new Date(Date.parse('2026-11-11T12:00:00.000Z') + 60_000));
+    await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
+    const late = await answer(sessionId, first, allYes(first));
+    expect(late.status).toBe('done');
+    expect(late.attempts[0]?.outcome?.decision).toBe('return_to_agent');
+    expect(late.events.filter((e) => e.type === 'captured')).toHaveLength(0);
   });
 
   it('a run without an approved cap is refused', async () => {

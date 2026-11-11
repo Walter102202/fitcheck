@@ -71,7 +71,7 @@ export function expectedResults(): ResultsJson {
         7,
         fill(7, 'paid_good'),
       ),
-      row('questions_per_held', 'Questions per held purchase', 0, null, []),
+      { ...row('questions_per_held', 'Questions per held purchase', 0, null, []), unit: 'mean' },
       row('consistent', 'Same outcome in all 3 runs', 32, 32, []),
     ],
     notes: [

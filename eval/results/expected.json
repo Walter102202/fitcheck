@@ -125,7 +125,8 @@
       "squares": {
         "capOnly": [],
         "fitcheck": []
-      }
+      },
+      "unit": "mean"
     },
     {
       "id": "consistent",

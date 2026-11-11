@@ -6,7 +6,7 @@ import { AppError } from '../api/errors.js';
 import { caps, runs } from '../db/schema.js';
 import type { Deps } from '../deps.js';
 import { getCap, latestCapForSession } from '../ledger/caps.js';
-import { listRunEvents } from '../ledger/purchases.js';
+import { listRunEvents, purchaseFor, releaseHold } from '../ledger/purchases.js';
 import { answerAttempt, processAttempt } from './attempt.js';
 import type { UnavailableReason } from './ports.js';
 import { singleFlight } from './single-flight.js';
@@ -116,6 +116,44 @@ async function advance(
   return saveRun(d, row.id, { attempts, notices, memory, cursor, status });
 }
 
+export const ABANDONED_MESSAGE = 'Not paid. The buyer left this purchase without answering.';
+
+/**
+ * A new run releases every hold this session left on a question card (lead ruling, lane A
+ * review): two abandoned $1,398.00 holds would otherwise starve the rest of the demo. Each
+ * release writes a not_captured event with no PayPal call, and the run ends returned to the
+ * agent. A purchase the buyer answered meanwhile keeps its result.
+ */
+async function abandonWaitingRuns(d: Deps, sessionId: string): Promise<void> {
+  const waiting = await d.db
+    .select()
+    .from(runs)
+    .where(and(eq(runs.sessionId, sessionId), eq(runs.status, 'awaiting_answers')));
+  for (const row of waiting) {
+    const attempt = row.attempts.find((a) => !a.outcome && a.review.decision === 'ask');
+    if (!attempt) continue;
+    const purchase = await purchaseFor(d.db, { runId: row.id, attemptNo: attempt.attemptNo });
+    const released = await releaseHold(d, { purchaseId: purchase.id });
+    if (released.outcome !== 'not_captured') continue;
+    const [current] = await d.db.select().from(runs).where(eq(runs.id, row.id));
+    if (current?.status !== 'awaiting_answers') continue;
+    const attempts = current.attempts.map((a) =>
+      a.attemptNo === attempt.attemptNo
+        ? {
+            ...a,
+            outcome: {
+              decision: 'return_to_agent' as const,
+              amountCents: 0,
+              agentMessage: ABANDONED_MESSAGE,
+            },
+          }
+        : a,
+    );
+    await saveRun(d, row.id, { attempts, status: 'done' });
+    d.logger.info('runs.abandoned_hold_released', { runId: row.id, purchaseId: purchase.id });
+  }
+}
+
 function placeholderIntent(scenario: ScenarioScript): Intent {
   return {
     category: scenario.category,
@@ -158,6 +196,7 @@ export async function startRun(
     if (!cap || cap.status === 'pending_approval') {
       throw new AppError('cap_not_active', 'Approve a spending cap first.', { status: 409 });
     }
+    await abandonWaitingRuns(d, i.sessionId);
     let intent: Intent;
     let intentUnavailable: UnavailableReason | undefined;
     try {
@@ -210,8 +249,10 @@ export async function submitAnswers(
     const row = await loadRun(d, i.sessionId, i.runId);
     const attempt = row.attempts.find((a) => a.attemptNo === i.body.attemptNo);
     if (!attempt) throw new AppError('not_found', 'Attempt not found', { status: 404 });
-    // Answers already sent: the stored run, unchanged, even if these answers differ.
-    if (attempt.answers) return toResponse(d, row);
+    // Answers already sent, or the purchase already ended (a new run released its hold): the
+    // stored run, unchanged, even if these answers differ.
+    const released = attempt.review.decision === 'ask' && attempt.outcome !== undefined;
+    if (attempt.answers || released) return toResponse(d, row);
     const card = attempt.review.card;
     if (attempt.review.decision !== 'ask' || !card) {
       throw new AppError('answers_not_expected', 'This purchase is not waiting for answers.', {

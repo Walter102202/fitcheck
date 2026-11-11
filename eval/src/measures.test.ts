@@ -142,6 +142,7 @@ describe('computeRows', () => {
       id: 'questions_per_held',
       label: 'Questions per held purchase',
       of: 3,
+      unit: 'mean',
       capOnly: null,
       fitcheck: 1.7,
       squares: { capOnly: [], fitcheck: [] },
