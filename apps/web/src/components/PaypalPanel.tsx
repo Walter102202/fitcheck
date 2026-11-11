@@ -108,6 +108,11 @@ export function PaypalPanel({
   capOnlySentence: string | null;
   eventDelayMs: number;
 }) {
+  // When the cap alone would refuse for the very reason the ledger shows, the box adds nothing.
+  const capOnly =
+    capOnlySentence !== null && !events.some((e) => e.sentence === capOnlySentence)
+      ? capOnlySentence
+      : null;
   return (
     <aside className={styles.ledger} aria-label="What PayPal did">
       <div className={styles.head}>
@@ -120,7 +125,7 @@ export function PaypalPanel({
           <PaymentEventItem key={event.eventId} event={event} delayMs={eventDelayMs} />
         ))}
       </ol>
-      {capOnlySentence && <CapOnlyBox sentence={capOnlySentence} />}
+      {capOnly && <CapOnlyBox sentence={capOnly} />}
     </aside>
   );
 }

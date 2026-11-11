@@ -82,6 +82,32 @@ test('the head shows the cap mode', () => {
   expect(screen.getByText('simulated')).toBeInTheDocument();
 });
 
+test('the spending-cap-only box does not repeat a sentence the ledger already shows', () => {
+  const sentence = 'The spending cap has $346.62 left.';
+  const events = [
+    ...runDryerSpain.events.slice(0, 1),
+    {
+      eventId: 'evt-short',
+      purchaseId: 'pur-short',
+      type: 'not_captured' as const,
+      amountCents: 139800,
+      at: '2026-11-10T22:41:00.000Z',
+      sentence,
+      paypalCall: null,
+    },
+  ];
+  render(
+    <PaypalPanel
+      cap={runDryerSpain.cap}
+      events={events}
+      capOnlySentence={sentence}
+      eventDelayMs={0}
+    />,
+  );
+  expect(screen.getAllByText(sentence, { exact: false })).toHaveLength(1);
+  expect(screen.queryByText('With a spending cap only')).toBeNull();
+});
+
 test('the spending-cap-only box shows its sentence, or nothing', () => {
   const { unmount } = renderDryer(0, capOnlySentence);
   expect(screen.getByText('With a spending cap only')).toBeInTheDocument();
