@@ -1,9 +1,9 @@
 import type { Cap, ConfigResponse } from '@fitcheck/contracts';
-import { fireEvent, screen, waitFor, within } from '@testing-library/react';
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 import { activeFixtureCap, createFakeApi } from '../../api/fixtures/fake-api.js';
 import { goTo } from '../../lib/browser.js';
-import { renderApp } from '../../test/render.js';
+import { renderApp, restoredFromCache } from '../../test/render.js';
 
 vi.mock('../../lib/browser.js', () => ({ goTo: vi.fn(), postForm: vi.fn() }));
 
@@ -87,6 +87,23 @@ test('approving in the sandbox creates the cap once and goes to PayPal', async (
   await waitFor(() => expect(goTo).toHaveBeenCalledWith(pendingCap.approveUrl));
   expect(create).toHaveBeenCalledTimes(1);
   expect(create).toHaveBeenCalledWith({ scenarioId: 'dryer-spain' });
+});
+
+test('Back from PayPal out of the page cache unlocks the button and reads the cap again', async () => {
+  const api = sandboxApi();
+  vi.spyOn(api, 'createCap').mockResolvedValue(pendingCap);
+  const readCap = vi.spyOn(api, 'getCap');
+  renderApp({ route: '/cap', api });
+  const approve = await screen.findByRole('button', { name: 'Approve in PayPal sandbox' });
+  fireEvent.click(approve);
+  await waitFor(() => expect(goTo).toHaveBeenCalledWith(pendingCap.approveUrl));
+  expect(approve).toBeDisabled();
+  const reads = readCap.mock.calls.length;
+  act(() => {
+    window.dispatchEvent(restoredFromCache());
+  });
+  await waitFor(() => expect(approve).toBeEnabled());
+  expect(readCap.mock.calls.length).toBe(reads + 1);
 });
 
 test('the cap remembers which purchase to come back to', async () => {

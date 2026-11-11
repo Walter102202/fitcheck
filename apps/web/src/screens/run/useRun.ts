@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { useAppConfig } from '../../api/config.js';
 import { useFitcheckApi } from '../../api/context.js';
+import { ApiRequestError } from '../../api/errors.js';
 import type { FitcheckApi } from '../../api/types.js';
 
 // One start per purchase and mode in flight, so StrictMode's second effect, or a second
@@ -21,8 +22,10 @@ function startOnce(api: FitcheckApi, scenarioId: string, review: 'on' | 'off') {
 
 const NO_CAP = new Set(['pending_approval', 'voided', 'expired']);
 
-function asError(e: unknown): Error {
-  return e instanceof Error ? e : new Error(String(e));
+// Kept as thrown: a Zod 4 ZodError is not an `instanceof Error`, and wrapping it would turn
+// its issue list into the message that readableError() exists to hide.
+function asFailure(e: unknown): NonNullable<unknown> {
+  return e ?? new Error('Unknown error');
 }
 
 /**
@@ -38,9 +41,11 @@ export function useRun(scenarioId: string, { enabled = true }: { enabled?: boole
   const runId = params.get('run');
 
   const [run, setRun] = useState<RunResponse | null>(null);
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<NonNullable<unknown> | null>(null);
   const [loading, setLoading] = useState(true);
   const [needsCap, setNeedsCap] = useState(false);
+  // A ?run= this session cannot read: a link from another visitor, or a visit since reset.
+  const [stale, setStale] = useState(false);
   const [tries, setTries] = useState(0);
   const shown = useRef<string | null>(null);
 
@@ -51,11 +56,19 @@ export function useRun(scenarioId: string, { enabled = true }: { enabled?: boole
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setStale(false);
     if (!runId) setRun(null);
     void (async () => {
       try {
         if (runId) {
-          const loaded = await api.getRun(runId);
+          let loaded: RunResponse;
+          try {
+            loaded = await api.getRun(runId);
+          } catch (e) {
+            if (!(e instanceof ApiRequestError && e.status === 404)) throw e;
+            if (!cancelled) setStale(true);
+            return;
+          }
           if (cancelled) return;
           shown.current = loaded.runId;
           setRun(loaded);
@@ -76,7 +89,7 @@ export function useRun(scenarioId: string, { enabled = true }: { enabled?: boole
           { replace: true },
         );
       } catch (e) {
-        if (!cancelled) setError(asError(e));
+        if (!cancelled) setError(asFailure(e));
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -109,6 +122,12 @@ export function useRun(scenarioId: string, { enabled = true }: { enabled?: boole
     setTries((n) => n + 1);
   }, []);
 
+  // Drops the unreadable ?run= and goes through the normal start: cap check, then one run.
+  const startFresh = useCallback(() => {
+    shown.current = null;
+    setParams(review === 'off' ? { review: 'off' } : {}, { replace: true });
+  }, [review, setParams]);
+
   const sendAnswers = useCallback(
     async (attemptNo: number, answers: Record<string, Answer>) => {
       if (!run) return;
@@ -118,5 +137,16 @@ export function useRun(scenarioId: string, { enabled = true }: { enabled?: boole
     [api, run],
   );
 
-  return { run, error, loading, needsCap, review, setReview, retry, sendAnswers };
+  return {
+    run,
+    error,
+    loading,
+    needsCap,
+    stale,
+    review,
+    setReview,
+    retry,
+    startFresh,
+    sendAnswers,
+  };
 }

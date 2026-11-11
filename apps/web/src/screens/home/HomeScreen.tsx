@@ -47,15 +47,19 @@ export function HomeScreen() {
   const list = scenarios.data ?? [];
   const firstRow = results.data?.rows[0];
 
-  const purchases = `${COUNT_WORD[list.length] ?? list.length} purchases made by a scripted shopping agent.`;
+  // The count only once the list is in: "No purchases" while loading or after a failure is false.
+  const purchases = scenarios.data
+    ? `${COUNT_WORD[list.length] ?? list.length} purchases made by a scripted shopping agent.`
+    : '';
   const records = config
-    ? ` Product records come ${config.channel3Mode === 'live' ? 'live from Channel3' : 'from a recorded Channel3 copy'}.`
+    ? `Product records come ${config.channel3Mode === 'live' ? 'live from Channel3' : 'from a recorded Channel3 copy'}.`
     : '';
   const payments = !config
     ? ''
     : config.paypalMode === 'sandbox'
-      ? ' Payments run on the PayPal sandbox: you approve the cap once with the test buyer shown on the next screen.'
-      : ' Payments run on simulated PayPal: you approve the cap once on the next screen.';
+      ? 'Payments run on the PayPal sandbox: you approve the cap once with the test buyer shown on the next screen.'
+      : 'Payments run on simulated PayPal: you approve the cap once on the next screen.';
+  const purchasesSub = [purchases, records, payments].filter(Boolean).join(' ');
 
   return (
     <div className="wrap">
@@ -131,11 +135,15 @@ export function HomeScreen() {
 
       <section className={styles.band} aria-labelledby="home-purchases">
         <h2 id="home-purchases">Run a purchase</h2>
-        <p className={styles.sub}>
-          {purchases}
-          {records}
-          {payments}
-        </p>
+        {purchasesSub && <p className={styles.sub}>{purchasesSub}</p>}
+        {scenarios.error && !scenarios.data && (
+          <div className={styles.loadError} role="alert">
+            <p>The purchases did not load.</p>
+            <Button variant="quiet" size="small" onClick={() => void scenarios.refetch()}>
+              Try again
+            </Button>
+          </div>
+        )}
         {list.length > 0 && (
           <div className={styles.scenarios} data-testid="scenarios">
             {list.map((scenario, i) => (

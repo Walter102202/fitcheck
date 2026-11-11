@@ -1,6 +1,13 @@
-import { formatUsd, runDryerSilent, runDryerSpain, runSonyAsk } from '@fitcheck/contracts';
+import {
+  formatUsd,
+  type RunResponse,
+  runDryerSilent,
+  runDryerSpain,
+  runSonyAsk,
+} from '@fitcheck/contracts';
 import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { expect, test, vi } from 'vitest';
+import { ZodError } from 'zod';
 import { ApiRequestError } from '../../api/errors.js';
 import { activeFixtureCap, createFakeApi } from '../../api/fixtures/fake-api.js';
 import { failedClosedRun, fixtureRun } from '../../api/fixtures/runs.js';
@@ -189,6 +196,86 @@ test('a failed start shows Try again, and Try again retries', async () => {
   fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
   await screen.findByText('Second pick');
   expect(start).toHaveBeenCalledTimes(2);
+});
+
+test('a ?run= from another visit offers to run the purchase again, and that starts one run', async () => {
+  const api = withCap();
+  const start = vi.spyOn(api, 'startRun');
+  renderApp({ route: '/run/dryer-spain?run=run-from-someone-else', api });
+  const alert = await screen.findByRole('alert');
+  expect(alert).toHaveTextContent('This purchase is from another visit.');
+  expect(screen.queryByRole('button', { name: 'Try again' })).toBeNull();
+  fireEvent.click(screen.getByRole('button', { name: 'Run it again' }));
+  await screen.findByText('Second pick');
+  expect(start).toHaveBeenCalledTimes(1);
+  expect(start).toHaveBeenCalledWith({ scenarioId: 'dryer-spain', review: 'on' });
+  await waitFor(() =>
+    expect(screen.getByTestId('location').textContent).toMatch(/^\/run\/dryer-spain\?run=run-fx-/),
+  );
+});
+
+test('a reply that drifts from the contract shows a readable error, not the schema dump', async () => {
+  const api = withCap();
+  vi.spyOn(api, 'startRun').mockRejectedValueOnce(
+    new ZodError([{ code: 'custom', path: ['runId'], message: 'Invalid input', input: 1 }]),
+  );
+  renderApp({ route: '/run/dryer-spain', api });
+  const alert = await screen.findByRole('alert');
+  expect(alert).toHaveTextContent('This purchase did not load.');
+  expect(alert).toHaveTextContent('The server’s reply did not match what this page expects.');
+  expect(alert.textContent).not.toMatch(/[[{]/);
+  expect(screen.getByRole('button', { name: 'Try again' })).toBeInTheDocument();
+});
+
+test('a network failure says the server did not answer', async () => {
+  const api = withCap();
+  vi.spyOn(api, 'startRun').mockRejectedValueOnce(new TypeError('Failed to fetch'));
+  renderApp({ route: '/run/dryer-spain', api });
+  expect(await screen.findByRole('alert')).toHaveTextContent('The server did not answer.');
+});
+
+const CAP_SHORT = 'Not paid. The spending cap has $168.81 left.';
+
+/** tv-sony after the cap refused the hold: the review asked, but the attempt ended at once. */
+function sonyRefusedByCap(): RunResponse {
+  const run = structuredClone(runSonyAsk);
+  const first = run.attempts[0];
+  if (!first) throw new Error('runSonyAsk has no attempt');
+  first.outcome = { decision: 'return_to_agent', amountCents: 0, agentMessage: CAP_SHORT };
+  return { ...run, status: 'done' };
+}
+
+test('a hold the cap refused shows not captured in step 3 too, and no card', async () => {
+  renderApp({
+    route: '/run/tv-sony',
+    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'tv-sony': sonyRefusedByCap() } }),
+  });
+  const strip = await waitFor(() => {
+    const el = document.querySelector('[data-kind="not_captured"]');
+    if (!el) throw new Error('no strip yet');
+    return el;
+  });
+  expect(strip).toHaveTextContent(`Sent to the agent: ${CAP_SHORT}`);
+  const steps = screen.getByTestId('steps');
+  expect(within(steps).getByText('Nothing was captured. The reason is below.')).toBeInTheDocument();
+  expect(within(steps).queryByText('The payment waits and the buyer gets one card.')).toBeNull();
+  expect(within(steps).queryByText('On hold')).toBeNull();
+  expect(screen.queryByRole('button', { name: 'Send answers' })).toBeNull();
+});
+
+test('with the review off, the strip follows what PayPal did, not the cap-only forecast', async () => {
+  const api = withCap();
+  const run = sonyRefusedByCap();
+  vi.spyOn(api, 'startRun').mockResolvedValue({ ...run, review: 'off', runId: 'run-off' });
+  renderApp({ route: '/run/tv-sony?review=off', api });
+  const strip = await waitFor(() => {
+    const el = document.querySelector('[data-kind]');
+    if (!el) throw new Error('no strip yet');
+    return el;
+  });
+  expect(strip).toHaveAttribute('data-kind', 'not_captured');
+  expect(strip).toHaveTextContent('$0.00');
+  expect(strip).toHaveTextContent(`Sent to the agent: ${CAP_SHORT}`);
 });
 
 test('switching the review off runs the same purchase as spending cap only', async () => {

@@ -1,6 +1,7 @@
 import type { Scenario } from '@fitcheck/contracts';
 import { Fragment, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
+import { readableError } from '../../api/errors.js';
 import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button } from '../../components/Button.js';
@@ -35,10 +36,18 @@ function RunView({ scenarioId }: { scenarioId: string }) {
   const index = list ? list.findIndex((s) => s.id === scenarioId) : -1;
   const scenario = list?.[index];
   const unknown = list !== null && index < 0;
-  const { run, error, loading, needsCap, review, setReview, retry, sendAnswers } = useRun(
-    scenarioId,
-    { enabled: (list !== null && !unknown) || scenarios.error !== null },
-  );
+  const {
+    run,
+    error,
+    loading,
+    needsCap,
+    stale,
+    review,
+    setReview,
+    retry,
+    startFresh,
+    sendAnswers,
+  } = useRun(scenarioId, { enabled: (list !== null && !unknown) || scenarios.error !== null });
 
   useEffect(() => {
     if (needsCap) navigate(`/cap?scenario=${encodeURIComponent(scenarioId)}`, { replace: true });
@@ -82,10 +91,18 @@ function RunView({ scenarioId }: { scenarioId: string }) {
 
       <div className={styles.grid}>
         <div className={styles.steps} data-testid="steps">
-          {error ? (
+          {stale ? (
             <div className={styles.error} role="alert">
               <p>
-                <b>This purchase did not load.</b> {error.message}
+                <b>This purchase is from another visit.</b> Each visit has its own spending cap, so
+                this page cannot show it.
+              </p>
+              <Button onClick={startFresh}>Run it again</Button>
+            </div>
+          ) : error !== null ? (
+            <div className={styles.error} role="alert">
+              <p>
+                <b>This purchase did not load.</b> {readableError(error)}
               </p>
               <Button onClick={retry}>Try again</Button>
             </div>

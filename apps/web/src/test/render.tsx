@@ -40,6 +40,13 @@ export function renderWithProviders(
   return { ...result, api };
 }
 
+/** The `pageshow` a browser fires when Back restores the page from its back-forward cache. */
+export function restoredFromCache(): Event {
+  const event = new Event('pageshow');
+  Object.defineProperty(event, 'persisted', { value: true });
+  return event;
+}
+
 /** The whole app at `route`, with a LocationProbe beside it. */
 export function renderApp(o: {
   route: string;

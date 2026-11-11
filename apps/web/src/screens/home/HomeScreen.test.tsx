@@ -124,6 +124,31 @@ test('home still renders when results fail', async () => {
   expect(screen.queryByRole('heading', { name: 'Wrong purchases that got paid' })).toBeNull();
 });
 
+test('while the purchases load, the band does not claim there are none', () => {
+  const api = createFakeApi();
+  vi.spyOn(api, 'getScenarios').mockReturnValue(new Promise(() => {}));
+  renderApp({ route: '/', api });
+  const band = screen.getByRole('region', { name: 'Run a purchase' });
+  expect(band.textContent).not.toMatch(/purchases made by/);
+  expect(band.textContent).not.toMatch(/^No |\bNo purchases\b/);
+});
+
+test('when the purchases fail, the band says so and Try again reloads them', async () => {
+  const api = createFakeApi();
+  const load = vi.spyOn(api, 'getScenarios').mockRejectedValueOnce(new Error('down'));
+  renderApp({ route: '/', api });
+  const band = screen.getByRole('region', { name: 'Run a purchase' });
+  expect(await within(band).findByRole('alert')).toHaveTextContent('The purchases did not load.');
+  expect(band.textContent).not.toMatch(/No purchases/);
+  // The rest of the page stays.
+  expect(
+    screen.getByRole('heading', { name: 'Three things can happen at the payment' }),
+  ).toBeInTheDocument();
+  fireEvent.click(within(band).getByRole('button', { name: 'Try again' }));
+  expect(await screen.findAllByRole('link', { name: /^Run: / })).toHaveLength(4);
+  expect(load).toHaveBeenCalledTimes(2);
+});
+
 test('Start over resets the session and reloads', async () => {
   const api = createFakeApi();
   const reset = vi.spyOn(api, 'resetSession');

@@ -1,7 +1,7 @@
-import { fireEvent, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import { expect, test, vi } from 'vitest';
 import { createFakeApi } from '../../api/fixtures/fake-api.js';
-import { renderApp } from '../../test/render.js';
+import { renderApp, restoredFromCache } from '../../test/render.js';
 
 vi.mock('../../lib/browser.js', () => ({ goTo: vi.fn(), postForm: vi.fn() }));
 
@@ -33,6 +33,19 @@ test('approving on the simulated page completes the approval with its token', as
   await waitFor(() => expect(complete).toHaveBeenCalledTimes(1));
   expect(complete).toHaveBeenCalledWith('t1');
   expect(approve).toBeDisabled();
+});
+
+test('Back to the simulated page out of the page cache unlocks the button', async () => {
+  const api = createFakeApi({ cap: null });
+  vi.spyOn(api, 'completeSimulatedApproval').mockReturnValue(new Promise(() => {}));
+  renderApp({ route: '/cap/approve-simulated?token=t1', api });
+  const approve = await screen.findByRole('button', { name: 'Approve the cap' });
+  fireEvent.click(approve);
+  await waitFor(() => expect(approve).toBeDisabled());
+  act(() => {
+    window.dispatchEvent(restoredFromCache());
+  });
+  await waitFor(() => expect(approve).toBeEnabled());
 });
 
 test('a missing token says so', async () => {

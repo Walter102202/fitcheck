@@ -6,6 +6,7 @@ import { useFitcheckApi } from '../../api/context.js';
 import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button, ButtonLink } from '../../components/Button.js';
+import { useOnPageRestore } from '../../lib/page-restore.js';
 import styles from './SimulatedApprovalScreen.module.css';
 
 const loadCap = (api: FitcheckApi) => api.getCap();
@@ -23,6 +24,12 @@ export function SimulatedApprovalScreen() {
   const [pending, setPending] = useState(false);
   const [failed, setFailed] = useState(false);
   const guard = useRef(false);
+
+  // Back to this page after approving: the form post left it locked.
+  useOnPageRestore(() => {
+    guard.current = false;
+    setPending(false);
+  });
 
   const amountCents = cap.data?.amountCents ?? config.data?.capAmountCents;
 

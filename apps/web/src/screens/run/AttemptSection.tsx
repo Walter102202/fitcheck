@@ -65,6 +65,12 @@ export function AttemptSection({
   const { review: result, outcome, capOnly } = attempt;
   const product = productNoun(category);
   const off = review === 'off';
+  // The review said capture or ask, but the attempt ended unpaid with no answers: the cap
+  // was short or inactive, or PayPal declined. Step 3 then closes on what really happened.
+  const refused =
+    outcome?.decision === 'return_to_agent' &&
+    !attempt.answers &&
+    result.decision !== 'return_to_agent';
 
   let checked: ReactNode;
   if (off) {
@@ -86,8 +92,10 @@ export function AttemptSection({
         </div>
         <Verdict
           text={summaryLine(result.summary)}
-          chip={VERDICT[result.decision].chip}
-          note={VERDICT[result.decision].note}
+          chip={refused ? 'not_captured' : VERDICT[result.decision].chip}
+          note={
+            refused ? 'Nothing was captured. The reason is below.' : VERDICT[result.decision].note
+          }
         />
       </>
     );
@@ -95,18 +103,28 @@ export function AttemptSection({
 
   let ending: ReactNode = null;
   if (off) {
+    // What PayPal did wins over the cap-only forecast, which was computed before paying.
+    const paid = outcome ? outcome.decision === 'capture' : capOnly.outcome === 'captured';
+    const offMessage = outcome?.agentMessage;
     ending = (
       <OutcomeStrip
-        kind={capOnly.outcome}
-        amountCents={capOnly.amountCents}
+        kind={paid ? 'captured' : 'not_captured'}
+        amountCents={outcome ? outcome.amountCents : capOnly.amountCents}
         capAmountCents={capAmountCents}
         product={product}
         reason="review"
+        {...(offMessage === undefined ? {} : { agentMessage: offMessage })}
       >
         {next}
       </OutcomeStrip>
     );
-  } else if (result.decision === 'ask' && !attempt.answers && canAnswer && result.card) {
+  } else if (
+    result.decision === 'ask' &&
+    !attempt.answers &&
+    !outcome &&
+    canAnswer &&
+    result.card
+  ) {
     ending = (
       <QuestionCard
         card={result.card}

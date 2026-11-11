@@ -7,6 +7,7 @@ import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button } from '../../components/Button.js';
 import { goTo } from '../../lib/browser.js';
+import { useOnPageRestore } from '../../lib/page-restore.js';
 import styles from './CapScreen.module.css';
 
 const loadCap = (api: FitcheckApi) => api.getCap();
@@ -45,6 +46,13 @@ export function CapScreen() {
   const [pending, setPending] = useState(false);
   const [failed, setFailed] = useState(false);
   const guard = useRef(false);
+
+  // Back from PayPal: unlock the button and read the cap again, which may now be active.
+  useOnPageRestore(() => {
+    guard.current = false;
+    setPending(false);
+    void cap.refetch();
+  });
 
   const status = cap.data?.status;
   useEffect(() => {
