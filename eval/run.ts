@@ -120,13 +120,15 @@ function plan(): Plan {
   if (split === 'heldout' && !heldOutCommit(REPO_ROOT)) {
     fail('Commit eval/cases/heldout.json and heldout.sha256 before the live held-out run.');
   }
+  const recordingsBase = join(EVAL_DIR, 'recordings', split);
   const guard = guardLiveRun({
     split,
     resultsDir,
+    recordingsDir: recordingsBase,
     ...(values.rerun ? { rerun: values.rerun } : {}),
   });
   if (!guard.ok) return fail(guard.message);
-  const dir = join(EVAL_DIR, 'recordings', split, runStamp(new Date()));
+  const dir = join(recordingsBase, runStamp(new Date()));
   const claimed = claimRecordingsDir(dir);
   if (!claimed.ok) return fail(claimed.message);
   return {

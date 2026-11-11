@@ -160,11 +160,23 @@ describe('results', () => {
     });
     expect(r.notes).toHaveLength(FIXED_NOTES.length + 2);
     expect(r.notes[3]).toBe(
-      'Rerun heldout-rerun-1.json after "citation crash": Fitcheck wrong purchases paid 1 in heldout.json, 0 in heldout-rerun-1.json.',
+      'Rerun heldout-rerun-1.json after "citation crash". Fitcheck numbers in table order: heldout.json 1 / 0 / 0 / 0 / n/a / 1; heldout-rerun-1.json 0 / 0 / 0 / 0 / n/a / 1. Both files are in eval/results/.',
     );
     expect(r.notes[4]).toBe(
       'Erratum: 2026-11-12 h-tv-01: label fixed; wrong purchases paid 1 before, 0 after.',
     );
+  });
+
+  it('a first file measured after an interrupted live run says so', () => {
+    const cases = [evalCase('h-tv-01', 'wrong', 'variant')];
+    const first = {
+      ...detail([outcome('h-tv-01', 'fitcheck', 1, false)], cases),
+      rerun: 'crash in run 2',
+    };
+    const r = toResultsJson(first, { first });
+    expect(r.notes.slice(FIXED_NOTES.length)).toEqual([
+      'Measured after an interrupted live run ("crash in run 2") that wrote no results; its recordings stay in eval/recordings/heldout/.',
+    ]);
   });
 
   it('readmeTable fills the medicion template', () => {
@@ -245,7 +257,7 @@ describe('results', () => {
     writeFileSync(errataFile, '# Errata\n\n- 2026-11-12 h-tv-01: before 1, after 0.\n');
     const again = publishHeldout({ resultsDir: dir, errataFile, detail: rerun, cases });
     expect(again.notes.slice(FIXED_NOTES.length)).toEqual([
-      'Rerun heldout-rerun-1.json after "citation crash": Fitcheck wrong purchases paid 1 in heldout.json, 0 in heldout-rerun-1.json.',
+      'Rerun heldout-rerun-1.json after "citation crash". Fitcheck numbers in table order: heldout.json 1 / 0 / 0 / 0 / n/a / 1; heldout-rerun-1.json 0 / 0 / 0 / 0 / n/a / 1. Both files are in eval/results/.',
       'Erratum: 2026-11-12 h-tv-01: before 1, after 0.',
     ]);
     expect(existsSync(join(dir, 'misses.md'))).toBe(true);

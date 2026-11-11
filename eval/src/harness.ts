@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type { AgentPick, Intent, ResultsRow } from '@fitcheck/contracts';
 import type { Deps } from '../../apps/backend/src/deps.js';
@@ -173,15 +173,34 @@ export function replayVerdict(
     : { ok: false, message: `Replay differs from ${committed.file}.` };
 }
 
-/** The held-out set is measured live once; a rerun needs a reason and keeps the first file. */
+/**
+ * The held-out set is measured live once; a rerun needs a reason and keeps the first file. A
+ * live run that started and crashed before writing results counts too: its recordings
+ * directory (eval/recordings/heldout/<stamp>) is the proof it ran.
+ */
 export function guardLiveRun(i: {
   split: 'tuning' | 'heldout';
   resultsDir: string;
+  /** eval/recordings/<split>: where live runs record. */
+  recordingsDir: string;
   rerun?: string;
 }): { ok: true; outFile: string } | { ok: false; message: string } {
   const first = join(i.resultsDir, `${i.split}.json`);
-  if (i.split === 'tuning' || !existsSync(first)) return { ok: true, outFile: first };
-  if (!i.rerun?.trim()) {
+  if (i.split === 'tuning') return { ok: true, outFile: first };
+  const rerun = Boolean(i.rerun?.trim());
+  if (!existsSync(first)) {
+    const started = existsSync(i.recordingsDir) && readdirSync(i.recordingsDir).length > 0;
+    if (started && !rerun) {
+      return {
+        ok: false,
+        message:
+          'A live held-out run already started (eval/recordings/heldout/ is not empty) and wrote ' +
+          'no results. Pass --rerun "<reason>" to measure it again.',
+      };
+    }
+    return { ok: true, outFile: first };
+  }
+  if (!rerun) {
     return {
       ok: false,
       message:

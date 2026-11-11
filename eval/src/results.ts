@@ -80,8 +80,7 @@ export function expectedResults(): ResultsJson {
   };
 }
 
-const fitcheckOf = (rows: ResultsRow[], id: string) =>
-  rows.find((r) => r.id === id)?.fitcheck ?? null;
+const cell = (value: number | null) => (value === null ? 'n/a' : String(value));
 
 /**
  * The served results of a run. A rerun (kept beside the first file) and every erratum add a
@@ -96,12 +95,19 @@ export function toResultsJson(
   } = {},
 ): ResultsJson {
   const notes = [...FIXED_NOTES];
-  for (const rerun of history.reruns ?? []) {
-    const before = history.first ? fitcheckOf(history.first.rows, 'wrong_paid') : null;
-    const after = fitcheckOf(rerun.detail.rows, 'wrong_paid');
+  if (history.first?.rerun) {
     notes.push(
-      `Rerun ${rerun.file} after "${rerun.detail.rerun ?? 'unknown'}": Fitcheck wrong purchases paid ` +
-        `${before ?? 'n/a'} in heldout.json, ${after ?? 'n/a'} in ${rerun.file}.`,
+      `Measured after an interrupted live run ("${history.first.rerun}") that wrote no results; ` +
+        'its recordings stay in eval/recordings/heldout/.',
+    );
+  }
+  // medicion.md §4.5: a rerun publishes both runs, every Fitcheck number of each.
+  const numbers = (rows: ResultsRow[]) => rows.map((r) => cell(r.fitcheck)).join(' / ');
+  for (const rerun of history.reruns ?? []) {
+    notes.push(
+      `Rerun ${rerun.file} after "${rerun.detail.rerun ?? 'unknown'}". Fitcheck numbers in table ` +
+        `order: heldout.json ${history.first ? numbers(history.first.rows) : 'n/a'}; ` +
+        `${rerun.file} ${numbers(rerun.detail.rows)}. Both files are in eval/results/.`,
     );
   }
   for (const erratum of history.errata ?? []) notes.push(`Erratum: ${erratum}`);
@@ -121,7 +127,6 @@ function modelLabel(model: string): string {
   if (!m?.[1]) return model;
   return `Claude ${m[1].charAt(0).toUpperCase()}${m[1].slice(1)} ${m[2]}.${m[3]}`;
 }
-const cell = (value: number | null) => (value === null ? 'n/a' : String(value));
 
 /** The medicion.md §6 "Does it work?" block with the numbers filled in. */
 export function readmeTable(r: ResultsJson): string {

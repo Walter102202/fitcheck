@@ -207,27 +207,36 @@ describe('measurement harness', () => {
 
   it('refuses a second live held-out run without --rerun', () => {
     const dir = mkdtempSync(join(tmpdir(), 'results-'));
-    expect(guardLiveRun({ split: 'heldout', resultsDir: dir })).toEqual({
-      ok: true,
-      outFile: join(dir, 'heldout.json'),
-    });
+    const recordingsDir = join(mkdtempSync(join(tmpdir(), 'recordings-')), 'heldout');
+    const guard = (o: { split?: 'heldout' | 'tuning'; rerun?: string } = {}) =>
+      guardLiveRun({ split: o.split ?? 'heldout', resultsDir: dir, recordingsDir, ...o });
+    expect(guard()).toEqual({ ok: true, outFile: join(dir, 'heldout.json') });
     writeFileSync(join(dir, 'heldout.json'), '{}');
-    const refused = guardLiveRun({ split: 'heldout', resultsDir: dir });
-    expect(refused.ok).toBe(false);
-    expect(guardLiveRun({ split: 'heldout', resultsDir: dir, rerun: 'model outage' })).toEqual({
+    expect(guard().ok).toBe(false);
+    expect(guard({ rerun: 'model outage' })).toEqual({
       ok: true,
       outFile: join(dir, 'heldout-rerun-1.json'),
     });
     writeFileSync(join(dir, 'heldout-rerun-1.json'), '{}');
-    expect(guardLiveRun({ split: 'heldout', resultsDir: dir, rerun: 'again' })).toEqual({
+    expect(guard({ rerun: 'again' })).toEqual({
       ok: true,
       outFile: join(dir, 'heldout-rerun-2.json'),
     });
     writeFileSync(join(dir, 'tuning.json'), '{}');
-    expect(guardLiveRun({ split: 'tuning', resultsDir: dir })).toEqual({
-      ok: true,
-      outFile: join(dir, 'tuning.json'),
-    });
+    expect(guard({ split: 'tuning' })).toEqual({ ok: true, outFile: join(dir, 'tuning.json') });
+  });
+
+  it('a live held-out run that crashed before writing results still blocks a second run', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'results-'));
+    const recordingsDir = join(mkdtempSync(join(tmpdir(), 'recordings-')), 'heldout');
+    // The crashed run left its recordings and no results file.
+    mkdirSync(join(recordingsDir, '20261111-1900', 'run-1'), { recursive: true });
+    const refused = guardLiveRun({ split: 'heldout', resultsDir: dir, recordingsDir });
+    expect(refused.ok).toBe(false);
+    expect(refused.ok === false && refused.message).toContain('--rerun');
+    expect(
+      guardLiveRun({ split: 'heldout', resultsDir: dir, recordingsDir, rerun: 'crash in run 2' }),
+    ).toEqual({ ok: true, outFile: join(dir, 'heldout.json') });
   });
 
   it('refuses an existing recordings directory', () => {
