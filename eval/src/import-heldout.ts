@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { copyFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -68,6 +69,12 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     file = target;
   } else {
     copyFileSync(join(KIT_DIR, 'heldout.json'), HELDOUT_FILE);
+    // Biome-format the copy silently, so `pnpm lint` never prints a diff of held-out content.
+    execFileSync('pnpm', ['exec', 'biome', 'format', '--write', HELDOUT_FILE], {
+      cwd: EVAL_DIR,
+      stdio: 'ignore',
+      shell: process.platform === 'win32',
+    });
   }
   const tuning = z.array(EvalCaseSchema).parse(JSON.parse(readFileSync(TUNING_FILE, 'utf8')));
   let raw: unknown;
