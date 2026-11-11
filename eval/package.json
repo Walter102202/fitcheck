@@ -1,0 +1,27 @@
+{
+  "name": "@fitcheck/eval",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fitcheck's held-out measurement: cases, catalog, harness and results.",
+  "scripts": {
+    "freeze": "tsx --conditions=development src/freeze-cli.ts",
+    "build-catalog": "tsx --conditions=development src/build-catalog.ts",
+    "writer-kit": "tsx --conditions=development src/writer-kit.ts",
+    "import-heldout": "tsx --conditions=development src/import-heldout.ts",
+    "review-table": "tsx --conditions=development src/review-table.ts",
+    "sweep": "tsx --conditions=development src/sweep.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fitcheck/checklists": "workspace:*",
+    "@fitcheck/contracts": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.0"
+  }
+}
