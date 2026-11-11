@@ -18,11 +18,12 @@ export const FactSpecSchema = z.looseObject({
   contradictionScan: z.array(z.string()).optional(),
 });
 
+// Closed shapes (no extra keys in the data), so TypeScript can narrow on the key.
 export const AppliesWhenSchema = z.union([
-  z.looseObject({ always: z.literal(true) }),
-  z.looseObject({ intentHas: z.string(), orCues: z.array(z.string()).optional() }),
-  z.looseObject({ cues: z.array(z.string()).min(1), unlessAlsoApplies: z.string().optional() }),
-  z.looseObject({ productHas: z.string() }),
+  z.object({ always: z.literal(true) }),
+  z.object({ intentHas: z.string(), orCues: z.array(z.string()).optional() }),
+  z.object({ cues: z.array(z.string()).min(1), unlessAlsoApplies: z.string().optional() }),
+  z.object({ productHas: z.string() }),
 ]);
 
 export const FactTestSchema = z.looseObject({
