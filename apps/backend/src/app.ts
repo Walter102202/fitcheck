@@ -1,24 +1,17 @@
-import { API, type ConfigResponse, type PaypalMode } from '@fitcheck/contracts';
+import { API, type ConfigResponse } from '@fitcheck/contracts';
 import { Hono } from 'hono';
 import type { Deps } from './deps.js';
-import { type Env, hasSandboxCredentials } from './env.js';
-
-function paypalModeOf(env: Env): PaypalMode {
-  if (env.PAYPAL_MODE === 'mock') return 'mock';
-  return hasSandboxCredentials(env) ? 'sandbox' : 'simulated';
-}
+import { type Env, paypalModeFor, sandboxBuyerFor } from './env.js';
 
 export function configFrom(env: Env): ConfigResponse {
-  const paypalMode = paypalModeOf(env);
   const config: ConfigResponse = {
-    paypalMode,
+    paypalMode: paypalModeFor(env),
     channel3Mode: env.CHANNEL3_MODE,
     reviewModel: env.REVIEW_MODEL,
     capAmountCents: env.CAP_AMOUNT_CENTS,
   };
-  if (paypalMode === 'sandbox' && env.SANDBOX_BUYER_EMAIL && env.SANDBOX_BUYER_PASSWORD) {
-    config.sandboxBuyer = { email: env.SANDBOX_BUYER_EMAIL, password: env.SANDBOX_BUYER_PASSWORD };
-  }
+  const buyer = sandboxBuyerFor(env);
+  if (buyer) config.sandboxBuyer = buyer;
   return config;
 }
 

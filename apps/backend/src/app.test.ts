@@ -1,6 +1,7 @@
 import { ConfigResponseSchema } from '@fitcheck/contracts';
 import { describe, expect, it } from 'vitest';
 import { createApp } from './app.js';
+import type { Db } from './db/client.js';
 import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { createLogger } from './logger.js';
@@ -10,6 +11,9 @@ function testDeps(source: Record<string, string> = {}): Deps {
     env: loadEnv(source),
     now: () => new Date('2026-11-11T12:00:00.000Z'),
     logger: createLogger({}, { silent: true }),
+    // The skeleton routes never touch the database.
+    db: {} as Db,
+    newId: () => 'id',
   };
 }
 

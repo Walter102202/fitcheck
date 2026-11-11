@@ -1,7 +1,10 @@
+import { randomUUID } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { serve } from '@hono/node-server';
 import { createApp } from './app.js';
+import { migrateWhenReady } from './db/boot.js';
+import { createDb } from './db/client.js';
 import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { createLogger } from './logger.js';
@@ -12,7 +15,9 @@ const envFile = ['.env', '../.env', '../../.env'].map((p) => resolve(p)).find(ex
 if (envFile) process.loadEnvFile(envFile);
 const env = loadEnv();
 const logger = createLogger();
-const deps: Deps = { env, logger, now: () => new Date() };
+const db = await createDb(env.DATABASE_URL);
+await migrateWhenReady(db, logger);
+const deps: Deps = { env, logger, db, now: () => new Date(), newId: randomUUID };
 const app = createApp(deps);
 const server = serve({ fetch: app.fetch, port: env.PORT }, () => {
   logger.info('server.listening', { port: env.PORT, appUrl: env.APP_URL });
