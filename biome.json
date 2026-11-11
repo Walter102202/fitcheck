@@ -6,7 +6,15 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/*.md", "!**/dist", "!**/drizzle", "!**/.data", "!**/coverage", "!fixtures/channel3"]
+    "includes": [
+      "**",
+      "!**/*.md",
+      "!**/dist",
+      "!**/drizzle",
+      "!**/.data",
+      "!**/coverage",
+      "!fixtures/channel3"
+    ]
   },
   "formatter": {
     "enabled": true,
