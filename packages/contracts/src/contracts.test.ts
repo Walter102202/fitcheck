@@ -8,6 +8,7 @@ import {
   formatUsd,
   ProductRecordSchema,
   ResultsJsonSchema,
+  ResultsRowSchema,
   type RunResponse,
   RunResponseSchema,
   runDryerSilent,
@@ -107,6 +108,20 @@ describe('results', () => {
       notes: [],
     };
     expect(ResultsJsonSchema.safeParse(results).success).toBe(true);
+  });
+
+  it('marks a mean row with unit "mean" and rejects other units', () => {
+    const row = {
+      id: 'questions_per_held',
+      label: 'Questions per held purchase',
+      of: 9,
+      capOnly: null,
+      fitcheck: 1.2,
+      squares: { capOnly: [], fitcheck: [] },
+    };
+    expect(ResultsRowSchema.parse({ ...row, unit: 'mean' }).unit).toBe('mean');
+    expect(ResultsRowSchema.parse(row).unit).toBeUndefined();
+    expect(ResultsRowSchema.safeParse({ ...row, unit: 'percent' }).success).toBe(false);
   });
 });
 

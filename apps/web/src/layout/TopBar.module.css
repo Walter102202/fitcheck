@@ -1,0 +1,68 @@
+/* Mockup fitcheck.css lines 164-221, and the 980 px part from 1401-1407. */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  height: 56px;
+}
+
+.wordmark {
+  font-size: var(--t-lg);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-decoration: none;
+  background: linear-gradient(var(--mark), var(--mark)) no-repeat 0 78% / 100% 42%;
+  padding: 0 3px;
+}
+
+.topnav {
+  display: flex;
+  gap: var(--s-5);
+  margin-right: auto;
+}
+
+.topnav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.topnav a[aria-current="page"] {
+  color: var(--ink);
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+.modes {
+  display: flex;
+  gap: var(--s-2);
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.mode {
+  border: 1px solid var(--line);
+  border-radius: var(--r-chip);
+  padding: 2px 8px;
+  background: var(--page);
+}
+
+.mode b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .topnav {
+    display: none;
+  }
+
+  .modes {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,42 @@
+/* The photo frame of the mockup's .pick img and .scenario img (lines 847-861, 591-630). */
+.frame {
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: var(--r-chip);
+  background: #fff;
+  object-fit: contain;
+}
+
+.frame[data-photo="none"] {
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+}
+
+.frame[data-size="112"] {
+  width: 112px;
+  height: 112px;
+}
+
+.frame[data-size="72"] {
+  width: 72px;
+  height: 72px;
+}
+
+.frame[data-size="56"] {
+  width: 56px;
+  height: 56px;
+}
+
+/* Mockup lines 1366-1369 and 1384-1395: smaller photos in one column. */
+@media (max-width: 980px) {
+  .frame[data-size="112"] {
+    width: 80px;
+    height: 80px;
+  }
+
+  .frame[data-size="72"] {
+    width: 56px;
+    height: 56px;
+  }
+}

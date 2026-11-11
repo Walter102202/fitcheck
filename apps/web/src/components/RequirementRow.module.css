@@ -1,0 +1,61 @@
+/* Mockup fitcheck.css lines 876-925, and the 980 px part from 1348-1352. */
+.check {
+  display: grid;
+  grid-template-columns: 172px 190px minmax(0, 1fr);
+  gap: var(--s-4);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+  animation: rise 0.3s var(--ease) both;
+  animation-delay: var(--d, 0s);
+}
+
+.evidence {
+  display: grid;
+  gap: var(--s-2);
+  min-width: 0;
+}
+
+.check[data-wide] {
+  grid-template-columns: 172px minmax(0, 1fr);
+}
+
+.check[data-wide] .evidence {
+  grid-column: 1 / -1;
+}
+
+.req b {
+  display: block;
+  font-weight: 700;
+}
+
+.req span {
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.check[data-flag] {
+  background: linear-gradient(var(--page), var(--page)) no-repeat 0 0 / 100% 100%;
+  margin: 0 calc(var(--s-5) * -1);
+  padding-left: var(--s-5);
+  padding-right: var(--s-5);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .check,
+  .check[data-wide] {
+    grid-template-columns: 1fr;
+    gap: var(--s-2);
+  }
+}

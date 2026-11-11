@@ -1,0 +1,209 @@
+/* Mockup fitcheck.css lines 1129-1308, and .ledger from the 980 px block (1340-1342). */
+.ledger {
+  position: sticky;
+  top: var(--s-4);
+  background: var(--ledger-bg);
+  color: var(--ledger-ink);
+  border-radius: var(--r-panel);
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-5);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.head h2 {
+  font-size: var(--t-lg);
+  font-weight: 800;
+}
+
+.head span {
+  font-size: var(--t-xs);
+  color: var(--ledger-faint);
+  border: 1px solid var(--ledger-line);
+  border-radius: var(--r-chip);
+  padding: 1px 7px;
+}
+
+.capFigure {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: var(--t-xs);
+  color: var(--ledger-faint);
+}
+
+.capFigure b {
+  font-family: var(--mono);
+  font-size: var(--t-xl);
+  font-weight: 600;
+  color: var(--ledger-ink);
+}
+
+.meter {
+  margin-top: var(--s-2);
+  height: 12px;
+  border-radius: 3px;
+  background: var(--ledger-line);
+  display: flex;
+  overflow: hidden;
+}
+
+.meter i {
+  display: block;
+  height: 100%;
+  transition: width 0.5s var(--ease);
+}
+
+.meter [data-bar="captured"] {
+  background: var(--ledger-captured);
+}
+
+.meter [data-bar="captured"][data-some] {
+  min-width: 6px; /* a small capture must still be visible */
+}
+
+.meter [data-bar="held"] {
+  background: repeating-linear-gradient(135deg, var(--ledger-held) 0 5px, #b9820f 5px 10px);
+}
+
+.split {
+  margin-top: var(--s-3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-2);
+  font-size: var(--t-xs);
+  color: var(--ledger-faint);
+}
+
+.split b {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ledger-ink);
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+.dot[data-dot="captured"] {
+  background: var(--ledger-captured);
+}
+
+.dot[data-dot="held"] {
+  background: var(--ledger-held);
+}
+
+.dot[data-dot="available"] {
+  background: var(--ledger-line);
+}
+
+.events {
+  display: grid;
+}
+
+.ev {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr) auto;
+  gap: 2px var(--s-3);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--ledger-line);
+  animation: rise 0.3s var(--ease) both;
+  animation-delay: var(--d, 0s);
+}
+
+.pip {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-top: 6px;
+  background: var(--ledger-faint);
+}
+
+.ev[data-type="authorized"] .pip {
+  background: var(--ledger-auth);
+}
+
+.ev[data-type="held"] .pip {
+  background: var(--ledger-held);
+}
+
+.ev[data-type="captured"] .pip {
+  background: var(--ledger-captured);
+}
+
+.ev[data-type="not_captured"] .pip {
+  background: transparent;
+  border: 2px solid var(--ledger-ink);
+}
+
+.what {
+  font-weight: 700;
+}
+
+.amt {
+  font-family: var(--mono);
+  font-weight: 600;
+  text-align: right;
+}
+
+.ev[data-type="not_captured"] .amt {
+  text-decoration: line-through;
+  color: var(--ledger-faint);
+}
+
+.why,
+.call {
+  grid-column: 2 / -1;
+  font-size: var(--t-xs);
+  color: var(--ledger-faint);
+}
+
+.call {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.baseline {
+  border: 1px dashed var(--ledger-faint);
+  border-radius: var(--r-chip);
+  padding: var(--s-3);
+  font-size: var(--t-xs);
+  color: var(--ledger-faint);
+}
+
+.baseline b {
+  display: block;
+  color: var(--ledger-ink);
+  font-size: var(--t-sm);
+  margin-bottom: 2px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .ledger {
+    position: static;
+  }
+}

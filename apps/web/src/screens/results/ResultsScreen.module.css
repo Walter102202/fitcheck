@@ -1,0 +1,52 @@
+/* The mockup's results view (index.html, #results): run-head, legend, one .sheet of metrics. */
+.head {
+  padding: var(--s-6) 0 var(--s-5);
+  display: grid;
+  gap: var(--s-4);
+}
+
+.title {
+  font-size: var(--t-2xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  max-width: 26em;
+}
+
+.lede {
+  font-size: var(--t-md);
+  color: var(--ink-2);
+  max-width: 46em;
+}
+
+.sheet {
+  margin-bottom: var(--s-8);
+}
+
+.limits {
+  padding: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+
+.limits h2 {
+  font-size: var(--t-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.limits p {
+  color: var(--ink-2);
+  max-width: 60em;
+  margin-top: var(--s-2);
+}
+
+.limits p:global(.note) {
+  margin-top: var(--s-3);
+}
+
+.error {
+  display: grid;
+  gap: var(--s-4);
+  justify-items: start;
+  margin-bottom: var(--s-8);
+}

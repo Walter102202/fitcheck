@@ -1,0 +1,30 @@
+/* Mockup fitcheck.css lines 791-824. */
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  padding: var(--s-5);
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.n {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+}
+
+.title h2 {
+  font-size: var(--t-lg);
+  font-weight: 800;
+}
+
+.aside {
+  margin-left: auto;
+  text-align: right;
+}

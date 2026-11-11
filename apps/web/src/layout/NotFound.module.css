@@ -1,0 +1,9 @@
+.page {
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-7);
+}
+
+.title {
+  font-size: var(--t-2xl);
+  margin-bottom: var(--s-4);
+}
