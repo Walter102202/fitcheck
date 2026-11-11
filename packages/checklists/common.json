@@ -273,7 +273,7 @@
       },
       "check": "code",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "The agent ordered {purchaseQuantity}; you asked for {quantity}."
+      "reasonTemplate": "The agent ordered {purchaseQuantity}; the buyer asked for {quantity}."
     },
     {
       "id": "common.variant_pinned",
@@ -309,7 +309,7 @@
       },
       "check": "code",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "{domain} is not among the stores you allowed."
+      "reasonTemplate": "{domain} is not among the stores the buyer allowed."
     },
     {
       "id": "common.no_duplicate",
@@ -345,7 +345,7 @@
       "check": "code",
       "ifMissing": "ask",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "It is a {brand}; you asked for {intentBrand}.",
+      "reasonTemplate": "It is a {brand}; the buyer asked for {intentBrand}.",
       "line": {
         "unbacked": "The listing does not name the brand. Is that OK?"
       }

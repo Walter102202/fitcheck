@@ -1,11 +1,13 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
+import { quoted } from './examples/shared.js';
 import {
   API,
   type Evidence,
   formatUsd,
   ProductRecordSchema,
+  ResultsJsonSchema,
   type RunResponse,
   RunResponseSchema,
   runDryerSilent,
@@ -81,6 +83,54 @@ describe('example runs', () => {
       if (item.path === 'title' || item.path === 'description') {
         expect(item.text.length).toBeLessThanOrEqual(160);
       }
+    }
+  });
+});
+
+describe('results', () => {
+  it('accepts a decimal row such as questions per held purchase', () => {
+    const results = {
+      measuredAt: '2026-11-11T21:00:00.000Z',
+      model: 'claude-sonnet-5-5',
+      recordedOn: '2026-11-11',
+      heldOutCommit: 'abc1234',
+      rows: [
+        {
+          id: 'questions_per_held',
+          label: 'Questions per held purchase',
+          of: 0,
+          capOnly: null,
+          fitcheck: 1.2,
+          squares: { capOnly: [], fitcheck: [] },
+        },
+      ],
+      notes: [],
+    };
+    expect(ResultsJsonSchema.safeParse(results).success).toBe(true);
+  });
+});
+
+describe('example evidence excerpts', () => {
+  it('cuts the ANIQ description to the sentence holding the quote', () => {
+    const evidence = runDryerSpain.attempts[0]?.review.results.find(
+      (r) => r.requirement === 'hair_dryer.dual_voltage',
+    )?.evidence[0];
+    expect(evidence?.text).toBe('Note: For use with 110V–120V outlets only.');
+    expect(evidence?.text.slice(evidence.start, evidence.end)).toBe(
+      'Note: For use with 110V–120V outlets only.',
+    );
+  });
+
+  it('windows a long sentence at word boundaries with ellipses', () => {
+    const words = Array.from({ length: 80 }, (_, i) => `word${i}`).join(' ');
+    const evidence = quoted('description', 'Description', words, 'word40', 'x', 'x');
+    expect(evidence.text.length).toBeLessThanOrEqual(160);
+    expect(evidence.text.startsWith('…')).toBe(true);
+    expect(evidence.text.endsWith('…')).toBe(true);
+    expect(evidence.text.slice(evidence.start, evidence.end)).toBe('word40');
+    const all = new Set(words.split(' '));
+    for (const token of evidence.text.slice(1, -1).trim().split(' ')) {
+      expect(all.has(token)).toBe(true);
     }
   });
 });

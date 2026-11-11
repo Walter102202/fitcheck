@@ -1,0 +1,127 @@
+# CI gates for every push and pull request: lint, typecheck and tests; a production build that boots;
+# and a hygiene job that keeps private files and secrets out of the repo. Render deploys a commit on
+# `main` only after this run passes (render.yaml, autoDeployTrigger: checksPass).
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+# A new push to the same branch cancels the run still going for the previous commit, except on
+# `main`, where every commit keeps its own verdict.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: checks (lint, typecheck, test)
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+
+  build:
+    name: build (production build, migrations, boot)
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Committed migrations match the schema
+        run: |
+          pnpm --filter @fitcheck/backend exec drizzle-kit generate
+          git add --intent-to-add apps/backend/drizzle
+          if ! git diff --exit-code --stat -- apps/backend/drizzle; then
+            echo "::error::schema.ts changed without a committed migration. Run 'pnpm --filter @fitcheck/backend exec drizzle-kit generate' and commit apps/backend/drizzle."
+            exit 1
+          fi
+
+      - run: pnpm build
+
+      # Mock PayPal, mock model and recorded Channel3: the defaults, so no secret is needed here.
+      - name: Built server boots, answers /healthz and serves the web
+        env:
+          DATABASE_URL: pglite://memory
+          PORT: 3999
+        run: |
+          node apps/backend/dist/index.js > boot.log 2>&1 &
+          server=$!
+          reason="the built server did not answer /healthz within 30 seconds"
+          for _ in $(seq 1 30); do
+            if curl -sf http://localhost:3999/healthz > /dev/null; then
+              reason=""
+              break
+            fi
+            sleep 1
+          done
+          if [ -z "$reason" ] && ! curl -sf http://localhost:3999/ | grep -qi '<!doctype html'; then
+            reason="the built server answers /healthz but does not serve the web build at /"
+          fi
+          kill "$server" 2>/dev/null || true
+          if [ -n "$reason" ]; then
+            echo "::error::$reason"
+            cat boot.log
+            exit 1
+          fi
+
+  hygiene:
+    name: hygiene (secrets, tracked files)
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the secret scan below walks the whole history
+
+      - name: No private or ignored file is tracked
+        run: |
+          tracked=$(git ls-files | grep -E '^docs/hackathon/|(^|/)\.env$|(^|/)\.env\.|\.(pem|key|p12|pfx)$' | grep -vE '(^|/)\.env\.example$' || true)
+          if [ -n "$tracked" ]; then
+            echo "::error::private files are tracked:"
+            echo "$tracked"
+            exit 1
+          fi
+          for pattern in 'docs/hackathon/' '.env' '.data/'; do
+            if ! grep -qxF "$pattern" .gitignore; then
+              echo "::error::.gitignore no longer lists '$pattern'."
+              exit 1
+            fi
+          done
+
+      # The gitleaks CLI, pinned by version and verified against the release checksums, scans every
+      # commit of every branch.
+      - name: Secret scan over the whole history
+        env:
+          GITLEAKS_VERSION: 8.30.1
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          cd "$RUNNER_TEMP/gitleaks"
+          gh release download "v$GITLEAKS_VERSION" --repo gitleaks/gitleaks \
+            --pattern "gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            --pattern "gitleaks_${GITLEAKS_VERSION}_checksums.txt"
+          grep " gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz$" "gitleaks_${GITLEAKS_VERSION}_checksums.txt" | sha256sum --check --strict
+          tar -xzf "gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" gitleaks
+          cd "$GITHUB_WORKSPACE"
+          "$RUNNER_TEMP/gitleaks/gitleaks" git --redact --verbose --no-banner --exit-code 1 .
