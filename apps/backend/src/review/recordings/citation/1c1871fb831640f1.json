@@ -1,0 +1,21 @@
+{
+  "kind": "citation",
+  "key": "1c1871fb831640f1",
+  "input": {
+    "productId": "cv7t721",
+    "requirements": ["hair_dryer.dual_voltage"]
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T04:10:00.000Z",
+  "attempts": {
+    "1": {
+      "citations": [
+        {
+          "requirement": "hair_dryer.dual_voltage",
+          "path": "description",
+          "quote": "Note: For use with 110V–120V outlets only."
+        }
+      ]
+    }
+  }
+}
