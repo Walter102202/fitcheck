@@ -1,3 +1,4 @@
+import type { PaypalMode } from '@fitcheck/contracts';
 import { z } from 'zod';
 
 const DEFAULT_SESSION_SECRET = 'dev-only-secret-change-me';
@@ -31,6 +32,12 @@ export const EnvSchema = z
     PORT: z.coerce.number().int().min(1).max(65535).default(3000),
     SESSION_SECRET: z.string().min(1).default(DEFAULT_SESSION_SECRET),
     CAP_AMOUNT_CENTS: z.coerce.number().int().positive().default(300000),
+    /** A session idle this long gets its cap voided in PayPal by the stale-cap sweep. */
+    CAP_IDLE_VOID_MINUTES: z.coerce.number().int().positive().default(120),
+    /** Signs the webhooks the simulated gateway delivers to itself. */
+    MOCK_WEBHOOK_SECRET: z.string().min(1).default('mock-webhook-secret'),
+    /** Where GET /api/results reads latest.json; defaults to the repo's eval/results. */
+    EVAL_RESULTS_DIR: z.string().optional(),
     SANDBOX_BUYER_EMAIL: z.string().optional(),
     SANDBOX_BUYER_PASSWORD: z.string().optional(),
     WEB_DIST_DIR: z.string().optional(),
@@ -78,4 +85,17 @@ export function loadEnv(source: Record<string, string | undefined> = process.env
 /** True when sandbox mode has the credentials it needs; otherwise sessions run simulated. */
 export function hasSandboxCredentials(env: Env): boolean {
   return Boolean(env.PAYPAL_CLIENT_ID?.trim() && env.PAYPAL_CLIENT_SECRET?.trim());
+}
+
+/** The mode new caps use: mock in tests, sandbox with credentials, simulated otherwise. */
+export function paypalModeFor(env: Env): PaypalMode {
+  if (env.PAYPAL_MODE === 'mock') return 'mock';
+  return hasSandboxCredentials(env) ? 'sandbox' : 'simulated';
+}
+
+/** The sandbox test buyer for the cap screen; null unless the session would use the sandbox. */
+export function sandboxBuyerFor(env: Env): { email: string; password: string } | null {
+  if (paypalModeFor(env) !== 'sandbox') return null;
+  if (!env.SANDBOX_BUYER_EMAIL || !env.SANDBOX_BUYER_PASSWORD) return null;
+  return { email: env.SANDBOX_BUYER_EMAIL, password: env.SANDBOX_BUYER_PASSWORD };
 }
