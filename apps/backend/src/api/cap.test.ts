@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { createApp } from '../app.js';
 import { caps } from '../db/schema.js';
 import { getCap, listCapEvents } from '../ledger/caps.js';
-import { PaypalError, type PaypalGateway } from '../paypal/index.js';
+import { createPaypalGateways, PaypalError, type PaypalGateway } from '../paypal/index.js';
 import { createHarness } from '../runs/harness.js';
 import { PAYPAL_SIMULATED_NOTICE } from '../runs/runs.js';
 
@@ -341,5 +341,56 @@ describe('cap API', () => {
     const res = await postJson(app, '/api/session/reset', cookie);
     expect(res.status).toBe(204);
     expect(cookieFrom(res)).not.toBe(cookie);
+  });
+
+  /** A server restart: a new simulated gateway that never saw the old orders. */
+  function restart() {
+    h.deps.paypal.simulated = createPaypalGateways(h.deps.env, {
+      logger: h.deps.logger,
+      bootId: 'restart1',
+      deliverWebhook: undefined,
+    }).simulated;
+  }
+
+  it('after a restart, POST /api/cap replaces a pending simulated cap', async () => {
+    h = await createHarness({ env: FALLBACK_ENV });
+    const app = createApp(h.deps);
+    const cookie = await visitor(app);
+    const old = await openCap(app, cookie, { scenarioId: 'tv-sony' });
+    restart();
+    const fresh = await openCap(app, cookie, { scenarioId: 'tv-sony' });
+    expect(fresh.capId).not.toBe(old.capId);
+    expect(fresh.status).toBe('pending_approval');
+    expect(fresh.approveUrl).toMatch(/token=SIM-restart1-/);
+    expect((await getCap(h.deps, old.capId)).status).toBe('expired');
+  });
+
+  it('after a restart, approving the forgotten order expires the cap and shows the error', async () => {
+    h = await createHarness({ env: FALLBACK_ENV });
+    const app = createApp(h.deps);
+    const cookie = await visitor(app);
+    const old = await openCap(app, cookie, { scenarioId: 'tv-sony' });
+    const token = tokenOf(old.approveUrl);
+    restart();
+    const approve = await postJson(
+      app,
+      `/api/cap/approve-simulated?token=${encodeURIComponent(token)}`,
+      cookie,
+    );
+    expect(approve.status).toBe(303);
+    expect(approve.headers.get('location')).toBe('/cap?error=paypal');
+    expect((await getCap(h.deps, old.capId)).status).toBe('expired');
+    expect(await currentCap(app, cookie)).toMatchObject({ status: 'expired' });
+  });
+
+  it('after a restart, the PayPal return of the forgotten order expires the cap', async () => {
+    h = await createHarness({ env: FALLBACK_ENV });
+    const app = createApp(h.deps);
+    const cookie = await visitor(app);
+    const old = await openCap(app, cookie, { scenarioId: 'tv-sony' });
+    restart();
+    const back = await capReturn(app, cookie, tokenOf(old.approveUrl));
+    expect(back.headers.get('location')).toBe('/cap?error=paypal');
+    expect((await getCap(h.deps, old.capId)).status).toBe('expired');
   });
 });

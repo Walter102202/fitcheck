@@ -43,8 +43,17 @@ async function approveAndAuthorize(deps: Deps, row: OwnCap): Promise<boolean> {
   } catch (error) {
     if (!(error instanceof PaypalError)) throw error;
     deps.logger.warn('caps.approval_failed', { capId: row.id, code: error.code });
+    await expireIfForgotten(deps, row, error);
     return false;
   }
+}
+
+/**
+ * A simulated order a restart forgot can never be approved: the cap expires, so the next
+ * POST /api/cap opens a new one instead of handing back the dead one.
+ */
+async function expireIfForgotten(deps: Deps, row: OwnCap, error: PaypalError): Promise<void> {
+  if (row.mode !== 'sandbox' && error.status === 404) await expireCap(deps, row.id);
 }
 
 export function capRoutes(deps: Deps): Hono<ApiEnv> {
@@ -66,7 +75,14 @@ export function capRoutes(deps: Deps): Hono<ApiEnv> {
       const token = c.req.query('token');
       const row = await ownCap(deps, c.var.sessionId, token);
       if (row?.mode !== 'simulated') throw capNotFound();
-      await deps.paypal.simulated.approve(row.orderId);
+      try {
+        await deps.paypal.simulated.approve(row.orderId);
+      } catch (error) {
+        if (!(error instanceof PaypalError)) throw error;
+        deps.logger.warn('caps.approval_failed', { capId: row.id, code: error.code });
+        await expireIfForgotten(deps, row, error);
+        return c.redirect(RETURN_FAILED, 303);
+      }
       return c.redirect(`${API.capReturn}?token=${encodeURIComponent(row.orderId)}`, 303);
     })
     .get(API.capReturn, async (c) => {
