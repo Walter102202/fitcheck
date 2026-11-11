@@ -1,0 +1,44 @@
+/* Mockup fitcheck.css lines 598-630, and the 980 px part from 1362-1375. */
+.scenario {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto auto;
+  gap: var(--s-4);
+  align-items: center;
+  padding: var(--s-4) var(--s-5);
+}
+
+.scenario + .scenario {
+  border-top: 1px solid var(--line);
+}
+
+.scenario q {
+  display: block;
+  font-size: var(--t-md);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.picks {
+  margin-top: 2px;
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.endsIn {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+@media (max-width: 980px) {
+  .scenario {
+    grid-template-columns: 56px minmax(0, 1fr);
+  }
+
+  .chip,
+  .run {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
