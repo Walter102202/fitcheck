@@ -9,15 +9,21 @@ export function delayStyle(ms: number | undefined): CSSProperties | undefined {
   return ms === undefined ? undefined : ({ '--d': `${ms}ms` } as CSSProperties);
 }
 
-/** A field of the product record, quoted, with the cited range highlighted. */
+/**
+ * A field of the product record, quoted, with the cited range highlighted. The head names the
+ * field and its record path (`field`), or, for a reader with no context such as the Home
+ * specimen, says it comes from the store's listing and leaves the path out (`listing`).
+ */
 export function Quote({
   evidence,
   tone,
   markDelayMs,
+  head = 'field',
 }: {
   evidence: Evidence;
   tone: Tone;
   markDelayMs?: number;
+  head?: 'field' | 'listing';
 }) {
   const { text } = evidence;
   const s = Math.min(Math.max(evidence.start, 0), text.length);
@@ -25,7 +31,13 @@ export function Quote({
   return (
     <figure className={styles.cite} data-tone={tone}>
       <div className={styles.head}>
-        {evidence.label} <span className={styles.path}>{evidence.path}</span>
+        {head === 'listing' ? (
+          `${evidence.label}, from the store’s listing`
+        ) : (
+          <>
+            {evidence.label} <span className={styles.path}>{evidence.path}</span>
+          </>
+        )}
       </div>
       <blockquote>
         {text.slice(0, s)}

@@ -32,6 +32,12 @@ test('highlights exactly the cited range and names the field', () => {
   expect(container.firstElementChild).toHaveAttribute('data-tone', 'clash');
 });
 
+test('a listing head names the field for a reader and never shows the path', () => {
+  render(<Quote evidence={sizeFeature} tone="broken" head="listing" />);
+  expect(screen.getByText('Features, line 4, from the store’s listing')).toBeInTheDocument();
+  expect(screen.queryByText('key_features[3]')).toBeNull();
+});
+
 test('the mark carries its tone and its delay', () => {
   const { container } = render(<Quote evidence={sizeFeature} tone="broken" markDelayMs={450} />);
   const mark = container.querySelector('mark') as HTMLElement;

@@ -31,6 +31,25 @@ test('a mean row passes its unit down: the value alone, and cap-only does not ap
   expect(screen.queryByText(/of 9/)).toBeNull();
 });
 
+test('before the run, a mean row: cap-only does not apply, Fitcheck is not measured yet', () => {
+  const row: ResultsRow = {
+    id: 'questions_per_held',
+    label: 'Questions per held purchase',
+    of: 0,
+    unit: 'mean',
+    capOnly: null,
+    fitcheck: null,
+    squares: { capOnly: [], fitcheck: [] },
+  };
+  render(<ResultsMetrics rows={[row]} headingLevel={2} />);
+  expect(
+    screen.getByRole('img', { name: 'Does not apply: Questions per held purchase' }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('img', { name: 'Not measured yet: Questions per held purchase' }),
+  ).toBeInTheDocument();
+});
+
 test('the heading level follows the page', () => {
   render(<ResultsMetrics rows={FIXTURE_RESULTS.rows.slice(0, 1)} headingLevel={2} />);
   expect(

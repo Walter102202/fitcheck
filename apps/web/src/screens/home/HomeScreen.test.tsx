@@ -27,6 +27,15 @@ test('the hero shows the headline and the dryer that does not work in Spain', ()
   ).toBeInTheDocument();
 });
 
+test('the specimen quote says where the line comes from, without the field path', () => {
+  renderApp({ route: '/' });
+  const specimen = screen.getByRole('figure', {
+    name: 'Example: a hair dryer that does not work in Spain',
+  });
+  expect(within(specimen).getByText('Description, from the store’s listing')).toBeInTheDocument();
+  expect(specimen.textContent).not.toMatch(/Description\s+description/);
+});
+
 test('Run the first purchase goes to the first scenario', async () => {
   renderApp({ route: '/' });
   expect(await screen.findByRole('link', { name: 'Run the first purchase' })).toHaveAttribute(

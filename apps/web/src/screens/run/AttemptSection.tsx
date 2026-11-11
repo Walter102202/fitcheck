@@ -23,7 +23,7 @@ function RecordLine({ record }: { record: Attempt['review']['record'] }) {
   const when =
     record.source === 'live'
       ? `Record fetched again from Channel3 at ${formatClock(record.fetchedAt)}.`
-      : `Record from the Channel3 copy recorded on ${record.recordedOn ?? record.fetchedAt.slice(0, 10)}.`;
+      : `Copy recorded from Channel3 on ${record.recordedOn ?? record.fetchedAt.slice(0, 10)}.`;
   return (
     <>
       {when}
@@ -155,7 +155,9 @@ export function AttemptSection({
       <Step
         n={3}
         title={off ? 'Fitcheck review is off' : 'Fitcheck checked the listing'}
-        {...(off || !result.record ? {} : { aside: <RecordLine record={result.record} /> })}
+        {...(off || result.failedClosed || !result.record
+          ? {}
+          : { aside: <RecordLine record={result.record} /> })}
       >
         {checked}
       </Step>

@@ -32,7 +32,7 @@ export function Specimen({ run }: { run: RunResponse }) {
             <RequirementChip state="broken" />
             <b>{broken.name}</b>
           </div>
-          <Quote evidence={evidence} tone="broken" markDelayMs={600} />
+          <Quote evidence={evidence} tone="broken" markDelayMs={600} head="listing" />
         </div>
       )}
       <div className={styles.specimenFoot}>
