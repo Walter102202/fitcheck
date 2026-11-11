@@ -1,0 +1,33 @@
+{
+  "records": 69,
+  "rows": [
+    {
+      "requirement": "tv.wall_mount",
+      "name": "Fits the wall mount the buyer already has",
+      "records": 45,
+      "missing": 15,
+      "disagrees": 5
+    },
+    {
+      "requirement": "tv.fits_space",
+      "name": "Fits the spot it goes in",
+      "records": 45,
+      "missing": 16,
+      "disagrees": 4
+    },
+    {
+      "requirement": "hair_dryer.dual_voltage",
+      "name": "Works on 220-240 V outlets abroad",
+      "records": 24,
+      "missing": 16,
+      "disagrees": 0
+    },
+    {
+      "requirement": "hair_dryer.diffuser",
+      "name": "Comes with a diffuser",
+      "records": 24,
+      "missing": 2,
+      "disagrees": 1
+    }
+  ]
+}
