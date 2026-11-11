@@ -80,7 +80,7 @@
       "check": "code_with_model_citation",
       "ifMissing": "ask",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "It is a {screenSizeIn}-inch TV; you asked for {intentValue} inches.",
+      "reasonTemplate": "It is a {screenSizeIn}-inch TV; the buyer asked for {intentValue} inches.",
       "line": {
         "unbacked": "The listing does not confirm the screen size. Is that OK?",
         "contradictory": "The listing gives two screen sizes: {conflicts}. Is that OK?"
@@ -102,7 +102,7 @@
       "check": "code",
       "ifMissing": "ask",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "It is {resolutionMax}; you asked for {intentValue}.",
+      "reasonTemplate": "It is {resolutionMax}; the buyer asked for {intentValue}.",
       "line": {
         "unbacked": "The listing does not confirm the resolution is {intentValue}. Is that OK?"
       }
@@ -123,7 +123,7 @@
       "check": "code",
       "ifMissing": "ask",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "It is an {panelFamily} TV; you asked for {intentValue}.",
+      "reasonTemplate": "It is an {panelFamily} TV; the buyer asked for {intentValue}.",
       "line": {
         "unbacked": "The listing does not say what kind of screen it has. Is that OK?",
         "contradictory": "The listing says {conflicts}, which are different screen technologies. Is that OK?"

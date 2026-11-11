@@ -5,7 +5,9 @@ export interface Logger {
   error(msg: string, fields?: Fields): void;
   child(bindings: Fields): Logger;
 }
-const SECRET_KEYS = /^(token|authorization|secret|password|clientSecret|apiKey)$/i;
+// Substrings, so access_token, x-api-key and PAYPAL_CLIENT_SECRET are caught; "authorization"
+// only as the whole key, so PayPal's authorizationId stays readable.
+const SECRET_KEYS = /token|secret|password|api[-_]?key|^authorization$/i;
 export function redact(fields: Fields): Fields {
   const visit = (value: unknown): unknown => {
     if (Array.isArray(value)) return value.map(visit);
