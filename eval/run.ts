@@ -120,13 +120,15 @@ function plan(): Plan {
   if (split === 'heldout' && !heldOutCommit(REPO_ROOT)) {
     fail('Commit eval/cases/heldout.json and heldout.sha256 before the live held-out run.');
   }
+  const recordingsBase = join(EVAL_DIR, 'recordings', split);
   const guard = guardLiveRun({
     split,
     resultsDir,
+    recordingsDir: recordingsBase,
     ...(values.rerun ? { rerun: values.rerun } : {}),
   });
   if (!guard.ok) return fail(guard.message);
-  const dir = join(EVAL_DIR, 'recordings', split, runStamp(new Date()));
+  const dir = join(recordingsBase, runStamp(new Date()));
   const claimed = claimRecordingsDir(dir);
   if (!claimed.ok) return fail(claimed.message);
   return {
@@ -180,13 +182,16 @@ for (const row of measured.rows) {
 }
 
 if (p.kind === 'live' && split === 'heldout') {
-  publishHeldout({
+  const latest = publishHeldout({
     resultsDir,
     errataFile: join(EVAL_DIR, 'cases', 'errata.md'),
     detail: results,
     cases,
   });
   console.log('Wrote eval/results/latest.json and eval/results/misses.md.');
+  // Counts only: the sentence under the README table.
+  const stops = latest.notes.find((note) => note.startsWith('Of the '));
+  if (stops) console.log(stops);
 }
 
 if (p.kind === 'replay' && p.committed) {

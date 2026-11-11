@@ -149,7 +149,13 @@ export async function openCap(
   i: { sessionId: string; returnScenarioId: string | null },
 ): Promise<Cap> {
   const latest = await latestCapForSession(d, i.sessionId);
-  if (latest && (latest.status === 'pending_approval' || latest.status === 'active')) return latest;
+  if (latest?.status === 'active') return latest;
+  if (latest?.status === 'pending_approval') {
+    if (await simulatedOrderKnown(d, latest.capId)) return latest;
+    // A restart forgot the simulated order: the buyer could never approve it.
+    d.logger.warn('caps.pending_order_forgotten', { capId: latest.capId });
+    await expireCap(d, latest.capId);
+  }
   const base = {
     sessionId: i.sessionId,
     amountCents: d.env.CAP_AMOUNT_CENTS,
@@ -164,6 +170,25 @@ export async function openCap(
     if (!(error instanceof PaypalError)) throw error;
     d.logger.warn('paypal.sandbox_fallback', { code: error.code, status: error.status });
     return createCap(d, { ...base, mode: 'simulated', fallback: true });
+  }
+}
+
+/**
+ * False only for a simulated (or mock) cap whose order the in-memory gateway no longer has,
+ * which happens after a server restart. Sandbox orders live at PayPal and are always kept.
+ */
+async function simulatedOrderKnown(d: LedgerDeps, capId: string): Promise<boolean> {
+  const [row] = await d.db
+    .select({ mode: caps.mode, orderId: caps.orderId })
+    .from(caps)
+    .where(eq(caps.id, capId));
+  if (!row?.orderId || row.mode === 'sandbox') return true;
+  try {
+    await d.paypal.simulated.getOrder(row.orderId);
+    return true;
+  } catch (error) {
+    if (error instanceof PaypalError && error.status === 404) return false;
+    throw error;
   }
 }
 

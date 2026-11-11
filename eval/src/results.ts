@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { ResultsJson, ResultsRow, SquareState } from '@fitcheck/contracts';
 import type { EvalCase } from './case-schema.js';
-import type { CaseRunOutcome } from './measures.js';
+import { type CaseRunOutcome, type WrongStops, wrongStops } from './measures.js';
 
 /** eval/results/<split>.json: everything a run measured, with the rows it computed. */
 export type RunDetail = {
@@ -80,8 +80,20 @@ export function expectedResults(): ResultsJson {
   };
 }
 
-const fitcheckOf = (rows: ResultsRow[], id: string) =>
-  rows.find((r) => r.id === id)?.fitcheck ?? null;
+const cell = (value: number | null) => (value === null ? 'n/a' : String(value));
+
+type Stops = Pick<WrongStops, 'notPaid' | 'rightReason'>;
+const STOPS_PREFIX = 'Of the ';
+
+/** The sentence under the README table (lead ruling on the final review, Important 5). */
+export function stopsSentence(s: Stops): string {
+  const one = s.notPaid === 1;
+  return (
+    `${STOPS_PREFIX}${s.notPaid} wrong purchase${one ? '' : 's'} Fitcheck did not pay, ` +
+    `${s.rightReason} ${s.rightReason === 1 ? 'was' : 'were'} stopped for the requirement that ` +
+    `made ${one ? 'it' : 'them'} wrong; the rest are listed in eval/results/misses.md.`
+  );
+}
 
 /**
  * The served results of a run. A rerun (kept beside the first file) and every erratum add a
@@ -93,15 +105,25 @@ export function toResultsJson(
     first?: RunDetail;
     reruns?: { file: string; detail: RunDetail }[];
     errata?: string[];
+    /** Unpaid wrong case-runs, and how many were stopped for their broken key. */
+    stops?: Stops;
   } = {},
 ): ResultsJson {
   const notes = [...FIXED_NOTES];
-  for (const rerun of history.reruns ?? []) {
-    const before = history.first ? fitcheckOf(history.first.rows, 'wrong_paid') : null;
-    const after = fitcheckOf(rerun.detail.rows, 'wrong_paid');
+  if (history.stops && history.stops.notPaid > 0) notes.push(stopsSentence(history.stops));
+  if (history.first?.rerun) {
     notes.push(
-      `Rerun ${rerun.file} after "${rerun.detail.rerun ?? 'unknown'}": Fitcheck wrong purchases paid ` +
-        `${before ?? 'n/a'} in heldout.json, ${after ?? 'n/a'} in ${rerun.file}.`,
+      `Measured after an interrupted live run ("${history.first.rerun}") that wrote no results; ` +
+        'its recordings stay in eval/recordings/heldout/.',
+    );
+  }
+  // medicion.md §4.5: a rerun publishes both runs, every Fitcheck number of each.
+  const numbers = (rows: ResultsRow[]) => rows.map((r) => cell(r.fitcheck)).join(' / ');
+  for (const rerun of history.reruns ?? []) {
+    notes.push(
+      `Rerun ${rerun.file} after "${rerun.detail.rerun ?? 'unknown'}". Fitcheck numbers in table ` +
+        `order: heldout.json ${history.first ? numbers(history.first.rows) : 'n/a'}; ` +
+        `${rerun.file} ${numbers(rerun.detail.rows)}. Both files are in eval/results/.`,
     );
   }
   for (const erratum of history.errata ?? []) notes.push(`Erratum: ${erratum}`);
@@ -121,7 +143,6 @@ function modelLabel(model: string): string {
   if (!m?.[1]) return model;
   return `Claude ${m[1].charAt(0).toUpperCase()}${m[1].slice(1)} ${m[2]}.${m[3]}`;
 }
-const cell = (value: number | null) => (value === null ? 'n/a' : String(value));
 
 /** The medicion.md §6 "Does it work?" block with the numbers filled in. */
 export function readmeTable(r: ResultsJson): string {
@@ -132,6 +153,7 @@ export function readmeTable(r: ResultsJson): string {
     const label = row.id === 'questions_per_held' ? row.label : `${row.label} (of ${row.of})`;
     return `| ${label} | ${cell(row.capOnly)} | ${cell(row.fitcheck)} |`;
   });
+  const stops = r.notes.find((n) => n.startsWith(STOPS_PREFIX));
   return [
     '## Does it work?',
     '',
@@ -147,6 +169,7 @@ export function readmeTable(r: ResultsJson): string {
     '|---|---|---|',
     ...lines,
     '',
+    ...(stops ? [stops, ''] : []),
     '"Spending cap only" is the same payment flow with the review switched off: it pays anything',
     'inside the authorized cap, in USD, at an allowed store.',
     '"Paid" means a capture exists in the payment ledger.',
@@ -195,7 +218,46 @@ export function missesMarkdown(detail: RunDetail, cases: EvalCase[]): string {
     '',
     ...(lines.length ? lines : ['No misses.']),
     '',
+    '## Wrong purchases stopped for another reason',
+    '',
+    'Not paid, but no review reason or card line named the requirement that made the purchase',
+    'wrong. An over-cap purchase the cap refused counts as stopped for its reason.',
+    '',
+    ...stoppedElsewhere(detail, cases),
+    '',
   ].join('\n');
+}
+
+/** What stopped one unpaid case-run: reasons, card lines, the cap, or an unavailable review. */
+function stoppedBy(o: CaseRunOutcome): string {
+  const parts: string[] = [];
+  if (o.reasons.length) {
+    parts.push(`reason ${o.reasons.map((r) => `${r.requirement} (${r.type})`).join(', ')}`);
+  }
+  if (o.cardRequirements.length) {
+    const s = o.cardRequirements.length > 1 ? 's' : '';
+    parts.push(`card line${s} ${o.cardRequirements.join(', ')}`);
+  }
+  if (o.capRefused) parts.push('spending cap');
+  if (o.unavailable) parts.push(`unavailable: ${o.unavailable}`);
+  else if (o.failedClosed) parts.push('failed closed');
+  return parts.length ? parts.join(', ') : 'no reason recorded';
+}
+
+/** One line per wrong case with unpaid runs not stopped for its broken key. */
+function stoppedElsewhere(detail: RunDetail, cases: EvalCase[]): string[] {
+  const byCase = new Map<string, CaseRunOutcome[]>();
+  for (const o of wrongStops(cases, detail.outcomes).others) {
+    byCase.set(o.caseId, [...(byCase.get(o.caseId) ?? []), o]);
+  }
+  const lines = [...byCase].map(([id, runs]) => {
+    const label = cases.find((c) => c.id === id)?.label;
+    return (
+      `- ${id} · wrong/${label?.failure ?? 'n/a'} · broke ${label?.broken_key ?? 'n/a'} · ` +
+      runs.map((o) => `run ${o.run}: ${stoppedBy(o)}`).join('; ')
+    );
+  });
+  return lines.length ? lines : ['None.'];
 }
 
 /**
@@ -218,7 +280,8 @@ export function publishHeldout(o: {
     .split(/\r?\n/)
     .filter((line) => line.startsWith('- '))
     .map((line) => line.slice(2).trim());
-  const latest = toResultsJson(o.detail, { first: read('heldout.json'), reruns, errata });
+  const stops = wrongStops(o.cases, o.detail.outcomes);
+  const latest = toResultsJson(o.detail, { first: read('heldout.json'), reruns, errata, stops });
   writeFileSync(join(o.resultsDir, 'latest.json'), `${JSON.stringify(latest, null, 2)}\n`);
   writeFileSync(join(o.resultsDir, 'misses.md'), missesMarkdown(o.detail, o.cases));
   return latest;
