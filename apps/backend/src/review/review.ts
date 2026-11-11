@@ -5,12 +5,21 @@ import type {
   ReviewInput,
   ReviewResult,
 } from '@fitcheck/contracts';
-import { getChecklist } from './checklist.js';
+import { getChecklist, type ReviewChecklist } from './checklist.js';
+import {
+  applyCitations,
+  type CitationDraft,
+  CitationDraftSchema,
+  citationRequests,
+  verifyCitation,
+} from './citations.js';
 import { evaluateCommon } from './common-checks.js';
 import { decide } from './decide.js';
-import { FAIL_CLOSED_MESSAGE } from './errors.js';
+import { FAIL_CLOSED_MESSAGE, ReviewUnavailableError } from './errors.js';
 import { appliesTo, type Evaluation, evaluateRequirement } from './evaluate.js';
-import { contextFor } from './paths.js';
+import { callModel, recordingKey } from './model/port.js';
+import { buildCitationPrompt } from './model/prompts.js';
+import { contextFor, type ProductContext, readPath } from './paths.js';
 import type { ReviewDeps } from './types.js';
 
 const ORIGIN_ORDER: Origin[] = ['stated', 'triggered', 'always'];
@@ -65,17 +74,65 @@ function evaluateAll(input: ReviewInput): Evaluation[] {
   );
 }
 
+/**
+ * One citation call per review, when a citation port is given and something needs a quote.
+ * Rejected citations are dropped; any failure keeps the code evidence (never fails closed).
+ */
+async function withCitations(
+  results: RequirementResult[],
+  input: ReviewInput,
+  ctx: ProductContext,
+  checklist: ReviewChecklist,
+  deps: ReviewDeps,
+): Promise<RequirementResult[]> {
+  const port = deps.citations;
+  if (!port) return results;
+  const requests = citationRequests(results, checklist);
+  if (requests.length === 0) return results;
+  try {
+    const ids = requests.map((r) => r.requirement).sort();
+    const fields = [...new Set(requests.flatMap((r) => r.patterns))].flatMap((pattern) =>
+      readPath(pattern, ctx).map((f) => ({ path: f.path, text: f.text })),
+    );
+    const { system, prompt } = buildCitationPrompt(fields, requests);
+    const draft = await callModel(
+      port,
+      {
+        kind: 'citation',
+        key: recordingKey([input.record.product.id, ...ids]),
+        system,
+        prompt,
+        schema: CitationDraftSchema,
+        input: { productId: input.record.product.id, requirements: ids },
+      },
+      (parsed) => ({ ok: true, value: parsed as CitationDraft }),
+    );
+    const accepted = draft.citations.flatMap((c) => {
+      const v = verifyCitation(c, ctx, checklist, results);
+      return v.ok ? [{ requirement: v.requirement, evidence: v.evidence }] : [];
+    });
+    return applyCitations(results, accepted);
+  } catch (err) {
+    const reason = err instanceof ReviewUnavailableError ? err.reason : 'error';
+    deps.logger?.warn('citations skipped', { reason });
+    return results;
+  }
+}
+
 /** Never throws: an internal error fails closed, keeping the record it was given. */
 export async function review(input: ReviewInput, deps: ReviewDeps): Promise<ReviewResult> {
   try {
+    const checklist = getChecklist(input.intent.category);
     const evals = evaluateAll(input);
     const d = decide(evals, input.memory, {
       amountCents: input.purchase.amountCents,
-      noun: getChecklist(input.intent.category).noun,
+      noun: checklist.noun,
     });
+    const ctx = contextFor(input.record.product, input.purchase.domain);
+    const results = await withCitations(d.results, input, ctx, checklist, deps);
     return {
       decision: d.decision,
-      results: d.results,
+      results,
       ...(d.card ? { card: d.card } : {}),
       ...(d.agentMessage !== undefined ? { agentMessage: d.agentMessage } : {}),
       summary: summaryOf(d.results),

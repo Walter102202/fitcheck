@@ -6,6 +6,8 @@ export type ReviewLogger = Pick<Logger, 'warn'>;
 
 export type ReviewDeps = {
   now: () => Date;
+  /** Optional: the model proposes the quote shown for free-text evidence; never changes a state or a decision. */
+  citations?: ModelPort;
   logger?: ReviewLogger;
 };
 

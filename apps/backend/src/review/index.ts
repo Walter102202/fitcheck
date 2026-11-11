@@ -1,4 +1,12 @@
 export { applyAnswers } from './answers.js';
+export {
+  applyCitations,
+  type CitationDraft,
+  CitationDraftSchema,
+  type CitationRequest,
+  citationRequests,
+  verifyCitation,
+} from './citations.js';
 export { decide, MAX_LINES } from './decide.js';
 export {
   FAIL_CLOSED_MESSAGE,
@@ -22,7 +30,12 @@ export {
   NoRecordingError,
   recordingKey,
 } from './model/port.js';
-export { buildIntentPrompt, INTENT_PROMPT_VERSION } from './model/prompts.js';
+export {
+  buildCitationPrompt,
+  buildIntentPrompt,
+  CITATION_PROMPT_VERSION,
+  INTENT_PROMPT_VERSION,
+} from './model/prompts.js';
 export {
   createFileRecordingStore,
   createMemoryRecordingStore,

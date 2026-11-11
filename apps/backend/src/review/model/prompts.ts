@@ -50,3 +50,39 @@ export function buildIntentPrompt(
   ].join('\n');
   return { system: INTENT_SYSTEM, prompt };
 }
+
+export const CITATION_PROMPT_VERSION = 'citation-v1';
+
+const CITATION_SYSTEM = `Fitcheck shows the buyer where a product listing states a value. Code has already found the values; you only point at the text.
+
+Rules:
+- For each request, give the listing field (its path exactly as shown under # Listing) and a quote copied exactly from that field, character for character, at most 160 characters.
+- Quote only text that states one of the request's values. Prefer a short, whole sentence or list item.
+- Never invent paths, values or text. Leave a request out when no field states its value.
+- Never judge the product, the price or the store.`;
+
+type CitationRequestLine = {
+  requirement: string;
+  fact: string;
+  patterns: string[];
+  values: { display: string }[];
+};
+
+/** The listing fields named by the requests' patterns, one per line with its path. */
+export function buildCitationPrompt(
+  fields: { path: string; text: string }[],
+  requests: CitationRequestLine[],
+): { system: string; prompt: string } {
+  const prompt = [
+    '# Listing',
+    ...fields.map((f) => `- ${f.path}: ${f.text}`),
+    '',
+    '# Requests',
+    ...requests.map(
+      (r) =>
+        `- ${r.requirement} (${r.fact}): values ${r.values.map((v) => v.display).join(', ')}; look in ${r.patterns.join(', ')}`,
+    ),
+    '',
+  ].join('\n');
+  return { system: CITATION_SYSTEM, prompt };
+}
