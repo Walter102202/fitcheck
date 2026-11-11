@@ -1,38 +1,30 @@
+import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { ConfigResponseSchema } from '@fitcheck/contracts';
-import { describe, expect, it } from 'vitest';
-import { createApp } from './app.js';
-import type { Db } from './db/client.js';
-import type { Deps } from './deps.js';
+import { afterEach, describe, expect, it } from 'vitest';
+import { configFrom, createApp } from './app.js';
 import { loadEnv } from './env.js';
-import { createLogger } from './logger.js';
-import { createPaypalGateways } from './paypal/index.js';
-import { createRecordedChannel3, createStubReviewPort } from './runs/review-stub.js';
+import { createHarness } from './runs/harness.js';
 
-function testDeps(source: Record<string, string> = {}): Deps {
-  const env = loadEnv(source);
-  const logger = createLogger({}, { silent: true });
-  return {
-    env,
-    now: () => new Date('2026-11-11T12:00:00.000Z'),
-    logger,
-    // The skeleton routes never touch the database.
-    db: {} as Db,
-    newId: () => 'id',
-    paypal: createPaypalGateways(env, { logger, bootId: 'test0000', deliverWebhook: undefined }),
-    channel3: createRecordedChannel3(),
-    review: createStubReviewPort(),
-  };
-}
+type Harness = Awaited<ReturnType<typeof createHarness>>;
+let h: Harness | undefined;
+afterEach(async () => {
+  await h?.close();
+  h = undefined;
+});
 
-describe('app skeleton', () => {
+describe('app', () => {
   it('answers /healthz', async () => {
-    const res = await createApp(testDeps()).request('/healthz');
+    h = await createHarness();
+    const res = await createApp(h.deps).request('/healthz');
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ ok: true });
   });
 
   it('serves /api/config from the default env', async () => {
-    const res = await createApp(testDeps()).request('/api/config');
+    h = await createHarness();
+    const res = await createApp(h.deps).request('/api/config');
     expect(res.status).toBe(200);
     const config = ConfigResponseSchema.parse(await res.json());
     expect(config.paypalMode).toBe('mock');
@@ -42,25 +34,35 @@ describe('app skeleton', () => {
     expect(config.sandboxBuyer).toBeUndefined();
   });
 
-  it('shows the sandbox buyer only in sandbox mode', async () => {
-    const res = await createApp(
-      testDeps({
+  it('builds the config from env: sandbox buyer only in sandbox, simulated without credentials', () => {
+    const buyer = { SANDBOX_BUYER_EMAIL: 'buyer@example.com', SANDBOX_BUYER_PASSWORD: 'pw' };
+    const sandbox = configFrom(
+      loadEnv({
         PAYPAL_MODE: 'sandbox',
         PAYPAL_CLIENT_ID: 'id',
-        PAYPAL_CLIENT_SECRET: 'secret',
-        SANDBOX_BUYER_EMAIL: 'buyer@example.com',
-        SANDBOX_BUYER_PASSWORD: 'pw',
+        PAYPAL_CLIENT_SECRET: 's',
+        ...buyer,
       }),
-    ).request('/api/config');
-    const config = ConfigResponseSchema.parse(await res.json());
-    expect(config.paypalMode).toBe('sandbox');
-    expect(config.sandboxBuyer).toEqual({ email: 'buyer@example.com', password: 'pw' });
+    );
+    expect(sandbox.paypalMode).toBe('sandbox');
+    expect(sandbox.sandboxBuyer).toEqual({ email: 'buyer@example.com', password: 'pw' });
+    const simulated = configFrom(loadEnv({ PAYPAL_MODE: 'sandbox', ...buyer }));
+    expect(simulated.paypalMode).toBe('simulated');
+    expect(simulated.sandboxBuyer).toBeUndefined();
   });
 
-  it('reports simulated when sandbox has no credentials', async () => {
-    const res = await createApp(testDeps({ PAYPAL_MODE: 'sandbox' })).request('/api/config');
-    const config = ConfigResponseSchema.parse(await res.json());
-    expect(config.paypalMode).toBe('simulated');
+  it('serves the built web app with the SPA fallback, but never for /api', async () => {
+    const dist = mkdtempSync(join(tmpdir(), 'web-dist-'));
+    mkdirSync(join(dist, 'assets'));
+    writeFileSync(join(dist, 'index.html'), '<!doctype html><title>Fitcheck</title>');
+    writeFileSync(join(dist, 'assets', 'app.js'), 'console.log(1)');
+    h = await createHarness({ env: { WEB_DIST_DIR: dist } });
+    const app = createApp(h.deps);
+    expect(await (await app.request('/assets/app.js')).text()).toBe('console.log(1)');
+    expect(await (await app.request('/run/tv-sony')).text()).toContain('<title>Fitcheck</title>');
+    const api = await app.request('/api/missing');
+    expect(api.status).toBe(404);
+    expect(await api.json()).toEqual({ error: 'not_found', message: 'Route not found' });
   });
 
   it('rejects an invalid env with the variable names', () => {
