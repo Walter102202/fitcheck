@@ -1,7 +1,7 @@
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { readRecordedProduct } from './fixtures.js';
 import {
   type Channel3Options,
@@ -164,6 +164,27 @@ describe('createChannel3Gateway', () => {
     expect(fallbackNotice('2026-11-10')).toBe(
       'Channel3 did not answer. Showing the copy recorded on Nov 10, 2026.',
     );
+  });
+
+  it('a live failure logs the product and the reason; a throwing logger changes nothing', async () => {
+    const warn = vi.fn();
+    const g = live(failingFetch('503'), { logger: { warn } });
+    expect((await g.getProduct('UXXAg59')).source).toBe('recorded');
+    expect(warn).toHaveBeenCalledWith('channel3 live failed, using the recording', {
+      productId: 'UXXAg59',
+      reason: 'Channel3 answered 503 for /v1/products/UXXAg59',
+    });
+    const throwing = live(failingFetch('503'), {
+      logger: {
+        warn: () => {
+          throw new Error('logger down');
+        },
+      },
+    });
+    expect((await throwing.getProduct('UXXAg59')).source).toBe('recorded');
+    const quiet = vi.fn();
+    await live(okFetch, { logger: { warn: quiet } }).getProduct('UXXAg59');
+    expect(quiet).not.toHaveBeenCalled();
   });
 
   it('a live answer for another product id falls back to the recording', async () => {

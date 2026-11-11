@@ -67,6 +67,16 @@ describe('voltage', () => {
     expect(vals(voltage('Works on 100-240V worldwide'))).toEqual(['dual']);
     expect(vals(voltage('120V only'))).toEqual(['us_only']);
   });
+
+  it('reads 100 or 110 to 220-240 as dual, with or without a unit on the first number', () => {
+    expect(vals(voltage('110V-240V'))).toEqual(['dual']);
+    expect(vals(voltage('100V-240V'))).toEqual(['dual']);
+    expect(vals(voltage('100-240V'))).toEqual(['dual']);
+    expect(vals(voltage('Works on 110 volts - 240V'))).toEqual(['dual']);
+    expect(vals(voltage('For use with 110V–120V outlets only'))).toEqual(['us_only']);
+    expect(vals(voltage('110V–120V'))).not.toContain('dual');
+    expect(voltage('Not dual voltage')).toEqual([]);
+  });
 });
 
 describe('other text normalizers', () => {

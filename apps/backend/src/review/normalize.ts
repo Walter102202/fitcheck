@@ -90,8 +90,9 @@ const inches: TextNormalizer = (text) => {
 };
 
 // ---- voltage ----
+// "110V-240V", "100V-240V", "100-240V": the first number may carry its own unit.
 const DUAL =
-  /dual[- ]voltage|dual[- ]power|universal voltage|worldwide voltage|1[01]0\s*[-–~/]\s*2[2-4]0\s*v|100\s*[-–~/]\s*240|120v\s*\/\s*240v|125v\s*\/\s*240v/gi;
+  /dual[- ]voltage|dual[- ]power|universal voltage|worldwide voltage|1[01]0\s*(?:v(?:olts?)?)?\s*[-–~/]\s*2[2-4]0\s*v|100\s*(?:v(?:olts?)?)?\s*[-–~/]\s*240|120v\s*\/\s*240v|125v\s*\/\s*240v/gi;
 const US_ONLY =
   /for use with 1[12]0\s*v(?:olts?)?(?:\s*[-–~/]\s*1[12]0\s*v(?:olts?)?)?(?:\s+outlets)?(?:\s+only)?|1[12]0\s*v(?:olts?)?\s*(?:outlets\s+)?only|standard 110\s*v(?:olts?)?(?:\s+voltage)?|120\s*v compatib\w*/gi;
 

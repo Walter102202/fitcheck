@@ -1,4 +1,5 @@
 import type { ProductRecord } from '@fitcheck/contracts';
+import type { Logger } from '../logger.js';
 import { FIXTURES_DIR, listRecordedProducts, readRecordedProduct } from './fixtures.js';
 import {
   type Channel3RestClient,
@@ -21,6 +22,8 @@ export type Channel3Options = {
   searchCounter?: SearchCounter;
   /** Default 8000. */
   timeoutMs?: number;
+  /** Told when a live product call fails and the recording is used. */
+  logger?: Pick<Logger, 'warn'>;
 };
 
 export type SearchResult = { records: ProductRecord[]; source: 'live' | 'recorded' };
@@ -106,9 +109,17 @@ export function createChannel3Gateway(
     try {
       const product = toRequestedProduct(id, await rest.getProductRaw(id));
       return { product, fetchedAt: now().toISOString(), source: 'live' };
-    } catch {
+    } catch (err) {
       // network, timeout, non-2xx (404 included), an unknown shape or another product's answer:
       // use the recording
+      try {
+        options.logger?.warn('channel3 live failed, using the recording', {
+          productId: id,
+          reason: err instanceof Error ? err.message : String(err),
+        });
+      } catch {
+        // a broken logger must not stop the fallback
+      }
       return recordedCopy(id);
     }
   }
