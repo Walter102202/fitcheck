@@ -119,7 +119,7 @@ describe('purchases', () => {
     await voidCap(h.deps, { capId: cap.capId, reason: 'reset' });
     const result = await capturePurchase(h.deps, ref(cap.capId, 2020));
     expect(result).toMatchObject({ outcome: 'not_captured', reason: 'cap_short' });
-    expect(result.event.sentence).toBe('The spending cap has $0.00 left.');
+    expect(result.event.sentence).toBe('The spending cap is no longer active.');
     expect(h.paypal.calls('capture')).toEqual([]);
   });
 
@@ -130,7 +130,7 @@ describe('purchases', () => {
     const result = await capturePurchase(h.deps, ref(cap.capId, 2020));
     expect(result.cap.status).toBe('expired');
     expect(result).toMatchObject({ outcome: 'not_captured' });
-    expect(result.event.sentence).toBe('The spending cap has $0.00 left.');
+    expect(result.event.sentence).toBe('The spending cap is no longer active.');
     expect(h.paypal.calls('capture')).toEqual([]);
   });
 
@@ -185,7 +185,7 @@ describe('purchases', () => {
     const result = await capturePurchase(h.deps, ref(cap.capId, 2020));
     expect(result.outcome).toBe('not_captured');
     expect(result.cap.status).toBe('expired');
-    expect(result.event.sentence).toBe('The spending cap has $0.00 left.');
+    expect(result.event.sentence).toBe('The spending cap is no longer active.');
   });
 
   it('refusePurchase records not_captured without a PayPal call', async () => {

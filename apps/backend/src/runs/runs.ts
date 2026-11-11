@@ -226,20 +226,22 @@ export async function startRun(
   }
   return singleFlight(`run:${i.sessionId}:${i.scenarioId}:${i.review}`, async () => {
     const now = d.now();
+    // A repeat of the session's latest run (a double click, a reload) gets that run back. Any
+    // other run started since (the switch turned off and on again) means a fresh run.
     const [recent] = await d.db
       .select()
       .from(runs)
       .where(
         and(
           eq(runs.sessionId, i.sessionId),
-          eq(runs.scenarioId, i.scenarioId),
-          eq(runs.review, i.review),
           gt(runs.createdAt, new Date(now.getTime() - RUN_DEDUPE_MS)),
         ),
       )
       .orderBy(desc(runs.createdAt))
       .limit(1);
-    if (recent) return toResponse(d, recent);
+    if (recent && recent.scenarioId === i.scenarioId && recent.review === i.review) {
+      return toResponse(d, recent);
+    }
 
     const cap = await latestCapForSession(d, i.sessionId);
     if (!cap || cap.status === 'pending_approval') {

@@ -45,6 +45,6 @@ describe('capOnlyCheck', () => {
   it('refuses on a voided cap', () => {
     expect(
       capOnlyCheck({ ...base, cap: { ...cap, status: 'voided', availableCents: 0 } }).sentence,
-    ).toBe('The spending cap has $0.00 left.');
+    ).toBe('The spending cap is no longer active.');
   });
 });

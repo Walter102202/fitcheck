@@ -231,6 +231,22 @@ describe('runs', () => {
     expect(h.paypal.calls('capture')).toEqual([]);
   });
 
+  it('review on, off and on again inside the dedupe window starts a fresh card', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    const at = (s: number) =>
+      h.clock.set(new Date(Date.parse('2026-11-11T12:00:00.000Z') + s * 1000));
+    const first = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    at(2);
+    await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'off' });
+    at(4);
+    const again = await startRun(h.deps, { sessionId, scenarioId: 'tv-sony', review: 'on' });
+    expect(again.runId).not.toBe(first.runId);
+    expect(again.status).toBe('awaiting_answers');
+    expect(again.attempts[0]?.review.card?.lines).toHaveLength(1);
+    expect(again.cap.heldCents).toBe(139800);
+  });
+
   it('answers to a purchase released by a new run change nothing', async () => {
     h = await createHarness();
     const { sessionId } = await activeCap(h.deps);

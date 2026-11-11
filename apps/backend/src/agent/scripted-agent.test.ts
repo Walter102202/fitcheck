@@ -72,6 +72,13 @@ describe('scripted agent', () => {
     }
   });
 
+  it('a second pick after a card holds for any answer, not only no', () => {
+    // The buyer may answer "Don't know"; the agent must not claim they said no.
+    for (const scenario of SCENARIOS) {
+      for (const step of scenario.picks) expect(step.agentSays).not.toMatch(/said no/i);
+    }
+  });
+
   it('rounds prices to cents', () => {
     expect(toCents(20.2)).toBe(2020);
     expect(toCents(1199.99)).toBe(119999);

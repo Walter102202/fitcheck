@@ -54,8 +54,9 @@ four purchases:
 4. **Replace the TV on our living room wall.** Nobody asked about the wall mount; Fitcheck checks
    the VESA pattern and asks once.
 
-The PayPal panel shows the cap, what is on hold, what was captured and the PayPal ids. The
-"Fitcheck review" switch turns the review off, so you can see what a spending cap alone pays for.
+The PayPal panel shows the cap, what is on hold, what was captured and the PayPal ids. To see what
+a spending cap alone pays for, run purchase 1 again with the "Fitcheck review" switch off: the
+110-120 V dryer is captured at once. **Start over** releases the cap and asks for a new one.
 
 ## Does it work?
 

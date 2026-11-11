@@ -162,7 +162,8 @@ async function refuseForCap(
     purchaseId: purchase.id,
     type: 'not_captured',
     amountCents: purchase.amountCents,
-    sentence: SENTENCES.capShort(availableOf(row)),
+    sentence:
+      row.status === 'active' ? SENTENCES.capShort(availableOf(row)) : SENTENCES.capInactive,
     paypalCall: null,
   });
   return done(row, purchase, event, 'cap_short');
