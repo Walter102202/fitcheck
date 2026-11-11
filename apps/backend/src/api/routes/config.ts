@@ -9,6 +9,7 @@ export function configFrom(env: Env): ConfigResponse {
     paypalMode: paypalModeFor(env),
     channel3Mode: env.CHANNEL3_MODE,
     reviewModel: env.REVIEW_MODEL,
+    reviewSource: env.LLM_PROVIDER === 'anthropic' ? 'live' : 'recorded',
     capAmountCents: env.CAP_AMOUNT_CENTS,
   };
   const buyer = sandboxBuyerFor(env);

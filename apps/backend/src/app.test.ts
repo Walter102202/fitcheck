@@ -51,6 +51,11 @@ describe('app', () => {
     expect(simulated.sandboxBuyer).toBeUndefined();
   });
 
+  it('says whether the review reads requests live or from recorded answers', () => {
+    expect(configFrom(loadEnv({})).reviewSource).toBe('recorded');
+    expect(configFrom(loadEnv({ LLM_PROVIDER: 'anthropic' })).reviewSource).toBe('live');
+  });
+
   it('serves the built web app with the SPA fallback, but never for /api', async () => {
     const dist = mkdtempSync(join(tmpdir(), 'web-dist-'));
     mkdirSync(join(dist, 'assets'));
