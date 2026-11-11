@@ -1,0 +1,496 @@
+{
+  "recordedOn": "2026-11-10",
+  "queries": [
+    {
+      "category": "tv",
+      "query": "65 inch 4K TV",
+      "tool": "search_products",
+      "probeFile": "medicion/search-tv-65.json",
+      "productIds": [
+        "JsWPLPk",
+        "0gH7IUm",
+        "NF7jfuZ",
+        "1U7pIWX",
+        "giXSDZ7",
+        "oQY2CWr",
+        "NgltcGJ",
+        "YQfWgKT"
+      ]
+    },
+    {
+      "category": "tv",
+      "query": "55 inch OLED TV",
+      "tool": "search_products",
+      "probeFile": "medicion/search-tv-55-oled.json",
+      "productIds": [
+        "hlCJ1IZ",
+        "OIlg7HH",
+        "TelLVBm",
+        "VuL7AbN",
+        "B1oXxDC",
+        "bLgkM5R",
+        "atc4QJi",
+        "iIRwnsL"
+      ]
+    },
+    {
+      "category": "tv",
+      "query": "75 inch TV for a bright living room",
+      "tool": "search_products",
+      "probeFile": "medicion/search-tv-75.json",
+      "productIds": [
+        "9k01plK",
+        "hlLknKm",
+        "XJTvtel",
+        "1cMM9Xd",
+        "CKrcW5A",
+        "WnDtUy0",
+        "Z8qSqUd",
+        "QDUtp0M"
+      ]
+    },
+    {
+      "category": "tv",
+      "query": "43 inch smart TV for a bedroom",
+      "tool": "search_products",
+      "probeFile": "medicion/search-tv-43.json",
+      "productIds": [
+        "NPaAc9C",
+        "LNYe3Ds",
+        "xXk16Tg",
+        "s7VhFCU",
+        "Qy43Ugv",
+        "xVQwiin",
+        "tr4tdMC",
+        "8dXT8jP"
+      ]
+    },
+    {
+      "category": "tv",
+      "query": "65 inch 4K TV",
+      "tool": "browse_products",
+      "probeFile": "requisitos/browse-tv-0.json",
+      "productIds": [
+        "JsWPLPk",
+        "ENqcYcj",
+        "GTuWLZN",
+        "7ZfAuSE",
+        "giXv9lz",
+        "qNxqAo3",
+        "EkLQIHA",
+        "YQfWgKT"
+      ]
+    },
+    {
+      "category": "tv",
+      "query": "55 inch smart TV Dolby Vision",
+      "tool": "browse_products",
+      "probeFile": "requisitos/browse-tv-1.json",
+      "productIds": [
+        "bLgkM5R",
+        "rouNkGk",
+        "zcsGb5p",
+        "WQbOhgn",
+        "XqarMNE",
+        "IY9GM13",
+        "YnGod7c",
+        "LAFlS99"
+      ]
+    },
+    {
+      "category": "hair_dryer",
+      "query": "hair dryer",
+      "tool": "browse_products",
+      "probeFile": "requisitos/browse-hairdryer-0.json",
+      "productIds": [
+        "PRHDkhO",
+        "zKknU2L",
+        "L4kSx03",
+        "JC6lKge",
+        "mf8IAyj",
+        "czMVg3I",
+        "2L1g7CP",
+        "0d09h4O"
+      ]
+    },
+    {
+      "category": "hair_dryer",
+      "query": "travel hair dryer dual voltage",
+      "tool": "browse_products",
+      "probeFile": "requisitos/browse-hairdryer2-0.json",
+      "productIds": [
+        "RxdGNA8",
+        "7k7IDuy",
+        "0FS5BoK",
+        "hf3UXkS",
+        "saZdY6C",
+        "oZ5Rep2",
+        "YPhHa2G",
+        "Qxt4Ypf"
+      ]
+    },
+    {
+      "category": "hair_dryer",
+      "query": "hair dryer with diffuser for curly hair",
+      "tool": "browse_products",
+      "probeFile": "requisitos/browse-hairdryer2-1.json",
+      "productIds": [
+        "zxlvAem",
+        "E6H1tqa",
+        "zF6ndCY",
+        "pI9XO9i",
+        "EflRTLn",
+        "yC3nfVM",
+        "weUo6Ph",
+        "BmKsBTF"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "JsWPLPk",
+      "category": "tv",
+      "title": "65 Inch 4K OLED Smart TV with Dolby Atmos"
+    },
+    {
+      "id": "0gH7IUm",
+      "category": "tv",
+      "title": "Panasonic 65\" W80C 4K UHD QLED+ Fire TV (2026)"
+    },
+    {
+      "id": "NF7jfuZ",
+      "category": "tv",
+      "title": "65 Inch 4K OLED Smart TV with a Recessed Ultra-Low Profile Full-Motion Mount"
+    },
+    {
+      "id": "1U7pIWX",
+      "category": "tv",
+      "title": "LG OLED evo AI B6 4K Smart TV 2026"
+    },
+    {
+      "id": "giXSDZ7",
+      "category": "tv",
+      "title": "BRAVIA 8 K65XR80 65 inch 4K HDR Smart OLED TV"
+    },
+    {
+      "id": "oQY2CWr",
+      "category": "tv",
+      "title": "Samsung QN65Q80D 65 Inch QLED 4K Smart TV Refurbished (2024)"
+    },
+    {
+      "id": "NgltcGJ",
+      "category": "tv",
+      "title": "LG PK640S Series 65\" UHD 4K HDR Commercial Signage TV"
+    },
+    {
+      "id": "YQfWgKT",
+      "category": "tv",
+      "title": "LG OLED evo AI C6 4K 65-Inch Smart TV"
+    },
+    {
+      "id": "hlCJ1IZ",
+      "category": "tv",
+      "title": "S95H 55\" OLED 4K UHD Smart TV"
+    },
+    {
+      "id": "OIlg7HH",
+      "category": "tv",
+      "title": "LG OLED evo C3 55 Inch HDR 4K Smart OLED TV 2023 Refurbished"
+    },
+    {
+      "id": "TelLVBm",
+      "category": "tv",
+      "title": "Lg Oled Evo C3 Smart Oled Tv"
+    },
+    {
+      "id": "VuL7AbN",
+      "category": "tv",
+      "title": "LG OLED55G5WUA"
+    },
+    {
+      "id": "B1oXxDC",
+      "category": "tv",
+      "title": "K55XR80 55\" OLED 4K UHD Smart TV"
+    },
+    {
+      "id": "bLgkM5R",
+      "category": "tv",
+      "title": "LG 55 Inch OLED AI 4K B5 Series Smart TV"
+    },
+    {
+      "id": "atc4QJi",
+      "category": "tv",
+      "title": "C6 Oled Evo Ai 4k Smart Tv 2026 55\""
+    },
+    {
+      "id": "iIRwnsL",
+      "category": "tv",
+      "title": "Samsung QN55S85HAE S85H Series - 55\" Class OLED TV - 4K"
+    },
+    {
+      "id": "9k01plK",
+      "category": "tv",
+      "title": "4K UHD AI Smart TV"
+    },
+    {
+      "id": "hlLknKm",
+      "category": "tv",
+      "title": "75\" Class Quantum Series 4K QLED Smart TV"
+    },
+    {
+      "id": "XJTvtel",
+      "category": "tv",
+      "title": "Samsung QN75QN80HAFXZA 75 Inch Neo QLED 4K TV"
+    },
+    {
+      "id": "1cMM9Xd",
+      "category": "tv",
+      "title": "Lg Qned Evo Ai Qned85a 4k Smart Tv"
+    },
+    {
+      "id": "CKrcW5A",
+      "category": "tv",
+      "title": "LG QNED AI QNED85B Mini LED 4K Smart TV 2026"
+    },
+    {
+      "id": "WnDtUy0",
+      "category": "tv",
+      "title": "Sony BRAVIA 5 75\" 4K HDR Smart Mini-LED TV"
+    },
+    {
+      "id": "Z8qSqUd",
+      "category": "tv",
+      "title": "Lg Mrgb95b Ai 4k Smart Tv"
+    },
+    {
+      "id": "QDUtp0M",
+      "category": "tv",
+      "title": "Sony BRAVIA 9 II 75 Inch 4K HDR Google TV"
+    },
+    {
+      "id": "NPaAc9C",
+      "category": "tv",
+      "title": "Westinghouse 43-inch Smart Roku TV, 1080p FHD Flat Screen"
+    },
+    {
+      "id": "LNYe3Ds",
+      "category": "tv",
+      "title": "Samsung QN43QN70HAFXZA 43\" NeoQLED 4K UHD Smart TV"
+    },
+    {
+      "id": "xXk16Tg",
+      "category": "tv",
+      "title": "Philips 43\" Class 7875 Series 4K UltraHD Ambilight Roku Smart TV"
+    },
+    {
+      "id": "s7VhFCU",
+      "category": "tv",
+      "title": "LG 43-Inch Nano 4K UHD AI NU70 Smart TV (2026)"
+    },
+    {
+      "id": "Qy43Ugv",
+      "category": "tv",
+      "title": "M70H 43\" 4K Mini LED Vision AI Smart TV 2026"
+    },
+    {
+      "id": "xVQwiin",
+      "category": "tv",
+      "title": "Samsung 43 inch QLED Q7F 4K Vision AI Smart TV (2025)"
+    },
+    {
+      "id": "tr4tdMC",
+      "category": "tv",
+      "title": "LG 43UK670H0UA 43\" Smart LED-LCD TV"
+    },
+    {
+      "id": "8dXT8jP",
+      "category": "tv",
+      "title": "43 inch Roku Full HD Smart LED TV"
+    },
+    {
+      "id": "ENqcYcj",
+      "category": "tv",
+      "title": "LG AI UA7050 65\" Class (65.1\" Diag.) 4K Ultra HD Smart LED TV"
+    },
+    {
+      "id": "GTuWLZN",
+      "category": "tv",
+      "title": "Loewe Stellar 4K OLED Smart TV"
+    },
+    {
+      "id": "7ZfAuSE",
+      "category": "tv",
+      "title": "Samsung 65\" QLED Q8F Smart 4K TV"
+    },
+    {
+      "id": "giXv9lz",
+      "category": "tv",
+      "title": "TCL 65” Class S4 (65S451) 4K UHD HDR Smart TV with Roku TV"
+    },
+    {
+      "id": "qNxqAo3",
+      "category": "tv",
+      "title": "Samsung S90H 65\" OLED 4K UHD Smart TV (2026)"
+    },
+    {
+      "id": "EkLQIHA",
+      "category": "tv",
+      "title": "Panasonic Z95BP Series 65 inch OLED 4K UHD Smart Fire TV + WN10 Neck Speaker Bundle"
+    },
+    {
+      "id": "rouNkGk",
+      "category": "tv",
+      "title": "Westinghouse 55-inch 4K UHD QLED Roku Smart TV"
+    },
+    {
+      "id": "zcsGb5p",
+      "category": "tv",
+      "title": "55\" Class Pro Series 4K QLED Mini-LED Smart TV"
+    },
+    {
+      "id": "WQbOhgn",
+      "category": "tv",
+      "title": "LG 55\" OLED evo AI 4K C5 Smart TV (OLED55C5PUA, 2025) + Sound Activated Party Lights"
+    },
+    {
+      "id": "XqarMNE",
+      "category": "tv",
+      "title": "LG OLED55G66LS (2026) OLED evo HDR 4K Ultra HD Smart AI TV, 55 inch"
+    },
+    {
+      "id": "IY9GM13",
+      "category": "tv",
+      "title": "Select Series 4K QLED Smart TV Dolby Vision HDR HDMI USB Streaming - 50R5D5"
+    },
+    {
+      "id": "YnGod7c",
+      "category": "tv",
+      "title": "S85H 55\" OLED 4K Vision AI Smart TV 2026"
+    },
+    {
+      "id": "LAFlS99",
+      "category": "tv",
+      "title": "S84F OLED Series 4K Vision AI Smart TV"
+    },
+    {
+      "id": "PRHDkhO",
+      "category": "hair_dryer",
+      "title": "InfinitiPRO DigitalAIRE Hair Dryer"
+    },
+    {
+      "id": "zKknU2L",
+      "category": "hair_dryer",
+      "title": "Helios 1875W Advanced Professional Hair Dryer"
+    },
+    {
+      "id": "L4kSx03",
+      "category": "hair_dryer",
+      "title": "Professional Hair Dryer"
+    },
+    {
+      "id": "JC6lKge",
+      "category": "hair_dryer",
+      "title": "InfinitiPRO Hair Dryer"
+    },
+    {
+      "id": "mf8IAyj",
+      "category": "hair_dryer",
+      "title": "5336U Hair Dryer Elegance"
+    },
+    {
+      "id": "czMVg3I",
+      "category": "hair_dryer",
+      "title": "hair dryer"
+    },
+    {
+      "id": "2L1g7CP",
+      "category": "hair_dryer",
+      "title": "Helios 1875W Advanced Professional Hair Dryer"
+    },
+    {
+      "id": "0d09h4O",
+      "category": "hair_dryer",
+      "title": "Babyliss Pro Porcelain Ceramic 2800 Hair Dryer"
+    },
+    {
+      "id": "RxdGNA8",
+      "category": "hair_dryer",
+      "title": "Dual Voltage Travel Hair Dryer with Diffuser"
+    },
+    {
+      "id": "7k7IDuy",
+      "category": "hair_dryer",
+      "title": "1875W Worldwide Travel Hair Dryer"
+    },
+    {
+      "id": "0FS5BoK",
+      "category": "hair_dryer",
+      "title": "Travel Hair Dryer Dual Voltage Foldable"
+    },
+    {
+      "id": "hf3UXkS",
+      "category": "hair_dryer",
+      "title": "Afar Lightweight Travel Size Hair Dryer"
+    },
+    {
+      "id": "saZdY6C",
+      "category": "hair_dryer",
+      "title": "Travel Hair Dryer"
+    },
+    {
+      "id": "oZ5Rep2",
+      "category": "hair_dryer",
+      "title": "Peewee 1200 Travel Hair Dryer"
+    },
+    {
+      "id": "YPhHa2G",
+      "category": "hair_dryer",
+      "title": "Mini Travel Hair Dryer Dual Voltage Europe, High-Speed Foldable"
+    },
+    {
+      "id": "Qxt4Ypf",
+      "category": "hair_dryer",
+      "title": "Dual Voltage Hair Dryer, Compact Folding Handle Design, 1600W"
+    },
+    {
+      "id": "zxlvAem",
+      "category": "hair_dryer",
+      "title": "Hair Dryer with Diffuser for Curly Hair, 200M Inoic Blow Dryer"
+    },
+    {
+      "id": "E6H1tqa",
+      "category": "hair_dryer",
+      "title": "Professional Hair Dryer with Diffuser"
+    },
+    {
+      "id": "zF6ndCY",
+      "category": "hair_dryer",
+      "title": "Diffuser Hair Dryer Blow Dryer"
+    },
+    {
+      "id": "pI9XO9i",
+      "category": "hair_dryer",
+      "title": "Diffuser Hair Dryer for Curly Hair, 2-in-1 Hair Dryer with Diffuser"
+    },
+    {
+      "id": "EflRTLn",
+      "category": "hair_dryer",
+      "title": "Hair Dryer & Diffuser"
+    },
+    {
+      "id": "yC3nfVM",
+      "category": "hair_dryer",
+      "title": "Defrizzion Dryer & Xxl Diffuser"
+    },
+    {
+      "id": "weUo6Ph",
+      "category": "hair_dryer",
+      "title": "SpeedStyle Pro Professional Performance High-Velocity Hair Dryer System"
+    },
+    {
+      "id": "BmKsBTF",
+      "category": "hair_dryer",
+      "title": "INFINITI PRO Digital Ionic Hair Dryer"
+    }
+  ]
+}

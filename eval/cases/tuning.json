@@ -1,0 +1,371 @@
+[
+  {
+    "id": "t-tv-01",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-neutral-4k-budget",
+    "request": "A 65-inch 4K TV under $600.",
+    "known_to_agent": { "screen_size_in": 65, "resolution": "4K", "budget_usd": 600 },
+    "dossier": {},
+    "attempt": {
+      "product_id": "ENqcYcj",
+      "store": "bestbuy.com",
+      "quantity": 1,
+      "price_seen_cents": 48999,
+      "amount_cents": 48999
+    },
+    "label": {
+      "class": "correct",
+      "should_end_paid": true,
+      "evidence": "title = \"LG AI UA7050 65\\\" Class (65.1\\\" Diag.) 4K Ultra HD Smart LED TV\"; structured_attributes.display-resolution = [\"1920 x 1080\",\"4K ultra HD\"]"
+    },
+    "notes": "One screen size, 65. The harmless \"1920 x 1080\" beside 4K resolves to 4K by the maximum rule."
+  },
+  {
+    "id": "t-tv-02",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-oled-budget",
+    "request": "A 65-inch OLED TV, up to $1,100.",
+    "known_to_agent": { "screen_size_in": 65, "panel": "OLED", "budget_usd": 1100 },
+    "dossier": {},
+    "attempt": {
+      "product_id": "YQfWgKT",
+      "store": "abt.com",
+      "quantity": 1,
+      "price_seen_cents": 99999,
+      "amount_cents": 99999
+    },
+    "label": {
+      "class": "correct",
+      "should_end_paid": true,
+      "evidence": "key_features[1] = \"65 inches Screen Size Class\"; structured_attributes.display-technology = [\"OLED\"]"
+    }
+  },
+  {
+    "id": "t-tv-03",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-wall-mount-fits",
+    "request": "Put a 65-inch TV on our living room wall, up to $1,300.",
+    "known_to_agent": { "screen_size_in": 65, "budget_usd": 1300, "mounted_on_wall": true },
+    "dossier": { "tv.wall_mount": { "need": "not_needed", "value": "200 x 200" } },
+    "attempt": {
+      "product_id": "1U7pIWX",
+      "store": "lg.com",
+      "quantity": 1,
+      "price_seen_cents": 119999,
+      "amount_cents": 119999
+    },
+    "label": {
+      "class": "correct_with_question",
+      "should_end_paid": true,
+      "evidence": "structured_attributes.vesa-mounting-pattern = [\"200 x 200 mm\"]; variants.selected = [{\"name\":\"Size\",\"label\":\"65\\\"\"}]"
+    },
+    "notes": "The wall in the request always gives a wall-mount line. The buyer's mount takes 200 x 200, so the answer is yes."
+  },
+  {
+    "id": "t-tv-04",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-wall-mount-owned",
+    "request": "Replace the TV on our living room wall with a 65-inch, up to $600.",
+    "known_to_agent": { "screen_size_in": 65, "budget_usd": 600, "mounted_on_wall": true },
+    "dossier": { "tv.wall_mount": { "need": "needed", "value": "200 x 200" } },
+    "attempt": {
+      "product_id": "0gH7IUm",
+      "store": "beachcamera.com",
+      "quantity": 1,
+      "price_seen_cents": 49999,
+      "amount_cents": 49999
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "compat_owned",
+      "broken_key": "tv.wall_mount",
+      "should_end_paid": false,
+      "evidence": "structured_attributes.vesa-mounting-pattern = [\"300 x 300 mm\"]"
+    },
+    "notes": "The buyer's mount takes 200 x 200 and nobody said so; the listing's 300 x 300 does not fit."
+  },
+  {
+    "id": "t-tv-05",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-size-stated",
+    "request": "A 75-inch TV for a bright living room, up to $1,200.",
+    "known_to_agent": { "screen_size_in": 75, "budget_usd": 1200 },
+    "dossier": { "tv.screen_size": { "need": "needed", "value": "75" } },
+    "attempt": {
+      "product_id": "NgltcGJ",
+      "store": "bhphotovideo.com",
+      "quantity": 1,
+      "price_seen_cents": 112000,
+      "amount_cents": 112000
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "stated_ignored",
+      "broken_key": "tv.screen_size",
+      "should_end_paid": false,
+      "evidence": "title = \"LG PK640S Series 65\\\" UHD 4K HDR Commercial Signage TV\""
+    },
+    "notes": "The buyer said 75 inches; the listing is a 65-inch TV."
+  },
+  {
+    "id": "t-tv-06",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-over-budget",
+    "request": "A 65-inch OLED TV, up to $1,000.",
+    "known_to_agent": { "screen_size_in": 65, "panel": "OLED", "budget_usd": 1000 },
+    "dossier": {},
+    "attempt": {
+      "product_id": "giXSDZ7",
+      "store": "pcrichard.com",
+      "quantity": 1,
+      "price_seen_cents": 169800,
+      "amount_cents": 169800
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "over_budget",
+      "broken_key": "common.budget",
+      "should_end_paid": false,
+      "evidence": "offers[pcrichard.com].price.price = 1698"
+    },
+    "notes": "$1,698.00 is over the stated $1,000.00 and inside the $3,000.00 cap."
+  },
+  {
+    "id": "t-tv-07",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-store-list",
+    "request": "A 65-inch 4K TV from bestbuy.com or walmart.com only, under $700.",
+    "known_to_agent": { "screen_size_in": 65, "resolution": "4K", "budget_usd": 700 },
+    "allowed_stores": ["bestbuy.com", "walmart.com"],
+    "dossier": {},
+    "attempt": {
+      "product_id": "0gH7IUm",
+      "store": "beachcamera.com",
+      "quantity": 1,
+      "price_seen_cents": 49999,
+      "amount_cents": 49999
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "store_not_allowed",
+      "broken_key": "common.merchant",
+      "should_end_paid": false,
+      "evidence": "offers[beachcamera.com].domain = \"beachcamera.com\""
+    },
+    "notes": "beachcamera.com is not one of the stores the buyer allowed. The spending cap alone also stops it."
+  },
+  {
+    "id": "t-tv-08",
+    "split": "tuning",
+    "category": "tv",
+    "family": "tv-wall-mount-contradictory",
+    "request": "Mount a 65-inch TV on our wall, up to $1,600.",
+    "known_to_agent": { "screen_size_in": 65, "budget_usd": 1600, "mounted_on_wall": true },
+    "dossier": { "tv.wall_mount": { "need": "needed", "value": "300 x 300" } },
+    "attempt": {
+      "product_id": "JsWPLPk",
+      "store": "bestbuy.com",
+      "quantity": 1,
+      "price_seen_cents": 153499,
+      "amount_cents": 153499
+    },
+    "label": {
+      "class": "unbacked",
+      "failure": "contradictory",
+      "broken_key": "tv.wall_mount",
+      "should_end_paid": false,
+      "evidence": "structured_attributes.vesa-mounting-pattern = [\"400 x 200 mm\",\"100 x 200 mm\"]"
+    },
+    "notes": "The plan's seed request said \"65-inch OLED\". This record's display-technology is [\"OLED\",\"LCoS\"], which would add a second contradictory line (panel type), so the request drops \"OLED\" to keep one broken requirement."
+  },
+  {
+    "id": "t-dryer-01",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-travel-dual-voltage",
+    "request": "A travel hair dryer for my trip to Spain, under $40.",
+    "known_to_agent": { "destination": "Spain", "budget_usd": 40 },
+    "dossier": {},
+    "attempt": {
+      "product_id": "saZdY6C",
+      "store": "walmart.com",
+      "quantity": 1,
+      "price_seen_cents": 2020,
+      "amount_cents": 2020
+    },
+    "label": {
+      "class": "correct",
+      "should_end_paid": true,
+      "evidence": "key_features[0] = \"Dual Voltage\""
+    }
+  },
+  {
+    "id": "t-dryer-02",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-curly-travel",
+    "request": "A hair dryer with a diffuser for my curly hair, for a trip to Italy.",
+    "known_to_agent": { "destination": "Italy", "hair": "curly" },
+    "dossier": {},
+    "attempt": {
+      "product_id": "RxdGNA8",
+      "store": "newegg.com",
+      "quantity": 1,
+      "price_seen_cents": 13680,
+      "amount_cents": 13680
+    },
+    "label": {
+      "class": "correct",
+      "should_end_paid": true,
+      "evidence": "key_features[0] = \"Dual Voltage (110-120V/220-240V) for international travel\"; structured_attributes.hair-styling-items-included = [\"Diffuser attachment\"]"
+    }
+  },
+  {
+    "id": "t-dryer-03",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-domestic-trip",
+    "request": "A hair dryer for a weekend trip to Chicago, under $150.",
+    "known_to_agent": { "destination": "Chicago", "budget_usd": 150 },
+    "dossier": { "hair_dryer.dual_voltage": { "need": "not_needed" } },
+    "attempt": {
+      "product_id": "PRHDkhO",
+      "store": "target.com",
+      "quantity": 1,
+      "price_seen_cents": 12999,
+      "amount_cents": 12999
+    },
+    "label": {
+      "class": "correct_with_question",
+      "should_end_paid": true,
+      "evidence": "title, key_features and description say nothing about voltage"
+    },
+    "notes": "\"Trip\" triggers the voltage line; Chicago uses 120 V outlets, so the buyer answers yes."
+  },
+  {
+    "id": "t-dryer-04",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-curly-no-diffuser",
+    "request": "A hair dryer for my curly hair, under $200.",
+    "known_to_agent": { "hair": "curly", "budget_usd": 200 },
+    "dossier": { "hair_dryer.diffuser": { "need": "needed" } },
+    "attempt": {
+      "product_id": "hf3UXkS",
+      "store": "sephora.com",
+      "quantity": 1,
+      "price_seen_cents": 19999,
+      "amount_cents": 19999
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "never_asked_need",
+      "broken_key": "hair_dryer.diffuser",
+      "should_end_paid": false,
+      "evidence": "structured_attributes.hair-styling-items-included = [\"Concentrator nozzle\"]"
+    },
+    "notes": "suitable-for-hair-type says \"Curly\", but the box list has no diffuser."
+  },
+  {
+    "id": "t-dryer-05",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-diffuser-stated",
+    "request": "A hair dryer that comes with a diffuser, under $150.",
+    "known_to_agent": { "wants": "diffuser", "budget_usd": 150 },
+    "dossier": { "hair_dryer.diffuser": { "need": "needed" } },
+    "attempt": {
+      "product_id": "0d09h4O",
+      "store": "fragrancenet.com",
+      "quantity": 1,
+      "price_seen_cents": 13399,
+      "amount_cents": 13399
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "stated_ignored",
+      "broken_key": "hair_dryer.diffuser",
+      "should_end_paid": false,
+      "evidence": "structured_attributes.hair-styling-items-included = [\"Concentrator nozzle\"]"
+    }
+  },
+  {
+    "id": "t-dryer-06",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-price-changed",
+    "request": "A travel hair dryer for Spain, under $40.",
+    "known_to_agent": { "destination": "Spain", "budget_usd": 40 },
+    "dossier": { "common.price_unchanged": { "need": "needed" } },
+    "attempt": {
+      "product_id": "saZdY6C",
+      "store": "walmart.com",
+      "quantity": 1,
+      "price_seen_cents": 1899,
+      "amount_cents": 1899
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "price_changed",
+      "broken_key": "common.price_unchanged",
+      "should_end_paid": false,
+      "evidence": "offers[walmart.com].price.price = 20.2 (the agent saw $18.99)"
+    },
+    "notes": "The price changed from $18.99 to $20.20 after the agent chose it; the buyer does not accept the change."
+  },
+  {
+    "id": "t-dryer-07",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-used-offer",
+    "request": "A hair dryer under $90.",
+    "known_to_agent": { "budget_usd": 90 },
+    "dossier": {},
+    "attempt": {
+      "product_id": "JC6lKge",
+      "store": "vinted.com",
+      "quantity": 1,
+      "price_seen_cents": 1000,
+      "amount_cents": 1000
+    },
+    "label": {
+      "class": "wrong",
+      "failure": "out_of_stock_or_used",
+      "broken_key": "common.condition_new",
+      "should_end_paid": false,
+      "evidence": "offers[vinted.com].condition = \"used\""
+    },
+    "notes": "The cheapest offer is used; the buyer never accepted used."
+  },
+  {
+    "id": "t-dryer-08",
+    "split": "tuning",
+    "category": "hair_dryer",
+    "family": "dryer-travel-silent-voltage",
+    "request": "A hair dryer for my trip to Spain, under $100.",
+    "known_to_agent": { "destination": "Spain", "budget_usd": 100 },
+    "dossier": { "hair_dryer.dual_voltage": { "need": "needed" } },
+    "attempt": {
+      "product_id": "mf8IAyj",
+      "store": "fruugo.us",
+      "quantity": 1,
+      "price_seen_cents": 4695,
+      "amount_cents": 4695
+    },
+    "label": {
+      "class": "unbacked",
+      "failure": "absent",
+      "broken_key": "hair_dryer.dual_voltage",
+      "should_end_paid": false,
+      "evidence": "title, key_features and description say nothing about voltage"
+    },
+    "notes": "Spain uses 230 V outlets; the listing is silent on voltage and the buyer needs it."
+  }
+]
