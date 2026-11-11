@@ -10,6 +10,7 @@
     "writer-kit": "tsx --conditions=development src/writer-kit.ts",
     "import-heldout": "tsx --conditions=development src/import-heldout.ts",
     "review-table": "tsx --conditions=development src/review-table.ts",
+    "readme-table": "tsx --conditions=development src/readme-table.ts",
     "sweep": "tsx --conditions=development src/sweep.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },

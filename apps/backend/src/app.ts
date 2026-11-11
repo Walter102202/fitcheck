@@ -4,6 +4,7 @@ import { Hono } from 'hono';
 import { mountStatic, notFound, onError } from './api/http.js';
 import { capRoutes } from './api/routes/cap.js';
 import { configRoutes } from './api/routes/config.js';
+import { resultsRoutes } from './api/routes/results.js';
 import { runRoutes } from './api/routes/runs.js';
 import { scenarioRoutes } from './api/routes/scenarios.js';
 import { webhookRoutes } from './api/routes/webhooks.js';
@@ -23,6 +24,7 @@ export function createApp(deps: Deps): Hono<ApiEnv> {
     scenarioRoutes(),
     capRoutes(deps),
     runRoutes(deps),
+    resultsRoutes(deps),
     webhookRoutes(deps),
   ];
   for (const routes of groups) app.route('/', routes);

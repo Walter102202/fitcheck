@@ -158,10 +158,11 @@ describe('computeRows', () => {
       outcome('t-tv-01', 'cap_only', 1, { captured: true }),
       outcome('t-tv-02', 'cap_only', 1, { captured: true }),
     ]);
+    // Cap only has one run, so every case is trivially consistent (medicion.md shows 32 of 32).
     expect(rowOf(rows, 'consistent')).toMatchObject({
       label: 'Same outcome in all 3 runs',
       of: 2,
-      capOnly: null,
+      capOnly: 2,
       fitcheck: 1,
     });
   });

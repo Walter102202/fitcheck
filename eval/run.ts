@@ -8,7 +8,7 @@
  * Prints counts and case ids only, never case content.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { parseArgs } from 'node:util';
 import { z } from 'zod';
 import { type Env, loadEnv } from '../apps/backend/src/env.js';
@@ -27,6 +27,7 @@ import {
   runStamp,
 } from './src/harness.js';
 import { evalModel } from './src/model.js';
+import { publishHeldout, type RunDetail } from './src/results.js';
 
 const { values } = parseArgs({
   options: {
@@ -57,6 +58,8 @@ if (split === 'heldout') {
   const freeze = verifyFreeze(casesFile, shaFile);
   if (!freeze.ok) fail(`The held-out freeze check failed: ${freeze.reason}.`);
 }
+/** The commit that froze the cases, taken before the run writes anything. */
+const commitAtStart = split === 'heldout' ? heldOutCommit(REPO_ROOT) : null;
 
 /** The server's ports on recorded Channel3, the fixed harness clock and no citations. */
 function portsWith(model: ModelPort): EvalPorts {
@@ -152,24 +155,38 @@ const recordedOn = [...new Set(cases.map((c) => loadRecord(c.attempt.product_id)
   .filter((d): d is string => typeof d === 'string')
   .sort()
   .join(', ');
-const results = {
+const results: RunDetail = {
   measuredAt: new Date().toISOString(),
   model: measured.modelName,
   recordedOn,
-  heldOutCommit: split === 'heldout' ? heldOutCommit(REPO_ROOT) : null,
+  heldOutCommit: commitAtStart,
   casesSha256: sha256File(casesFile),
   recordingsDir: p.recordingsDir,
   runs: p.runs,
+  rerun: p.kind === 'live' ? (values.rerun ?? null) : null,
   outcomes: measured.outcomes,
   rows: measured.rows,
 };
-mkdirSync(join(p.outFile, '..'), { recursive: true });
-writeFileSync(p.outFile, `${JSON.stringify(results, null, 2)}\n`);
-console.log(`Wrote ${posix(p.outFile)}.`);
+const writeJson = (file: string, value: unknown) => {
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
+  console.log(`Wrote ${posix(file)}.`);
+};
+writeJson(p.outFile, results);
 for (const row of measured.rows) {
   console.log(
     `${row.label}: cap only ${row.capOnly ?? '-'}, Fitcheck ${row.fitcheck ?? '-'} (of ${row.of})`,
   );
+}
+
+if (p.kind === 'live' && split === 'heldout') {
+  publishHeldout({
+    resultsDir,
+    errataFile: join(EVAL_DIR, 'cases', 'errata.md'),
+    detail: results,
+    cases,
+  });
+  console.log('Wrote eval/results/latest.json and eval/results/misses.md.');
 }
 
 if (p.kind === 'replay' && p.committed) {

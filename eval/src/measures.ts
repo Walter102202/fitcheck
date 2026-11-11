@@ -67,7 +67,8 @@ export function computeRows(cases: EvalCase[], outcomes: CaseRunOutcome[]): Resu
   const everyUnasked = (runs: Runs) => runs.length > 0 && runs.every(paidUnasked);
 
   const held = outcomes.filter((o) => o.column === 'fitcheck' && o.asked);
-  const fitcheckRuns = sorted.map((c) => runsOf(c, 'fitcheck'));
+  const consistent = (runs: Runs) =>
+    runs.length > 0 && runs.every((o) => o.captured === runs[0]?.captured);
 
   return [
     countRow(
@@ -111,10 +112,8 @@ export function computeRows(cases: EvalCase[], outcomes: CaseRunOutcome[]): Resu
       id: 'consistent',
       label: 'Same outcome in all 3 runs',
       of: sorted.length,
-      capOnly: null,
-      fitcheck: fitcheckRuns.filter(
-        (runs) => runs.length > 0 && runs.every((o) => o.captured === runs[0]?.captured),
-      ).length,
+      capOnly: sorted.map((c) => runsOf(c, 'cap_only')).filter(consistent).length,
+      fitcheck: sorted.map((c) => runsOf(c, 'fitcheck')).filter(consistent).length,
       squares: { capOnly: [], fitcheck: [] },
     },
   ];
