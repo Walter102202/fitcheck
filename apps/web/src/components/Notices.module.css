@@ -1,0 +1,14 @@
+.notices {
+  display: grid;
+  gap: var(--s-2);
+  margin-bottom: var(--s-5);
+}
+
+.notices li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ask);
+  border-radius: var(--r-chip);
+  padding: var(--s-2) var(--s-3);
+  font-size: var(--t-sm);
+}
