@@ -6,6 +6,13 @@ export {
   ReviewUnavailableError,
   type ReviewUnavailableReason,
 } from './errors.js';
+export {
+  checksFor,
+  extractIntent,
+  type IntentDraft,
+  IntentDraftSchema,
+  verifyIntentDraft,
+} from './intent.js';
 export { createAiSdkModelPort, createModelPort, type ModelEnv } from './model/ai-sdk.js';
 export {
   callModel,
@@ -15,6 +22,7 @@ export {
   NoRecordingError,
   recordingKey,
 } from './model/port.js';
+export { buildIntentPrompt, INTENT_PROMPT_VERSION } from './model/prompts.js';
 export {
   createFileRecordingStore,
   createMemoryRecordingStore,
@@ -24,4 +32,4 @@ export {
   type RecordingStore,
 } from './model/recordings.js';
 export { failClosed, review } from './review.js';
-export type { ReviewDeps, ReviewLogger } from './types.js';
+export type { IntentDeps, ReviewDeps, ReviewLogger } from './types.js';

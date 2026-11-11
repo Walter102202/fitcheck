@@ -1,0 +1,22 @@
+[
+  {
+    "scenarioId": "dryer-spain",
+    "category": "hair_dryer",
+    "request": "A hair dryer for my trip to Spain next week. Under $40."
+  },
+  {
+    "scenarioId": "dryer-silent",
+    "category": "hair_dryer",
+    "request": "The cheapest hair dryer you can find for my trip to Spain."
+  },
+  {
+    "scenarioId": "tv-sony",
+    "category": "tv",
+    "request": "A 65-inch OLED TV for the living room. Up to $1,500."
+  },
+  {
+    "scenarioId": "tv-wall",
+    "category": "tv",
+    "request": "Replace the TV on our living room wall with a 65-inch, up to $1,600."
+  }
+]

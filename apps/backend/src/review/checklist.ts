@@ -25,7 +25,7 @@ export type ReviewChecklist = {
   /** Category file order, then common file order. */
   requirements: RequirementSpec[];
   /** common.json outOfScope. */
-  outOfScope: { id: string; name: string }[];
+  outOfScope: { id: string; name: string; handling?: string }[];
 };
 
 const NOUNS: Record<Category, ReviewChecklist['noun']> = { tv: 'TV', hair_dryer: 'hair dryer' };
@@ -45,7 +45,11 @@ export function getChecklist(category: Category): ReviewChecklist {
     channel3CategorySlugs: own.channel3CategorySlugs ?? [],
     facts: { ...common.facts, ...own.facts },
     requirements: [...own.requirements, ...common.requirements],
-    outOfScope: common.outOfScope.map((o) => ({ id: o.id, name: o.name })),
+    outOfScope: common.outOfScope.map((o) => ({
+      id: o.id,
+      name: o.name,
+      ...(o.handling !== undefined ? { handling: o.handling } : {}),
+    })),
   };
   cache.set(category, checklist);
   return checklist;

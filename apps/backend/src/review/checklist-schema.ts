@@ -61,7 +61,11 @@ export const RequirementSpecSchema = z.looseObject({
   whenStatedValue: z.string().optional(),
 });
 
-export const OutOfScopeSchema = z.looseObject({ id: z.string(), name: z.string() });
+export const OutOfScopeSchema = z.looseObject({
+  id: z.string(),
+  name: z.string(),
+  handling: z.string().optional(),
+});
 
 export const ChecklistFileSchema = z.looseObject({
   category: z.enum(['common', 'tv', 'hair_dryer']),

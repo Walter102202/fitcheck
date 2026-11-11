@@ -1,0 +1,33 @@
+{
+  "kind": "intent",
+  "key": "ebaa814808b8b6b2",
+  "input": {
+    "category": "tv",
+    "request": "Replace the TV on our living room wall with a 65-inch, up to $1,600."
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T03:50:00.000Z",
+  "attempts": {
+    "1": {
+      "budget": {
+        "quote": "up to $1,600"
+      },
+      "quantity": null,
+      "acceptUsed": null,
+      "stores": [],
+      "stated": [
+        {
+          "requirement": "tv.screen_size",
+          "quote": "65-inch"
+        }
+      ],
+      "triggered": [
+        {
+          "requirement": "tv.wall_mount",
+          "quote": "our living room wall"
+        }
+      ],
+      "unsupported": []
+    }
+  }
+}
