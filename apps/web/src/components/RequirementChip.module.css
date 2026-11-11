@@ -1,0 +1,32 @@
+/* Mockup fitcheck.css lines 260-290. Unbacked and nobody asked share the amber "ask" tint. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px 3px 7px;
+  border-radius: var(--r-chip);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.chip[data-state="backed"] {
+  background: var(--backed-tint);
+  color: var(--backed);
+}
+
+.chip[data-state="unbacked"],
+.chip[data-state="never_asked"] {
+  background: var(--ask-tint);
+  color: var(--ask);
+}
+
+.chip[data-state="contradictory"] {
+  background: var(--clash-tint);
+  color: var(--clash);
+}
+
+.chip[data-state="broken"] {
+  background: var(--broken-tint);
+  color: var(--broken);
+}

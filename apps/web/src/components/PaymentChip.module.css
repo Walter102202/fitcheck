@@ -1,0 +1,31 @@
+/* Mockup fitcheck.css lines 292-322. Not captured is ink, never red. */
+.pay {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  border-radius: var(--r-chip);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pay[data-state="authorized"] {
+  background: var(--pay-auth);
+  color: #fff;
+}
+
+.pay[data-state="captured"] {
+  background: var(--pay-captured);
+  color: #fff;
+}
+
+.pay[data-state="held"] {
+  background: var(--pay-held);
+  color: var(--ink);
+}
+
+.pay[data-state="not_captured"] {
+  background: var(--pay-not);
+  color: #fff;
+}
