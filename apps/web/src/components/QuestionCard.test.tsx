@@ -37,9 +37,14 @@ test('the title and the line count come from the card', () => {
   const { rerender, container } = render(<QuestionCard card={sony} onSubmit={vi.fn()} />);
   expect(screen.getByRole('heading', { name: sony.title })).toBeInTheDocument();
   expect(container.querySelector('h2 .mono, h2 [data-money]')?.textContent).toBe('$1,398.00');
-  expect(screen.getByText('To the buyer. 1 line.')).toBeInTheDocument();
+  expect(screen.getByText('The buyer answers 1 question.')).toBeInTheDocument();
+  expect(
+    screen.getByText(
+      'PayPal captures only if every answer is yes. Anything else releases the hold.',
+    ),
+  ).toBeInTheDocument();
   rerender(<QuestionCard card={card} onSubmit={vi.fn()} />);
-  expect(screen.getByText('To the buyer. 2 lines.')).toBeInTheDocument();
+  expect(screen.getByText('The buyer answers 2 questions.')).toBeInTheDocument();
   expect(screen.getByRole('form', { name: sony.title })).toBeInTheDocument();
 });
 
@@ -50,7 +55,7 @@ test('Send answers does nothing until every line is answered', () => {
   fireEvent.click(screen.getByRole('button', { name: 'Send answers' }));
   expect(onSubmit).not.toHaveBeenCalled();
   expect(
-    screen.getByText('Pick an answer for every line first. We pay only if every answer is yes.'),
+    screen.getByText('Answer every question first. PayPal captures only if every answer is yes.'),
   ).toBeInTheDocument();
   const unanswered = within(screen.getByRole('radiogroup', { name: second.text })).getAllByRole(
     'radio',

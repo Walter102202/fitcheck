@@ -10,8 +10,8 @@ const CHOICES: { value: Answer; label: string }[] = [
 ];
 
 const HINT = {
-  idle: 'We pay only if every answer is yes.',
-  missing: 'Pick an answer for every line first. We pay only if every answer is yes.',
+  idle: 'PayPal captures only if every answer is yes. Anything else releases the hold.',
+  missing: 'Answer every question first. PayPal captures only if every answer is yes.',
   failed: 'The answers were not sent. Try again.',
 } as const;
 
@@ -73,7 +73,7 @@ export function QuestionCard({
           <Title text={card.title} />
         </h2>
         <span className="note">
-          {n === 1 ? 'To the buyer. 1 line.' : `To the buyer. ${n} lines.`}
+          {n === 1 ? 'The buyer answers 1 question.' : `The buyer answers ${n} questions.`}
         </span>
       </header>
       {card.lines.map((line, i) => {
