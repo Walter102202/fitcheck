@@ -11,6 +11,7 @@ import { RequirementChip } from '../../components/RequirementChip.js';
 import { ScenarioRow } from '../../components/ScenarioRow.js';
 import { SquareRow } from '../../components/SquareRow.js';
 import { goTo } from '../../lib/browser.js';
+import { modelName } from '../../lib/model.js';
 import styles from './HomeScreen.module.css';
 import { Specimen } from './Specimen.js';
 
@@ -70,6 +71,11 @@ export function HomeScreen() {
             A shopping agent picks a product for you. Before PayPal captures the money, Fitcheck
             fetches the product record again and checks every requirement you have, including the
             ones nobody asked about. Each one has to be backed by a line of the store’s listing.
+          </p>
+          <p className={styles.engine}>
+            {config ? modelName(config.reviewModel) : 'Claude'} turns your request into
+            requirements, code checks each one against the listing, and only then does PayPal
+            capture the money.
           </p>
           <div className={styles.actions}>
             <ButtonLink to={`/run/${list[0]?.id ?? 'dryer-spain'}`}>

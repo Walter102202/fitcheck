@@ -220,6 +220,7 @@ test('config plays the simulated fallback with the $3,000.00 cap', async () => {
     paypalMode: 'simulated',
     channel3Mode: 'recorded',
     reviewModel: 'claude-sonnet-5-5',
+    reviewSource: 'recorded',
     capAmountCents: 300000,
   });
 });

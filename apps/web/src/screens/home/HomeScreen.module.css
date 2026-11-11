@@ -23,6 +23,14 @@
   max-width: 34em;
 }
 
+.engine {
+  margin-top: var(--s-3);
+  font-size: var(--t-md);
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 34em;
+}
+
 .actions {
   margin-top: var(--s-6);
   display: flex;

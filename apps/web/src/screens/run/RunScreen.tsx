@@ -1,6 +1,7 @@
 import type { Scenario } from '@fitcheck/contracts';
 import { Fragment, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
+import { useAppConfig } from '../../api/config.js';
 import { readableError } from '../../api/errors.js';
 import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
@@ -31,6 +32,7 @@ export function RunScreen() {
 
 function RunView({ scenarioId }: { scenarioId: string }) {
   const navigate = useNavigate();
+  const config = useAppConfig().data;
   const scenarios = useQuery(loadScenarios, 'scenarios');
   const list = scenarios.data;
   const index = list ? list.findIndex((s) => s.id === scenarioId) : -1;
@@ -108,7 +110,13 @@ function RunView({ scenarioId }: { scenarioId: string }) {
             </div>
           ) : ready ? (
             <>
-              <ChecksStep checks={run.checks} notChecked={run.intent.notChecked} />
+              <ChecksStep
+                checks={run.checks}
+                notChecked={run.intent.notChecked}
+                {...(config
+                  ? { reader: { model: config.reviewModel, source: config.reviewSource } }
+                  : {})}
+              />
               {run.attempts.map((attempt, i) => {
                 const last = i === run.attempts.length - 1;
                 return (

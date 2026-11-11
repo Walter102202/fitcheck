@@ -27,6 +27,15 @@ test('the hero shows the headline and the dryer that does not work in Spain', ()
   ).toBeInTheDocument();
 });
 
+test('one hero sentence names the reviewing model and PayPal', async () => {
+  renderApp({ route: '/' });
+  expect(
+    await screen.findByText(
+      'Claude Sonnet 5.5 turns your request into requirements, code checks each one against the listing, and only then does PayPal capture the money.',
+    ),
+  ).toBeInTheDocument();
+});
+
 test('the specimen quote says where the line comes from, without the field path', () => {
   renderApp({ route: '/' });
   const specimen = screen.getByRole('figure', {

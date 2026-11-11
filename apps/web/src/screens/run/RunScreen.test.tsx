@@ -92,6 +92,15 @@ test('dryer-spain: broken first pick, then the LURA captured', async () => {
   expect(within(panel).getByText('With a spending cap only')).toBeInTheDocument();
 });
 
+test('step 1 says the requirements are Claude’s recorded answer', async () => {
+  renderApp({ route: '/run/dryer-spain', api: withCap() });
+  expect(
+    await screen.findByText(
+      'Claude Sonnet 5.5 read these requirements from this request earlier. This page replays its recorded answer.',
+    ),
+  ).toBeInTheDocument();
+});
+
 test('the record line says when Channel3 was asked again', async () => {
   renderApp({ route: '/run/dryer-spain', api: withCap() });
   expect(

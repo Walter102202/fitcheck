@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { useAppConfig } from '../api/config.js';
 import { GITHUB_URL } from '../lib/links.js';
+import { modelName } from '../lib/model.js';
 import styles from './TopBar.module.css';
 
 export function TopBar() {
@@ -24,6 +25,10 @@ export function TopBar() {
         </nav>
         {config && (
           <div className={styles.modes}>
+            <span className={styles.mode}>
+              Review: <b>{modelName(config.reviewModel)}</b>
+              {config.reviewSource === 'recorded' && ' · recorded answers'}
+            </span>
             <span className={styles.mode}>
               PayPal: <b>{config.paypalMode}</b>
             </span>

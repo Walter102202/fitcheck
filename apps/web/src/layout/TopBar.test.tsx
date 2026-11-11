@@ -13,6 +13,28 @@ test('shows the PayPal and Channel3 modes from /api/config', async () => {
   expect(screen.getByText(/Channel3:/)).toHaveTextContent('Channel3: recorded copy');
 });
 
+test('names the reviewing model, and says when its answers are recorded', async () => {
+  renderWithProviders(<TopBar />);
+  expect(await screen.findByText(/Review:/)).toHaveTextContent(
+    'Review: Claude Sonnet 5.5 · recorded answers',
+  );
+});
+
+test('a live reviewer is named without the recorded part', async () => {
+  const api = createFakeApi();
+  vi.spyOn(api, 'getConfig').mockResolvedValue({
+    paypalMode: 'sandbox',
+    channel3Mode: 'live',
+    reviewModel: 'claude-sonnet-5-5',
+    reviewSource: 'live',
+    capAmountCents: 300000,
+  });
+  renderWithProviders(<TopBar />, { api });
+  const chip = await screen.findByText(/Review:/);
+  expect(chip).toHaveTextContent('Review: Claude Sonnet 5.5');
+  expect(chip.textContent).not.toMatch(/recorded/);
+});
+
 test('a sandbox and live config reads as such', async () => {
   const api = createFakeApi();
   vi.spyOn(api, 'getConfig').mockResolvedValue({

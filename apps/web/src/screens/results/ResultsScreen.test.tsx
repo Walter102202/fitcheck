@@ -55,7 +55,7 @@ test('a committed run shows its date, model and commit', async () => {
   renderApp({ route: '/results', api });
   expect(
     await screen.findByText(
-      'Measured on 2026-11-11 with claude-sonnet-5-5. Held-out set committed in abc1234.',
+      'Measured on 2026-11-11 with Claude Sonnet 5.5. Held-out set committed in abc1234.',
     ),
   ).toBeInTheDocument();
 });

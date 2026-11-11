@@ -46,6 +46,43 @@ test('one row per check, with its name and origin', () => {
   );
 });
 
+test('step 1 says Claude read the requirements, and that recorded answers are recorded', () => {
+  const { unmount } = render(
+    <ChecksStep
+      checks={runDryerSpain.checks}
+      notChecked={[]}
+      reader={{ model: 'claude-sonnet-5-5', source: 'recorded' }}
+    />,
+  );
+  expect(
+    screen.getByText(
+      'Claude Sonnet 5.5 read these requirements from this request earlier. This page replays its recorded answer.',
+    ),
+  ).toBeInTheDocument();
+  unmount();
+  render(
+    <ChecksStep
+      checks={runDryerSpain.checks}
+      notChecked={[]}
+      reader={{ model: 'claude-sonnet-5-5', source: 'live' }}
+    />,
+  );
+  expect(
+    screen.getByText('Claude Sonnet 5.5 read these requirements from the request.'),
+  ).toBeInTheDocument();
+});
+
+test('a request that could not be read names no reader', () => {
+  render(
+    <ChecksStep
+      checks={[]}
+      notChecked={[]}
+      reader={{ model: 'claude-sonnet-5-5', source: 'live' }}
+    />,
+  );
+  expect(screen.queryByText(/Claude Sonnet 5\.5/)).toBeNull();
+});
+
 test('the not-checked line', () => {
   const { unmount } = render(
     <ChecksStep

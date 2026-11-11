@@ -3,6 +3,7 @@ import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button } from '../../components/Button.js';
 import { SquareLegend } from '../../components/SquareRow.js';
+import { modelName } from '../../lib/model.js';
 import { ResultsMetrics } from './ResultsMetrics.js';
 import styles from './ResultsScreen.module.css';
 
@@ -16,7 +17,7 @@ function measuredLine(results: ResultsJson): string {
   const commit = results.heldOutCommit
     ? ` Held-out set committed in ${results.heldOutCommit.slice(0, 7)}.`
     : '';
-  return `Measured on ${results.measuredAt.slice(0, 10)} with ${results.model}.${commit}`;
+  return `Measured on ${results.measuredAt.slice(0, 10)} with ${modelName(results.model)}.${commit}`;
 }
 
 /** The held-out measurement: unit squares, counts, and what it does not show. */

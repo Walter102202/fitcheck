@@ -27,6 +27,8 @@ const CONFIG: ConfigResponse = {
   paypalMode: 'simulated',
   channel3Mode: 'recorded',
   reviewModel: 'claude-sonnet-5-5',
+  // The server says recorded whenever LLM_PROVIDER is not anthropic, as in fixture mode.
+  reviewSource: 'recorded',
   capAmountCents: CAP_CENTS,
 };
 
