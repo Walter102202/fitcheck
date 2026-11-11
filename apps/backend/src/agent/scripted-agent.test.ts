@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { type ProductRecord, ProductRecordSchema } from '@fitcheck/contracts';
 import { describe, expect, it } from 'vitest';
-import { FIXTURES_DIR, SCENARIOS } from './scenarios.js';
+import { FIXTURES_DIR, SCENARIOS, scenarioList } from './scenarios.js';
 import { pickFor, toCents } from './scripted-agent.js';
 
 const fixture = (id: string): ProductRecord =>
@@ -25,6 +25,24 @@ describe('scripted agent', () => {
     const offer = edited.product.offers[0];
     if (offer) offer.price.price = 31;
     expect(pickFor(aniqStep, edited).priceCents).toBe(3100);
+  });
+
+  // The Panasonic's main image is its energy label; the wall-mounted photo tells the story.
+  it('shows the chosen photo for the wall TV, on Home and on the pick', () => {
+    const wall = SCENARIOS.find((s) => s.id === 'tv-wall')?.picks[0];
+    if (!wall) throw new Error('tv-wall has no first pick');
+    expect(pickFor(wall, fixture('0gH7IUm')).image).toContain('952add9f');
+    expect(scenarioList().find((s) => s.id === 'tv-wall')?.image).toContain('952add9f');
+  });
+
+  it('falls back to the main image when the chosen photo is gone', () => {
+    const wall = SCENARIOS.find((s) => s.id === 'tv-wall')?.picks[0];
+    if (!wall) throw new Error('tv-wall has no first pick');
+    const record = fixture('0gH7IUm');
+    record.product.images = record.product.images.filter((i) => !i.url.includes('952add9f'));
+    expect(pickFor(wall, record).image).toBe(
+      record.product.images.find((i) => i.is_main_image)?.url,
+    );
   });
 
   it('uses the cheapest in-stock USD offer when the scenario store is gone', () => {

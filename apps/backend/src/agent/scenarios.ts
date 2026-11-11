@@ -1,11 +1,20 @@
 import { readFileSync } from 'node:fs';
-import { ProductRecordSchema, type Scenario } from '@fitcheck/contracts';
+import { type ProductRecord, ProductRecordSchema, type Scenario } from '@fitcheck/contracts';
 
 /** fixtures/channel3/ at the repo root; the same relative path works from src and dist. */
 export const FIXTURES_DIR = new URL('../../../../fixtures/channel3/', import.meta.url);
 
-/** One scripted agent pick. `agentSays` may hold {price}, filled from the record at pick time. */
-export type PickStep = { productId: string; domain: string; quantity: number; agentSays: string };
+/**
+ * One scripted agent pick. `agentSays` may hold {price}, filled from the record at pick time.
+ * `photo` is part of an image URL to show instead of the main image (falls back to it if gone).
+ */
+export type PickStep = {
+  productId: string;
+  domain: string;
+  quantity: number;
+  agentSays: string;
+  photo?: string;
+};
 export type ScenarioScript = Omit<Scenario, 'image'> & { picks: PickStep[] };
 
 /**
@@ -19,7 +28,7 @@ export const SCENARIOS: ScenarioScript[] = [
     request: 'A hair dryer for my trip to Spain next week. Under $40.',
     title: 'Hair dryer for a trip to Spain',
     shows: 'The listing says 110-120 V only',
-    endsIn: 'Not captured, then captured',
+    endsIn: 'Sent back, then the second pick is paid',
     showcase: 'broken',
     picks: [
       {
@@ -52,10 +61,10 @@ export const SCENARIOS: ScenarioScript[] = [
         agentSays: 'The cheapest one I found: {price} at boscovs.com.',
       },
       {
-        productId: 'saZdY6C',
-        domain: 'walmart.com',
+        productId: 'Qxt4Ypf',
+        domain: 'newegg.com',
         quantity: 1,
-        agentSays: 'You said no, so here is a travel hair dryer at {price} from walmart.com.',
+        agentSays: 'You said no, so here is a Conair travel dryer at {price} from newegg.com.',
       },
     ],
   },
@@ -82,7 +91,7 @@ export const SCENARIOS: ScenarioScript[] = [
     request: 'Replace the TV on our living room wall with a 65-inch, up to $1,600.',
     title: '65-inch TV for the wall mount',
     shows: 'Nobody asked about the wall-mount pattern',
-    endsIn: 'On hold, no; then on hold, yes, captured',
+    endsIn: 'Asked twice: no, then yes and paid',
     showcase: 'never_asked',
     picks: [
       {
@@ -90,24 +99,33 @@ export const SCENARIOS: ScenarioScript[] = [
         domain: 'beachcamera.com',
         quantity: 1,
         agentSays: 'Panasonic 65-inch W80C, {price} at beachcamera.com.',
+        // The main image is the energy label; this one shows the TV on a wall.
+        photo: '952add9f',
       },
       {
         productId: '1U7pIWX',
         domain: 'lg.com',
         quantity: 1,
-        agentSays: 'You said no, so here is the LG B6 65-inch at {price} from lg.com.',
+        agentSays:
+          'You said no, so here is the LG B6 65-inch at {price} from lg.com. Its mount pattern is 200 x 200 mm.',
       },
     ],
   },
 ];
 
-/** The main image of a recorded product, for the Home rows. */
-export function recordedImage(productId: string): string {
+/** The pick's chosen photo when the record still has it, else the record's main image. */
+export function imageOf(record: ProductRecord, photo?: string): string | null {
+  const images = record.product.images;
+  const chosen = photo ? images.find((i) => i.url.includes(photo)) : undefined;
+  return (chosen ?? images.find((i) => i.is_main_image) ?? images[0])?.url ?? null;
+}
+
+/** The image of a recorded product, for the Home rows. */
+export function recordedImage(productId: string, photo?: string): string {
   const record = ProductRecordSchema.parse(
     JSON.parse(readFileSync(new URL(`${productId}.json`, FIXTURES_DIR), 'utf8')),
   );
-  const images = record.product.images;
-  return (images.find((i) => i.is_main_image) ?? images[0])?.url ?? '';
+  return imageOf(record, photo) ?? '';
 }
 
 let listed: Scenario[] | undefined;
@@ -115,7 +133,7 @@ let listed: Scenario[] | undefined;
 export function scenarioList(): Scenario[] {
   listed ??= SCENARIOS.map(({ picks, ...scenario }) => ({
     ...scenario,
-    image: recordedImage(picks[0]?.productId ?? ''),
+    image: recordedImage(picks[0]?.productId ?? '', picks[0]?.photo),
   }));
   return listed;
 }

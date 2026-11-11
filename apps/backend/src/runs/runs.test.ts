@@ -144,7 +144,7 @@ describe('runs', () => {
     });
   });
 
-  it('dryer-silent shows the unbacked voltage and, after a no, the LURA', async () => {
+  it('dryer-silent shows the unbacked voltage and, after a no, the dual-voltage Conair', async () => {
     h = await createHarness();
     const { sessionId } = await activeCap(h.deps);
     const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-silent', review: 'on' });
@@ -158,7 +158,7 @@ describe('runs', () => {
     const done = await answer(sessionId, run, allNo(run));
     expect(done.attempts).toHaveLength(2);
     expect(done.attempts[0]?.outcome?.agentMessage).toBeTruthy();
-    expect(done.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 2020 });
+    expect(done.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 3799 });
     expect(done.status).toBe('done');
   });
 

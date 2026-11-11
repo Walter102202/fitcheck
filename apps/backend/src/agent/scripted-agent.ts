@@ -1,6 +1,6 @@
 import { type AgentPick, type Cents, formatUsd, type ProductRecord } from '@fitcheck/contracts';
 import { AppError } from '../api/errors.js';
-import type { PickStep } from './scenarios.js';
+import { imageOf, type PickStep } from './scenarios.js';
 
 /** Channel3 prices are dollars; the ledger is cents. */
 export function toCents(price: number): Cents {
@@ -27,8 +27,7 @@ export function pickFor(step: PickStep, record: ProductRecord): AgentPick {
     });
   }
   const priceCents = toCents(offer.price.price);
-  const images = record.product.images;
-  const image = (images.find((i) => i.is_main_image) ?? images[0])?.url ?? null;
+  const image = imageOf(record, step.photo);
   return {
     productId: record.product.id,
     title: record.product.title,

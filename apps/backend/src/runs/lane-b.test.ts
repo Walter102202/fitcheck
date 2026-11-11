@@ -37,7 +37,7 @@ describe("the four demo scenarios on Lane B's review", () => {
     expect(run.status).toBe('done');
   });
 
-  it('dryer-silent: the voltage is unbacked and asked; a no moves to the LURA', async () => {
+  it('dryer-silent: the voltage is unbacked and asked; a no moves to the dual-voltage Conair', async () => {
     const { sessionId } = await laneB();
     const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-silent', review: 'on' });
     expect(run.status).toBe('awaiting_answers');
@@ -46,7 +46,7 @@ describe("the four demo scenarios on Lane B's review", () => {
     );
     expect(voltage?.state).toBe('unbacked');
     const done = await answerAll(sessionId, run, 'no');
-    expect(done.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 2020 });
+    expect(done.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 3799 });
   });
 
   it('tv-sony: held with a card; a yes captures 139800', async () => {

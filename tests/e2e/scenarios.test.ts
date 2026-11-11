@@ -14,6 +14,7 @@ async function boot(env: Record<string, string> = {}) {
 }
 
 const LURA_CENTS = 2020;
+const CONAIR_DUAL_CENTS = 3799;
 const SONY_CENTS = 139800;
 const LG_CENTS = 119999;
 
@@ -40,7 +41,7 @@ describe('the four scenarios over HTTP', () => {
     expect(run.cap.capturedCents).toBe(LURA_CENTS);
   });
 
-  it('dryer-silent: voltage unbacked and asked; a no moves to the LURA, which is captured', async () => {
+  it('dryer-silent: voltage unbacked and asked; a no moves to a dual-voltage Conair, which is captured', async () => {
     const v = (await boot()).visitor();
     await v.approveCap();
     const held = await v.start('dryer-silent');
@@ -53,7 +54,11 @@ describe('the four scenarios over HTTP', () => {
 
     const done = await v.answerAll(held, 'no');
     expect(done.attempts[0]?.outcome?.decision).toBe('return_to_agent');
-    expect(done.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: LURA_CENTS });
+    expect(done.attempts[1]?.outcome).toEqual({
+      decision: 'capture',
+      amountCents: CONAIR_DUAL_CENTS,
+    });
+    expect(done.attempts[1]?.pick.productId).toBe('Qxt4Ypf');
   });
 
   it('tv-sony: the 65/55 contradiction is asked; yes captures, no in a fresh session captures nothing', async () => {
