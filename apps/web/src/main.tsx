@@ -1,11 +1,13 @@
+// The global styles load first, so every component's CSS Module comes after them and wins
+// over `.wrap` and the base rules wherever both set the same property.
+import './styles/fonts.css';
+import './styles/tokens.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { httpApi } from './api/http.js';
 import { FIXTURES_MODE } from './api/mode.js';
 import type { FitcheckApi } from './api/types.js';
 import { App } from './app.js';
-import './styles/fonts.css';
-import './styles/tokens.css';
 
 const root = document.getElementById('root');
 if (!root) throw new Error('index.html has no #root element');

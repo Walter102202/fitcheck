@@ -19,7 +19,7 @@ test('14 of 16 renders 16 squares and an accessible count', () => {
   ).toBeInTheDocument();
   expect(container.querySelectorAll('i[data-state="paid_bad"]')).toHaveLength(14);
   expect(container.querySelectorAll('i[data-state="not_paid"]')).toHaveLength(2);
-  expect(screen.getByText('14 of 16')).toBeInTheDocument();
+  expect(screen.getByText('14 of 16')).not.toHaveAttribute('data-pending');
   expect(screen.getByText('Spending cap only')).toBeInTheDocument();
 });
 
@@ -33,7 +33,8 @@ test('a row not measured yet says so', () => {
       label="Wrong purchases that got paid"
     />,
   );
-  expect(screen.getByText('Not measured yet')).toBeInTheDocument();
+  // The words are longer than a count, so they take the smaller pending style and stay inside the sheet.
+  expect(screen.getByText('Not measured yet')).toHaveAttribute('data-pending');
   expect(
     screen.getByRole('img', { name: 'Not measured yet: Wrong purchases that got paid' }),
   ).toBeInTheDocument();

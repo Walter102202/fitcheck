@@ -29,7 +29,9 @@ export function SquareRow({
           <i key={i} className={styles.sq} data-state={state} />
         ))}
       </span>
-      <span className={styles.count}>{measured ? `${count} of ${of}` : 'Not measured yet'}</span>
+      <span className={styles.count} {...(measured ? {} : { 'data-pending': '' })}>
+        {measured ? `${count} of ${of}` : 'Not measured yet'}
+      </span>
     </div>
   );
 }

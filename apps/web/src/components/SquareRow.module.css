@@ -46,6 +46,15 @@
   white-space: nowrap;
 }
 
+/* "Not measured yet" is wider than "14 of 16": small body type keeps it inside the 110px column. */
+.count[data-pending] {
+  font-family: inherit;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--ink-2);
+  white-space: normal;
+}
+
 .legend {
   display: flex;
   flex-wrap: wrap;

@@ -38,3 +38,12 @@
 .switch input:disabled + label {
   cursor: default;
 }
+
+/* The mockup's 32 px switch stays on desktop; a finger gets the 44 px target the spec asks for. */
+@media (pointer: coarse) {
+  .switch label {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}

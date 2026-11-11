@@ -39,3 +39,10 @@
   cursor: default;
   opacity: 0.6;
 }
+
+/* The mockup's 36 px small button stays on desktop; a finger gets the spec's 44 px target. */
+@media (pointer: coarse) {
+  .btn[data-size="small"] {
+    min-height: 44px;
+  }
+}
