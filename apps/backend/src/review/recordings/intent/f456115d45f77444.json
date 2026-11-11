@@ -1,0 +1,32 @@
+{
+  "kind": "intent",
+  "key": "f456115d45f77444",
+  "input": {
+    "category": "tv",
+    "request": "A 65-inch OLED TV for the living room. Up to $1,500."
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T03:50:00.000Z",
+  "attempts": {
+    "1": {
+      "budget": {
+        "quote": "Up to $1,500"
+      },
+      "quantity": null,
+      "acceptUsed": null,
+      "stores": [],
+      "stated": [
+        {
+          "requirement": "tv.screen_size",
+          "quote": "65-inch"
+        },
+        {
+          "requirement": "tv.panel_type",
+          "quote": "OLED"
+        }
+      ],
+      "triggered": [],
+      "unsupported": []
+    }
+  }
+}

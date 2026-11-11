@@ -12,7 +12,40 @@ export const CAP_CENTS = 300000;
 export const AUTHORIZATION_ID = '0VF52814937998046';
 export const NOT_CHECKED = ['shipping', 'returns', 'warranty', 'tax'];
 
-/** Evidence on a quoted span of a field; the excerpt is cut to 160 characters around it. */
+const EXCERPT_MAX = 160;
+
+/**
+ * Cuts `field` around [at, end) with lane B's makeExcerpt rules: short text whole; else the
+ * sentence holding the match if it fits; else a window cut at word boundaries with "…".
+ */
+function excerpt(field: string, at: number, end: number): { text: string; start: number } {
+  if (field.length <= EXCERPT_MAX) return { text: field, start: at };
+  let offset = 0;
+  for (const sentence of field.split(/(?<=[.!?])\s+/)) {
+    const from = field.indexOf(sentence, offset);
+    offset = from + sentence.length;
+    if (from <= at && end <= offset) {
+      if (sentence.length <= EXCERPT_MAX) return { text: sentence, start: at - from };
+      break;
+    }
+  }
+  const room = EXCERPT_MAX - 2;
+  let to = Math.min(field.length, Math.max(0, Math.round((at + end - room) / 2)) + room);
+  let from = Math.max(0, to - room);
+  if (from > 0 && field[from - 1] !== ' ') {
+    const space = field.indexOf(' ', from);
+    if (space >= 0 && space < at) from = space + 1;
+  }
+  if (to < field.length && field[to] !== ' ') {
+    const space = field.lastIndexOf(' ', to);
+    if (space >= end) to = space;
+  }
+  const prefix = from > 0 ? '…' : '';
+  const suffix = to < field.length ? '…' : '';
+  return { text: `${prefix}${field.slice(from, to)}${suffix}`, start: prefix.length + at - from };
+}
+
+/** Evidence on a quoted span of a field, excerpted to at most 160 characters. */
 export function quoted(
   path: string,
   label: string,
@@ -23,13 +56,7 @@ export function quoted(
 ): Evidence {
   const at = field.indexOf(quote);
   if (at < 0) throw new Error(`Quote not found in ${path}: ${quote}`);
-  let text = field;
-  let start = at;
-  if (field.length > 160) {
-    const from = Math.max(0, Math.min(at - 40, field.length - 160));
-    text = field.slice(from, from + 160);
-    start = at - from;
-  }
+  const { text, start } = excerpt(field, at, at + quote.length);
   return { path, label, text, start, end: start + quote.length, value, display };
 }
 

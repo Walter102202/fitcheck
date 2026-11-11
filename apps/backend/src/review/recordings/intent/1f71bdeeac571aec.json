@@ -1,0 +1,26 @@
+{
+  "kind": "intent",
+  "key": "1f71bdeeac571aec",
+  "input": {
+    "category": "hair_dryer",
+    "request": "The cheapest hair dryer you can find for my trip to Spain."
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T03:50:00.000Z",
+  "attempts": {
+    "1": {
+      "budget": null,
+      "quantity": null,
+      "acceptUsed": null,
+      "stores": [],
+      "stated": [],
+      "triggered": [
+        {
+          "requirement": "hair_dryer.dual_voltage",
+          "quote": "my trip to Spain"
+        }
+      ],
+      "unsupported": []
+    }
+  }
+}

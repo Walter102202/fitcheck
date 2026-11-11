@@ -14,6 +14,21 @@ describe('checklists', () => {
     }
   });
 
+  // Reason templates are shown after "Sent to the agent:", so they speak about the buyer.
+  it.each(lists)('%s: reason templates never address the buyer as "you"', (_, list) => {
+    const templates = [...JSON.stringify(list).matchAll(/"reasonTemplate":"([^"]*)"/g)].map(
+      (m) => m[1] ?? '',
+    );
+    expect(templates.length).toBeGreaterThan(0);
+    for (const template of templates) expect(template).not.toMatch(/\byou\b/i);
+  });
+
+  it('the dual-voltage reason tells the agent what to pick instead', () => {
+    expect(JSON.stringify(loadChecklist('hair_dryer'))).toContain(
+      '"reasonTemplate":"The listing says it only works on 110-120 V outlets; the buyer is taking it abroad. Pick an offer whose listing states 220-240 V or dual voltage."',
+    );
+  });
+
   it('requirement ids are unique across the three files', () => {
     const ids = lists.flatMap(([, list]) => list.requirements.map((r) => r.id));
     expect(new Set(ids).size).toBe(ids.length);
