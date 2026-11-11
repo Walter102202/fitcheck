@@ -1,5 +1,6 @@
 import type { Answer, QuestionCard, TaskMemory } from '@fitcheck/contracts';
 import { getChecklist } from './checklist.js';
+import { notPaid } from './errors.js';
 
 function requirementName(id: string): string {
   for (const category of ['tv', 'hair_dryer'] as const) {
@@ -36,6 +37,6 @@ export function applyAnswers(
   return {
     decision: 'return_to_agent',
     memory: next,
-    agentMessage: `The buyer did not approve: ${declined.join('; ')}.`,
+    agentMessage: notPaid(`The buyer did not approve: ${declined.join('; ')}.`),
   };
 }

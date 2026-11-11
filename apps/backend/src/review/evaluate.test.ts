@@ -71,7 +71,7 @@ describe('evaluateRequirement: screen size, resolution, panel', () => {
       stated: { 'tv.screen_size': { value: 55, quote: '55-inch' } },
     });
     expect(e.result.state).toBe('broken');
-    expect(e.returnReason).toBe('It is a 65-inch TV; you asked for 55 inches.');
+    expect(e.returnReason).toBe('It is a 65-inch TV; the buyer asked for 55 inches.');
     expect(e.returnType).toBe('broken');
   });
 
@@ -87,7 +87,7 @@ describe('evaluateRequirement: screen size, resolution, panel', () => {
       stated: { 'tv.resolution': { value: '8k', quote: '8K' } },
     });
     expect(e.result.state).toBe('broken');
-    expect(e.returnReason).toBe('It is 4K; you asked for 8K.');
+    expect(e.returnReason).toBe('It is 4K; the buyer asked for 8K.');
   });
 
   it('stated OLED on the Panasonic QLED is broken', () => {
@@ -95,7 +95,7 @@ describe('evaluateRequirement: screen size, resolution, panel', () => {
       stated: { 'tv.panel_type': { value: 'oled', quote: 'OLED' } },
     });
     expect(e.result.state).toBe('broken');
-    expect(e.returnReason).toBe('It is an LED/LCD TV; you asked for OLED.');
+    expect(e.returnReason).toBe('It is an LED/LCD TV; the buyer asked for OLED.');
   });
 });
 
@@ -162,7 +162,7 @@ describe('evaluateRequirement: wall mount and space', () => {
     });
     expect(e.result.state).toBe('broken');
     expect(e.returnReason).toBe(
-      'This TV uses the VESA 300 x 300 mm pattern; your mount takes up to 200 x 200 mm.',
+      "This TV uses the VESA 300 x 300 mm pattern; the buyer's mount takes up to 200 x 200 mm.",
     );
   });
 
@@ -220,7 +220,7 @@ describe('evaluateRequirement: hair dryers', () => {
       display: '110-120 V only',
     });
     expect(e.returnReason).toBe(
-      'The listing says it only works on 110-120 V outlets; you are taking it abroad.',
+      'The listing says it only works on 110-120 V outlets; the buyer is taking it abroad. Pick an offer whose listing states 220-240 V or dual voltage.',
     );
   });
 

@@ -179,7 +179,7 @@ describe('evaluateCommon', () => {
 
   it('a quantity mismatch returns', () => {
     const e = common('common.quantity', 'UXXAg59', 'pcrichard.com', { quantity: 2 });
-    expect(e?.returnReason).toBe('The agent ordered 2; you asked for 1.');
+    expect(e?.returnReason).toBe('The agent ordered 2; the buyer asked for 1.');
     expect(e?.result).not.toHaveProperty('fact');
   });
 
@@ -191,7 +191,7 @@ describe('evaluateCommon', () => {
       {},
       { stores: ['bestbuy.com'] },
     );
-    expect(e?.returnReason).toBe('pcrichard.com is not among the stores you allowed.');
+    expect(e?.returnReason).toBe('pcrichard.com is not among the stores the buyer allowed.');
     const ok = common(
       'common.merchant',
       'UXXAg59',
@@ -247,7 +247,7 @@ describe('evaluateCommon', () => {
         stated: { 'common.brand': { value: 'sony', quote: 'Sony' } },
       },
     );
-    expect(e?.returnReason).toBe('It is a Panasonic; you asked for Sony.');
+    expect(e?.returnReason).toBe('It is a Panasonic; the buyer asked for Sony.');
     expect(e?.returnType).toBe('broken');
     const ok = common(
       'common.brand',

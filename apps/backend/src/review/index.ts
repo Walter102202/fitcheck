@@ -10,6 +10,8 @@ export {
 export { decide, MAX_LINES } from './decide.js';
 export {
   FAIL_CLOSED_MESSAGE,
+  NOT_PAID_PREFIX,
+  notPaid,
   OVERFLOW_MESSAGE,
   ReviewUnavailableError,
   type ReviewUnavailableReason,

@@ -61,7 +61,7 @@ describe('applyAnswers', () => {
       {},
     );
     expect(out.decision).toBe('return_to_agent');
-    expect(out.agentMessage).toBe('The buyer did not approve: Screen size.');
+    expect(out.agentMessage).toBe('Not paid. The buyer did not approve: Screen size.');
     expect(out.memory['tv.screen_size=55|65']).toBe('needed');
     expect(out.memory['tv.wall_mount=300x300']).toBe('not_needed');
   });
@@ -73,7 +73,7 @@ describe('applyAnswers', () => {
       {},
     );
     expect(out.agentMessage).toBe(
-      'The buyer did not approve: Fits the wall mount the buyer already has (not sure).',
+      'Not paid. The buyer did not approve: Fits the wall mount the buyer already has (not sure).',
     );
     expect(out.memory).not.toHaveProperty('tv.wall_mount=300x300');
   });
@@ -82,7 +82,7 @@ describe('applyAnswers', () => {
     const out = applyAnswers(card, { 'tv.screen_size=55|65': 'yes', 'tv.other=1': 'yes' }, {});
     expect(out.decision).toBe('return_to_agent');
     expect(out.agentMessage).toBe(
-      'The buyer did not approve: Fits the wall mount the buyer already has (not sure).',
+      'Not paid. The buyer did not approve: Fits the wall mount the buyer already has (not sure).',
     );
     expect(out.memory).toEqual({ 'tv.screen_size=55|65': 'not_needed' });
   });
@@ -90,7 +90,7 @@ describe('applyAnswers', () => {
   it('two declined lines are joined with a semicolon', () => {
     const out = applyAnswers(card, { 'tv.screen_size=55|65': 'no' }, {});
     expect(out.agentMessage).toBe(
-      'The buyer did not approve: Screen size; Fits the wall mount the buyer already has (not sure).',
+      'Not paid. The buyer did not approve: Screen size; Fits the wall mount the buyer already has (not sure).',
     );
   });
 
@@ -102,7 +102,7 @@ describe('applyAnswers', () => {
     const no = applyAnswers(paymentCard, { 'common.price_unchanged=139800': 'no' }, {});
     expect(no).toMatchObject({ decision: 'return_to_agent', memory: {} });
     expect(no.agentMessage).toBe(
-      'The buyer did not approve: Price has not changed since the agent chose it.',
+      'Not paid. The buyer did not approve: Price has not changed since the agent chose it.',
     );
   });
 

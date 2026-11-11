@@ -67,7 +67,7 @@ describe('scenarios', () => {
       evidence: [{ text: 'Note: For use with 110V–120V outlets only.', display: '110-120 V only' }],
     });
     expect(a1.agentMessage).toBe(
-      'The listing says it only works on 110-120 V outlets; you are taking it abroad.',
+      'Not paid. The listing says it only works on 110-120 V outlets; the buyer is taking it abroad. Pick an offer whose listing states 220-240 V or dual voltage.',
     );
     const a2 = await at('saZdY6C', 'walmart.com');
     expect(a2.decision).toBe('capture');

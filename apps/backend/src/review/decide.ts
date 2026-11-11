@@ -7,7 +7,7 @@ import {
   type ReviewResult,
   type TaskMemory,
 } from '@fitcheck/contracts';
-import { OVERFLOW_MESSAGE } from './errors.js';
+import { notPaid, OVERFLOW_MESSAGE } from './errors.js';
 import type { Evaluation, PendingLine } from './evaluate.js';
 
 export const MAX_LINES = 3;
@@ -48,7 +48,7 @@ export function decide(
     const sentences = [...new Set(returns.map((r) => r.reason))];
     return {
       decision: 'return_to_agent',
-      agentMessage: sentences.join(' '),
+      agentMessage: notPaid(sentences.join(' ')),
       reasons: returns.map((r) => ({ requirement: r.requirement, type: r.type })),
       results,
     };
@@ -76,9 +76,11 @@ export function decide(
   if (rejected.length > 0) {
     return {
       decision: 'return_to_agent',
-      agentMessage: rejected
-        .map((r) => `The buyer already said no to this point earlier in this task: ${r.name}.`)
-        .join(' '),
+      agentMessage: notPaid(
+        rejected
+          .map((r) => `The buyer already said no to this point earlier in this task: ${r.name}.`)
+          .join(' '),
+      ),
       reasons: rejected.map((r) => reasonOf(r.line)),
       results,
     };
@@ -93,7 +95,7 @@ export function decide(
   if (lines.length > MAX_LINES) {
     return {
       decision: 'return_to_agent',
-      agentMessage: OVERFLOW_MESSAGE,
+      agentMessage: notPaid(OVERFLOW_MESSAGE),
       reasons: lines.map(reasonOf),
       results,
     };

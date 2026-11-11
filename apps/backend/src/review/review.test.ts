@@ -74,7 +74,7 @@ describe('review', () => {
     expect(r).toMatchObject({
       decision: 'return_to_agent',
       agentMessage:
-        'The listing says it only works on 110-120 V outlets; you are taking it abroad.',
+        'Not paid. The listing says it only works on 110-120 V outlets; the buyer is taking it abroad. Pick an offer whose listing states 220-240 V or dual voltage.',
     });
     expect(r.card).toBeUndefined();
   });
@@ -113,7 +113,10 @@ describe('review', () => {
       }),
       deps,
     );
-    expect(result).toMatchObject({ decision: 'return_to_agent', agentMessage: OVERFLOW_MESSAGE });
+    expect(result).toMatchObject({
+      decision: 'return_to_agent',
+      agentMessage: `Not paid. ${OVERFLOW_MESSAGE}`,
+    });
     expect(result.card).toBeUndefined();
     expect(result.reasons.map((x) => x.type)).toEqual([
       'payment',
@@ -129,7 +132,7 @@ describe('review', () => {
     expect(conair).toMatchObject({
       decision: 'return_to_agent',
       agentMessage:
-        'The buyer already said no to this point earlier in this task: Works on 220-240 V outlets abroad.',
+        'Not paid. The buyer already said no to this point earlier in this task: Works on 220-240 V outlets abroad.',
     });
     expect(conair.card).toBeUndefined();
     expect(conair.reasons).toEqual([{ requirement: 'hair_dryer.dual_voltage', type: 'unbacked' }]);
@@ -238,5 +241,19 @@ describe('review', () => {
     delete live.recordedOn;
     const l = await review(input(live, 'walmart.com', travel), deps);
     expect(l.record).toEqual({ fetchedAt: live.fetchedAt, source: 'live' });
+  });
+});
+
+describe('agent messages', () => {
+  it('the ANIQ return equals the contract example, Not paid prefix included', async () => {
+    const { runDryerSpain } = await import('@fitcheck/contracts');
+    const example = runDryerSpain.attempts[0]?.review.agentMessage;
+    const r = await review(input('cv7t721', 'walmart.com', travel), deps);
+    expect(r.agentMessage).toBe(example);
+    expect(r.agentMessage?.startsWith('Not paid. ')).toBe(true);
+  });
+
+  it('fail closed keeps its message without the prefix', () => {
+    expect(failClosed(NOW).agentMessage).toBe('Fitcheck could not check this listing.');
   });
 });

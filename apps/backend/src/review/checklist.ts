@@ -63,7 +63,7 @@ export const STATED_TESTS: Record<string, { test: FactTest; reasonTemplate: stri
   'tv.wall_mount': {
     test: { fact: 'vesaPattern', op: 'fitsWithin', valueFrom: 'intent' },
     reasonTemplate:
-      'This TV uses the VESA {vesaPattern} pattern; your mount takes up to {intentValue}.',
+      "This TV uses the VESA {vesaPattern} pattern; the buyer's mount takes up to {intentValue}.",
   },
   'tv.fits_space': {
     test: { fact: 'widthIn', op: 'max', valueFrom: 'intent' },
