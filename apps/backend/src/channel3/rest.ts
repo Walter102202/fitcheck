@@ -79,3 +79,12 @@ export function toChannel3Product(raw: unknown): Channel3Product {
     .join('; ');
   throw new Channel3ShapeError(`Unknown Channel3 product shape: ${issues}`);
 }
+
+/** The product answered for `GET /v1/products/{id}`; an answer for another id is a shape error. */
+export function toRequestedProduct(id: string, raw: unknown): Channel3Product {
+  const product = toChannel3Product(raw);
+  if (product.id !== id) {
+    throw new Channel3ShapeError(`Channel3 answered product ${product.id} for ${id}`);
+  }
+  return product;
+}

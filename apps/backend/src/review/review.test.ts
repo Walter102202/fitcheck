@@ -109,7 +109,7 @@ describe('review', () => {
     });
     const result = await review(
       input(noCondition, 'pcrichard.com', sonyWall, {
-        purchase: { priceSeenCents: 129800, amountCents: 139800 },
+        purchase: { priceSeenCents: 129800, amountCents: 129800 },
       }),
       deps,
     );
@@ -218,7 +218,7 @@ describe('review', () => {
     const changed = await review(
       input('0gH7IUm', 'beachcamera.com', wallOnly, {
         memory: { 'tv.wall_mount=300x300': 'not_needed' },
-        purchase: { priceSeenCents: 45000 },
+        purchase: { priceSeenCents: 45000, amountCents: 45000 },
       }),
       deps,
     );

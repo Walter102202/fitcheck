@@ -19,9 +19,21 @@ import { appliesTo, type Evaluation, groupCandidates, passes } from './evaluate.
 import { collectCandidates } from './facts.js';
 import type { Candidate } from './normalize.js';
 import { type ProductContext, readPath, searchedLabels } from './paths.js';
-import { findQuote } from './text.js';
+import { findQuote, looseEqual, makeExcerpt } from './text.js';
 
 export { chosenOffer } from './paths.js';
+
+const brandKey = (s: string) => s.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const hasWord = (hay: string, word: string) =>
+  new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(word)}(?![\\p{L}\\p{N}])`, 'u').test(hay);
+
+/** Word-bounded containment either way: "Sony" matches "a sony tv", "Sony Group" matches "sony". */
+function sameBrand(listed: string, wanted: string): boolean {
+  const a = brandKey(listed);
+  const b = brandKey(wanted);
+  return a !== '' && b !== '' && (hasWord(a, b) || hasWord(b, a));
+}
 
 /** Checks that need the chosen offer; they are skipped when the listing has no offer from the domain. */
 const OFFER_CHECKS = new Set([
@@ -123,13 +135,28 @@ export function evaluateCommon(
         test && !isFactTest(test) && 'everyOptionNamed' in test
           ? test.everyOptionNamed.map((n) => n.toLowerCase())
           : [];
-      const options = (ctx.product.variants?.options ?? []).filter(
+      const allOptions = ctx.product.variants?.options ?? [];
+      const listed = ctx.product.variants?.selected ?? [];
+      const sameName = (a: string, b: string) => a.toLowerCase() === b.toLowerCase();
+      // the agent's pins must agree with the listing and name a label the listing offers
+      for (const pin of purchase.variantSelected ?? []) {
+        const option = allOptions.find((o) => sameName(o.name, pin.name));
+        if (!option) continue;
+        const name = option.name.toLowerCase();
+        const current = listed.find((s) => sameName(s.name, pin.name));
+        if (current && !looseEqual(current.label, pin.label)) {
+          return fail(
+            `The agent pinned ${name} ${pin.label}, but the listing is for ${name} ${current.label}.`,
+          );
+        }
+        if (!option.values.some((v) => looseEqual(v.label, pin.label))) {
+          return fail(`The agent pinned ${name} ${pin.label}, which the listing does not offer.`);
+        }
+      }
+      const options = allOptions.filter(
         (o) => names.includes(o.name.toLowerCase()) && o.values.length > 1,
       );
-      const selected = [
-        ...(ctx.product.variants?.selected ?? []),
-        ...(purchase.variantSelected ?? []),
-      ];
+      const selected = [...listed, ...(purchase.variantSelected ?? [])];
       for (const o of options) {
         const pinned = selected.some(
           (s) => s.name.toLowerCase() === o.name.toLowerCase() && s.label,
@@ -139,14 +166,65 @@ export function evaluateCommon(
       return backed(options.flatMap((o) => fieldEvidence(`variants.selected[${o.name}]`, ctx)));
     }
     case 'common.amount_matches': {
+      // the agent charges what it saw; a live price change is price_unchanged's card line
       if (priceCents === null) return fail(`The ${purchase.domain} offer is not in USD.`);
-      const evidence = fieldEvidence('offer.price.price', ctx);
-      return priceCents * quantity === purchase.amountCents
-        ? backed(evidence.map((e) => ({ ...e, value: priceCents, display: e.text })))
-        : fail(
-            render(),
-            evidence.map((e) => ({ ...e, value: priceCents, display: e.text })),
-          );
+      const seen = purchase.priceSeenCents * quantity;
+      const evidence = fieldEvidence('offer.price.price', ctx).map((e) => ({
+        ...e,
+        value: priceCents,
+        display: e.text,
+      }));
+      return purchase.amountCents === seen
+        ? backed(evidence)
+        : fail(render({ price: formatUsd(seen) }), evidence);
+    }
+    case 'common.brand': {
+      // the listing's brand names; the title only when the listing names no brand at all
+      const stated = intent.stated[req.id];
+      const wanted = typeof stated?.value === 'string' ? stated.value : (stated?.quote ?? '');
+      let named: Evidence[] = fieldEvidence('brands[].name', ctx)
+        .filter((e) => e.text.trim() !== '')
+        .map((e) => ({ ...e, value: e.text.trim().toLowerCase(), display: e.text.trim() }));
+      const hit = named.length === 0 && stated ? findQuote(ctx.product.title, stated.quote) : null;
+      if (hit) {
+        const written = ctx.product.title.slice(hit.start, hit.end);
+        const excerpt = makeExcerpt(ctx.product.title, hit.start, hit.end);
+        named = [
+          {
+            path: 'title',
+            label: 'Title',
+            text: excerpt.text,
+            start: excerpt.start,
+            end: excerpt.end,
+            value: written.toLowerCase(),
+            display: written,
+          },
+        ];
+      }
+      if (named.length === 0) {
+        const template = req.line?.unbacked ?? 'The listing does not name the brand. Is that OK?';
+        return {
+          result: {
+            ...base,
+            state: 'unbacked',
+            evidence: [],
+            searched: searchedLabels(checklist.facts.brand?.evidence ?? [], ctx),
+          },
+          line: {
+            lineId: req.id,
+            requirement: req.id,
+            type: 'unbacked',
+            text: renderTemplate(template, vars),
+          },
+        };
+      }
+      // a product may carry a second (retailer) brand: one matching brand is enough
+      const matching = named.filter((e) => sameBrand(e.display, wanted));
+      if (matching.length > 0) return backed(matching);
+      return fail(
+        render({ brand: named[0]?.display ?? '', intentBrand: stated?.quote ?? wanted }),
+        named,
+      );
     }
     default:
       break;
@@ -158,31 +236,8 @@ export function evaluateCommon(
   const fact = factId ? checklist.facts[factId] : undefined;
   if (!test || !fact || !factId) throw new Error(`${req.id} has no fact test`);
 
-  let candidates = collectCandidates(factId, ctx, checklist);
+  const candidates = collectCandidates(factId, ctx, checklist);
   const stated = intent.stated[req.id];
-  if (req.id === 'common.brand' && candidates.length === 0 && stated) {
-    const hit = findQuote(ctx.product.title, stated.quote);
-    if (hit) {
-      const written = ctx.product.title.slice(hit.start, hit.end);
-      candidates = [
-        {
-          value: written.toLowerCase(),
-          evidence: {
-            path: 'title',
-            label: 'Title',
-            text: ctx.product.title.slice(0, 160),
-            start: hit.start,
-            end: hit.end,
-            value: written.toLowerCase(),
-            display: written,
-          },
-          source: 'title',
-          conflictDisplay: written,
-          backing: true,
-        },
-      ];
-    }
-  }
 
   if (candidates.length === 0) {
     const result: RequirementResult = {
@@ -221,13 +276,6 @@ export function evaluateCommon(
     return passes(test, value, expected, fact);
   };
   const failing = candidates.filter((c) => !ok(c));
-
-  if (req.id === 'common.brand') {
-    // a product may carry a second (retailer) brand: one matching brand is enough
-    if (failing.length < candidates.length) return backed(evidenceOf(candidates.filter(ok)));
-    const brand = failing[0]?.evidence.display ?? '';
-    return fail(render({ brand, intentBrand: stated?.quote ?? '' }), evidenceOf(failing));
-  }
   if (failing.length === 0) return backed(evidenceOf(candidates));
 
   const first = failing[0];

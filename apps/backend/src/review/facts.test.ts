@@ -81,7 +81,7 @@ describe('collectCandidates', () => {
     expect(bb.filter((c) => c.backing)).toEqual([]);
   });
 
-  it('screen size over the 53 recorded TVs: 1 without a size, 6 with two', () => {
+  it('screen size over the 53 recorded TVs: 1 without a size, 5 with two', () => {
     const tvs = allRecorded('televisions');
     expect(tvs).toHaveLength(53);
     const none: string[] = [];
@@ -96,7 +96,9 @@ describe('collectCandidates', () => {
       if (g.length >= 2) two.push(r.product.id);
     }
     expect(none.sort()).toEqual(['9k01plK']);
-    expect(two.sort()).toEqual(['3KRsP5G', 'BNmn7U3', 'FOOnl5V', 'TelLVBm', 'UXXAg59', 'oQY2CWr']);
+    // requisitos.md counted 6 of 53; FOOnl5V was a false positive (its mount range '43"-98"'),
+    // which the normalizer now skips as a compatibility range (lead ruling 2026-11-11).
+    expect(two.sort()).toEqual(['3KRsP5G', 'BNmn7U3', 'TelLVBm', 'UXXAg59', 'oQY2CWr']);
   });
 
   it('VESA over the 53 TVs: 37 with a pattern, 7 with two or more', () => {

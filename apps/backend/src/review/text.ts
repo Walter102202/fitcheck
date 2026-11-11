@@ -57,6 +57,11 @@ export function findQuote(haystack: string, quote: string): { start: number; end
   return { start, end };
 }
 
+/** Equal when compared loosely (case, quotes, dashes, spacing): `65"` equals `65”`. */
+export function looseEqual(a: string, b: string): boolean {
+  return normalizeWithMap(a.trim()).text === normalizeWithMap(b.trim()).text;
+}
+
 const isSpace = (c: string | undefined) => c !== undefined && /\s/.test(c);
 
 /**

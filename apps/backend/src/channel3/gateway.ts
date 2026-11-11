@@ -1,6 +1,11 @@
 import type { ProductRecord } from '@fitcheck/contracts';
 import { FIXTURES_DIR, listRecordedProducts, readRecordedProduct } from './fixtures.js';
-import { type Channel3RestClient, createChannel3RestClient, toChannel3Product } from './rest.js';
+import {
+  type Channel3RestClient,
+  createChannel3RestClient,
+  toChannel3Product,
+  toRequestedProduct,
+} from './rest.js';
 import { createInMemorySearchCounter, type SearchCounter } from './search-counter.js';
 
 export type Channel3Env = {
@@ -99,9 +104,11 @@ export function createChannel3Gateway(
   async function getProduct(id: string): Promise<ProductRecord> {
     if (!rest) return recordedCopy(id);
     try {
-      return liveRecord(await rest.getProductRaw(id));
+      const product = toRequestedProduct(id, await rest.getProductRaw(id));
+      return { product, fetchedAt: now().toISOString(), source: 'live' };
     } catch {
-      // network, timeout, non-2xx (404 included) or an unknown shape: use the recording
+      // network, timeout, non-2xx (404 included), an unknown shape or another product's answer:
+      // use the recording
       return recordedCopy(id);
     }
   }

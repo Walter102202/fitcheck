@@ -165,4 +165,13 @@ describe('createChannel3Gateway', () => {
       'Channel3 did not answer. Showing the copy recorded on Nov 10, 2026.',
     );
   });
+
+  it('a live answer for another product id falls back to the recording', async () => {
+    const wrong = (async () => json(200, product('cv7t721'))) as typeof fetch;
+    const g = live(wrong);
+    const r = await g.getProduct('UXXAg59');
+    expect(r.source).toBe('recorded');
+    expect(r.product.id).toBe('UXXAg59');
+    expect(g.noticeFor(r)).not.toBeNull();
+  });
 });

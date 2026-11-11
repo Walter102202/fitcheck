@@ -56,9 +56,20 @@ export function failClosed(_now: Date, record?: ProductRecord): ReviewResult {
   };
 }
 
-function evaluateAll(input: ReviewInput): Evaluation[] {
+function contextOf(input: ReviewInput): ProductContext {
+  return contextFor(input.record.product, input.purchase.domain, input.purchase.variantSelected);
+}
+
+/** What the buyer would pay now: the live USD price times the quantity, else the agent's amount. */
+function payableCents(input: ReviewInput, ctx: ProductContext): number {
+  const offer = ctx.offer;
+  return offer && offer.price.currency === 'USD'
+    ? Math.round(offer.price.price * 100) * input.intent.quantity
+    : input.purchase.amountCents;
+}
+
+function evaluateAll(input: ReviewInput, ctx: ProductContext): Evaluation[] {
   const checklist = getChecklist(input.intent.category);
-  const ctx = contextFor(input.record.product, input.purchase.domain);
   const evals: Evaluation[] = [];
   for (const req of checklist.requirements) {
     if (req.id.startsWith('common.')) {
@@ -114,21 +125,35 @@ async function withCitations(
     return applyCitations(results, accepted);
   } catch (err) {
     const reason = err instanceof ReviewUnavailableError ? err.reason : 'error';
-    deps.logger?.warn('citations skipped', { reason });
+    warnSafely(deps, 'citations skipped', { reason });
     return results;
+  }
+}
+
+/** A logger that throws must not turn a review into a throw. */
+function warnSafely(deps: ReviewDeps, msg: string, fields: Record<string, unknown>): void {
+  try {
+    deps.logger?.warn(msg, fields);
+  } catch {
+    // nothing left to report to
   }
 }
 
 /** Never throws: an internal error fails closed, keeping the record it was given. */
 export async function review(input: ReviewInput, deps: ReviewDeps): Promise<ReviewResult> {
   try {
+    if (input.record.product.id !== input.purchase.productId) {
+      throw new Error(
+        `record ${input.record.product.id} is not the purchased product ${input.purchase.productId}`,
+      );
+    }
     const checklist = getChecklist(input.intent.category);
-    const evals = evaluateAll(input);
+    const ctx = contextOf(input);
+    const evals = evaluateAll(input, ctx);
     const d = decide(evals, input.memory, {
-      amountCents: input.purchase.amountCents,
+      amountCents: payableCents(input, ctx),
       noun: checklist.noun,
     });
-    const ctx = contextFor(input.record.product, input.purchase.domain);
     const results = await withCitations(d.results, input, ctx, checklist, deps);
     return {
       decision: d.decision,
@@ -140,7 +165,7 @@ export async function review(input: ReviewInput, deps: ReviewDeps): Promise<Revi
       record: recordMeta(input.record),
     };
   } catch (err) {
-    deps.logger?.warn('review failed closed', { err });
+    warnSafely(deps, 'review failed closed', { err });
     return failClosed(deps.now(), input.record);
   }
 }

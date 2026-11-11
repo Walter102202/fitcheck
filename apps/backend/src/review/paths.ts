@@ -2,7 +2,14 @@
 import { type Channel3Product, formatUsd } from '@fitcheck/contracts';
 
 export type Offer = Channel3Product['offers'][number];
-export type ProductContext = { product: Channel3Product; offer: Offer | null; domain: string };
+export type Pin = { name: string; label: string };
+export type ProductContext = {
+  product: Channel3Product;
+  offer: Offer | null;
+  domain: string;
+  /** The agent's variant pins; they count as selected where the listing selects nothing. */
+  pinned?: Pin[];
+};
 export type Field = {
   path: string;
   label: string;
@@ -18,8 +25,23 @@ export function chosenOffer(product: Channel3Product, domain: string): Offer | n
   return product.offers.find((o) => o.domain.toLowerCase() === d) ?? null;
 }
 
-export function contextFor(product: Channel3Product, domain: string): ProductContext {
-  return { product, offer: chosenOffer(product, domain), domain };
+export function contextFor(
+  product: Channel3Product,
+  domain: string,
+  pinned?: Pin[],
+): ProductContext {
+  const ctx: ProductContext = { product, offer: chosenOffer(product, domain), domain };
+  if (pinned && pinned.length > 0) ctx.pinned = pinned;
+  return ctx;
+}
+
+/** The listing's selected variants, then the agent's pins for options the listing leaves open. */
+function selectedVariants(ctx: ProductContext): Pin[] {
+  const listed = ctx.product.variants?.selected ?? [];
+  const open = (ctx.pinned ?? []).filter(
+    (pin) => !listed.some((s) => s.name.toLowerCase() === pin.name.toLowerCase()),
+  );
+  return [...listed, ...open];
 }
 
 /** "$1,398.00" for USD, else "1398 EUR". */
@@ -112,7 +134,7 @@ export function readPath(pattern: string, ctx: ProductContext): Field[] {
   const selected = /^variants\.selected\[(.+)\]$/.exec(pattern);
   if (selected?.[1] !== undefined) {
     const names = selected[1].split('|').map((n) => n.toLowerCase());
-    return (p.variants?.selected ?? [])
+    return selectedVariants(ctx)
       .filter((s) => names.includes(s.name.toLowerCase()))
       .map((s) => ({
         path: `variants.selected[${s.name}]`,

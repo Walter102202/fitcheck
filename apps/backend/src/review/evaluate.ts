@@ -52,14 +52,15 @@ export function appliesTo(
     return has ? { applies: true, origin: 'stated', ...quoteOf(intent, req.id) } : NOT_APPLICABLE;
   }
   if ('cues' in when) {
+    // a buyer's stated value always applies; unlessAlsoApplies only silences a cue
+    const stated = intent.stated[req.id];
+    if (stated) return { applies: true, origin: 'stated', originQuote: stated.quote };
     if (when.unlessAlsoApplies) {
       const other = getChecklist(intent.category).requirements.find(
         (r) => r.id === when.unlessAlsoApplies,
       );
       if (other && appliesTo(other, intent, ctx).applies) return NOT_APPLICABLE;
     }
-    const stated = intent.stated[req.id];
-    if (stated) return { applies: true, origin: 'stated', originQuote: stated.quote };
     const triggered = intent.triggered[req.id];
     if (triggered) return { applies: true, origin: 'triggered', originQuote: triggered.quote };
     return NOT_APPLICABLE;

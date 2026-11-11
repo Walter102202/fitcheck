@@ -10,7 +10,7 @@ import { FIXTURES_DIR } from '../src/channel3/fixtures.js';
 import {
   type Channel3RestClient,
   createChannel3RestClient,
-  toChannel3Product,
+  toRequestedProduct,
 } from '../src/channel3/rest.js';
 
 type IndexEntry = { id: string; title: string; category: string; recordedOn: string };
@@ -52,7 +52,7 @@ export async function refreshFixtures(o: {
   const failed: { id: string; error: string }[] = [];
   for (const id of ids) {
     try {
-      const product = toChannel3Product(await o.client.getProductRaw(id));
+      const product = toRequestedProduct(id, await o.client.getProductRaw(id));
       const record: ProductRecord = {
         product,
         fetchedAt: o.now.toISOString(),

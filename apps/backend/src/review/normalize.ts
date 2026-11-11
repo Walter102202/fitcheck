@@ -59,12 +59,20 @@ function termNormalizer(terms: Record<string, string>): TextNormalizer {
 const SIZE = /\b(\d{2}(?:\.\d)?)\s*(?:"|”|″|-?\s?inch(?:es)?\b|-in\b|\s?class)(?!\s*[WHD]\b)/gi;
 const CM = /\b(\d{2,3}(?:\.\d)?)\s*cm\b/gi;
 
+// Two sizes joined by a dash or "to" are a compatibility range (`43"-98"`, "32 to 70 inch"), as
+// on a wall mount or a stand: neither end is the product's screen size.
+const UNIT = String.raw`(?:"|”|″|-?\s?inch(?:es)?\b|-in\b)`;
+const RANGE_BEFORE = new RegExp(String.raw`\d(?:\.\d)?\s*${UNIT}?\s*(?:to|-|–)\s*$`, 'i');
+const RANGE_AFTER = new RegExp(String.raw`^\s*(?:to|-|–)\s*\d{2,3}(?:\.\d)?(?!\d)\s*${UNIT}`, 'i');
+
 function skipSize(text: string, start: number, end: number): boolean {
-  const before = text.slice(Math.max(0, start - 8), start);
+  const before = text.slice(Math.max(0, start - 16), start);
+  const after = text.slice(end);
   return (
-    /\d\s*(?:to|-|–)\s*$/i.test(before) ||
+    RANGE_BEFORE.test(before) ||
+    RANGE_AFTER.test(after) ||
     /[x×]\s*$/i.test(before) ||
-    /^\s*[x×]/i.test(text.slice(end))
+    /^\s*[x×]/i.test(after)
   );
 }
 
@@ -87,13 +95,19 @@ const DUAL =
 const US_ONLY =
   /for use with 1[12]0\s*v(?:olts?)?(?:\s*[-–~/]\s*1[12]0\s*v(?:olts?)?)?(?:\s+outlets)?(?:\s+only)?|1[12]0\s*v(?:olts?)?\s*(?:outlets\s+)?only|standard 110\s*v(?:olts?)?(?:\s+voltage)?|120\s*v compatib\w*/gi;
 
+/** "Not dual voltage", "non-dual voltage": a negated claim is no claim. */
+const negated = (text: string, start: number) =>
+  /\b(?:not|non)[\s-]*$/i.test(text.slice(Math.max(0, start - 8), start));
+
 const voltage: TextNormalizer = (text) =>
   settle([
-    ...allMatches(DUAL, text).map((m) => ({
-      value: 'dual',
-      start: m.index,
-      end: m.index + m[0].length,
-    })),
+    ...allMatches(DUAL, text)
+      .filter((m) => !negated(text, m.index))
+      .map((m) => ({
+        value: 'dual',
+        start: m.index,
+        end: m.index + m[0].length,
+      })),
     ...allMatches(US_ONLY, text).map((m) => ({
       value: 'us_only',
       start: m.index,
@@ -135,16 +149,30 @@ const condition: TextNormalizer = (text) => {
 
 // ---- money ----
 const DOLLARS = /\$\s*(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d{1,2}))?/;
-const DOLLAR_WORDS = /(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d{1,2}))?\s*(?:dollars|usd|bucks)\b/i;
 
 function toCents(whole: string, frac: string | undefined): number {
   return Number(whole.replace(/,/g, '')) * 100 + (frac ? Number(frac.padEnd(2, '0')) : 0);
 }
 
-/** "$1,500" -> 150000; "Under $40" -> 4000; "40 dollars" -> 4000; null without an amount. */
+// A budget quote: thousands by comma or space, a k suffix, never a number glued to a word ("$40ish").
+const AMOUNT = String.raw`(\d{1,3}(?:[, ]\d{3})+|\d+)(?:\.(\d{1,2}))?([kK])?`;
+const AMOUNT_END = String.raw`(?![\p{L}\p{N}])`;
+const BUDGET_DOLLARS = new RegExp(String.raw`\$\s*${AMOUNT}${AMOUNT_END}`, 'u');
+const BUDGET_DOLLAR_WORDS = new RegExp(String.raw`${AMOUNT}\s*(?:dollars|usd|bucks)\b`, 'iu');
+const BUDGET_WORDS = new RegExp(
+  String.raw`\b(?:budget(?:\s+(?:of|is))?|under|up\s+to|max(?:imum)?|at\s+most|less\s+than|no\s+more\s+than)\s*:?\s*${AMOUNT}${AMOUNT_END}`,
+  'iu',
+);
+
+/**
+ * A budget quote in cents: "$1,500", "Up to $2k", "$1 500", "budget 1500", "40 dollars";
+ * null without an amount or when a word is glued to the number.
+ */
 export function parseUsdCents(text: string): number | null {
-  const m = DOLLARS.exec(text) ?? DOLLAR_WORDS.exec(text);
-  return m?.[1] !== undefined ? toCents(m[1], m[2]) : null;
+  const m = BUDGET_DOLLARS.exec(text) ?? BUDGET_DOLLAR_WORDS.exec(text) ?? BUDGET_WORDS.exec(text);
+  if (m?.[1] === undefined) return null;
+  const cents = toCents(m[1].replace(/ /g, ''), m[2]);
+  return m[3] ? cents * 1000 : cents;
 }
 
 const usdCents: TextNormalizer = (text) => {
@@ -285,12 +313,20 @@ export function candidateFrom(
 // ---- product extractors ----
 
 const DIFFUSER = /diffuser/gi;
+const NOT_IN_BOX = /^[^.;,!?]{0,30}?\b(?:sold separately|not included)\b/i;
 const ITEMS_PATH = 'structured_attributes.hair-styling-items-included';
+
+/** Diffuser mentions, without "Diffuser sold separately" or "Diffuser attachment not included". */
+function diffuserMentions(text: string): RegExpExecArray[] {
+  return allMatches(DIFFUSER, text).filter(
+    (m) => !NOT_IN_BOX.test(text.slice(m.index + m[0].length)),
+  );
+}
 
 function diffuser(fact: FactSpec, ctx: ProductContext): Candidate[] {
   const items = readPath(ITEMS_PATH, ctx);
   for (const field of items) {
-    const [m] = allMatches(DIFFUSER, field.text);
+    const [m] = diffuserMentions(field.text);
     if (m) {
       const match = { value: true, start: m.index, end: m.index + m[0].length };
       return [candidateFrom(field, match, 'diffuser', true)];
@@ -299,7 +335,7 @@ function diffuser(fact: FactSpec, ctx: ProductContext): Candidate[] {
   const out: Candidate[] = [];
   for (const pattern of fact.evidence.filter((p) => p !== ITEMS_PATH)) {
     for (const field of readPath(pattern, ctx)) {
-      for (const m of allMatches(DIFFUSER, field.text)) {
+      for (const m of diffuserMentions(field.text)) {
         const match = { value: true, start: m.index, end: m.index + m[0].length };
         out.push(candidateFrom(field, match, 'diffuser', true));
       }

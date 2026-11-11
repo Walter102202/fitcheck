@@ -68,6 +68,23 @@ describe('refreshFixtures', () => {
     expect(out).toEqual({ updated: ['saZdY6C'], failed: [] });
     expect(index(tmp).find((e) => e.id === 'cv7t721')?.recordedOn).toBe('2026-11-10');
   });
+
+  it('never writes a live product under another id', async () => {
+    const before = readFileSync(join(tmp, 'saZdY6C.json'));
+    const swapped: Channel3RestClient = {
+      ...client,
+      getProductRaw: async () => product('cv7t721'),
+    };
+    const out = await refreshFixtures({
+      client: swapped,
+      fixturesDir: tmp,
+      now,
+      only: ['saZdY6C'],
+    });
+    expect(out.updated).toEqual([]);
+    expect(out.failed[0]?.id).toBe('saZdY6C');
+    expect(readFileSync(join(tmp, 'saZdY6C.json')).equals(before)).toBe(true);
+  });
 });
 
 describe('checkShapes', () => {
