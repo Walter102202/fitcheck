@@ -1,0 +1,164 @@
+/* Mockup fitcheck.css lines 475-597 (hero, specimen, bands, outcomes, purchase list) and
+   1310-1318 (footer); the 980 px part is from 1322-1334. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--s-7);
+  align-items: center;
+  padding: var(--s-8) 0 var(--s-7);
+}
+
+.hero h1 {
+  font-size: var(--t-3xl);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.lede {
+  margin-top: var(--s-5);
+  font-size: var(--t-lg);
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 34em;
+}
+
+.actions {
+  margin-top: var(--s-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.specimen {
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-4);
+}
+
+.specimenHead {
+  display: flex;
+  gap: var(--s-3);
+  align-items: center;
+}
+
+.specimenReq {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.specimen blockquote {
+  font-size: var(--t-md);
+}
+
+.specimenFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+
+.band {
+  padding: var(--s-7) 0;
+  border-top: 1px solid var(--line);
+}
+
+.band > h2 {
+  font-size: var(--t-xl);
+  font-weight: 800;
+}
+
+.sub {
+  margin-top: var(--s-2);
+  color: var(--ink-2);
+  font-size: var(--t-md);
+  max-width: 44em;
+}
+
+.outcomes {
+  margin-top: var(--s-5);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+
+.outcomeDef {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+
+.outcomeDef h3 {
+  font-size: var(--t-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.outcomeDef p {
+  color: var(--ink-2);
+}
+
+.pay {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.scenarios {
+  margin-top: var(--s-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+}
+
+.units {
+  margin-top: var(--s-5);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.more {
+  margin-top: var(--s-4);
+}
+
+.foot {
+  border-top: 1px solid var(--line);
+  padding: var(--s-6) 0 var(--s-8);
+  color: var(--ink-2);
+  font-size: var(--t-xs);
+  display: grid;
+  gap: var(--s-2);
+  max-width: 62em;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: var(--s-7) 0 var(--s-6);
+    gap: var(--s-6);
+  }
+
+  .hero h1 {
+    font-size: var(--t-2xl);
+  }
+
+  .outcomes {
+    grid-template-columns: 1fr;
+  }
+}
