@@ -26,6 +26,7 @@ export function ResultsMetrics({
                 of={row.of}
                 label={row.label}
                 {...unit}
+                {...(row.unit === 'mean' ? { missing: 'does_not_apply' as const } : {})}
               />
               <SquareRow
                 who="Fitcheck"

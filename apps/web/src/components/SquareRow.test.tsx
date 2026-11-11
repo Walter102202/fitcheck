@@ -41,15 +41,22 @@ test('a row not measured yet says so', () => {
   expect(container.querySelectorAll('i[data-state="pending"]')).toHaveLength(16);
 });
 
-test('a mean shows the number alone, and a missing mean does not apply', () => {
+test('a mean shows the number alone; a missing value is not measured yet unless it does not apply', () => {
   const label = 'Questions per held purchase';
-  const { unmount } = render(
+  const first = render(
     <SquareRow who="Fitcheck" squares={[]} count={1.2} of={9} label={label} unit="mean" />,
   );
   expect(screen.getByText('1.2')).not.toHaveAttribute('data-pending');
   expect(screen.queryByText(/of 9/)).toBeNull();
   expect(screen.getByRole('img', { name: `1.2: ${label}` })).toBeInTheDocument();
-  unmount();
+  first.unmount();
+
+  const second = render(
+    <SquareRow who="Fitcheck" squares={[]} count={null} of={0} label={label} unit="mean" />,
+  );
+  expect(screen.getByText('Not measured yet')).toHaveAttribute('data-pending');
+  second.unmount();
+
   render(
     <SquareRow
       who="Spending cap only"
@@ -58,6 +65,7 @@ test('a mean shows the number alone, and a missing mean does not apply', () => {
       of={9}
       label={label}
       unit="mean"
+      missing="does_not_apply"
     />,
   );
   expect(screen.getByText('Does not apply')).toHaveAttribute('data-pending');

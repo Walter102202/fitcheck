@@ -1,10 +1,17 @@
 import type { SquareState } from '@fitcheck/contracts';
 import styles from './SquareRow.module.css';
 
+type Missing = 'not_measured' | 'does_not_apply';
+
 /** The count column: "14 of 16" for a count, "1.2" for a mean; words when there is no number. */
-function countText(count: number | null, of: number, unit: 'count' | 'mean'): string {
-  if (unit === 'mean') return count === null ? 'Does not apply' : String(count);
-  return count === null ? 'Not measured yet' : `${count} of ${of}`;
+function countText(
+  count: number | null,
+  of: number,
+  unit: 'count' | 'mean',
+  missing: Missing,
+): string {
+  if (count === null) return missing === 'does_not_apply' ? 'Does not apply' : 'Not measured yet';
+  return unit === 'mean' ? String(count) : `${count} of ${of}`;
 }
 
 /** One row of unit squares: each square is one purchase. */
@@ -15,6 +22,7 @@ export function SquareRow({
   of,
   label,
   unit = 'count',
+  missing = 'not_measured',
 }: {
   who: string;
   squares: SquareState[];
@@ -23,8 +31,10 @@ export function SquareRow({
   label: string;
   /** From the results row; absent means a count. */
   unit?: 'count' | 'mean';
+  /** What a null count means here: the cap-only column of a mean row does not apply. */
+  missing?: Missing;
 }) {
-  const text = countText(count, of, unit);
+  const text = countText(count, of, unit, missing);
   return (
     <div className={styles.unitRow}>
       <span className={styles.who}>{who}</span>
