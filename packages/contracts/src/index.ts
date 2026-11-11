@@ -1,3 +1,4 @@
+export * from './cap-sentences.js';
 export * from './channel3.js';
 export * from './config.js';
 export { runDryerSilent } from './examples/run-dryer-silent.js';

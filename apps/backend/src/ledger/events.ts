@@ -1,4 +1,11 @@
-import { type Cents, formatUsd, type PaymentEvent, type PaypalCall } from '@fitcheck/contracts';
+import {
+  CAP_INACTIVE_SENTENCE,
+  type Cents,
+  capShortSentence,
+  formatUsd,
+  type PaymentEvent,
+  type PaypalCall,
+} from '@fitcheck/contracts';
 import { asc, eq } from 'drizzle-orm';
 import type { Db } from '../db/client.js';
 import { paymentEvents } from '../db/schema.js';
@@ -13,8 +20,8 @@ export const SENTENCES = {
   captured: (amount: Cents, cap: Cents) =>
     `PayPal captured ${formatUsd(amount)} from the ${formatUsd(cap)} cap.`,
   notSent: 'No capture sent to PayPal.',
-  capShort: (available: Cents) => `The spending cap has ${formatUsd(available)} left.`,
-  capInactive: 'The spending cap is no longer active.',
+  capShort: capShortSentence,
+  capInactive: CAP_INACTIVE_SENTENCE,
   declined: 'PayPal declined the capture.',
   voided: (amount: Cents) => `Fitcheck released the ${formatUsd(amount)} left on the cap.`,
   released: (amount: Cents) =>
