@@ -1,0 +1,35 @@
+{
+  "name": "@fitcheck/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fitcheck backend: JSON API, PayPal spending cap, Channel3 review and static web.",
+  "scripts": {
+    "dev": "tsx watch --conditions=development src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "fixtures:refresh": "tsx --conditions=development scripts/fixtures-refresh.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "4.0.99",
+    "@electric-sql/pglite": "^0.5.15",
+    "@fitcheck/checklists": "workspace:*",
+    "@fitcheck/contracts": "workspace:*",
+    "@hono/node-server": "^2.1.6",
+    "@hono/zod-validator": "^0.9.1",
+    "ai": "7.0.165",
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.17",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

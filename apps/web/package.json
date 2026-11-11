@@ -1,0 +1,33 @@
+{
+  "name": "@fitcheck/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fitcheck web: the demo purchases, the spending cap and the measurement.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fitcheck/contracts": "workspace:*",
+    "lucide-react": "1.61.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router": "7.18.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "jsdom": "31.0.0",
+    "typescript": "~5.9.3",
+    "vite": "8.3.6",
+    "vitest": "^5.1.0"
+  }
+}
