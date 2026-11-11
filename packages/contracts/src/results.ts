@@ -7,6 +7,11 @@ export const ResultsRowSchema = z.object({
   id: z.string(),
   label: z.string(),
   of: z.number().int().nonnegative(),
+  /**
+   * "mean": the values are averages, shown alone ("1.2", not "1.2 of 9"), and a null value
+   * means "does not apply". Absent means "count", where null means "not measured yet".
+   */
+  unit: z.enum(['count', 'mean']).optional(),
   /** A count, or a mean such as questions per held purchase (one decimal). */
   capOnly: z.number().nonnegative().nullable(),
   fitcheck: z.number().nonnegative().nullable(),
