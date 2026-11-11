@@ -1,6 +1,7 @@
 import type { Db } from './db/client.js';
 import type { Env } from './env.js';
 import type { Logger } from './logger.js';
+import type { PaypalGateways } from './paypal/index.js';
 
 /**
  * Everything a route or workflow needs, passed explicitly so tests build their own.
@@ -13,4 +14,5 @@ export type Deps = {
   db: Db;
   /** Defaults to crypto.randomUUID; tests use a sequential one. */
   newId: () => string;
+  paypal: PaypalGateways;
 };

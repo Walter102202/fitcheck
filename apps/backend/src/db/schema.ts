@@ -42,6 +42,8 @@ export const caps = pgTable(
   'caps',
   {
     id: uuid('id').primaryKey(),
+    /** Creation order; a session's latest cap is the highest. */
+    seq: integer('seq').generatedAlwaysAsIdentity(),
     sessionId: uuid('session_id')
       .notNull()
       .references(() => sessions.id),
@@ -90,6 +92,8 @@ export const purchases = pgTable(
     domain: text('domain').notNull(),
     amountCents: cents('amount_cents'),
     status: text('status').$type<PurchaseStatus>().notNull(),
+    /** Why it ended unpaid, so a repeated call returns the same result. */
+    reason: text('reason').$type<'cap_short' | 'declined' | 'answers' | 'review'>(),
     captureId: text('capture_id'),
     /** `capture:<purchaseId>`, also the PayPal-Request-Id of its one capture. */
     requestId: text('request_id').notNull().unique(),

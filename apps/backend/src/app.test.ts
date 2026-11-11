@@ -5,15 +5,19 @@ import type { Db } from './db/client.js';
 import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { createLogger } from './logger.js';
+import { createPaypalGateways } from './paypal/index.js';
 
 function testDeps(source: Record<string, string> = {}): Deps {
+  const env = loadEnv(source);
+  const logger = createLogger({}, { silent: true });
   return {
-    env: loadEnv(source),
+    env,
     now: () => new Date('2026-11-11T12:00:00.000Z'),
-    logger: createLogger({}, { silent: true }),
+    logger,
     // The skeleton routes never touch the database.
     db: {} as Db,
     newId: () => 'id',
+    paypal: createPaypalGateways(env, { logger, bootId: 'test0000', deliverWebhook: undefined }),
   };
 }
 

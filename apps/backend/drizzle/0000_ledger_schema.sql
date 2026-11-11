@@ -1,5 +1,6 @@
 CREATE TABLE "caps" (
 	"id" uuid PRIMARY KEY NOT NULL,
+	"seq" integer GENERATED ALWAYS AS IDENTITY (sequence name "caps_seq_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"session_id" uuid NOT NULL,
 	"mode" text NOT NULL,
 	"status" text NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE "purchases" (
 	"domain" text NOT NULL,
 	"amount_cents" integer NOT NULL,
 	"status" text NOT NULL,
+	"reason" text,
 	"capture_id" text,
 	"request_id" text NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL,

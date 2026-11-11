@@ -1,5 +1,5 @@
 {
-  "id": "162c2c68-1b48-47ad-88fc-a791d4abe92f",
+  "id": "e4827b30-afd5-403d-a315-3dc0b3bb435c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -13,6 +13,23 @@
           "type": "uuid",
           "primaryKey": true,
           "notNull": true
+        },
+        "seq": {
+          "name": "seq",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "caps_seq_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
         },
         "session_id": {
           "name": "session_id",
@@ -317,6 +334,12 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
         },
         "capture_id": {
           "name": "capture_id",
