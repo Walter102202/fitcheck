@@ -33,8 +33,9 @@ deploys only after its CI run passes (`autoDeployTrigger: checksPass`).
 2. **Webhook.** On the same REST app, add a webhook for
    `https://<service>.onrender.com/api/webhooks/paypal` with the events the backend handles:
    `CHECKOUT.ORDER.APPROVED`, `PAYMENT.AUTHORIZATION.CREATED`, `PAYMENT.AUTHORIZATION.VOIDED`,
-   `PAYMENT.CAPTURE.COMPLETED`, `PAYMENT.CAPTURE.PENDING`, `PAYMENT.CAPTURE.DECLINED`,
-   `PAYMENT.CAPTURE.DENIED`. Paste its id into `PAYPAL_WEBHOOK_ID`.
+   `PAYMENT.CAPTURE.COMPLETED`, `PAYMENT.CAPTURE.PENDING` and `PAYMENT.CAPTURE.DECLINED`. Paste
+   its id into `PAYPAL_WEBHOOK_ID`. (The backend also accepts the legacy v1 name
+   `PAYMENT.CAPTURE.DENIED`, which the v2 dashboard no longer lists.)
 3. **Anthropic.** Paste `ANTHROPIC_API_KEY` (a key with a spending cap). Then set
    `LLM_PROVIDER: anthropic` in `render.yaml`.
 4. **Channel3.** Paste `CHANNEL3_API_KEY`. Then set `CHANNEL3_MODE: live` in `render.yaml`.
