@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react';
 import { expect, test, vi } from 'vitest';
+import { createFakeApi } from './api/fixtures/fake-api.js';
 import { renderApp } from './test/render.js';
 
 vi.mock('./lib/browser.js', () => ({ goTo: vi.fn(), postForm: vi.fn() }));
@@ -10,7 +11,8 @@ test.each([
   ['/cap', /Approve a spending cap for your agent/],
   ['/somewhere', /This page does not exist/],
 ])('route %s renders its screen', async (route, heading) => {
-  renderApp({ route });
+  // No cap yet, so /cap stays on the approval screen instead of skipping to a purchase.
+  renderApp({ route, api: createFakeApi() });
   expect(await screen.findByRole('heading', { level: 1, name: heading })).toBeInTheDocument();
 });
 
