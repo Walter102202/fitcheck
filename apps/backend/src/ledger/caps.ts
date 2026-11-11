@@ -94,6 +94,18 @@ export async function latestCapForSession(
 }
 
 /**
+ * The session's latest cap, expired first when a restart forgot its simulated order. The web
+ * then asks for a new cap before the next purchase instead of failing at capture.
+ */
+export async function currentCapForSession(d: LedgerDeps, sessionId: string): Promise<Cap | null> {
+  const cap = await latestCapForSession(d, sessionId);
+  if (!cap || (cap.status !== 'active' && cap.status !== 'pending_approval')) return cap;
+  if (await simulatedOrderKnown(d, cap.capId)) return cap;
+  d.logger.warn('caps.order_forgotten', { capId: cap.capId, status: cap.status });
+  return expireCap(d, cap.capId);
+}
+
+/**
  * Opens a PayPal AUTHORIZE order for the cap. Sandbox and simulated caps wait for the buyer's
  * approval; a mock cap (tests) is approved and authorized in the same call.
  */

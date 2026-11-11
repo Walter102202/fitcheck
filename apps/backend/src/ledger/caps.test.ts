@@ -1,7 +1,15 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { createSession } from '../db/sessions.js';
-import { createHarness } from '../runs/harness.js';
-import { completeApproval, createCap, getCap, listCapEvents, voidCap } from './caps.js';
+import { MockPaypalGateway } from '../paypal/mock.js';
+import { activeCap, createHarness } from '../runs/harness.js';
+import {
+  completeApproval,
+  createCap,
+  currentCapForSession,
+  getCap,
+  listCapEvents,
+  voidCap,
+} from './caps.js';
 import { capturePurchase, holdPurchase } from './purchases.js';
 
 type Harness = Awaited<ReturnType<typeof createHarness>>;
@@ -29,6 +37,16 @@ const ref = (capId: string, n: number, amountCents: number) => ({
 });
 
 describe('caps', () => {
+  it('the current cap expires when a restart forgot its simulated authorization', async () => {
+    h = await createHarness();
+    const { sessionId, cap } = await activeCap(h.deps);
+    expect((await currentCapForSession(h.deps, sessionId))?.status).toBe('active');
+    h.deps.paypal.simulated = new MockPaypalGateway({ webhookSecret: 'x' });
+    const after = await currentCapForSession(h.deps, sessionId);
+    expect(after).toMatchObject({ capId: cap.capId, status: 'expired' });
+    expect(await currentCapForSession(h.deps, await createSession(h.deps))).toBeNull();
+  });
+
   it('createCap in mock mode is active at once', async () => {
     h = await createHarness();
     const cap = await newCap('mock');

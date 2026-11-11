@@ -5,7 +5,7 @@ import { pickFor } from '../agent/scripted-agent.js';
 import { AppError } from '../api/errors.js';
 import { caps, purchases, runs } from '../db/schema.js';
 import type { Deps } from '../deps.js';
-import { getCap, latestCapForSession } from '../ledger/caps.js';
+import { currentCapForSession, getCap } from '../ledger/caps.js';
 import { SENTENCES } from '../ledger/events.js';
 import { listRunEvents, purchaseFor, releaseHold } from '../ledger/purchases.js';
 import { answerAttempt, PENDING_NOTICE, processAttempt } from './attempt.js';
@@ -243,8 +243,9 @@ export async function startRun(
       return toResponse(d, recent);
     }
 
-    const cap = await latestCapForSession(d, i.sessionId);
-    if (!cap || cap.status === 'pending_approval') {
+    // Only a cap that can still pay starts a run; an exhausted one still runs and says so.
+    const cap = await currentCapForSession(d, i.sessionId);
+    if (!cap || (cap.status !== 'active' && cap.status !== 'exhausted')) {
       throw new AppError('cap_not_active', 'Approve a spending cap first.', { status: 409 });
     }
     await abandonWaitingRuns(d, i.sessionId);

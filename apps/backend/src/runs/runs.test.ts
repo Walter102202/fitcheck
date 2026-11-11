@@ -10,7 +10,8 @@ import {
 import { afterEach, describe, expect, it } from 'vitest';
 import { FIXTURES_DIR } from '../agent/scenarios.js';
 import { createSession } from '../db/sessions.js';
-import { createCap } from '../ledger/caps.js';
+import { createCap, currentCapForSession, voidCap } from '../ledger/caps.js';
+import { MockPaypalGateway } from '../paypal/mock.js';
 import { PENDING_NOTICE, processAttempt } from './attempt.js';
 import { activeCap, createHarness } from './harness.js';
 import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
@@ -279,6 +280,23 @@ describe('runs', () => {
     await expect(
       startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' }),
     ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+  });
+
+  it('a run on a voided cap, or on a cap a restart forgot, is refused before any review', async () => {
+    h = await createHarness();
+    const voided = await activeCap(h.deps);
+    await voidCap(h.deps, { capId: voided.cap.capId, reason: 'reset' });
+    await expect(
+      startRun(h.deps, { sessionId: voided.sessionId, scenarioId: 'tv-sony', review: 'on' }),
+    ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+
+    const forgotten = await activeCap(h.deps);
+    h.deps.paypal.simulated = new MockPaypalGateway({ webhookSecret: 'x' });
+    await expect(
+      startRun(h.deps, { sessionId: forgotten.sessionId, scenarioId: 'tv-sony', review: 'on' }),
+    ).rejects.toMatchObject({ code: 'cap_not_active', status: 409 });
+    expect((await currentCapForSession(h.deps, forgotten.sessionId))?.status).toBe('expired');
+    expect(h.paypal.calls('capture')).toEqual([]);
   });
 
   it('an unknown scenario is 404', async () => {
