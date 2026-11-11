@@ -71,6 +71,9 @@ function RunView({ scenarioId }: { scenarioId: string }) {
   const shownRows =
     lastAttempt?.review.results.filter((r) => r.state !== 'not_applicable').length ?? 0;
   const ready = run !== null && !loading;
+  // With the review off nothing is checked, so there is no step 1; the picks number on from there.
+  const reviewOn = (run?.review ?? review) === 'on';
+  const firstPickStep = reviewOn ? 2 : 1;
 
   return (
     <div className="wrap">
@@ -110,13 +113,15 @@ function RunView({ scenarioId }: { scenarioId: string }) {
             </div>
           ) : ready ? (
             <>
-              <ChecksStep
-                checks={run.checks}
-                notChecked={run.intent.notChecked}
-                {...(config
-                  ? { reader: { model: config.reviewModel, source: config.reviewSource } }
-                  : {})}
-              />
+              {reviewOn && (
+                <ChecksStep
+                  checks={run.checks}
+                  notChecked={run.intent.notChecked}
+                  {...(config
+                    ? { reader: { model: config.reviewModel, source: config.reviewSource } }
+                    : {})}
+                />
+              )}
               {run.attempts.map((attempt, i) => {
                 const last = i === run.attempts.length - 1;
                 return (
@@ -126,6 +131,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
                     )}
                     <AttemptSection
                       attempt={attempt}
+                      firstStep={firstPickStep + i * 2}
                       category={run.intent.category}
                       capAmountCents={run.cap.amountCents}
                       review={run.review}
@@ -141,9 +147,15 @@ function RunView({ scenarioId }: { scenarioId: string }) {
             </>
           ) : (
             <div role="status">
-              <Step n={1} title="What Fitcheck will check">
-                <p>Fitcheck is reading the listing…</p>
-              </Step>
+              {reviewOn ? (
+                <Step n={1} title="What Fitcheck will check">
+                  <p>Fitcheck is reading the listing…</p>
+                </Step>
+              ) : (
+                <Step n={1} title="The agent picked">
+                  <p>The agent is picking…</p>
+                </Step>
+              )}
             </div>
           )}
         </div>

@@ -55,6 +55,16 @@
   color: #fff;
 }
 
+/* Review off: money moved, but nothing vouches for the listing. A warning, never the green. */
+.outcome[data-kind="unchecked"] {
+  border-color: var(--ask);
+}
+
+.outcome[data-kind="unchecked"] .label {
+  background: var(--ask-tint);
+  color: var(--ask);
+}
+
 .returned {
   margin-top: var(--s-2);
   padding: var(--s-3);

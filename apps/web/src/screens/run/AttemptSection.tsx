@@ -43,9 +43,10 @@ function Verdict({ text, chip, note }: { text?: string; chip: PaymentState; note
   );
 }
 
-/** Steps 2 to 4 for one pick: the product, the review of its listing, and how it ended. */
+/** Two numbered steps for one pick (the product, the review of its listing), then how it ended. */
 export function AttemptSection({
   attempt,
+  firstStep,
   category,
   capAmountCents,
   review,
@@ -54,6 +55,8 @@ export function AttemptSection({
   next,
 }: {
   attempt: Attempt;
+  /** The number of this pick's first step; picks number on so a second pick never restarts at 1. */
+  firstStep: number;
   category: Category;
   capAmountCents: Cents;
   review: 'on' | 'off';
@@ -108,7 +111,7 @@ export function AttemptSection({
     const offMessage = outcome?.agentMessage;
     ending = (
       <OutcomeStrip
-        kind={paid ? 'captured' : 'not_captured'}
+        kind={paid ? 'unchecked' : 'not_captured'}
         amountCents={outcome ? outcome.amountCents : capOnly.amountCents}
         capAmountCents={capAmountCents}
         product={product}
@@ -149,11 +152,14 @@ export function AttemptSection({
 
   return (
     <>
-      <Step n={2} title={attempt.attemptNo > 1 ? 'The agent picked again' : 'The agent picked'}>
+      <Step
+        n={firstStep}
+        title={attempt.attemptNo > 1 ? 'The agent picked again' : 'The agent picked'}
+      >
         <ProductCard pick={attempt.pick} category={category} />
       </Step>
       <Step
-        n={3}
+        n={firstStep + 1}
         title={off ? 'Fitcheck review is off' : 'Fitcheck checked the listing'}
         {...(off || result.failedClosed || !result.record
           ? {}

@@ -101,6 +101,33 @@ test('step 1 says the requirements are Claude’s recorded answer', async () => 
   ).toBeInTheDocument();
 });
 
+test('steps number on across picks instead of starting again at 1', async () => {
+  renderApp({ route: '/run/dryer-spain', api: withCap() });
+  await screen.findByText('Second pick');
+  const steps = [...document.querySelectorAll('[data-step]')];
+  expect(steps.map((s) => s.getAttribute('data-step'))).toEqual(['1', '2', '3', '4', '5']);
+  expect(steps.map((s) => s.querySelector('h2')?.textContent)).toEqual([
+    'What Fitcheck will check',
+    'The agent picked',
+    'Fitcheck checked the listing',
+    'The agent picked again',
+    'Fitcheck checked the listing',
+  ]);
+});
+
+test('review off: no requirements step, and the capture does not read as a success', async () => {
+  const price = formatUsd(runDryerSilent.attempts[0]?.pick.priceCents ?? 0);
+  renderApp({ route: '/run/dryer-silent?review=off', api: withCap() });
+  await waitFor(() => expect(document.querySelector('[data-kind]')).not.toBeNull());
+  expect(screen.queryByRole('heading', { name: 'What Fitcheck will check' })).toBeNull();
+  expect(screen.queryByText(/read these requirements/)).toBeNull();
+  const steps = [...document.querySelectorAll('[data-step]')];
+  expect(steps.map((s) => s.getAttribute('data-step'))).toEqual(['1', '2']);
+  expect(document.querySelector('[data-kind="captured"]')).toBeNull();
+  const unchecked = document.querySelector('[data-kind="unchecked"]');
+  expect(unchecked).toHaveTextContent(`Captured ${price}. Nobody checked the listing.`);
+});
+
 test('the record line says when Channel3 was asked again', async () => {
   renderApp({ route: '/run/dryer-spain', api: withCap() });
   expect(
@@ -332,7 +359,7 @@ test('switching the review off runs the same purchase as spending cap only', asy
   expect(
     screen.getByText('Nothing was checked. The spending cap alone decides.'),
   ).toBeInTheDocument();
-  expect(screen.getByText('PayPal captured $29.29 from the $3,000.00 cap.')).toBeInTheDocument();
+  expect(screen.getByText('Captured $29.29. Nobody checked the listing.')).toBeInTheDocument();
   expect(screen.queryByText('With a spending cap only')).toBeNull();
   expect(screen.getByRole('radio', { name: 'Off: spending cap only' })).toBeChecked();
   expect(screen.getByTestId('location').textContent).toMatch(/review=off/);

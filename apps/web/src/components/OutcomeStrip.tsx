@@ -1,17 +1,30 @@
 import { type Cents, formatUsd } from '@fitcheck/contracts';
 import type { ReactNode } from 'react';
-import { Check, CircleSlash, ICON_PROPS, Undo2 } from './icons.js';
+import { Check, CircleSlash, ICON_PROPS, TriangleAlert, Undo2 } from './icons.js';
 import styles from './OutcomeStrip.module.css';
 
 type Reason = 'review' | 'answers' | 'failed_closed';
+/** `unchecked`: captured with the review off, so nothing vouches for the listing. */
+type Kind = 'captured' | 'not_captured' | 'unchecked';
+
+const LABEL: Record<Kind, string> = {
+  captured: 'Captured',
+  not_captured: 'Not captured',
+  unchecked: 'Captured, unchecked',
+};
 
 function sentences(
-  kind: 'captured' | 'not_captured',
+  kind: Kind,
   reason: Reason,
   amount: string,
   cap: string,
   product: string,
 ): [bold: string, rest: string] {
+  if (kind === 'unchecked')
+    return [
+      `Captured ${amount}. Nobody checked the listing.`,
+      'The amount is the agent’s price, taken on its word.',
+    ];
   if (kind === 'captured')
     return [
       `PayPal captured ${amount} from the ${cap} cap.`,
@@ -42,7 +55,7 @@ export function OutcomeStrip({
   agentMessage,
   children,
 }: {
-  kind: 'captured' | 'not_captured';
+  kind: Kind;
   amountCents: Cents;
   capAmountCents: Cents;
   product: string;
@@ -50,8 +63,8 @@ export function OutcomeStrip({
   agentMessage?: string;
   children?: ReactNode;
 }) {
-  const captured = kind === 'captured';
-  const Icon = captured ? Check : CircleSlash;
+  const captured = kind !== 'not_captured';
+  const Icon = kind === 'unchecked' ? TriangleAlert : captured ? Check : CircleSlash;
   const [bold, rest] = sentences(
     kind,
     reason,
@@ -63,7 +76,7 @@ export function OutcomeStrip({
     <div className={styles.outcome} role="status" data-kind={kind}>
       <div className={styles.label}>
         <Icon {...ICON_PROPS} size={28} strokeWidth={2.2} />
-        {captured ? 'Captured' : 'Not captured'}
+        {LABEL[kind]}
         <span className="mono">{formatUsd(captured ? amountCents : 0)}</span>
       </div>
       <div className={styles.body}>

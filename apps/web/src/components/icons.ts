@@ -7,6 +7,7 @@ export {
   EqualNot,
   Lock,
   Pause,
+  TriangleAlert,
   Tv,
   Undo2,
   Wind,

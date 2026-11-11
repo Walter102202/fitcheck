@@ -38,6 +38,24 @@ test('captured after answers says every line was a yes', () => {
   expect(screen.getByRole('status')).toHaveTextContent('You answered yes to every line.');
 });
 
+test('captured with the review off is a warning, not a success', () => {
+  render(
+    <OutcomeStrip
+      kind="unchecked"
+      amountCents={1499}
+      capAmountCents={300000}
+      product="hair dryer"
+      reason="review"
+    />,
+  );
+  const strip = screen.getByRole('status');
+  expect(strip).toHaveAttribute('data-kind', 'unchecked');
+  expect(screen.getByText('Captured $14.99. Nobody checked the listing.')).toBeInTheDocument();
+  expect(strip).toHaveTextContent('Captured, unchecked');
+  expect(strip).toHaveTextContent('$14.99');
+  expect(strip.textContent).not.toMatch(/PayPal captured \$14\.99 from/);
+});
+
 test('not captured shows $0.00 and the message sent to the agent', () => {
   const msg = runDryerSpain.attempts[0]?.review.agentMessage as string;
   render(

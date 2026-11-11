@@ -14,7 +14,7 @@ export function Step({
   children: ReactNode;
 }) {
   return (
-    <section className={styles.step}>
+    <section className={styles.step} data-step={n}>
       <div className={styles.title}>
         <span className={styles.n}>{n}</span>
         <h2>{title}</h2>
