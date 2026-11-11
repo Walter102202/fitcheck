@@ -2,6 +2,12 @@
 .ledger {
   position: sticky;
   top: var(--s-4);
+  /* Never taller than the viewport: on a laptop the head stays in view and the events scroll. */
+  max-height: calc(100vh - 2 * var(--s-4));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ledger-faint) transparent;
   background: var(--ledger-bg);
   color: var(--ledger-ink);
   border-radius: var(--r-panel);
@@ -205,5 +211,7 @@
 @media (max-width: 980px) {
   .ledger {
     position: static;
+    max-height: none;
+    overflow: visible;
   }
 }

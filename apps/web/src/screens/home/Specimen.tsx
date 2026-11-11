@@ -21,8 +21,8 @@ export function Specimen({ run }: { run: RunResponse }) {
         <div>
           <b>“{run.intent.request}”</b>
           <div className="note">
-            The agent picked this one at {first.pick.domain} for{' '}
-            <span className="mono">{formatUsd(first.pick.priceCents)}</span>
+            {/* Body type, not mono: a monospace full stop inside small prose reads "$29 . 29". */}
+            The agent picked this one at {first.pick.domain} for {formatUsd(first.pick.priceCents)}
           </div>
         </div>
       </div>

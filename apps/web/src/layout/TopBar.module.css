@@ -57,12 +57,33 @@
   font-weight: 600;
 }
 
+/* Narrow: wordmark and every nav item on the first line, the mode chips wrap below. */
 @media (max-width: 980px) {
+  .inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: var(--s-3);
+    column-gap: var(--s-4);
+    row-gap: var(--s-2);
+  }
+
   .topnav {
-    display: none;
+    gap: var(--s-4);
+    margin-right: 0;
   }
 
   .modes {
-    margin-left: auto;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .inner {
+    column-gap: var(--s-3);
+  }
+
+  .topnav {
+    gap: var(--s-3);
   }
 }

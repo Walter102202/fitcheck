@@ -43,6 +43,8 @@ test('the specimen quote says where the line comes from, without the field path'
   });
   expect(within(specimen).getByText('Description, from the store’s listing')).toBeInTheDocument();
   expect(specimen.textContent).not.toMatch(/Description\s+description/);
+  // The price sits in body type: a monospace full stop in small prose read "$29 . 29".
+  expect(within(specimen).getByText(/at walmart\.com for \$29\.29$/)).not.toContainHTML('mono');
 });
 
 // Walter, 2026-11-11: the benchmark is described, not named.
