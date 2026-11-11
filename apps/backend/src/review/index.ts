@@ -6,5 +6,22 @@ export {
   ReviewUnavailableError,
   type ReviewUnavailableReason,
 } from './errors.js';
+export { createAiSdkModelPort, createModelPort, type ModelEnv } from './model/ai-sdk.js';
+export {
+  callModel,
+  type ModelCall,
+  type ModelCallKind,
+  type ModelPort,
+  NoRecordingError,
+  recordingKey,
+} from './model/port.js';
+export {
+  createFileRecordingStore,
+  createMemoryRecordingStore,
+  createRecordingModelPort,
+  createReplayModelPort,
+  DEFAULT_RECORDINGS_DIR,
+  type RecordingStore,
+} from './model/recordings.js';
 export { failClosed, review } from './review.js';
 export type { ReviewDeps, ReviewLogger } from './types.js';
