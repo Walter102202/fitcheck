@@ -91,7 +91,11 @@ const detail = (outcomes: CaseRunOutcome[], cases: EvalCase[]): RunDetail => ({
 
 const STOPS_HEADING = '## Wrong purchases stopped for another reason';
 
-/** Five unpaid wrong case-runs: three stopped for the broken key, two for something else. */
+/**
+ * Counted by case, like the table. h-tv-01 was paid in run 3, so it is not among the unpaid.
+ * Unpaid: h-tv-02 and h-tv-06 (every run stopped for the broken key), h-tv-03 (never) and
+ * h-tv-07 (run 1 yes, run 2 no).
+ */
 function stopsFixture() {
   const cases = [
     evalCase('h-tv-01', 'wrong', 'compat_owned', 'tv.wall_mount'),
@@ -99,7 +103,12 @@ function stopsFixture() {
     evalCase('h-tv-03', 'wrong', 'space', 'tv.screen_size'),
     evalCase('h-tv-04', 'correct'),
     evalCase('h-tv-05', 'unbacked', 'absent', 'tv.wall_mount'),
+    evalCase('h-tv-06', 'wrong', 'stated_ignored', 'tv.screen_size'),
+    evalCase('h-tv-07', 'wrong', 'variant', 'tv.screen_size'),
   ];
+  const sizeReason = {
+    reasons: [{ requirement: 'tv.screen_size', type: 'contradictory' as const }],
+  };
   const card = (requirements: string[]) => ({
     asked: true,
     lines: requirements.length,
@@ -118,19 +127,27 @@ function stopsFixture() {
     outcome('h-tv-03', 'fitcheck', 2, false, { failedClosed: true, unavailable: 'model_error' }),
     outcome('h-tv-04', 'fitcheck', 1, false),
     outcome('h-tv-05', 'fitcheck', 1, false),
+    outcome('h-tv-06', 'fitcheck', 1, false, sizeReason),
+    outcome('h-tv-06', 'fitcheck', 2, false, card(['tv.screen_size'])),
+    outcome('h-tv-07', 'fitcheck', 1, false, sizeReason),
+    outcome('h-tv-07', 'fitcheck', 2, false, card(['tv.wall_mount'])),
   ];
   return { cases, outcomes };
 }
 const STOPS_SENTENCE =
-  'Of the 5 wrong purchases Fitcheck did not pay, 3 were stopped for the requirement that made them wrong; the rest are listed in eval/results/misses.md.';
+  'Of the 4 wrong purchases Fitcheck did not pay, 2 were stopped for the requirement that made them wrong; the rest are listed in eval/results/misses.md.';
 
 describe('results', () => {
-  it('counts unpaid wrong case-runs stopped for the requirement that made them wrong', () => {
+  it('counts, by case, the unpaid wrong purchases stopped for the requirement that made them wrong', () => {
     const { cases, outcomes } = stopsFixture();
     const stops = wrongStops(cases, outcomes);
-    expect(stops.notPaid).toBe(5);
-    expect(stops.rightReason).toBe(3);
-    expect(stops.others.map((o) => `${o.caseId}#${o.run}`)).toEqual(['h-tv-03#1', 'h-tv-03#2']);
+    expect(stops.notPaid).toBe(4);
+    expect(stops.rightReason).toBe(2);
+    expect(stops.others.map((o) => `${o.caseId}#${o.run}`)).toEqual([
+      'h-tv-03#1',
+      'h-tv-03#2',
+      'h-tv-07#2',
+    ]);
   });
 
   it('the stops sentence is a results note and sits right under the README table', () => {
@@ -154,6 +171,7 @@ describe('results', () => {
     const section = md.slice(md.indexOf(STOPS_HEADING));
     expect(section.split('\n').filter((l) => l.startsWith('- '))).toEqual([
       '- h-tv-03 · wrong/space · broke tv.screen_size · run 1: card line tv.wall_mount; run 2: unavailable: model_error',
+      '- h-tv-07 · wrong/variant · broke tv.screen_size · run 2: card line tv.wall_mount',
     ]);
   });
 
