@@ -25,6 +25,8 @@ export function createPaypalGateways(
     deliverWebhook: MockOptions['deliverWebhook'];
     bootId: string;
     now?: () => Date;
+    /** Tests pin a fixed prefix for readable ids; a server never does. */
+    idPrefix?: string;
   },
 ): PaypalGateways {
   const mode = paypalModeFor(env);
@@ -32,8 +34,9 @@ export function createPaypalGateways(
     o.logger.warn('paypal.webhook_id_missing');
   const simulated = new MockPaypalGateway({
     webhookSecret: env.MOCK_WEBHOOK_SECRET,
-    // A per-process prefix: a restarted server never reissues an id the old one gave out.
-    idPrefix: env.PAYPAL_MODE === 'mock' ? 'MOCK' : `SIM-${o.bootId}`,
+    // A per-process prefix: a restarted server (persistent database, in-memory gateway) never
+    // reissues an order, capture or webhook id the old process gave out.
+    idPrefix: o.idPrefix ?? `${env.PAYPAL_MODE === 'mock' ? 'MOCK' : 'SIM'}-${o.bootId}`,
     logger: o.logger,
     ...(o.deliverWebhook ? { deliverWebhook: o.deliverWebhook } : {}),
     ...(o.now ? { now: o.now } : {}),

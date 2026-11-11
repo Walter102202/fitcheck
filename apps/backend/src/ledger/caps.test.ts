@@ -68,7 +68,9 @@ describe('caps', () => {
     expect(first.expiresAt).toBe('2026-12-10T12:00:00.000Z');
     const events = await listCapEvents(h.deps.db, cap.capId);
     expect(events.map((e) => e.type)).toEqual(['authorized']);
+    // The approval webhook, then the two calls above: one PayPal request id every time.
     expect(h.paypal.calls('authorize')).toEqual([
+      `cap:${cap.capId}:authorize`,
       `cap:${cap.capId}:authorize`,
       `cap:${cap.capId}:authorize`,
     ]);

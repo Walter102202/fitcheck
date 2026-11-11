@@ -5,6 +5,7 @@ import { createTestDb } from '../db/test-db.js';
 import type { Deps } from '../deps.js';
 import { loadEnv } from '../env.js';
 import { createCap } from '../ledger/caps.js';
+import { deliverInProcess } from '../ledger/webhooks.js';
 import { createLogger } from '../logger.js';
 import { createPaypalGateways, type MockPaypalGateway } from '../paypal/index.js';
 import type { Channel3Port, ReviewPort } from './ports.js';
@@ -46,8 +47,11 @@ export async function createHarness(
   const paypal = createPaypalGateways(env, {
     logger,
     bootId: 'test0000',
+    // Readable MOCK-ORDER-000001 ids in mock mode; SIM-test0000-… behind sandbox mode.
+    ...(env.PAYPAL_MODE === 'mock' ? { idPrefix: 'MOCK' } : {}),
     now,
-    deliverWebhook: async () => {},
+    // In-process, as in production: the simulated gateway's webhooks reach the ledger.
+    deliverWebhook: (event, headers) => deliverInProcess(deps, event, headers),
   });
   const deps: Deps = {
     env,

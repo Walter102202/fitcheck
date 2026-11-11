@@ -8,6 +8,7 @@ import { closeDb, createDb } from './db/client.js';
 import type { Deps } from './deps.js';
 import { loadEnv } from './env.js';
 import { sweepCaps } from './ledger/sweep.js';
+import { deliverInProcess } from './ledger/webhooks.js';
 import { createLogger } from './logger.js';
 import { createPaypalGateways } from './paypal/index.js';
 import { createPorts } from './runs/ports.js';
@@ -26,7 +27,8 @@ const paypal = createPaypalGateways(env, {
   now,
   // Per process, so a restarted server never reissues a simulated PayPal id.
   bootId: randomBytes(4).toString('hex'),
-  deliverWebhook: async () => {},
+  // Simulated PayPal's webhooks go straight into the ledger, as PayPal's would over HTTP.
+  deliverWebhook: (event, headers) => deliverInProcess(deps, event, headers),
 });
 // Lane B's Channel3 gateway throws here when CHANNEL3_MODE=live has no key: a misconfigured
 // deploy fails to boot instead of serving recordings silently.

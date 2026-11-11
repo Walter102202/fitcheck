@@ -244,11 +244,32 @@ describe('cap API', () => {
   });
 
   it('a PayPal refusal to authorize goes to /cap?error=paypal', async () => {
+    h = await createHarness({
+      env: { PAYPAL_MODE: 'sandbox', PAYPAL_CLIENT_ID: 'id', PAYPAL_CLIENT_SECRET: 'secret' },
+    });
+    const approveUrl = 'https://www.sandbox.paypal.com/checkoutnow?token=SB-ORDER-1';
+    h.deps.paypal.sandbox = {
+      createOrder: async () => ({ orderId: 'SB-ORDER-1', approveUrl, raw: {} }),
+      authorizeOrder: async () => {
+        throw new PaypalError('ORDER_NOT_APPROVED', 422);
+      },
+    } as unknown as PaypalGateway;
+    const app = createApp(h.deps);
+    const cookie = await visitor(app);
+    const cap = await openCap(app, cookie, { scenarioId: 'tv-sony' });
+    expect(cap).toMatchObject({ mode: 'sandbox', status: 'pending_approval', approveUrl });
+    const back = await capReturn(app, cookie, 'SB-ORDER-1');
+    expect(back.status).toBe(303);
+    expect(back.headers.get('location')).toBe('/cap?error=paypal');
+    expect((await currentCap(app, cookie))?.status).toBe('pending_approval');
+  });
+
+  it('an expired simulated order goes to /cap?error=paypal', async () => {
     h = await createHarness({ env: FALLBACK_ENV });
     const app = createApp(h.deps);
     const cookie = await visitor(app);
     const cap = await openCap(app, cookie, { scenarioId: 'tv-sony' });
-    h.paypal.failNext('authorize', { httpStatus: 422 });
+    h.paypal.expireOrder(tokenOf(cap.approveUrl));
     const back = await capReturn(app, cookie, tokenOf(cap.approveUrl));
     expect(back.headers.get('location')).toBe('/cap?error=paypal');
     expect((await currentCap(app, cookie))?.status).toBe('pending_approval');
