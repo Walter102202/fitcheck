@@ -43,17 +43,29 @@ describe('app', () => {
         PAYPAL_CLIENT_SECRET: 's',
         ...buyer,
       }),
+      null,
     );
     expect(sandbox.paypalMode).toBe('sandbox');
     expect(sandbox.sandboxBuyer).toEqual({ email: 'buyer@example.com', password: 'pw' });
-    const simulated = configFrom(loadEnv({ PAYPAL_MODE: 'sandbox', ...buyer }));
+    const simulated = configFrom(loadEnv({ PAYPAL_MODE: 'sandbox', ...buyer }), null);
     expect(simulated.paypalMode).toBe('simulated');
     expect(simulated.sandboxBuyer).toBeUndefined();
   });
 
-  it('says whether the review reads requests live or from recorded answers', () => {
-    expect(configFrom(loadEnv({})).reviewSource).toBe('recorded');
-    expect(configFrom(loadEnv({ LLM_PROVIDER: 'anthropic' })).reviewSource).toBe('live');
+  it('says whether the review reads requests live, from recordings of a model, or from a script', () => {
+    expect(configFrom(loadEnv({ LLM_PROVIDER: 'anthropic' }), 'hand-or-anything')).toMatchObject({
+      reviewSource: 'live',
+      reviewModel: 'claude-sonnet-5-5',
+    });
+    expect(configFrom(loadEnv({}), 'claude-opus-5-5')).toMatchObject({
+      reviewSource: 'recorded',
+      reviewModel: 'claude-opus-5-5',
+    });
+    // Hand-written recordings never pass for a model's answers.
+    expect(configFrom(loadEnv({}), null)).toMatchObject({
+      reviewSource: 'scripted',
+      reviewModel: 'claude-sonnet-5-5',
+    });
   });
 
   it('serves the built web app with the SPA fallback, but never for /api', async () => {

@@ -3,7 +3,22 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { recordingKey } from './port.js';
-import { createFileRecordingStore, DEFAULT_RECORDINGS_DIR } from './recordings.js';
+import { createFileRecordingStore, DEFAULT_RECORDINGS_DIR, recordedModel } from './recordings.js';
+
+describe('recordedModel', () => {
+  const put = (dir: string, kind: 'intent' | 'citation', key: string, model: string) =>
+    createFileRecordingStore(dir).put(kind, key, 1, { input: {}, output: {}, model });
+
+  it('names the model only when every recording came from that one model', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'rec-'));
+    expect(recordedModel(dir)).toBeNull();
+    await put(dir, 'intent', 'a', 'claude-sonnet-5-5');
+    await put(dir, 'citation', 'b', 'claude-sonnet-5-5');
+    expect(recordedModel(dir)).toBe('claude-sonnet-5-5');
+    await put(dir, 'intent', 'c', 'hand');
+    expect(recordedModel(dir)).toBeNull();
+  });
+});
 
 describe('createFileRecordingStore', () => {
   it('writes <kind>/<key>.json', async () => {

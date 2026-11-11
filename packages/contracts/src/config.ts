@@ -6,8 +6,12 @@ export const ConfigResponseSchema = z.object({
   paypalMode: PaypalModeSchema,
   channel3Mode: z.enum(['live', 'recorded']),
   reviewModel: z.string(),
-  /** live: the model reads each request; recorded: answers recorded from it earlier. */
-  reviewSource: z.enum(['live', 'recorded']).optional(),
+  /**
+   * live: the model reads each request; recorded: answers recorded from that model earlier;
+   * scripted: hand-written answers stand in until a model key is set (reviewModel is then the
+   * model a live setup would call).
+   */
+  reviewSource: z.enum(['live', 'recorded', 'scripted']).optional(),
   capAmountCents: CentsSchema,
   /** The sandbox test buyer shown on the cap screen; absent unless sandbox. */
   sandboxBuyer: z.object({ email: z.string(), password: z.string() }).optional(),

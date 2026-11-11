@@ -76,7 +76,8 @@ judged against the Channel3 record, not the physical product. Only TVs and hair 
 ## What is real and what is simulated
 
 - **Real:** the PayPal sandbox calls (authorize, partial captures, void, webhooks), the Claude
-  Sonnet 5.5 calls and the live Channel3 records.
+  Sonnet 5.5 calls and the live Channel3 records. The header says which mode the site runs in:
+  live model calls, answers recorded from the model, or scripted answers when no model is set.
 - **Simulated:** the shopping agent is scripted: four preset requests with fixed product picks, so
   every judge sees the same story. Fitcheck places no real retailer orders. In the sandbox demo the
   PayPal payee is a test merchant account that stands in for the retailer, and the money is play
