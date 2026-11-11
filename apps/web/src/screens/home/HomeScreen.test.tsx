@@ -36,6 +36,14 @@ test('the specimen quote says where the line comes from, without the field path'
   expect(specimen.textContent).not.toMatch(/Description\s+description/);
 });
 
+// Walter, 2026-11-11: the benchmark is described, not named.
+test('the footer describes the benchmark without naming it', () => {
+  renderApp({ route: '/' });
+  const footer = document.querySelector('footer');
+  expect(footer).toHaveTextContent('A payments benchmark published on November 5, 2026 found');
+  expect(footer?.textContent).not.toMatch(/visa/i);
+});
+
 test('Run the first purchase goes to the first scenario', async () => {
   renderApp({ route: '/' });
   expect(await screen.findByRole('link', { name: 'Run the first purchase' })).toHaveAttribute(

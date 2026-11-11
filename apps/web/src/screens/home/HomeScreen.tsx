@@ -189,7 +189,7 @@ export function HomeScreen() {
 
       <footer className={styles.foot}>
         <p>
-          Why this exists: Visa’s agentic commerce benchmark (November 5, 2026) found that shopping
+          Why this exists: A payments benchmark published on November 5, 2026 found that shopping
           agents often pick a product that misses a requirement, because they read the buyer’s
           silence as “no constraint”. That benchmark stops before checkout. Fitcheck is the check at
           checkout.

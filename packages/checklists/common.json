@@ -390,7 +390,7 @@
     },
     {
       "id": "common.bundle",
-      "name": "Bundle agreed in conversation (Visa pattern 5)",
+      "name": "Bundle agreed in conversation",
       "reason": "Needs a task-level list of items, not product data.",
       "handling": "Not built for the hackathon."
     }
