@@ -1,0 +1,171 @@
+{
+  "product": {
+    "id": "0FS5BoK",
+    "title": "Travel Hair Dryer Dual Voltage Foldable",
+    "description": "This 1300W travel hair dryer is designed for global versatility with a dual voltage range of 100-240V, making it an ideal companion for international trips. It features ionic technology to reduce frizz and enhance shine, alongside a high-speed motor reaching 110,000 RPM for fast drying. For versatile styling, it includes magnetic attachments: a concentrator nozzle and a diffuser. The compact, foldable design ensures it fits easily into luggage, and it comes with a storage bag and an ALCI safety plug for added security in wet environments.",
+    "brands": [
+      {
+        "id": "J59a",
+        "name": "Newegg.com"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2045020b-be2f-483b-b48f-ffb36f68c8e0?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2045020b-be2f-483b-b48f-ffb36f68c8e0?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Hand holding the gold-colored hair dryer and accessories."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/8d5fb98c-8939-4c0b-bf84-ba3a3829eeb5?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Product dimensions and specs for a foldable travel hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c2290f9a-9bf7-407a-9e03-50ddd67255dc?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using a hair dryer to achieve healthier, shinier hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/af2539d2-149d-4152-b80f-b11a256458ca?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Details of the hair dryer modes and settings."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e041cdb9-190d-4f4e-9c1a-aa98cf8e701b?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/e041cdb9-190d-4f4e-9c1a-aa98cf8e701b?aid=01M73TC2528J4SBDEJGGHGR19H&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Two magnetic nozzles for styling versatility: diffuser and concentrator."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1300W airflow with ionic technology",
+      "Dual voltage (100-240V) for worldwide travel",
+      "ALCI leakage protection safety plug",
+      "Magnetic concentrator nozzle and diffuser attachments",
+      "Compact, foldable design with storage bag",
+      "110,000 RPM high-speed drying"
+    ],
+    "colors": [
+      {
+        "hex": "#f1eae0",
+        "percentage": 0.513
+      },
+      {
+        "hex": "#c9bfb3",
+        "percentage": 0.2521
+      },
+      {
+        "hex": "#afa497",
+        "percentage": 0.1199
+      },
+      {
+        "hex": "#383838",
+        "percentage": 0.1149
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/0FS5BoK-LPzf-S666bu?o=01M61SZBHNCMR2TZ7DYAT6ZPH3&aid=01M73TC2528J4SBDEJGGHGR19H",
+        "domain": "newegg.com",
+        "price": {
+          "price": 79.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 5.82,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.05,
+            "unit": "in"
+          },
+          "height": {
+            "number": 4.25,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 0.526,
+            "unit": "kg"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Diffuser nozzle",
+        "Ionic function",
+        "Travel size"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,278 @@
+{
+  "product": {
+    "id": "1U7pIWX",
+    "title": "LG OLED evo AI B6 4K Smart TV 2026",
+    "description": "Experience the ultimate in home entertainment with the LG OLED evo AI B6 4K Smart TV 2026. This TV boasts over 8.3 million self-lit pixels for perfect black and vivid colors, powered by the Alpha 8 AI Processor Gen3 for optimized images and audio. Enjoy cinematic visuals with Dolby Vision and Dolby Atmos, and a smooth gaming experience with up to 120Hz refresh rate and G-Sync compatibility. The intuitive webOS platform, enhanced by AI, offers easy access to a world of content, free channels, and personalized recommendations. Additionally, LG Shield provides robust security, while the EyeSafe technology ensures comfortable viewing with reduced blue light.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d72a85c3-e362-44bd-b3d6-a6d4e90e0c26?aid=01M73RZT1BKC20QEE81MET2QYT&mid=g0qz",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED AI TV displaying colorful abstract design."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1e92b439-6cd8-47c5-a45a-c686998e4491?aid=01M73RZT1BKC20QEE81MET2QYT&mid=g0qz",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "TV screen showing vivid colors and anti-glare display features."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": "male",
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Over 8.3 million self-lit smart pixels with Perfect Black and Vivid Color",
+      "The Alpha 8 AI Processor Gen3 provides advanced AI for optimized images and audio",
+      "The OLED Care feature helps protect your OLED display to retain the best picture quality possible over time",
+      "Enjoy movie magic from home with Dolby Vision®, Dolby Atmos® & FILMMAKER MODE™ with Ambient Light Technology",
+      "See visual brilliance with Precision HDR Master Pro, engineered for picture accuracy with stunning contrast and an expanded color spectrum",
+      "Precision Sound Master Pro delivers exceptional dialogue clarity and surround sound",
+      "Metallic AI Magic Remote with sleek metallic design, point, click, scroll, and AI voice control",
+      "Wi-Fi 6E for a smooth and fast streaming experience, low latency, and ultra-fast speeds",
+      "Ultimate Gaming with 120Hz Refresh Rate, NVIDIA G-Sync, AMD FreeSync Premium and 0.1ms response time",
+      "webOS delivers smarter, easier streaming, plus Google Gemini & Microsoft Copilot at your fingertips³"
+    ],
+    "colors": [
+      {
+        "hex": "#eed942",
+        "percentage": 0.159
+      },
+      {
+        "hex": "#0d7c1e",
+        "percentage": 0.1571
+      },
+      {
+        "hex": "#09432a",
+        "percentage": 0.1529
+      },
+      {
+        "hex": "#071c1f",
+        "percentage": 0.1516
+      },
+      {
+        "hex": "#e12a27",
+        "percentage": 0.1472
+      },
+      {
+        "hex": "#45c637",
+        "percentage": 0.0833
+      },
+      {
+        "hex": "#af7e4d",
+        "percentage": 0.0775
+      },
+      {
+        "hex": "#552221",
+        "percentage": 0.0714
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/1U7pIWX-g0qz-S666bu?o=01KR7N04X88GFXS0ZD8J94WZ07&aid=01M73RZT1BKC20QEE81MET2QYT",
+        "domain": "lg.com",
+        "price": {
+          "price": 1199.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 57,
+            "unit": "in"
+          },
+          "height": {
+            "number": 32.8,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 37.7,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/1U7pIWX-p1PB-S666bu?o=01M4EB3T29KK6YDWRS3B97Y60B&aid=01M73RZT1BKC20QEE81MET2QYT",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 1199.99,
+          "compare_at_price": 1999.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/1U7pIWX-oHaU-S666bu?o=01M3BERKY4K5KEB66W19DTCRX5&aid=01M73RZT1BKC20QEE81MET2QYT",
+        "domain": "bhphotovideo.com",
+        "price": {
+          "price": 1299.99,
+          "compare_at_price": 1599.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 144.8,
+            "unit": "cm"
+          },
+          "width": {
+            "number": 21.8,
+            "unit": "cm"
+          },
+          "height": {
+            "number": 89.9,
+            "unit": "cm"
+          },
+          "weight": {
+            "number": 17.3,
+            "unit": "kg"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            {
+              "label": "48\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/f3ce9207-cc0c-4287-b9f3-4a17793e0474",
+              "product_id": "ZY6tjt6"
+            },
+            {
+              "label": "65\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/d72a85c3-e362-44bd-b3d6-a6d4e90e0c26",
+              "product_id": "1U7pIWX"
+            },
+            {
+              "label": "77\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/22b79d2b-6681-4af6-99cf-7c54af795165",
+              "product_id": "SmyrKV1"
+            },
+            {
+              "label": "83\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/2165dfd8-6e36-4f7a-8697-4ef8da16d998",
+              "product_id": "i9NHieq"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Size",
+          "label": "65\""
+        }
+      ]
+    },
+    "structured_attributes": {
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "pattern": [
+        "Abstract",
+        "Color-block",
+        "Graphic"
+      ],
+      "compatible-voice-assistant": [
+        "Google Assistant",
+        "Amazon Alexa"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Internet TV",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "Built-in digital tuner",
+        "Local dimming",
+        "Screen mirroring"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "Dolby digital (AC-3)"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ]
+    },
+    "ratings": {
+      "value": 4.41,
+      "count": 108,
+      "source_count": 3
+    }
+  },
+  "fetchedAt": "2026-11-10T22:24:19.176Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

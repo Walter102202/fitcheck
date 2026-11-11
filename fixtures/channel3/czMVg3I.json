@@ -1,0 +1,204 @@
+{
+  "product": {
+    "id": "czMVg3I",
+    "title": "hair dryer",
+    "description": "The Conair Cord-Keeper is a powerful 1875-watt hair dryer designed for efficient, no-fuss drying. It features ionic and tourmaline ceramic technology to reduce frizz and add shine across all hair types. The dryer includes a concentrator for sleek styles and a diffuser for enhancing natural curls and volume. For added convenience, it includes a Cord-Keeper retractable design for easy storage and clutter-free countertops.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/3ffe7176-f429-41d0-ad93-205942db4c56?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/3ffe7176-f429-41d0-ad93-205942db4c56?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Pink hair dryer with diffuser and concentrator attachment on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a70129f1-c8e7-47b3-bebf-6205dfe14fd7?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "cleaned_url": "https://cdn.trychannel3.com/21f6011b-d03f-446c-8752-2c03c73df6e6?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Pink hair dryer showing the retractable cord feature against a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ccedef7c-a0d3-491d-b148-2817a7c9f590?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ccedef7c-a0d3-491d-b148-2817a7c9f590?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Box showing Conair hair dryer, concentrator, and diffuser attachments."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b24b7164-7b82-413d-9bd5-c8f67554a9de?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "cleaned_url": "https://cdn.trychannel3.com/3059af39-c235-450c-b3aa-e8b725332242?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Pink hair dryer highlighting ionic technology for shiny hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d78b745d-eed7-4dad-bd30-c045ecbbe4c2?aid=01M73S7RQTW8XPJYSQ6HT4SGC1&mid=gn9k",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up of the control panel features on the hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1875 watts of drying power",
+      "Ionic and tourmaline ceramic technology to reduce frizz",
+      "Includes concentrator and diffuser attachments",
+      "Cord-Keeper retractable cord design",
+      "Three heat settings and two speed settings",
+      "Lightweight 1.42 lb design"
+    ],
+    "colors": [
+      {
+        "hex": "#c771a8",
+        "percentage": 0.16
+      },
+      {
+        "hex": "#c587af",
+        "percentage": 0.1581
+      },
+      {
+        "hex": "#211d23",
+        "percentage": 0.1421
+      },
+      {
+        "hex": "#8e2378",
+        "percentage": 0.1415
+      },
+      {
+        "hex": "#38373b",
+        "percentage": 0.1174
+      },
+      {
+        "hex": "#9c3f82",
+        "percentage": 0.1065
+      },
+      {
+        "hex": "#d5adc9",
+        "percentage": 0.0886
+      },
+      {
+        "hex": "#8c6581",
+        "percentage": 0.0857
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/czMVg3I-gn9k-S666bu?o=01M5CXDHZ62SNF8JCCEYRGHWAT&aid=01M73S7RQTW8XPJYSQ6HT4SGC1",
+        "domain": "vinted.com",
+        "price": {
+          "price": 5,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "used",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/czMVg3I-LPzf-S666bu?o=01M1FZER4N90EVBCHG8PDERRV5&aid=01M73S7RQTW8XPJYSQ6HT4SGC1",
+        "domain": "newegg.com",
+        "price": {
+          "price": 44.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 8.24,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.68,
+            "unit": "in"
+          },
+          "height": {
+            "number": 9.2,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 1.42,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly",
+        "Fine",
+        "Straight",
+        "Thick"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function",
+        "Diffuser nozzle",
+        "Travel size"
+      ]
+    },
+    "ratings": {
+      "value": 5,
+      "count": 1,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,199 @@
+{
+  "product": {
+    "id": "OIlg7HH",
+    "title": "LG OLED evo C3 55 Inch HDR 4K Smart OLED TV 2023 Refurbished",
+    "description": "The LG OLED evo C3 is a 55-inch 4K Smart TV from 2023, featuring the exclusive α9 AI Processor Gen6 for optimized picture and sound. It boasts a native 120Hz refresh rate, 0.1 ms response time, and Brightness Booster Max for luminous contrast even in well-lit rooms. Designed for both cinema and gaming, it supports NVIDIA G-Sync, AMD FreeSync Premium, and VRR, while integrating Dolby Atmos AI for cinematic surround sound. This refurbished model runs on webOS 23 and includes built-in Alexa and Google Assistant compatibility.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/cb22ab1a-04ca-4633-9e90-0c1138c11546?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/cb22ab1a-04ca-4633-9e90-0c1138c11546?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo TV showing vibrant, flowing abstract colors on a black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/589f36d5-ccf9-4c85-94c6-08ea057452af?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo TV showing vibrant, flowing abstract colors on a black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1e61ed05-f1aa-48c4-ad8c-f8817597bade?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo TV showing vibrant, flowing abstract colors on a black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/313725d0-8a0e-4427-b07a-1c1ccc3d0990?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo TV showing vibrant, flowing abstract colors on a black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2bb1bcd0-fce6-4123-8c16-2a6f8f5fde39?aid=01M73SEPXGPN7H583C2W7E74YP&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo TV showing vibrant, flowing abstract colors on a black screen."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "4K (2160p) resolution",
+      "OLED display",
+      "Smart webOS",
+      "α9 AI Processor Gen6",
+      "Brightness Booster",
+      "Dolby Vision and Dolby Atmos",
+      "NVIDIA G-Sync / AMD FreeSync compatible for gaming",
+      "Game Dashboard and Game Optimizer",
+      "LG Channels",
+      "FILMMAKER MODE"
+    ],
+    "colors": [
+      {
+        "hex": "#1c6d53",
+        "percentage": 0.1512
+      },
+      {
+        "hex": "#081b41",
+        "percentage": 0.1397
+      },
+      {
+        "hex": "#7471a1",
+        "percentage": 0.1364
+      },
+      {
+        "hex": "#c2f0a6",
+        "percentage": 0.1322
+      },
+      {
+        "hex": "#9ec6a5",
+        "percentage": 0.1275
+      },
+      {
+        "hex": "#52d2a6",
+        "percentage": 0.1226
+      },
+      {
+        "hex": "#3c2588",
+        "percentage": 0.1065
+      },
+      {
+        "hex": "#38a58d",
+        "percentage": 0.084
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/OIlg7HH-p1PB-S666bu?o=01KY2JCT3P7NG5DCYCG87SHPA6&aid=01M73SEPXGPN7H583C2W7E74YP",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 995.88,
+          "compare_at_price": 1280.25,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/OIlg7HH-RnUy-S666bu?o=01M6D8EBK3B4CHN42NCCXKQZWZ&aid=01M73SEPXGPN7H583C2W7E74YP",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 1791.99,
+          "compare_at_price": 1896.99,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": null,
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 14515,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-shape": [
+        "Flat"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control",
+        "MEMC technology"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "pattern": [
+        "Abstract"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "smart-tv-platform": [
+        "webOS",
+        "Android TV"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "LPCM (Linear Pulse Code Modulation)"
+      ],
+      "hdr-format": [
+        "Advanced HDR"
+      ]
+    },
+    "ratings": {
+      "value": 4.66,
+      "count": 1057,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

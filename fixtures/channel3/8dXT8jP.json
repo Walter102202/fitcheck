@@ -1,0 +1,169 @@
+{
+  "product": {
+    "id": "8dXT8jP",
+    "title": "43 inch Roku Full HD Smart LED TV",
+    "description": "The Philips 43-inch Roku Full HD Smart LED TV is designed for simple and enjoyable streaming. It features a crisp 1080p Full HD display for sharp visuals and vibrant detail. The integrated Roku OS provides a user-friendly interface with instant access to thousands of streaming channels and live TV. Enhanced sound quality is provided by Dolby Audio, and the TV supports wireless connectivity, Apple AirPlay, and voice control via Siri, Alexa, and Google Assistant.",
+    "brands": [
+      {
+        "id": "7ju5",
+        "name": "Philips"
+      },
+      {
+        "id": "BBnI",
+        "name": "Roku"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/66a89cf2-dcd9-4cd0-9720-c9ec956b8362?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "cleaned_url": "https://cdn.trychannel3.com/2b441c5a-f038-483a-8f4f-546efef81e51?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Front view of Philips Roku Smart LED TV on two black feet."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d21731b0-04e8-4491-8f6c-210533ead998?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Lifestyle shot of a couple relaxing on a sofa in an RV with a TV in the background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f757cc7f-5c19-4f84-bfc7-0ba47d84b89b?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/f757cc7f-5c19-4f84-bfc7-0ba47d84b89b?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front three-quarter view of a Philips Roku Smart LED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0aab5711-55f0-4868-ac27-5617332bec13?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Lifestyle shot of a Philips Roku TV in a bright living room."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/50d28995-f366-4f3f-8f9d-45466252c1a1?aid=01M73SEWHF8S87RCNVM2WZZMBQ&mid=jlW4",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of a Philips Roku Smart LED TV displaying the home screen."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Full HD 1080p display for sharp picture clarity",
+      "Built-in Roku OS with simple streaming interface",
+      "Dolby Audio for enhanced sound quality",
+      "Access to free live and on-demand content via The Roku Channel",
+      "Wireless connectivity for smooth streaming performance",
+      "Apple AirPlay support for easy content sharing",
+      "Works with Siri, Alexa, and Google Assistant",
+      "Free Roku mobile app for remote control and voice search"
+    ],
+    "colors": [
+      {
+        "hex": "#1c2a4e",
+        "percentage": 0.4289
+      },
+      {
+        "hex": "#214a7b",
+        "percentage": 0.1519
+      },
+      {
+        "hex": "#e4e5e7",
+        "percentage": 0.1422
+      },
+      {
+        "hex": "#081021",
+        "percentage": 0.1021
+      },
+      {
+        "hex": "#5685a5",
+        "percentage": 0.0885
+      },
+      {
+        "hex": "#3e4c6d",
+        "percentage": 0.0863
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/8dXT8jP-jlW4-S666bu?o=01M38CJEND0CN0J89ZGAAQV04V&aid=01M73SEWHF8S87RCNVM2WZZMBQ",
+        "domain": "campingworld.com",
+        "price": {
+          "price": 299.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 13.89,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "television-specialized-features": [
+        "Smart TV",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Apple Siri",
+        "Google Assistant"
+      ],
+      "display-resolution": [
+        "1920 x 1080"
+      ],
+      "audio-technology": [
+        "Dolby digital (AC-3)"
+      ],
+      "display-technology": [
+        "LED"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,114 @@
+{
+  "product": {
+    "id": "5swh9aC",
+    "title": "Conair 1875 Watt Hair Dryer",
+    "description": "The Conair 1875 Watt Hair Dryer is a professional-grade styling tool designed for fast drying and reduced frizz. It features advanced ionic technology, 2 heat and 2 speed settings for personalized styling, and a cool shot button to lock in styles. The lightweight design ensures comfortable use, and it includes a concentrator for focused airflow. This model (HB-370FDVH-TN) comes in a blue and black color scheme.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/40074a8c-077d-430b-ae39-2f119be387b2?aid=01M73S7S518GGHEDBSYZHAM2TS&mid=7uRn",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/40074a8c-077d-430b-ae39-2f119be387b2?aid=01M73S7S518GGHEDBSYZHAM2TS&mid=7uRn",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Blue and black Conair 1875 Watt hair dryer, side view."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1875 watts of powerful drying performance",
+      "Ionic technology for smooth, shiny results with reduced frizz",
+      "2 heat and 2 speed settings for personalized styling",
+      "Cool shot button to set your style in place",
+      "Lightweight design for comfortable use",
+      "Includes concentrator for focused airflow"
+    ],
+    "colors": [
+      {
+        "hex": "#0060eb",
+        "percentage": 0.2904
+      },
+      {
+        "hex": "#474448",
+        "percentage": 0.2052
+      },
+      {
+        "hex": "#2f2e34",
+        "percentage": 0.1495
+      },
+      {
+        "hex": "#a0b4d3",
+        "percentage": 0.1201
+      },
+      {
+        "hex": "#161318",
+        "percentage": 0.1122
+      },
+      {
+        "hex": "#3c7bc9",
+        "percentage": 0.0574
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/5swh9aC-7uRn-S666bu?o=01M3FDDNK1DX4989BF8YPAX0NW&aid=01M73S7S518GGHEDBSYZHAM2TS",
+        "domain": "boscovs.com",
+        "price": {
+          "price": 14.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

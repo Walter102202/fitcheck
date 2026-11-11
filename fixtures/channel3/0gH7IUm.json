@@ -1,0 +1,177 @@
+{
+  "product": {
+    "id": "0gH7IUm",
+    "title": "Panasonic 65\" W80C 4K UHD QLED+ Fire TV (2026)",
+    "description": "The Panasonic 65\" W80C is a 4K UHD QLED+ Fire TV (2026 model) designed for refined everyday living. It features a glare-free matte screen and an AI 4K Colour Engine for enhanced clarity and contrast. The TV supports a 120Hz refresh rate (HSR) and includes Game Mode with VRR and ALLM for smooth gaming. Audio is powered by Dual full-range speakers with Dolby Atmos and AI Space-Aware Audio. It integrates the Fire TV operating system for seamless streaming and smart features.",
+    "brands": [
+      {
+        "id": "vlUR",
+        "name": "Panasonic"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/b448c604-68b9-46f6-b987-504df34e375f?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "product_information",
+        "alt_text": "Energy guide graphic comparing yearly energy costs of the TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dea14374-d4fe-4960-b200-3c9cada561f8?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "65-inch QLED TV displaying blue abstract graphics in a living room."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9b43f027-9558-4f34-8474-466ea2606ee0?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "65-inch QLED TV displaying a presentation in a home setting."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/952add9f-02f9-4e71-9a6b-281c72a4055e?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "65-inch QLED TV displaying abstract colorful graphics in a living room."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f6456ab3-f89f-43cf-9242-0c20edb23ec2?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/f6456ab3-f89f-43cf-9242-0c20edb23ec2?aid=01M73RZT135STZBGRM5VFRTZKD&mid=RnUy",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up detail of the slim bezel and stand of the television."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "65\" QLED+ Glare Free Matte Screen",
+      "3840x2160 4K UHD Resolution",
+      "120Hz HSR Refresh Rate",
+      "AI 4K Colour Engine for optimized visuals",
+      "Fire TV Operating System",
+      "Dolby Vision & Dolby Atmos support",
+      "Game Mode with VRR, ALLM, and MEMC",
+      "Filmmaker Mode for authentic cinematic presentation",
+      "AI Space-Aware Audio with Dialogue and Adaptive modes"
+    ],
+    "colors": [
+      {
+        "hex": "#464646",
+        "percentage": 0.3916
+      },
+      {
+        "hex": "#6d6d6d",
+        "percentage": 0.3583
+      },
+      {
+        "hex": "#adadad",
+        "percentage": 0.1438
+      },
+      {
+        "hex": "#1f1f1f",
+        "percentage": 0.1064
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/0gH7IUm-RnUy-S666bu?o=01M2WVNNJMJ663C856K7P79QXC&aid=01M73RZT135STZBGRM5VFRTZKD",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 499.99,
+          "compare_at_price": 549.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 56.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 12.5,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.9,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 13835,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-shape": [
+        "Flat"
+      ],
+      "display-technology": [
+        "QLED"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)"
+      ],
+      "smart-tv-platform": [
+        "Fire TV"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "MEMC technology",
+        "Quantum dot technology",
+        "Smart TV",
+        "Suitable for gaming"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:24:19.176Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

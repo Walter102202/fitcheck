@@ -1,0 +1,225 @@
+{
+  "product": {
+    "id": "3KRsP5G",
+    "title": "Samsung S85f OLED 4K Vision Ai Smart TV",
+    "description": "Samsung QN83S85F is a high-end 83-inch OLED 4K Vision AI smart TV with sleek ultra-thin bezel design, flat panel, and lightweight stand feet. The model emphasizes a large screen experience with vibrant color rendering and advanced picture processing typical of Samsung OLED TV line. This listing focuses on customer reviews for the QN83S85F variant sold by Crutchfield.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      },
+      {
+        "id": "Zd7y",
+        "name": "Crutchfield"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ce0fb7bf-35f4-4d95-ba2b-efd738343a2a?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/bd307d0e-963c-495e-b6b7-55d043c74ed3?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV displaying a vibrant orange and purple canyon scene."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cdc3948e-76f2-4c0e-b03e-5c33b8422bfe?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/cdc3948e-76f2-4c0e-b03e-5c33b8422bfe?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV displaying a vibrant orange and purple canyon scene."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/43f6ebca-6d1b-42ac-b938-470b25bbd7f8?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Side profile view of a Samsung OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/3ef933ba-27f9-4799-b553-782802aadab3?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Ports and connections on the back panel of the television."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f78f5a31-a53d-43ed-94a2-73903d2d35cf?aid=01M73S7DHBD8C6G593R35FT8EE&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Dimensions and what's in the box for a 55 inch OLED TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "OLED 4K resolution",
+      "Vision AI Smart TV",
+      "65 inch class measured diagonal",
+      "sleek ultra-thin bezel",
+      "flat panel design",
+      "two stand feet",
+      "self-illuminating OLED display panel produces infinite contrast, vibrant color, and absolute black",
+      "Samsung Vision AI delivers AI-powered personalization features and picture/sound optimization",
+      "free ad-supported movies and shows with Samsung TV Plus; built-in hubs for gaming, streaming, and SmartThings"
+    ],
+    "colors": [
+      {
+        "hex": "#3b1a33",
+        "percentage": 0.252
+      },
+      {
+        "hex": "#673055",
+        "percentage": 0.2458
+      },
+      {
+        "hex": "#bb89b3",
+        "percentage": 0.1734
+      },
+      {
+        "hex": "#89527f",
+        "percentage": 0.1205
+      },
+      {
+        "hex": "#ab688b",
+        "percentage": 0.1159
+      },
+      {
+        "hex": "#e4cedf",
+        "percentage": 0.0924
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/3KRsP5G-Fn95-S666bu?o=01KJAGRA26WKACDNBZ8TSSWG68&aid=01M73S7DHBD8C6G593R35FT8EE",
+        "domain": "crutchfield.com",
+        "price": {
+          "price": 1197.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            {
+              "label": "65\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/f59d00a0-fbfa-470f-bccf-bcf4be590ab1",
+              "product_id": "9tziJay"
+            },
+            {
+              "label": "83\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/ce0fb7bf-35f4-4d95-ba2b-efd738343a2a",
+              "product_id": "3KRsP5G"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Size",
+          "label": "83\""
+        }
+      ]
+    },
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "pattern": [
+        "Abstract"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Smart TV",
+        "Built-in digital tuner",
+        "HDR support",
+        "Internet TV",
+        "Screen mirroring",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "Adjustable viewing angle"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "PCM (Pulse Code Modulation)",
+        "AAC"
+      ]
+    },
+    "ratings": {
+      "value": 5,
+      "count": 8,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

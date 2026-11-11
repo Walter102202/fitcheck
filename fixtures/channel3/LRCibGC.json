@@ -1,0 +1,176 @@
+{
+  "product": {
+    "id": "LRCibGC",
+    "title": "Flight+ Travel Hair Dryer",
+    "description": "The ghd Flight+ Travel Hair Dryer is a compact and portable hair drying solution designed for travel. It features a folding handle for easy packing and dual voltage compatibility (120V and 240V) for international use. This lightweight dryer is 50% lighter than full-sized ghd models while maintaining 70% of the power. It includes safeguard technology to prevent overheating by automatically cooling down when held too close to the hair. The set comes with a protective bag and offers two speed and temperature settings.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/1fda4372-4e73-4d0f-8cd3-702ffeb35ab7?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/a79df915-83a4-477a-8c11-936f13fb9bbb?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black pouch with hair dryer end on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6e2ad96d-dddc-405b-be1d-2065ee26e58b?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/32d1202b-ef6c-431f-b3fb-f798f08c1004?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer with box on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f28e2062-4eac-4176-a584-81aa6ec39d80?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/174f9cee-57f8-4fe3-a82a-1b1e9b483e1f?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer showing side profile and cord."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dbba3013-9d6a-41c0-99c0-1e181e29bc8e?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cbf35121-1730-4196-9dd3-fe6e42658551?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Travel bag and hair dryer on a leather surface with a boarding pass."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/31dd3993-36b8-46ba-98bb-23302a5bd7f4?aid=01M73TC3FN5ZZ5C682FMHG60ND&mid=K6RA",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the hair dryer nozzle with a perforated head."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": "female",
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Compact and portable design weighing less than 1lb",
+      "Foldable handle for easy packing",
+      "Advanced ionic technology for reduced frizz and smooth, shiny results",
+      "Dual voltage functionality for international travel",
+      "2 speed and temperature settings",
+      "Includes removable nozzle",
+      "Comes with an exclusive luxurious travel protective case",
+      "2 year warranty",
+      "Safeguard technology to prevent overheating"
+    ],
+    "colors": [
+      {
+        "hex": "#202022",
+        "percentage": 0.7164
+      },
+      {
+        "hex": "#414042",
+        "percentage": 0.181
+      },
+      {
+        "hex": "#868586",
+        "percentage": 0.1026
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/LRCibGC-K6RA-S666bu?o=01M1Q3V3ZY2E4TR5QKAFPEMYS1&aid=01M73TC3FN5ZZ5C682FMHG60ND",
+        "domain": "macys.com",
+        "price": {
+          "price": 109.65,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 1,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/LRCibGC-yagp-S666bu?o=01M2ZN860R5BEWD45GW0QTF47P&aid=01M73TC3FN5ZZ5C682FMHG60ND",
+        "domain": "bluemercury.com",
+        "price": {
+          "price": 129,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly",
+        "Fine",
+        "Straight",
+        "Thick"
+      ],
+      "hair-styling-tool-features": [
+        "Travel size",
+        "Concentrator nozzle",
+        "Ionic function"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ]
+    },
+    "ratings": {
+      "value": 3.5,
+      "count": 12,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

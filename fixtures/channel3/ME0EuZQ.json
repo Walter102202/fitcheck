@@ -1,0 +1,136 @@
+{
+  "product": {
+    "id": "ME0EuZQ",
+    "title": "Neuro Dry+ Folding Professional Dual-Voltage Hair Dryer",
+    "description": "Experience fast, frizz-free blowouts anywhere with the Paul Mitchell Neuro Dry+ Folding Professional Dual-Voltage Hair Dryer. This compact and lightweight dryer features a powerful digital motor for speedy styling, and its unique design automatically pauses airflow when the handle is released, ensuring energy efficiency. With three heat and speed settings, a cool shot button, and automatic dual voltage for worldwide use, this dryer offers personalized styling. It also includes a memory function to recall your last settings and a long 9-foot cord for convenience. The dryer comes with three magnetic attachments (nozzle, diffuser, and pik), a storage bag, a cleaning brush, and a two-year warranty.",
+    "brands": [
+      {
+        "id": "EcGF",
+        "name": "Paul Mitchell"
+      },
+      {
+        "id": "HcBK",
+        "name": "NeuroGum"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2e2403ac-6e13-4221-9b94-e0aea0b494b1?aid=01M73TC2WG9RPZP4YFW4HZ2V6P&mid=ELn5",
+        "cleaned_url": "https://cdn.trychannel3.com/4f0b5868-5782-4782-b272-608ffe1c04e8?aid=01M73TC2WG9RPZP4YFW4HZ2V6P&mid=ELn5",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black Paul Mitchell Neuro Dry+ Folding Professional Dual-Voltage Hair Dryer"
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Light + Compact: Folds for easy storage",
+      "Fast: Digital motor spins at 110K RPM for speedy styling",
+      "Enhanced: Blend of positive and negative ions neutralize static frizz",
+      "Elevated: Automatically pauses airflow upon releasing the dryer handle; must be activated for use",
+      "Personalized: 3 heat/speed settings and a cool shot button",
+      "Travel-friendly: Automatic dual voltage (120-240V) for worldwide use; may require plug adapter; adapter not included",
+      "Smart: Memory function remembers your last settings used",
+      "Convenient: 9-foot professional-length cord for better reach during styling",
+      "2024 + 2025 Elle Tools and Treatments Award for Best Compact Dryer",
+      "2024 Glamour Beauty & Wellness Award Winner for Best Hair Dryer",
+      "Fast drying, comparable to leading prestige dryer brands",
+      "24-hour frizz control",
+      "117% more shine"
+    ],
+    "colors": [
+      {
+        "hex": "#525252",
+        "percentage": 0.5655
+      },
+      {
+        "hex": "#2d2d2d",
+        "percentage": 0.3539
+      },
+      {
+        "hex": "#a0a0a0",
+        "percentage": 0.0806
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/ME0EuZQ-ELn5-S666bu?o=01KS6T5N28ZVJWVRFHEFE3NBZ1&aid=01M73TC2WG9RPZP4YFW4HZ2V6P",
+        "domain": "ulta.com",
+        "price": {
+          "price": 250,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "application-type": [
+        "Leave-in"
+      ],
+      "hair-dryer-motor-type": [
+        "Digital motor"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment",
+        "Hair comb"
+      ],
+      "hair-styling-tool-features": [
+        "Adjustable thermostat",
+        "Ionic function"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ]
+    },
+    "ratings": {
+      "value": 4.6,
+      "count": 144,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

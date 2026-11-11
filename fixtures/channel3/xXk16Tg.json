@@ -1,0 +1,215 @@
+{
+  "product": {
+    "id": "xXk16Tg",
+    "title": "Philips 43\" Class 7875 Series 4K UltraHD Ambilight Roku Smart TV",
+    "description": "The Philips 43\" Class 7875 Series is a 4K UltraHD Roku Smart TV designed for an immersive viewing experience. It features proprietary Ambilight technology, which uses rear LEDs to project color-matching light onto the wall behind the screen, extending the on-screen action into the room. The TV boasts a 4K resolution (3840 x 2160) with HDR10 for rich color and contrast, and a 60Hz refresh rate paired with Philips Perfect Motion Rate for smooth visuals during fast-paced content. Powered by the Roku OS, it provides seamless access to streaming apps like Netflix and Disney+, and is compatible with Alexa, Google Assistant, Siri, and Apple AirPlay. For audio, it includes a 2-channel speaker system with Dolby Audio support.",
+    "brands": [
+      {
+        "id": "7ju5",
+        "name": "Philips"
+      },
+      {
+        "id": "BBnI",
+        "name": "Roku"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/cb1021e2-00e0-4050-b942-a21c1a4c8357?aid=01M73SEWB7G5C2KE9RTJ213T8P&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Front view of the 43-inch Philips Ambilight TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6df9e0b6-3b66-45de-8e56-56a683503814?aid=01M73SEWB7G5C2KE9RTJ213T8P&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Philips Ambilight TV with dynamic LED lighting on the wall."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/83c2e14a-b45d-47b0-9f3c-ed825fc112b9?aid=01M73SEWB7G5C2KE9RTJ213T8P&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Philips Ambilight TV setup showing plug and play ease."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/88b99d90-4e8c-45c1-abd4-fd0c4f1556d5?aid=01M73SEWB7G5C2KE9RTJ213T8P&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "People watching sports on TV with immersive Ambilight lighting."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/35b9a210-5cd7-4dbe-a3ed-4803942e539d?aid=01M73SEWB7G5C2KE9RTJ213T8P&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Gaming content on TV with reactive Ambilight lighting."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "4K UltraHD resolution (3840 x 2160) with HDR10",
+      "Philips Ambilight technology projects color-matching light onto the wall",
+      "Roku Smart TV platform with integrated streaming apps",
+      "60Hz refresh rate with Philips Perfect Motion Rate",
+      "Dolby Audio 2-channel speaker system",
+      "Compatible with Alexa, Google Assistant, Siri, and Apple AirPlay",
+      "Member-exclusive 3-year manufacturer's warranty"
+    ],
+    "colors": [
+      {
+        "hex": "#090611",
+        "percentage": 0.5326
+      },
+      {
+        "hex": "#271e32",
+        "percentage": 0.2205
+      },
+      {
+        "hex": "#573d5b",
+        "percentage": 0.1402
+      },
+      {
+        "hex": "#a19996",
+        "percentage": 0.1067
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/xXk16Tg-dCgO-S666bu?o=01M53YKJ99XV2XEXRBZE08ZKZD&aid=01M73SEWB7G5C2KE9RTJ213T8P",
+        "domain": "samsclub.com",
+        "price": {
+          "price": 229,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 37.71,
+            "unit": "in"
+          },
+          "width": {
+            "number": 9.44,
+            "unit": "in"
+          },
+          "height": {
+            "number": 23.68,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 15.04,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/xXk16Tg-p1PB-S666bu?o=01KY04V8S5WE462DTDE9FMTNNS&aid=01M73SEWB7G5C2KE9RTJ213T8P",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 289.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hdr-format": [
+        "HDR10+",
+        "HDR10"
+      ],
+      "audio-technology": [
+        "Dolby digital (AC-3)"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4K ultra HD",
+        "1080p",
+        "2160p"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "pattern": [
+        "Solid",
+        "Graphic"
+      ],
+      "television-specialized-features": [
+        "Suitable for gaming",
+        "Smart TV",
+        "HDR support",
+        "Voice control",
+        "Built-in soundbar",
+        "Quantum dot technology",
+        "Motion interpolation technology",
+        "MEMC technology",
+        "Adjustable viewing angle",
+        "Internet TV"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "display-technology": [
+        "LCD"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ]
+    },
+    "ratings": {
+      "value": 4.55,
+      "count": 55,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,207 @@
+{
+  "product": {
+    "id": "zKknU2L",
+    "title": "Helios 1875W Advanced Professional Hair Dryer",
+    "description": "The GHD Helios 1875W Advanced Professional Hair Dryer is an award-winning blow dryer designed for salon-quality results. It features a powerful 1875W brushless motor and advanced ionic technology to reduce frizz and flyaways, delivering 30% more shine and superior hair alignment. Engineered for efficiency and comfort, it is lightweight, ergonomically balanced, and delivers a concentrated airflow at 75 MPH for faster styling.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d8b62119-b23f-4bb0-b82e-7fd7d9a4cbc6?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer with silver accents on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/25acaeb0-9108-425c-990d-3d4b1a113e06?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/25acaeb0-9108-425c-990d-3d4b1a113e06?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Box packaging for the Helios professional hairdryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/562f720a-700a-4283-953a-90c90edb4b13?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing hairdryer features like speed and shine."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/db3a2887-cc85-48c2-b5b0-9fb2ef5163da?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman with long dark hair using a black hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b54f87b4-8f6a-41b4-a440-c9ea0a71b672?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/b54f87b4-8f6a-41b4-a440-c9ea0a71b672?aid=01M73S7RR2CSDB3HSFTDS0TDC7&mid=lJxY",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer on a dark marble surface."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Powerful 1875W brushless motor",
+      "Advanced ionic technology reduces frizz and flyaways",
+      "30% more shine and 3x more hair alignment",
+      "Concentrated airflow at 75 MPH for faster styling",
+      "Bespoke acoustic system for low sound levels",
+      "Lightweight and ergonomically balanced",
+      "Professional length 9' power cord",
+      "3 heat settings and 3 speed settings",
+      "Cool shot button for salon-worthy finish",
+      "2 year consumer use warranty"
+    ],
+    "colors": [
+      {
+        "hex": "#151716",
+        "percentage": 0.3947
+      },
+      {
+        "hex": "#e1e1e1",
+        "percentage": 0.1681
+      },
+      {
+        "hex": "#4c5152",
+        "percentage": 0.1496
+      },
+      {
+        "hex": "#737a7d",
+        "percentage": 0.1132
+      },
+      {
+        "hex": "#2e3132",
+        "percentage": 0.0959
+      },
+      {
+        "hex": "#c0c2c0",
+        "percentage": 0.0785
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/zKknU2L-lJxY-S666bu?o=01KRPDRQSHC64D0MQQVGP0WBJH&aid=01M73S7RR2CSDB3HSFTDS0TDC7",
+        "domain": "dermstore.com",
+        "price": {
+          "price": 329,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/zKknU2L-yagp-S666bu?o=01M30A2QZ1NHFWZ89NJN42SF2Y&aid=01M73S7RR2CSDB3HSFTDS0TDC7",
+        "domain": "bluemercury.com",
+        "price": {
+          "price": 329,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 9.75,
+            "unit": "in"
+          },
+          "width": {
+            "number": 4.25,
+            "unit": "in"
+          },
+          "height": {
+            "number": 4,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "hair-dryer-motor-type": [
+        "Brushless DC motor (BLDC)"
+      ],
+      "suitable-for-hair-type": [
+        "Curly",
+        "Fine",
+        "Straight",
+        "All hair types",
+        "Dry"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "conditioner-effect": [
+        "Anti-frizz",
+        "Repair",
+        "Shine",
+        "Smoothing",
+        "Strengthening",
+        "Thickening"
+      ],
+      "material": [
+        "Plastic"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 47,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

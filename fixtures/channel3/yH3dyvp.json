@@ -1,0 +1,112 @@
+{
+  "product": {
+    "id": "yH3dyvp",
+    "title": "Bio Ionic Smart-X High Effieiency Dryer And Diffuser",
+    "description": "Experience revolutionary hair drying technology with the BIO IONIC SMART-X High Efficiency Dryer and Diffuser. This professional-grade styling tool combines advanced ionic technology with intelligent heat distribution to deliver faster drying times while reducing damage and frizz. It features multiple heat and speed settings for customizable styling and includes a specialized diffuser attachment perfect for enhancing natural curls and waves. The ergonomic design ensures comfortable handling during extended use while the powerful motor provides consistent airflow for salon-quality results at home.",
+    "brands": [
+      {
+        "id": "o3Im",
+        "name": "BioIonic"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ee206751-cd6e-4102-9f61-eec133b37f3d?aid=01M73TC3P4EEJEP48FC2DWW1AB&mid=MMoD",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ee206751-cd6e-4102-9f61-eec133b37f3d?aid=01M73TC3P4EEJEP48FC2DWW1AB&mid=MMoD",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "White hair dryer and diffuser on a white background."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Advanced ionic technology",
+      "Intelligent heat distribution",
+      "Multiple heat and speed settings",
+      "Includes specialized diffuser attachment",
+      "Ergonomic design",
+      "Powerful motor for consistent airflow"
+    ],
+    "colors": [
+      {
+        "hex": "#282827",
+        "percentage": 0.6536
+      },
+      {
+        "hex": "#b7b5ab",
+        "percentage": 0.1298
+      },
+      {
+        "hex": "#8b8980",
+        "percentage": 0.1181
+      },
+      {
+        "hex": "#4b4a47",
+        "percentage": 0.0985
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/yH3dyvp-MMoD-S666bu?o=01M6J1SYY7G8GWAQZ73R1QATYP&aid=01M73TC3P4EEJEP48FC2DWW1AB",
+        "domain": "fragrancenet.com",
+        "price": {
+          "price": 258.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "suitable-for-hair-type": [
+        "Curly"
+      ],
+      "hair-styling-tool-features": [
+        "Ionic function",
+        "Diffuser nozzle"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

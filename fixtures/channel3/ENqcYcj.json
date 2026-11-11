@@ -1,0 +1,221 @@
+{
+  "product": {
+    "id": "ENqcYcj",
+    "title": "LG AI UA7050 65\" Class (65.1\" Diag.) 4K Ultra HD Smart LED TV",
+    "description": "The LG AI UA7050 is a 65-inch Class (65.1\" diagonal) 4K Ultra HD Smart LED TV designed for a cinematic home viewing experience. Powered by the Alpha 7 AI Processor Gen8, it features 4K Super Upscaling for enhanced picture quality and a7 AI Sound Pro for immersive audio. The TV includes HDR10 Pro for brilliant detail in every scene, webOS 25 for seamless access to streaming apps, and integrated LG Channels providing over 350 free channels. Gaming features include FreeSync, VRR, and the LG Game Optimizer, while smart connectivity is supported via ThinQ, Google Assistant, Amazon Alexa, and Apple HomeKit.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/c4a50f26-9290-4505-81ac-4057f192b9d1?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/8c8ecbf5-040b-4783-b748-f5ce9b7ab1d5?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "TV screen displaying vibrant, colorful, abstract, glowing spheres."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/8d6bb968-9376-4863-93d6-3f75eba1d487?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/24ab30d8-048f-452a-9783-47915e1ad447?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen displaying vibrant, colorful, abstract, glowing spheres."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a4c35864-ab37-4f34-b149-53451d0d2b9a?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/470f79aa-6015-4d42-b22a-4aa31f653dab?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Diagram showing dimensions and size of a 65-inch LG UHD AI TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/449501de-08e8-4799-86ac-9c243e0c072b?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing the Alpha 7 AI Processor Gen8 features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a5536d6c-24ef-40e7-bf72-c6df4d595bc5?aid=01M73S7CKFMW7NXGHQG84ZWQ38&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing HDR10 Pro and SDR visual technologies."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "4K Super Upscaling",
+      "A7 AI Processor 4K Gen8",
+      "A7 AI Sound Pro (Virtual 9.1.2 Up-mix)",
+      "HDR10 Pro",
+      "WebOS 25 Smart TV platform",
+      "350+ free LG Channels",
+      "60Hz Native Refresh Rate",
+      "Filmmaker Mode",
+      "FreeSync, VRR, and ALLM for gaming",
+      "Built-in Amazon Alexa, Google Assistant, and Apple HomeKit support"
+    ],
+    "colors": [
+      {
+        "hex": "#53606c",
+        "percentage": 0.1593
+      },
+      {
+        "hex": "#492e46",
+        "percentage": 0.1367
+      },
+      {
+        "hex": "#e4ebcd",
+        "percentage": 0.1341
+      },
+      {
+        "hex": "#1a1525",
+        "percentage": 0.127
+      },
+      {
+        "hex": "#292d3d",
+        "percentage": 0.1207
+      },
+      {
+        "hex": "#cd638a",
+        "percentage": 0.1194
+      },
+      {
+        "hex": "#9a3547",
+        "percentage": 0.1019
+      },
+      {
+        "hex": "#baa4aa",
+        "percentage": 0.1008
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/ENqcYcj-p1PB-S666bu?o=01KZ90N69JNXSA0CKQQ4Q1S2CD&aid=01M73S7CKFMW7NXGHQG84ZWQ38",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 489.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/ENqcYcj-yqJJ-S666bu?o=01M38QH76BBM5PJW11W945QEHX&aid=01M73S7CKFMW7NXGHQG84ZWQ38",
+        "domain": "microcenter.com",
+        "price": {
+          "price": 279.99,
+          "compare_at_price": 399.99,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 57.3,
+            "unit": "in"
+          },
+          "width": {
+            "number": 10.6,
+            "unit": "in"
+          },
+          "height": {
+            "number": 33.6,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-shape": [
+        "Flat"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Screen mirroring",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HLG"
+      ],
+      "display-technology": [
+        "LED"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "wi-fi-standard": [
+        "802.11ax",
+        "802.11ac"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4K ultra HD"
+      ],
+      "vesa-mounting-pattern": [
+        "400 x 400 mm"
+      ],
+      "audio-technology": [
+        "AAC",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)",
+        "PCM (Pulse Code Modulation)"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ]
+    },
+    "ratings": {
+      "value": 4.7,
+      "count": 1004,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

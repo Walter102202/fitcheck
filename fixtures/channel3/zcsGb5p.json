@@ -1,0 +1,136 @@
+{
+  "product": {
+    "id": "zcsGb5p",
+    "title": "55\" Class Pro Series 4K QLED Mini-LED Smart TV",
+    "description": "The Roku 55\" Pro Series 4K QLED Mini-LED Smart TV (Model 55R8C5KIT1) is a high-performance television featuring a Mini-LED QLED panel for sharp, vibrant picture quality. It supports Dolby Vision HDR for enhanced contrast and lifelike visuals. Powered by Roku OS, it provides seamless access to streaming apps via dual-band Wi-Fi 6 and includes a voice remote and Bluetooth connectivity for wireless audio. This comprehensive bundle comes with a high-speed HDMI cable, a screen cleaner, and a 12-month CPS warranty.",
+    "brands": [
+      {
+        "id": "BBnI",
+        "name": "Roku"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2bb4687e-1e50-4cbf-abba-fbccd081f84d?aid=01M73S7CVQQ08YQ4Y7BKF5FWS6&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2bb4687e-1e50-4cbf-abba-fbccd081f84d?aid=01M73S7CVQQ08YQ4Y7BKF5FWS6&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Roku TV interface showing streaming apps, HDMI cable, and screen cleaner."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "55\" Class 4K UHD (3840 × 2160) QLED Mini-LED display",
+      "Dolby Vision HDR for enhanced contrast and color",
+      "Roku OS with built-in streaming apps and dual-band Wi-Fi 6",
+      "Voice remote support and Bluetooth audio pairing",
+      "Multiple HDMI and USB inputs",
+      "Included HDMI cable, screen cleaner, and 12-Month CPS Warranty"
+    ],
+    "colors": [
+      {
+        "hex": "#1c1640",
+        "percentage": 0.4049
+      },
+      {
+        "hex": "#382c66",
+        "percentage": 0.2385
+      },
+      {
+        "hex": "#857099",
+        "percentage": 0.1388
+      },
+      {
+        "hex": "#e9e8ed",
+        "percentage": 0.1138
+      },
+      {
+        "hex": "#744283",
+        "percentage": 0.1039
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/zcsGb5p-K6RA-S666bu?o=01M3YWDSG6017EZ4KHCB787FNW&aid=01M73S7CVQQ08YQ4Y7BKF5FWS6",
+        "domain": "macys.com",
+        "price": {
+          "price": 699.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 56,
+            "unit": "in"
+          },
+          "width": {
+            "number": 7,
+            "unit": "in"
+          },
+          "height": {
+            "number": 34,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 66,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Voice control"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "Dolby vision"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "display-technology": [
+        "Mini-LED",
+        "QLED"
+      ],
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

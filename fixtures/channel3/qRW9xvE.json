@@ -1,0 +1,180 @@
+{
+  "product": {
+    "id": "qRW9xvE",
+    "title": "SpeedStyle Pro Hair Dryer, Curly & Coily",
+    "description": "The Shark SpeedStyle Pro Hair Dryer is a professional-grade styling system specifically engineered for curly and coily hair. It features high-velocity airflow that reaches 0-100 mph in under a second for ultra-fast drying and styling without heat damage. The system includes an intelligent IQ speed styling and drying suite that automatically adjusts temperature and airflow for its included attachments: the Defrizzfast diffuser, Quicksmooth brush, and Frizzfighter finishing tool. It also features a Scalp Shield mode to protect the scalp and new hair growth from extreme heat, with temperature regulation that ensures it never exceeds 230°F.",
+    "brands": [
+      {
+        "id": "dEah",
+        "name": "Shark"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/70ef9d21-c5ec-4401-a10c-be2c1667b028?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/70ef9d21-c5ec-4401-a10c-be2c1667b028?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Shark Speedstyle Pro hair dryer and attachments on white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f9d89d6b-75fa-4a9f-ac60-ac115c451614?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing features of Shark SpeedStyle and SpeedStyle PRO dryers."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2c607961-fd31-41b9-bf1e-68de957b9c86?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Shark SpeedStyle PRO hair dryer in use, blowing air."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/86d57afe-9b14-4f50-9ff2-8a4a92e9ddaf?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of the professional Shark SpeedStyle PRO hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a0cc40c6-9eef-4c51-8cfc-8c72d1e85042?aid=01M73TC37KZRPKNPFM16HYX5FW&mid=DyQi",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman styling hair with different attachments of the Shark Speedstyle Pro dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Plastic"
+    ],
+    "key_features": [
+      "High-velocity airflow (0-100 mph in under a second) for fast drying",
+      "Scalp Shield mode to protect new hair growth and scalp comfort",
+      "Intelligent temperature regulation (never exceeding 230°F) to prevent heat damage",
+      "IQ speed styling & drying suite automatically adjusts settings for accessories",
+      "Includes Defrizzfast diffuser with retractable prongs",
+      "Includes Quicksmooth brush with boar bristles for volume and smoothing",
+      "Includes Frizzfighter finishing tool with Coanda airflow technology",
+      "Five heat settings (Scalp Shield, low, medium, high, and no heat)",
+      "Three airflow settings (low, medium, and high)"
+    ],
+    "colors": [
+      {
+        "hex": "#5d5b5d",
+        "percentage": 0.2843
+      },
+      {
+        "hex": "#242325",
+        "percentage": 0.2685
+      },
+      {
+        "hex": "#060508",
+        "percentage": 0.237
+      },
+      {
+        "hex": "#3d3a3c",
+        "percentage": 0.1133
+      },
+      {
+        "hex": "#aea9a8",
+        "percentage": 0.0969
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/qRW9xvE-DyQi-S666bu?o=01M3247S0JFKCV0XRQ61ES67XW&aid=01M73TC37KZRPKNPFM16HYX5FW",
+        "domain": "bloomingdales.com",
+        "price": {
+          "price": 229.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 6.5,
+            "unit": "in"
+          },
+          "width": {
+            "number": 1.88,
+            "unit": "in"
+          },
+          "height": {
+            "number": 7.91,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 1.66,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Diffuser attachment",
+        "Hair brush",
+        "Straightening brush"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly",
+        "Straight"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "material": [
+        "Plastic"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

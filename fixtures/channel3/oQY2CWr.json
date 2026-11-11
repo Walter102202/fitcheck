@@ -1,0 +1,221 @@
+{
+  "product": {
+    "id": "oQY2CWr",
+    "title": "Samsung QN65Q80D 65 Inch QLED 4K Smart TV Refurbished (2024)",
+    "description": "The Samsung Q80D is a 75-inch 4K HDR Smart QLED TV designed for high-performance viewing. It features Direct Full Array technology for precise contrast control and 100% Color Volume powered by Quantum Dots for vivid, accurate colors at any brightness level. Driven by the NQ4 AI Gen2 Processor, it offers AI upscaling for sharp details and optimized imagery. The TV includes integrated Dolby Atmos and Object Tracking Sound Lite for an immersive audio experience, and the Samsung Gaming Hub for console-free gaming. It runs on the Tizen smart platform with support for major streaming services and voice control via Alexa and Google Assistant.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/293d0cb5-b8d7-40ef-8ec6-32f9b4e39ccc?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/293d0cb5-b8d7-40ef-8ec6-32f9b4e39ccc?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED TV with an owl in a tree hollow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/990c41f0-c458-4f11-a27d-c563014ece56?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED TV with an owl in a tree hollow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/86eda2fb-396c-433e-b90d-c9b4c47131c9?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED TV with an owl in a tree hollow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1fc2aee7-71a1-4a42-913b-6b8a24c38b9b?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED TV profile view."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/44b6ce6b-01f1-4444-8142-da65be35db1e?aid=01M73SEKHG2DKENTFH572QCBT9&mid=nSgk",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "TV back panel ports and connections."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Direct Full Array for precise contrast control",
+      "100% Color Volume with Quantum Dot technology",
+      "NQ4 AI Gen2 Processor with AI Upscaling",
+      "Dolby Atmos and Object Tracking Sound Lite",
+      "Q-Symphony 3.0 for synchronized TV and soundbar audio",
+      "Samsung Gaming Hub for integrated gaming access",
+      "HDR Brightness Optimizer for enhanced visibility in dark scenes",
+      "SolarCell Remote™ for sustainable charging",
+      "Quantum HDR+ for rich color and striking details",
+      "Motion Xcelerator 120Hz for smooth action"
+    ],
+    "colors": [
+      {
+        "hex": "#33231f",
+        "percentage": 0.2674
+      },
+      {
+        "hex": "#58554f",
+        "percentage": 0.2436
+      },
+      {
+        "hex": "#52382d",
+        "percentage": 0.1409
+      },
+      {
+        "hex": "#878682",
+        "percentage": 0.1403
+      },
+      {
+        "hex": "#d2d0cc",
+        "percentage": 0.1079
+      },
+      {
+        "hex": "#110b0c",
+        "percentage": 0.0998
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/oQY2CWr-nSgk-S666bu?o=01M73Q0Z8P73AE2S813V8H8DGJ&aid=01M73SEKHG2DKENTFH572QCBT9",
+        "domain": "rcwilley.com",
+        "price": {
+          "price": 1399.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 65.8,
+            "unit": "in"
+          },
+          "width": {
+            "number": 40.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 12.3,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 104.9,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/oQY2CWr-RnUy-S666bu?o=01M2Y9WGZ36Y5E5QTZF4R12NRK&aid=01M73SEKHG2DKENTFH572QCBT9",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 688,
+          "compare_at_price": 1499.99,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": null,
+        "dimensions": {
+          "length": {
+            "number": 56.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 11.2,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.1,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 57.5,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-technology": [
+        "QLED"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Quantum dot technology",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "hdr-format": [
+        "HDR10+",
+        "HLG",
+        "Advanced HDR"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:24.338Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

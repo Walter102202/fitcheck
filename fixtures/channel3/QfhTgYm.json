@@ -1,0 +1,153 @@
+{
+  "product": {
+    "id": "QfhTgYm",
+    "title": "Flight+ Festive Edition Travel Dryer Gift Set",
+    "description": "Powerful, compact travel hair dryer with digital display, dual‑voltage, cool shot button, ergonomic folding handle, and a premium travel case.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/c5b48c79-33a3-4d47-a354-c81437977d13?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/41c44436-569b-4cf9-ad80-c45996c8b538?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "is_main_image": true,
+        "shot_type": "packaging",
+        "alt_text": "Black case for hair dryer with white top, cord visible."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6afd8448-0477-4b6d-852c-85244d8ebad3?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Black case for hair dryer with white top, cord visible."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bb57314a-3cc8-43f9-bad7-d7715e5ec805?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of the black hair dryer nozzle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9a4597fb-c000-4f15-8554-d2029883524f?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer showing its body and nozzle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e5f14969-99f4-49ff-95ac-132e37569ed6?aid=01M73TC3AKPGS76ZC1160X0CSY&mid=2eyF",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Detail shot of the textured nozzle of the hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Compact and lightweight (0.99 lb)",
+      "Digital display with temperature & speed controls",
+      "Dual voltage (120V/240V) for global use",
+      "Cool shot button and auto‑shutoff safety",
+      "Foldable handle for easy packing",
+      "Inline travel case with strap"
+    ],
+    "colors": [
+      {
+        "hex": "#646668",
+        "percentage": 0.4898
+      },
+      {
+        "hex": "#929292",
+        "percentage": 0.4084
+      },
+      {
+        "hex": "#c5c5c3",
+        "percentage": 0.1019
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/QfhTgYm-2eyF-S666bu?o=01KF6DCF8M8KE0M634DMBFMJQH&aid=01M73TC3AKPGS76ZC1160X0CSY",
+        "domain": "ghdhair.com",
+        "price": {
+          "price": 90,
+          "compare_at_price": 129,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 0.99,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Travel size",
+        "Auto power-off",
+        "Ionic function",
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Variable"
+      ],
+      "hair-dryer-motor-type": [
+        "DC motor"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ]
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 101,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

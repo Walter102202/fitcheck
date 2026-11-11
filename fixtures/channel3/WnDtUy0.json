@@ -1,0 +1,239 @@
+{
+  "product": {
+    "id": "WnDtUy0",
+    "title": "Sony BRAVIA 5 75\" 4K HDR Smart Mini-LED TV",
+    "description": "The Sony BRAVIA 5 75\" is a 4K HDR Smart Mini-LED TV designed for an immersive home cinema and gaming experience. It features a UHD 4K (3840 x 2160) Mini-LED panel with thousands of local-dimming zones, powered by an AI-driven XR processor for enhanced color, clarity, and contrast. The TV supports a 120 Hz native refresh rate, Dolby Vision, HDR10, and HLG, making it ideal for high-quality movies and fast-paced gaming. It runs on the Google TV OS, providing access to a vast library of streaming apps and Google Assistant voice control via the included remote. Specifically optimized for PlayStation 5, it includes features like Auto HDR Tone Mapping and Auto Genre Picture Mode. Audio is enhanced by Acoustic Multi-Audio and Voice Zoom 3 for clearer dialogue.",
+    "brands": [
+      {
+        "id": "PURH",
+        "name": "Sony"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/23bd9451-edfc-474e-9460-cf7a61228f06?aid=01M73SESZQ08KQGPDK9NAH8XQG&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "product_information",
+        "alt_text": "Front view of Sony Bravia 5 Mini LED TV specifications."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/50ef6390-6850-4185-822e-6b99d754a50d?aid=01M73SESZQ08KQGPDK9NAH8XQG&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of the vibrant, curved display surface of the TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/101b2cd7-69cc-4a45-a45e-6e78e3e53f9d?aid=01M73SESZQ08KQGPDK9NAH8XQG&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing abstract colorful light patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/83a60cd8-c2f6-4f0c-8fe4-f6f431e3f859?aid=01M73SESZQ08KQGPDK9NAH8XQG&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing vibrant orange and blue abstract light patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cbb58631-7654-47d4-b28f-5d9adeceff03?aid=01M73SESZQ08KQGPDK9NAH8XQG&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up detail of the TV's black frame and screen edge."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "UHD 4K 3840 x 2160 Mini-LED Panel",
+      "Dolby Vision, HDR10 & HLG Compatible",
+      "Google TV OS",
+      "XR Motion Clarity Technology",
+      "Exclusive PS5 Gaming Features",
+      "XR Triluminos Pro reproducing over a billion colors",
+      "XR Processor with AI scene recognition",
+      "Acoustic Multi-Audio and X-Balanced Speaker",
+      "120 Hz Native Refresh Rate",
+      "Voice Zoom 3 for clear dialogue"
+    ],
+    "colors": [
+      {
+        "hex": "#fcef20",
+        "percentage": 0.2548
+      },
+      {
+        "hex": "#feb712",
+        "percentage": 0.1916
+      },
+      {
+        "hex": "#ec9511",
+        "percentage": 0.1718
+      },
+      {
+        "hex": "#fed415",
+        "percentage": 0.1569
+      },
+      {
+        "hex": "#9fe37f",
+        "percentage": 0.0959
+      },
+      {
+        "hex": "#c3640b",
+        "percentage": 0.0735
+      },
+      {
+        "hex": "#e6b61c",
+        "percentage": 0.0554
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/WnDtUy0-RnUy-S666bu?o=01M313QAMX0BQ6V36PKS8BPGE4&aid=01M73SESZQ08KQGPDK9NAH8XQG",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 1598,
+          "compare_at_price": 1999.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 1671,
+            "unit": "mm"
+          },
+          "width": {
+            "number": 405,
+            "unit": "mm"
+          },
+          "height": {
+            "number": 990,
+            "unit": "mm"
+          },
+          "weight": {
+            "number": 38.6,
+            "unit": "kg"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/WnDtUy0-oHaU-S666bu?o=01M33VGW4W4FSKRZAWMBXMAND3&aid=01M73SESZQ08KQGPDK9NAH8XQG",
+        "domain": "bhphotovideo.com",
+        "price": {
+          "price": 1998,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 15.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 39,
+            "unit": "in"
+          },
+          "height": {
+            "number": 65.8,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 85.1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-resolution": [
+        "4K ultra HD",
+        "1920 x 1080"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "display-technology": [
+        "Mini-LED"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Local dimming",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "AI-powered",
+        "Built-in digital tuner",
+        "Parental control",
+        "Quantum dot technology"
+      ],
+      "smart-tv-platform": [
+        "Android TV"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "DTS-X",
+        "DTS-HD master audio",
+        "DTS-HD High Resolution Audio",
+        "DTS"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ]
+    },
+    "ratings": {
+      "value": 4.11,
+      "count": 46,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

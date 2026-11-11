@@ -1,0 +1,159 @@
+{
+  "product": {
+    "id": "VuL7AbN",
+    "title": "LG OLED55G5WUA",
+    "description": "The LG OLED55G5WUA is a 55-inch Smart 4K TV featuring LG's brightest OLED evo panel with Brightness Booster Ultimate for high-contrast, vibrant images even in bright rooms. Designed for a flush wall-mount aesthetic, it belongs to the Gallery Design Series with an ultra-thin bezel. It is powered by the Alpha 11 Gen 2 AI Processor 4K for enhanced picture and sound, including AI Sound Pro. Gamers benefit from a 0.1ms response time, support for 4K/120Hz and 4K/165Hz refresh rates, VRR, and ALLM. The TV runs on WebOS 25 and integrates AI ThinQ, Amazon Alexa, and Apple HomeKit.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/dd608477-25f9-4e71-8316-d281f72e8c66?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "merchant_information",
+        "alt_text": "LG OLED evo AI television with vibrant purple and yellow waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/828b1901-6f6f-4722-a641-35b2d504a8ac?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "merchant_information",
+        "alt_text": "LG OLED evo AI television with vibrant purple and yellow waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/eff4e98c-c88a-46f6-8931-277c09a60f81?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/eff4e98c-c88a-46f6-8931-277c09a60f81?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Side profile of a thin black TV screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c37cf3af-6285-4b10-837c-1150885e77d9?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c37cf3af-6285-4b10-837c-1150885e77d9?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen displaying vibrant purple, yellow, and black abstract waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/aba847ab-4825-484b-8e89-4b51b072b495?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/aba847ab-4825-484b-8e89-4b51b072b495?aid=01M73SEPXNAHFG2QQTDXQ0M67G&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of a thin silver/gray metal edge."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "OLED evo panel with Brightness Booster Ultimate",
+      "Alpha 11 Gen 2 AI Processor 4K",
+      "4K Ultra HD resolution (3840 x 2160)",
+      "120Hz native refresh rate (up to 165Hz for PC gaming)",
+      "0.1ms response time with VRR and ALLM support",
+      "WebOS 25 smart interface",
+      "Built-in AI ThinQ, Amazon Alexa, and Google Assistant compatibility",
+      "Apple HomeKit and AirPlay 2 support",
+      "4 HDMI 2.1 inputs",
+      "Flush wall-mount Gallery design (stand sold separately)"
+    ],
+    "colors": [
+      {
+        "hex": "#505154",
+        "percentage": 0.8813
+      },
+      {
+        "hex": "#77787c",
+        "percentage": 0.1187
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/VuL7AbN-Fn95-S666bu?o=01M6MNFJQ5WV4YNBMWNW5Z2STR&aid=01M73SEPXNAHFG2QQTDXQ0M67G",
+        "domain": "crutchfield.com",
+        "price": {
+          "price": 1301.99,
+          "compare_at_price": 2499.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 48.13,
+            "unit": "in"
+          },
+          "width": {
+            "number": 27.69,
+            "unit": "in"
+          },
+          "height": {
+            "number": 1.13,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 37,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Smart TV",
+        "Screen mirroring",
+        "Suitable for gaming",
+        "Voice control"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ]
+    },
+    "ratings": {
+      "value": 4.75,
+      "count": 818,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

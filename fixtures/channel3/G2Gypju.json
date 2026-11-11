@@ -1,0 +1,147 @@
+{
+  "product": {
+    "id": "G2Gypju",
+    "title": "ghd Flight+ Travel Hair Dryer in Black",
+    "description": "The ghd Flight+ Travel Hair Dryer in Black is a premium, portable hair dryer designed for effortless travel. Weighing less than 1lb, it features a compact yet powerful motor providing 77% of the power of a full-size dryer for fast results. It includes a foldable handle for easy packing and two combined speed and temperature settings, along with a removable nozzle and a cool setting to set your style. This professional-grade tool comes with an exclusive luxurious travel protective case.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/5dc69865-948c-48f6-82d4-c4978515f7ae?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/5dc69865-948c-48f6-82d4-c4978515f7ae?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer with carrying case and nozzle on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d02af8a5-4154-4b21-8c93-037bd0127fee?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Black hair dryer on a textured surface with text highlighting its features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/59d75d25-61eb-4f78-bd76-7518701ac5f2?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/59d75d25-61eb-4f78-bd76-7518701ac5f2?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer from a three-quarter angle showing the nozzle and cord."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7a0f2582-408d-43e7-9cc8-e715f23b00cb?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/7a0f2582-408d-43e7-9cc8-e715f23b00cb?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of the round nozzle and body of the black hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/aaf2a4a2-b443-486a-905b-2be8a594e821?aid=01M73TC33DV4MVYE4EDMY57VZ1&mid=TZAa",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Black hair dryer shown in a window with a scenic view demonstrating power."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Compact powerful motor with 77% of the power of a full-size hair dryer",
+      "Weight of less than 1lb",
+      "Foldable handle for easy packing",
+      "2 speed and temperature settings",
+      "Removable nozzle",
+      "Includes an exclusive luxurious travel protective case",
+      "Cool setting for styling"
+    ],
+    "colors": [
+      {
+        "hex": "#222123",
+        "percentage": 0.7537
+      },
+      {
+        "hex": "#4a4a4c",
+        "percentage": 0.1579
+      },
+      {
+        "hex": "#b5b4b5",
+        "percentage": 0.0884
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/G2Gypju-TZAa-S666bu?o=01M3RCCNK2G0Q26KJ07A3NFN0M&aid=01M73TC33DV4MVYE4EDMY57VZ1",
+        "domain": "revolve.com",
+        "price": {
+          "price": 129,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "hair-styling-tool-features": [
+        "Travel size",
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

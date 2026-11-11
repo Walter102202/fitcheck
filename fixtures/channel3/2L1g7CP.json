@@ -1,0 +1,125 @@
+{
+  "product": {
+    "id": "2L1g7CP",
+    "title": "Helios 1875W Advanced Professional Hair Dryer",
+    "description": "The GHD Helios Professional Hairdryer in White is a professional-grade styling tool featuring advanced aerodynamic technology and a brushless motor for 30% faster drying. Its contoured nozzle and internal aerodynamics create a smooth, controlled airflow that reduces frizz and flyaways while enhancing shine. Designed for comfort, it is lightweight and ergonomic, offering variable temperature and speed controls to suit all hair types for salon-quality results at home.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/8e6ce778-f22e-49a1-b9be-d5504bba996e?aid=01M73S7RY22ERN0RX6YWW36786&mid=lI0N",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/8e6ce778-f22e-49a1-b9be-d5504bba996e?aid=01M73S7RY22ERN0RX6YWW36786&mid=lI0N",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "White and rose gold Helios professional hair dryer from above."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Brushless motor for 30% faster drying",
+      "Contoured nozzle for smooth controlled airflow",
+      "Reduces frizz and flyaways",
+      "Variable temperature and speed controls",
+      "Lightweight and ergonomic design",
+      "1875W high wattage for professional performance",
+      "Award-winning design including Allure Best of Beauty Award"
+    ],
+    "colors": [
+      {
+        "hex": "#c0c1c0",
+        "percentage": 0.5159
+      },
+      {
+        "hex": "#1e1a18",
+        "percentage": 0.4024
+      },
+      {
+        "hex": "#585758",
+        "percentage": 0.0817
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/2L1g7CP-lI0N-S666bu?o=01M3JRRN6JHCVK2ED8SN7H1R1J&aid=01M73S7RY22ERN0RX6YWW36786",
+        "domain": "onestopplus.com",
+        "price": {
+          "price": 182.49,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/2L1g7CP-MMoD-S666bu?o=01M3QVJYKGKTGGTXERX85XKYN2&aid=01M73S7RY22ERN0RX6YWW36786",
+        "domain": "fragrancenet.com",
+        "price": {
+          "price": 237.84,
+          "compare_at_price": 354.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-dryer-motor-type": [
+        "Brushless DC motor (BLDC)"
+      ],
+      "suitable-for-hair-type": [
+        "Curly",
+        "All hair types"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Variable"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

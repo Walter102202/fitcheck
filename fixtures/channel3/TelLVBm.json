@@ -1,0 +1,241 @@
+{
+  "product": {
+    "id": "TelLVBm",
+    "title": "Lg Oled Evo C3 Smart Oled Tv",
+    "description": "Experience breathtaking picture quality with the LG OLED evo C3 83-inch Smart OLED TV. Powered by the exclusive α9 AI Processor Gen6, this TV delivers luminous brightness, rich colors with 100% color volume, and enhanced contrast even in well-lit rooms. Enjoy an immersive gaming experience with a 0.1 ms response rate, NVIDIA G-Sync, AMD FreeSync Premium, and VRR support. The AI-assisted deep learning analyzes content to optimize picture and sound, while OLED Dynamic Tone Mapping Pro refines images for incredible sharpness. Its smart TV features, powered by webOS 23 and the Magic Remote, offer simplified navigation and access to a vast array of streaming content and over 300 free LG channels. For gamers, the Game Dashboard and Optimizer provide easy access to controls, and with GeForce Now, cloud gaming is seamless. Immerse yourself in cinematic sound with Dolby Atmos and AI virtual surround audio.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2c7ad35f-7d77-4112-8762-3114ef9e3924?aid=01M73SEPXNAHFG2QQTDXQ0M67H&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2c7ad35f-7d77-4112-8762-3114ef9e3924?aid=01M73SEPXNAHFG2QQTDXQ0M67H&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo 55 inch 4k smart TV display with vibrant colors."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "OLED Panel"
+    ],
+    "key_features": [
+      "OLED evo TVs bring to life brilliant color and perfect black on over 8.3 million self-lit OLED pixels.",
+      "Brightness Booster Max for luminous picture and high contrast",
+      "Ultra Slim Design: Sleeker than ever.",
+      "Art Gallery: When you're finished watching, display paintings, photos and other content to blend the LG OLED evo C3 into your space.",
+      "α9 AI Processor Gen6",
+      "webOS 23, LG ThinQ AI and Magic Remote",
+      "LG Channels: Get instant access to over 30 free channels with LG Channels.",
+      "FILMMAKER MODE: Land in the center of the action with LG's FILMMAKER MODE",
+      "Dolby Vision and Dolby Atmos",
+      "Ultimate Gaming: NVIDIA G-Sync, AMD FreeSync Premium and VRR to further improve gaming quality."
+    ],
+    "colors": [
+      {
+        "hex": "#061107",
+        "percentage": 0.4332
+      },
+      {
+        "hex": "#114717",
+        "percentage": 0.1922
+      },
+      {
+        "hex": "#558c3f",
+        "percentage": 0.1254
+      },
+      {
+        "hex": "#85c981",
+        "percentage": 0.1178
+      },
+      {
+        "hex": "#755622",
+        "percentage": 0.0854
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/TelLVBm-p1PB-S666bu?o=01KY4AD8J7DQEGA011R5BFD1D6&aid=01M73SEPXNAHFG2QQTDXQ0M67H",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 2554.85,
+          "compare_at_price": 3412.19,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/TelLVBm-g0qz-S666bu?o=01KR2H56THF13QSW2YVJ743M99&aid=01M73SEPXNAHFG2QQTDXQ0M67H",
+        "domain": "lg.com",
+        "price": {
+          "price": 1799.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 48.1,
+            "unit": "in"
+          },
+          "width": {
+            "number": 1.8,
+            "unit": "in"
+          },
+          "height": {
+            "number": 27.7,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 31.1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            {
+              "label": "42 Inch",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/6af8d221-cb03-48b1-ad46-598435c7f8eb",
+              "product_id": "GMpSfRL"
+            },
+            {
+              "label": "48 Inch",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/07e89666-7cdd-4936-8a0b-c1e1fe9bd7dd",
+              "product_id": "IhK5zT7"
+            },
+            {
+              "label": "55 Inch",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/2c7ad35f-7d77-4112-8762-3114ef9e3924",
+              "product_id": "TelLVBm"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Size",
+          "label": "55 Inch"
+        }
+      ]
+    },
+    "structured_attributes": {
+      "energy-efficiency-class-sdr": [
+        "A"
+      ],
+      "audio-technology": [
+        "LPCM (Linear Pulse Code Modulation)",
+        "PCM (Pulse Code Modulation)",
+        "Dolby atmos",
+        "AAC",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)",
+        "DTS-X"
+      ],
+      "wi-fi-standard": [
+        "802.11ac",
+        "802.11ax",
+        "802.11n"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "energy-efficiency-class-hdr": [
+        "A"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4096 x 2160",
+        "4K ultra HD"
+      ],
+      "vesa-mounting-pattern": [
+        "400 x 400 mm",
+        "200 x 200 mm"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Motion interpolation technology",
+        "Quantum dot technology",
+        "Smart TV",
+        "Voice control",
+        "AI-powered",
+        "Internet TV",
+        "Suitable for gaming"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ],
+      "pattern": [
+        "Solid",
+        "Abstract",
+        "Graphic"
+      ]
+    },
+    "ratings": {
+      "value": 4.55,
+      "count": 3272,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

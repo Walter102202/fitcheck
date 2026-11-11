@@ -1,0 +1,224 @@
+{
+  "product": {
+    "id": "Eyh2EMK",
+    "title": "Sage 2-in-1 Diffuser Hair Dryer",
+    "description": "The Sage 2-in-1 Diffuser Hair Dryer is a professional styling tool specifically designed for wavy, curly, and coily hair. It features an integrated diffuser that defines curls, reduces frizz, and amplifies natural volume and shine without the need for extra attachments. The dryer utilizes advanced ionic and ceramic argan oil technology to lock in moisture and enhance luminosity. Users can personalize their experience with two heat settings (Low 110±5°F / High 130±5°F), two airflow speeds, and a cool shot feature. Weighing only 16.58 oz, its ergonomic design prevents hand fatigue during use.",
+    "brands": [
+      {
+        "id": "Ux94",
+        "name": "StyleCraft"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/9802cc45-c7ae-44b6-b216-68260d64611d?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "cleaned_url": "https://cdn.trychannel3.com/bd60b727-34df-4816-892d-bfcca713fca3?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Sage green 2-in-1 diffuser base with nozzles."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d32cd481-108d-45e8-bc5d-a711695d6670?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "cleaned_url": "https://cdn.trychannel3.com/f8e12bef-84fa-4062-b903-cf6ea8207565?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Top view of the 2-in-1 diffuser and dryer head."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/abdc08b2-9e26-4f0e-94fd-99156c4f7972?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman using the ergonomic hair dryer diffuser."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b0b50003-5f70-4d84-b0e9-8a94e9374c8e?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "cleaned_url": "https://cdn.trychannel3.com/6b4b11fd-d04c-4a9f-88c1-5976b63369fe?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Diffuser base with argan oil technology text."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6f3466cd-5d5e-4aca-83f2-e95e43fada7c?aid=01M73TC3FNK1958XRPAT1THQ9V&mid=ELn5",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Diffuser head showing ion generator for frizz reduction."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "ceramic"
+    ],
+    "key_features": [
+      "2-in-1 Integrated Diffuser & Hair Dryer",
+      "Curl Boosting System",
+      "Ceramic Argan Oil Technology",
+      "Advanced Ion Generator",
+      "2 Heat Settings",
+      "2 Airflow Settings",
+      "Cool Shot Button",
+      "Ultra-Lightweight Ergonomic Design",
+      "9 ft Professional Power Cord",
+      "2 heat settings (Low 110±5°F / High 130±5°F)"
+    ],
+    "colors": [
+      {
+        "hex": "#8c9283",
+        "percentage": 0.5194
+      },
+      {
+        "hex": "#5d6356",
+        "percentage": 0.1272
+      },
+      {
+        "hex": "#1f201d",
+        "percentage": 0.1206
+      },
+      {
+        "hex": "#40433c",
+        "percentage": 0.1191
+      },
+      {
+        "hex": "#c6cac1",
+        "percentage": 0.1136
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/Eyh2EMK-ELn5-S666bu?o=01M0TJMNVEJSK63BDZR04Q8429&aid=01M73TC3FNK1958XRPAT1THQ9V",
+        "domain": "ulta.com",
+        "price": {
+          "price": 99.95,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/Eyh2EMK-p1PB-S666bu?o=01M36AD1DKG0XCFRD5DBGAJY59&aid=01M73TC3FNK1958XRPAT1THQ9V",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 99.95,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/Eyh2EMK-LPzf-S666bu?o=01M5ZRZGFM8B0XK5M569GXGZ18&aid=01M73TC3FNK1958XRPAT1THQ9V",
+        "domain": "newegg.com",
+        "price": {
+          "price": 110.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 5.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 5.9,
+            "unit": "in"
+          },
+          "height": {
+            "number": 7.1,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 16.58,
+            "unit": "oz"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/Eyh2EMK-K6RA-S666bu?o=01M1Q86232Q2T0JH8F7AQFM78M&aid=01M73TC3FNK1958XRPAT1THQ9V",
+        "domain": "macys.com",
+        "price": {
+          "price": 114.95,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "suitable-for-hair-type": [
+        "Curly"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "conditioner-effect": [
+        "Anti-frizz",
+        "Shine"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "heat-settings": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ],
+      "hair-care-technology": [
+        "Warm"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function",
+        "Diffuser nozzle",
+        "Ceramic heating system"
+      ]
+    },
+    "ratings": {
+      "value": 4.4,
+      "count": 7,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

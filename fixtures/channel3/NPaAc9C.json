@@ -1,0 +1,182 @@
+{
+  "product": {
+    "id": "NPaAc9C",
+    "title": "Westinghouse 43-inch Smart Roku TV, 1080p FHD Flat Screen",
+    "description": "The Westinghouse 43-inch Smart Roku TV delivers a crisp Full High Definition (1080p) viewing experience with a 16:9 aspect ratio, offering double the resolution of traditional HD televisions for a smoother, more detailed picture. Integrated with the Roku streaming platform, it provides access to over 350 free live TV channels and thousands of apps including Netflix, Prime Video, and MAX. The TV is designed for smart home integration, supporting voice control via Siri, Alexa, and Google Assistant, and allows for easy content casting through Apple AirPlay 2 and Google Cast. It features a versatile range of connectivity options with three HDMI ports, composite video, and optical digital audio inputs.",
+    "brands": [
+      {
+        "id": "N0QP",
+        "name": "Westinghouse"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6d3f88a5-0a8a-48d7-ae62-dd5c8512f122?aid=01M73SEWAWDC2TVCZYTDQEVT3M&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Roku TV streaming platform interface showing various app icons."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/439d6b46-24da-4886-8b2e-e578049a9e84?aid=01M73SEWAWDC2TVCZYTDQEVT3M&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Hand holding a smartphone controlling Roku TV features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/36d8953c-2bb7-49a6-9bab-7ca3b9c486ec?aid=01M73SEWAWDC2TVCZYTDQEVT3M&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Person casting media from a phone to a TV using AirPlay and Google Cast."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/637b5f18-a57a-4651-b6bb-385e80cee38f?aid=01M73SEWAWDC2TVCZYTDQEVT3M&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of the Westinghouse 43-inch Roku TV display."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a1c30f6e-ec83-48b8-a528-e44df1f7298b?aid=01M73SEWAWDC2TVCZYTDQEVT3M&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Inputs and outputs ports on the back of the TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Full HD (1080p) resolution with over 2 million pixels",
+      "Roku Smart TV platform with 350+ free live TV channels",
+      "Compatible with Amazon Alexa, Google Assistant, and Apple HomeKit",
+      "Supports Apple AirPlay 2 and Google Cast",
+      "Connectivity: 3 x HDMI, 1 x Composite Video, 1 x Optical Digital Audio"
+    ],
+    "colors": [
+      {
+        "hex": "#160728",
+        "percentage": 0.1621
+      },
+      {
+        "hex": "#0c070e",
+        "percentage": 0.1445
+      },
+      {
+        "hex": "#2d084e",
+        "percentage": 0.1428
+      },
+      {
+        "hex": "#8f9295",
+        "percentage": 0.1384
+      },
+      {
+        "hex": "#5b0a72",
+        "percentage": 0.1255
+      },
+      {
+        "hex": "#d2d9c3",
+        "percentage": 0.1229
+      },
+      {
+        "hex": "#1c2d3b",
+        "percentage": 0.0906
+      },
+      {
+        "hex": "#644055",
+        "percentage": 0.0731
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/NPaAc9C-p1PB-S666bu?o=01M3CGCGV7R47G60XRK7EE3ZMG&aid=01M73SEWAWDC2TVCZYTDQEVT3M",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 189.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 8.2,
+            "unit": "in"
+          },
+          "width": {
+            "number": 38.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 24,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "television-specialized-features": [
+        "Smart TV",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-technology": [
+        "LED"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Apple Siri",
+        "Google Assistant"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "1080p",
+        "Full HD"
+      ]
+    },
+    "ratings": {
+      "value": 4.75,
+      "count": 461,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

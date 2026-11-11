@@ -1,0 +1,193 @@
+{
+  "product": {
+    "id": "hlCJ1IZ",
+    "title": "S95H 55\" OLED 4K UHD Smart TV",
+    "description": "Samsung's S95H OLED TV offers a bright and detailed viewing experience for movies and streaming. It is powered by the NQ4 AI Gen3 Processor for real-time picture and sound enhancement and features 4K AI Upscaling Pro to sharpen lower-resolution content. The TV includes Glare-Free technology to minimize reflections and a sleek floating design to reduce cable clutter. It supports a 165Hz VRR (100Hz native) and OLED HDR Pro, and provides access to over 5,000 artworks.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6583ee75-8c43-486b-b9bf-b639381765a9?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/6583ee75-8c43-486b-b9bf-b639381765a9?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV displaying abstract purple and white waves on a black background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dfe72f47-7808-4265-a79c-7cfd47e1f5e4?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/dfe72f47-7808-4265-a79c-7cfd47e1f5e4?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV with a modern thin stand and screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/64021313-6449-4b2d-86df-f9f7b1bc8483?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/64021313-6449-4b2d-86df-f9f7b1bc8483?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV screen featuring dynamic purple and white abstract light patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0187fb06-e61f-4d6c-bd54-ca2c29d82222?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/0187fb06-e61f-4d6c-bd54-ca2c29d82222?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV screen displaying vibrant purple and white flowing abstract patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bed22839-626e-42c4-b295-5ab36e31ce60?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/bed22839-626e-42c4-b295-5ab36e31ce60?aid=01M73SEPXDG7R7M5T5FJN7MKXW&mid=K6RA",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV with slim black bezel showing abstract visuals."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "55\" OLED display",
+      "4K Ultra HD resolution with 4K AI Upscaling Pro",
+      "NQ4 AI Gen3 Processor for AI-enhanced picture and sound",
+      "165Hz VRR (100Hz native)",
+      "OLED HDR Pro",
+      "Glare-free screen to reduce distracting reflections",
+      "Floating design with reduced cable clutter",
+      "Access to 5000+ artworks from world-famous artists",
+      "Connectivity: 4 HDMI, 2 USB-A, Ethernet, Digital Audio Out (Optical), and RF In"
+    ],
+    "colors": [
+      {
+        "hex": "#ccb5c5",
+        "percentage": 0.1422
+      },
+      {
+        "hex": "#886a87",
+        "percentage": 0.1365
+      },
+      {
+        "hex": "#ba9ab2",
+        "percentage": 0.1235
+      },
+      {
+        "hex": "#27172d",
+        "percentage": 0.1234
+      },
+      {
+        "hex": "#48314e",
+        "percentage": 0.1229
+      },
+      {
+        "hex": "#ecdce0",
+        "percentage": 0.119
+      },
+      {
+        "hex": "#655167",
+        "percentage": 0.1165
+      },
+      {
+        "hex": "#988b97",
+        "percentage": 0.1161
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/hlCJ1IZ-K6RA-S666bu?o=01M4Q6KETM6TM81RE8PNBX1DDE&aid=01M73SEPXDG7R7M5T5FJN7MKXW",
+        "domain": "macys.com",
+        "price": {
+          "price": 2497.99,
+          "compare_at_price": 2997.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 1,
+            "unit": "in"
+          },
+          "width": {
+            "number": 59.4,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.2,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 46.1,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "OLED"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "hdr-format": [
+        "No HDR"
+      ]
+    },
+    "ratings": {
+      "value": 4.89,
+      "count": 712,
+      "source_count": 3
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

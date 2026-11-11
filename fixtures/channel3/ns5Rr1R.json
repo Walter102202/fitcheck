@@ -1,0 +1,155 @@
+{
+  "product": {
+    "id": "ns5Rr1R",
+    "title": "Pro Hair Dryer",
+    "description": "The CHI Pro Hair Dryer in Pearl White is designed to dry wet hair faster while enhancing moisture and shine. Utilizing ceramic technology, it creates negative ions that diffuse water molecules into micro-fine nano particles to reduce frizz, static electricity, and overall drying time. It features a low EMF design, two speed settings, a cold shot button, and an ergonomically shaped body for comfort. The dryer comes with a diffuser attachment and a convenient 11 ft. swivel cord.",
+    "brands": [
+      {
+        "id": "0k48",
+        "name": "Chi"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/8bfc0893-3949-4031-9b59-4fd38672ba70?aid=01M73S7RZGHTWT1TVQYWW0S3NK&mid=SToq",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/bad6ce25-6cc4-4d5e-8bd8-c8b19cf3dbcf?aid=01M73S7RZGHTWT1TVQYWW0S3NK&mid=SToq",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Pearl white CHI Pro hair dryer and nozzle shown from the side."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cc2f21b5-2cec-4e69-a974-b7d605e7bb58?aid=01M73S7RZGHTWT1TVQYWW0S3NK&mid=SToq",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Close-up of straight brown hair being dried by a hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a6790f76-144c-428d-9a4a-79ecdfd1c031?aid=01M73S7RZGHTWT1TVQYWW0S3NK&mid=SToq",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Side-by-side comparison of before and after hair styling with a hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Ceramic"
+    ],
+    "key_features": [
+      "Produces moist heat",
+      "Promotes moisture and shine in the hair",
+      "Ceramic Heater reduces frizz and static electricity",
+      "Low EMF",
+      "Ergonomically designed",
+      "Two speed settings",
+      "Cold shot button",
+      "11 ft. swivel cord"
+    ],
+    "colors": [
+      {
+        "hex": "#cdc7c9",
+        "percentage": 0.5418
+      },
+      {
+        "hex": "#191819",
+        "percentage": 0.2453
+      },
+      {
+        "hex": "#393839",
+        "percentage": 0.1669
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/ns5Rr1R-SToq-S666bu?o=01M1P6ZY748JHRH2HH38XZYAPX&aid=01M73S7RZGHTWT1TVQYWW0S3NK",
+        "domain": "chi.com",
+        "price": {
+          "price": 129.21,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 11.375,
+            "unit": "in"
+          },
+          "width": {
+            "number": 4,
+            "unit": "in"
+          },
+          "height": {
+            "number": 10.375,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 2.4,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Ceramic heating system",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "material": [
+        "Ceramic"
+      ]
+    },
+    "ratings": {
+      "value": 4.65,
+      "count": 34,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

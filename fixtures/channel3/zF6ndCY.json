@@ -1,0 +1,181 @@
+{
+  "product": {
+    "id": "zF6ndCY",
+    "title": "Diffuser Hair Dryer Blow Dryer",
+    "description": "This professional ionic hairdryer is designed specifically for versatility, featuring 300 million negative ions to reduce frizz and enhance natural shine. It comes with three essential attachments: a 5.5\" extended large diffuser for bouncy curls, a precise concentrator for sleek blowouts, and a non-pulling comb for detangling and smoothing. Lightweight at only 0.77 lbs, it offers 1600W of power with six different settings (3 temperatures and 2 speeds) and a one-touch cool shot button to lock in styles.",
+    "brands": [
+      {
+        "id": "whBu",
+        "name": "TYMO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/7bf6401d-16ac-42f9-95fd-de7e3ebf7449?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/7bf6401d-16ac-42f9-95fd-de7e3ebf7449?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Diffuser hair dryer blowing air with purple light."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f5a73613-6066-44a6-97f1-68e9aca47280?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman with long curly hair drying with hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/fe92ecef-4282-444d-8bdb-4dec82afe534?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "scale_reference",
+        "alt_text": "Hair dryer showing its lightweight design."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bfcbe843-3bc4-4823-a7e0-d03be814a55f?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Different nozzle options and settings for hairdryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a22687cc-a9b2-4d0b-a397-5ba7ff06579a?aid=01M73TC254XXF2EM9K0MADGFK1&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Tips for correctly using the hair dryer near the hair."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "300 million negative ions for frizz reduction and shine",
+      "Includes diffuser, concentrator, and comb attachments",
+      "Ultra-lightweight design (0.77 lbs)",
+      "1600W salon-grade power",
+      "6 styling modes (3 temperature and 2 speed settings)",
+      "One-touch cool shot button"
+    ],
+    "colors": [
+      {
+        "hex": "#141519",
+        "percentage": 0.1395
+      },
+      {
+        "hex": "#8b9bbb",
+        "percentage": 0.1346
+      },
+      {
+        "hex": "#5f718c",
+        "percentage": 0.125
+      },
+      {
+        "hex": "#a4c7dc",
+        "percentage": 0.124
+      },
+      {
+        "hex": "#817797",
+        "percentage": 0.1229
+      },
+      {
+        "hex": "#3d4860",
+        "percentage": 0.1209
+      },
+      {
+        "hex": "#655477",
+        "percentage": 0.117
+      },
+      {
+        "hex": "#2c292f",
+        "percentage": 0.1161
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/zF6ndCY-LPzf-S666bu?o=01M63CTCVJCG427YDA3XJ6WV98&aid=01M73TC254XXF2EM9K0MADGFK1",
+        "domain": "newegg.com",
+        "price": {
+          "price": 77.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 8.19,
+            "unit": "in"
+          },
+          "width": {
+            "number": 4.33,
+            "unit": "in"
+          },
+          "height": {
+            "number": 2.8,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 0.77,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment",
+        "Hair comb"
+      ],
+      "suitable-for-hair-type": [
+        "Curly"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function",
+        "Travel size"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

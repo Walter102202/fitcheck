@@ -1,0 +1,204 @@
+{
+  "product": {
+    "id": "Ap3MIci",
+    "title": "Samsung HBU8000 65\" Smart 4K Ultra TV for Hospitality",
+    "description": "The Samsung BU8000 Series 65\" UHD 4K HDR Hospitality TV is designed for premium in-room entertainment, featuring 4K UHD resolution (3840 x 2160) and HDR10+ and HLG support for lifelike color and detail. It runs on the Tizen Enterprise Platform, allowing hotel operators to efficiently manage multiple devices and provide guests with access to popular streaming apps. The TV features a slim 1\" profile, Object Tracking Sound Lite for an immersive 3D surround sound experience, and is compatible with Samsung LYNK Cloud for centralized property management. It includes 3 HDMI inputs, built-in Wi-Fi 5, Bluetooth 5.2, and a Samsung Smart Remote with voice control.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/eb123a79-1ca4-4df3-9d33-f5ac3e8c45e2?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "cleaned_url": "https://cdn.trychannel3.com/f629d9ec-09d1-4089-a36f-08f72a201c82?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing Crystal UHD water texture."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0ca8e537-b36d-4318-8028-1880ceb00892?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "cleaned_url": "https://cdn.trychannel3.com/37f04b5b-0528-43a8-bedb-22cd702149ec?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing blue and turquoise water texture."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ab87fed0-8a2e-40df-821c-6f34f5f50696?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing blue and turquoise water texture."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/30772adb-5366-4f24-9ac4-68f4c444ddb4?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/30772adb-5366-4f24-9ac4-68f4c444ddb4?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black Samsung UHD TV with stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/352647a0-40a7-4701-aaaa-69f1a9057cf0?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "cleaned_url": "https://cdn.trychannel3.com/a9a89571-f766-4a1e-ae8f-133ca048d617?aid=01M73S7DG26S53QF8A7DP3CKMY&mid=oHaU",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Rear view of the Samsung TV showing ports."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "4K UHD (3840 x 2160) Native Resolution",
+      "HDR10+ & HLG Support",
+      "Tizen Enterprise Platform Built-In",
+      "1 x RF Antenna & 3 x HDMI Inputs",
+      "Slim 1\" Profile",
+      "20W Speakers with Samsung OTS Lite",
+      "Built-In Wi-Fi 5 & Bluetooth 5.2",
+      "Pro:Idiom Support",
+      "Samsung LYNK Cloud Compatible",
+      "65\" Smart Hospitality TV"
+    ],
+    "colors": [
+      {
+        "hex": "#01a8c0",
+        "percentage": 0.3153
+      },
+      {
+        "hex": "#37c1cf",
+        "percentage": 0.1923
+      },
+      {
+        "hex": "#01819e",
+        "percentage": 0.1658
+      },
+      {
+        "hex": "#447e8a",
+        "percentage": 0.1171
+      },
+      {
+        "hex": "#296072",
+        "percentage": 0.1068
+      },
+      {
+        "hex": "#2c3f48",
+        "percentage": 0.1027
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/Ap3MIci-oHaU-S666bu?o=01M3F2FMY3ZX709S35A3XD8XCC&aid=01M73S7DG26S53QF8A7DP3CKMY",
+        "domain": "bhphotovideo.com",
+        "price": {
+          "price": 632.15,
+          "compare_at_price": 1509,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 57.1,
+            "unit": "in"
+          },
+          "width": {
+            "number": 11.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 34.2,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 47,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/Ap3MIci-LFnL-S666bu?o=01KJX62W2A68S4GHMHQXB0GT8Q&aid=01M73S7DG26S53QF8A7DP3CKMY",
+        "domain": "staples.com",
+        "price": {
+          "price": 1659.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "vesa-mounting-pattern": [
+        "300 x 300 mm",
+        "200 x 200 mm"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "television-specialized-features": [
+        "Ambient light sensor",
+        "Built-in digital tuner",
+        "HDR support",
+        "Smart TV",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "1920 x 1080"
+      ],
+      "display-technology": [
+        "LCD",
+        "LED"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

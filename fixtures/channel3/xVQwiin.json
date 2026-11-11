@@ -1,0 +1,286 @@
+{
+  "product": {
+    "id": "xVQwiin",
+    "title": "Samsung 43 inch QLED Q7F 4K Vision AI Smart TV (2025)",
+    "description": "Experience stunning visuals and immersive audio with this Samsung QLED TV. Powered by Pantone-certified color accuracy, it displays over a billion authentic hues with incredible detail. Quantum HDR enhances contrast for lifelike imagery, while the 3D audio system synchronizes perfectly with on-screen action, all intelligently managed by Samsung Vision AI. Enhanced with a Q4 AI Processor for upscaled 4K content and AI-optimized picture and sound, this TV offers 100% Color Volume with Quantum Dot technology for vibrant colors at any brightness. It also features Samsung Knox Security for robust protection, endless free content through Samsung TV Plus and other streaming apps, and Motion Xcelerator for smooth gaming and sports action. Object Tracking Sound Lite and Q-Symphony create a more immersive audio experience.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/afd825d9-c2ae-4a92-b443-4cc736c551d6?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED 43-inch Smart TV displaying a blue icy landscape."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ed64e655-55a9-4687-b61d-4e4fe633022e?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung QLED 43-inch Smart TV displaying a blue water texture."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a3e572e0-10c4-4028-8d18-362c97a9c45c?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "angle_view",
+        "alt_text": "Side view of a black Samsung QLED 43-inch TV on a stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/67f53fc7-0b5a-4b97-9db5-e6b6cb1b0ec1?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/67f53fc7-0b5a-4b97-9db5-e6b6cb1b0ec1?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Rear view of a black Samsung QLED 43-inch TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1fdb4a0f-841a-4f98-906e-f181347f4062?aid=01M73SEWB74SNX5YY8ND4SPX62&mid=DO3T",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "size_chart",
+        "alt_text": "Dimensions and what's in the box for the 43\" Q7F QLED TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "43-Inch 4K QLED Smart TV",
+      "60Hz Refresh Rate",
+      "Q4 AI Gen1 Processor",
+      "100% Color Volume with Quantum Dot",
+      "Samsung Knox Security",
+      "Endless Free Content",
+      "Quantum HDR",
+      "Motion Xcelerator 60Hz",
+      "Color Booster Pro",
+      "4K Upscaling"
+    ],
+    "colors": [
+      {
+        "hex": "#6ebbc2",
+        "percentage": 0.2652
+      },
+      {
+        "hex": "#feffff",
+        "percentage": 0.1868
+      },
+      {
+        "hex": "#248c94",
+        "percentage": 0.1442
+      },
+      {
+        "hex": "#246d74",
+        "percentage": 0.1311
+      },
+      {
+        "hex": "#5b979a",
+        "percentage": 0.108
+      },
+      {
+        "hex": "#243638",
+        "percentage": 0.0983
+      },
+      {
+        "hex": "#bad3d4",
+        "percentage": 0.0663
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/xVQwiin-DO3T-S666bu?o=01M4Z5TRCFPX6TD21HM4D9BG8Z&aid=01M73SEWB74SNX5YY8ND4SPX62",
+        "domain": "abt.com",
+        "price": {
+          "price": 527.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 38.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 22.1,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 15.7,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/xVQwiin-RnUy-S666bu?o=01M30R0FKBG2620N417YRRP2F6&aid=01M73SEWB74SNX5YY8ND4SPX62",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 324,
+          "compare_at_price": 5999,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "used",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 10886,
+            "unit": "g"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/xVQwiin-Fn95-S666bu?o=01KJAYQC7J9J5JT1N5Q37BJRRV&aid=01M73SEWB74SNX5YY8ND4SPX62",
+        "domain": "crutchfield.com",
+        "price": {
+          "price": 347.99,
+          "compare_at_price": 397.99,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 38.125,
+            "unit": "in"
+          },
+          "height": {
+            "number": 24,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 15,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/xVQwiin-nSgk-S666bu?o=01KRNFMKBRQM6Q5K99WZ7WTJRA&aid=01M73SEWB74SNX5YY8ND4SPX62",
+        "domain": "rcwilley.com",
+        "price": {
+          "price": 349.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 42.5,
+            "unit": "in"
+          },
+          "height": null,
+          "weight": {
+            "number": 15,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "audio-technology": [
+        "Dolby digital (AC-3)"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "display-technology": [
+        "QLED",
+        "LED"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p",
+        "1920 x 1080",
+        "2560 x 1440"
+      ],
+      "hdr-format": [
+        "HDR10+",
+        "HLG",
+        "HDR10"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Built-in digital tuner",
+        "HDR support",
+        "Quantum dot technology",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "Internet TV",
+        "Motion interpolation technology",
+        "Screen mirroring"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "energy-efficiency-class-sdr": [
+        "G"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": {
+      "value": 4.58,
+      "count": 6914,
+      "source_count": 4
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

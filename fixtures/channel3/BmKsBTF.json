@@ -1,0 +1,166 @@
+{
+  "product": {
+    "id": "BmKsBTF",
+    "title": "INFINITI PRO Digital Ionic Hair Dryer",
+    "description": "The INFINITI PRO by Conair Digital Ionic Hair Dryer is designed for versatile styling, combining advanced digital airflow and ionic technology to reduce frizz and enhance shine. This hair dryer comes with three professional attachments: a diffuser for enhancing curls and volume, a thermal concentrator for sleek results, and an anti-flyaway attachment to smooth hair. It features a lightweight design (up to 20% lighter than other Conair AC motor dryers) and offers customizable settings with 3 heat and 2 speed options, along with a true cold shot to lock styles in place.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      },
+      {
+        "id": "S8GP",
+        "name": "InfinitiPRO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6965579a-9d00-47cb-beed-865e1a66f4ba?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the black hair dryer brush attachment with vents."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5ca0ec0e-caba-453b-bc6a-2e00b64ad484?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Side view of the silver and purple hair dryer highlighting its features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/37874336-0b88-4d99-be8b-0011ff44d471?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/37874336-0b88-4d99-be8b-0011ff44d471?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of the silver and purple hair dryer with airflow indicators."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/3a1c76c3-2925-41bf-ac73-047858a4677f?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up of the hair dryer showing ionic technology benefits."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f1e1f8ee-b685-4924-9a4d-c072cfbd7bcc?aid=01M73TC2T6EJ3F4MSR9YW4AASY&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman with curly hair using a diffuser attachment on her hair."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Fast Digital Airflow for smooth, sleek styling",
+      "Ionic Technology to fight frizz and flyaways",
+      "Includes Diffuser for curls, texture, volume, and lift",
+      "Includes Thermal Concentrator for sleek, shiny results",
+      "Includes Anti-Flyaway Attachment to smooth hair",
+      "Up to 20% Lighter Design for comfortable daily styling",
+      "Personalized Styling with 3 heat and 2 speed settings",
+      "True Cold Shot to lock styles in place"
+    ],
+    "colors": [
+      {
+        "hex": "#343636",
+        "percentage": 0.4113
+      },
+      {
+        "hex": "#e8e8e4",
+        "percentage": 0.1418
+      },
+      {
+        "hex": "#a2a19b",
+        "percentage": 0.1315
+      },
+      {
+        "hex": "#c9c9c4",
+        "percentage": 0.1149
+      },
+      {
+        "hex": "#1c1c1c",
+        "percentage": 0.1039
+      },
+      {
+        "hex": "#7b7778",
+        "percentage": 0.0965
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/BmKsBTF-QnTm-S666bu?o=01M63GWDBEMDWJ8ENVMJ1JZXSG&aid=01M73TC2T6EJ3F4MSR9YW4AASY",
+        "domain": "target.com",
+        "price": {
+          "price": 89.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "suitable-for-hair-type": [
+        "Curly",
+        "Frizzy"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Diffuser nozzle",
+        "Ionic function"
+      ],
+      "hair-dryer-motor-type": [
+        "Digital motor"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

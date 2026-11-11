@@ -1,0 +1,179 @@
+{
+  "product": {
+    "id": "pI9XO9i",
+    "title": "Diffuser Hair Dryer for Curly Hair, 2-in-1 Hair Dryer with Diffuser",
+    "description": "A professional 2-in-1 diffuser hair dryer specifically designed for curly, wavy, and coily hair. It combines an ionic hair dryer with a built-in diffuser featuring 17 airflow-diffusing fingers to distribute air evenly, reduce frizz, and enhance natural curl definition and volume. The device utilizes ionic and ceramic technology to minimize heat damage and static, resulting in smoother, shinier hair. It offers customizable styling with 2 airflow speeds and 3 heat settings ranging from delicate to fast dry.",
+    "brands": [
+      {
+        "id": "J59a",
+        "name": "Newegg.com"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/997a2729-6b47-4242-8a43-6be55f6a4b8b?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/997a2729-6b47-4242-8a43-6be55f6a4b8b?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Product box packaging for the diffuser hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e57ca716-d9fa-4791-bd9e-6d38acdc0455?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Woman with curly hair using a pink diffuser hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5d5492dc-5e20-494d-8d90-8b7f9fb9f8a1?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Diffuser hair dryer components: diffuser, dryer, and plug."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/76931131-98c8-48a9-9000-4e9660eaaa0c?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Before and after curly hair styling with a diffuser."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/007fce09-a83a-4b4f-912a-732ce30fe833?aid=01M73TC2KB28DE3SEQAXKE04S4&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing 3 drying settings for different hair types."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "ceramic"
+    ],
+    "key_features": [
+      "2-in-1 diffuser hair dryer",
+      "Ionic and ceramic technology",
+      "2 airflow speeds and 3 heat settings",
+      "17 airflow-diffusing fingers",
+      "Ergonomic grip",
+      "Reduces frizz and enhances natural volume",
+      "Lightweight and compact design"
+    ],
+    "colors": [
+      {
+        "hex": "#262626",
+        "percentage": 0.2709
+      },
+      {
+        "hex": "#caa6a8",
+        "percentage": 0.1524
+      },
+      {
+        "hex": "#b68081",
+        "percentage": 0.1368
+      },
+      {
+        "hex": "#0b0b0b",
+        "percentage": 0.1178
+      },
+      {
+        "hex": "#484444",
+        "percentage": 0.1125
+      },
+      {
+        "hex": "#746565",
+        "percentage": 0.1066
+      },
+      {
+        "hex": "#ebdfdf",
+        "percentage": 0.1031
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/pI9XO9i-LPzf-S666bu?o=01M62XRTE1PDR08GDW138K9ETV&aid=01M73TC2KB28DE3SEQAXKE04S4",
+        "domain": "newegg.com",
+        "price": {
+          "price": 79.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 7.48,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.93,
+            "unit": "in"
+          },
+          "height": {
+            "number": 3.07,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "material": [
+        "Ceramic"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "suitable-for-hair-type": [
+        "Curly",
+        "Frizzy"
+      ],
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Ceramic heating system",
+        "Diffuser nozzle",
+        "Ionic function"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

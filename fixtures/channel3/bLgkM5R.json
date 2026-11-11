@@ -1,0 +1,233 @@
+{
+  "product": {
+    "id": "bLgkM5R",
+    "title": "LG 55 Inch OLED AI 4K B5 Series Smart TV",
+    "description": "The LG OLED B5 is a premium 55-inch 4K Smart TV featuring an α8 AI Processor Gen2 that automatically optimizes picture and sound quality. It delivers striking visuals with over 8.3 million self-lit pixels for Perfect Black and Perfect Color. Designed for both cinematic and gaming experiences, it supports Dolby Vision, Dolby Atmos, FILMMAKER MODE, and a native 120Hz refresh rate. Gamers benefit from NVIDIA G-Sync, AMD FreeSync Premium, VRR, and four HDMI 2.1 inputs. The TV runs on the LG webOS 25 platform, providing access to various apps and over 300 free LG Channels, with up to 5 years of software updates via webOS Re:New.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/281c34bb-9be7-4470-b5c0-904857f401f1?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/281c34bb-9be7-4470-b5c0-904857f401f1?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED TV displaying vibrant abstract colors and patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/108c3822-58d3-480d-9985-ba02dbccf5db?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED TV displaying vibrant abstract colors and patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dc2170a3-cb00-44e5-b6b6-7454d98b2266?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/dc2170a3-cb00-44e5-b6b6-7454d98b2266?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black LG TV stand/base."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2749f312-efa5-46e2-8d74-902f53eda35e?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2749f312-efa5-46e2-8d74-902f53eda35e?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black LG OLED TV showing the set-top box interface."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/55a7c9f5-cec6-4c9f-9b4d-298d257b0f27?aid=01M73SEPXNKSJKHH8CCK1WQT5D&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Back panel of a black LG OLED TV showing ports and branding."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Alpha 8 AI Processor Gen2 detects what you're watching and automatically improves the picture and sound quality",
+      "Perfect Black & Perfect Color Over 8.3 million self-lit smart pixels with Perfect Black and Perfect Color technology.",
+      "Dolby Vision, Dolby Atmos & FILMMAKER MODE Enjoy movie magic from home with Dolby Vision, Dolby Atmos¹ & FILMMAKER MODE",
+      "Ultimate Game Play Packed with gaming features like NVIDIA G-Sync and 120Hz refresh rate",
+      "AI webOS, LG Channels, webOS & Re:New LG’s Award winning Smart TV platform powered by webOS. Get access to apps & view over 30 free LG Channels. Plus get up to 5 years of software updates with webOS Re:New.⁴",
+      "Personalized Picture / Sound Wizard The Personalized Picture & Sound Wizard uses AI technology to analyze your favorite images and sound clips to create a personalized picture and audio experiences tailored for you.",
+      "4K Native Resolution",
+      "NVIDIA G-Sync, AMD FreeSync Premium, and VRR",
+      "4 x HDMI 2.1 & 2 x USB 2.0 Ports",
+      "0.1ms Response Time"
+    ],
+    "colors": [
+      {
+        "hex": "#e08b3e",
+        "percentage": 0.1626
+      },
+      {
+        "hex": "#cd6324",
+        "percentage": 0.1516
+      },
+      {
+        "hex": "#3e5511",
+        "percentage": 0.1368
+      },
+      {
+        "hex": "#2e2d0a",
+        "percentage": 0.1309
+      },
+      {
+        "hex": "#aab244",
+        "percentage": 0.1303
+      },
+      {
+        "hex": "#898c2e",
+        "percentage": 0.1016
+      },
+      {
+        "hex": "#b63a12",
+        "percentage": 0.1014
+      },
+      {
+        "hex": "#c5d768",
+        "percentage": 0.0848
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/bLgkM5R-p1PB-S666bu?o=01KXPR093ENEA86SM0M2YQZ2V7&aid=01M73SEPXNKSJKHH8CCK1WQT5D",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 999.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/bLgkM5R-DO3T-S666bu?o=01KREQBFX5F95486S74RVD99D0&aid=01M73SEPXNKSJKHH8CCK1WQT5D",
+        "domain": "abt.com",
+        "price": {
+          "price": 899.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 48.3,
+            "unit": "in"
+          },
+          "height": {
+            "number": 27.9,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 32,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/bLgkM5R-RnUy-S666bu?o=01M30JYVK3721F17XE0946C7R9&aid=01M73SEPXNKSJKHH8CCK1WQT5D",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 996.99,
+          "compare_at_price": 1896.99,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "audio-technology": [
+        "Dolby atmos",
+        "Dolby digital (AC-3)"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "Built-in digital tuner",
+        "Internet TV",
+        "Screen mirroring",
+        "VESA mounting support",
+        "Voice control",
+        "Motion interpolation technology"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "1920 x 1080"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "wi-fi-standard": [
+        "802.11ax",
+        "802.11ac"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "pattern": [
+        "Abstract"
+      ]
+    },
+    "ratings": {
+      "value": 4.7,
+      "count": 246,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

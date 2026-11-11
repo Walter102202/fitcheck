@@ -1,0 +1,122 @@
+{
+  "product": {
+    "id": "2YG1rmN",
+    "title": "Turbo Styler Hair Dryer",
+    "description": "This Conair 1875W Turbo Styler Hair Dryer is designed for efficient and effective hair drying. It features ionic technology to help reduce frizz and promote healthy-looking hair, and a cool shot button to lock in styles. The 1875 watts of power ensure quick drying. A concentrator attachment is included for targeted styling. The dryer has a teal and black color scheme with a sleek, ergonomic design.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/cf34dbb7-d598-4cc0-b82a-428753825b34?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/e469d3af-87ac-426e-a905-5031041a2272?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Conair 1875W Turbo Styler hair dryer in teal and black."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/43bb865c-57ad-40cb-a491-92489f2d0d79?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/f31d4389-b707-4f26-b978-86ac23ec6b5c?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "is_main_image": false,
+        "shot_type": "angle_view",
+        "alt_text": "Close-up view of the teal and black Conair hair dryer nozzle and handle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/425f8875-bdea-4f07-9ca9-5b3580616b1b?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/c760f08e-4552-4ccd-b4b7-cea62ab4a0ca?aid=01M73S7SKJREZRSHABJE78401H&mid=oeWt",
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Box packaging for the Conair 1875 Turbo Dryer hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1875W",
+      "Turbo Styler",
+      "Ionic technology",
+      "Concentrator included",
+      "Cool shot button"
+    ],
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "percentage": 0.7098
+      },
+      {
+        "hex": "#111111",
+        "percentage": 0.1262
+      },
+      {
+        "hex": "#32a7a3",
+        "percentage": 0.0758
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/2YG1rmN-oeWt-S666bu?o=01KRQT98SC5WP28PBCVPTDN25S&aid=01M73S7SKJREZRSHABJE78401H",
+        "domain": "cvs.com",
+        "price": {
+          "price": 19.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "conditioner-effect": [
+        "Anti-frizz"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function"
+      ]
+    },
+    "ratings": {
+      "value": 4.2,
+      "count": 145,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,271 @@
+{
+  "product": {
+    "id": "QDUtp0M",
+    "title": "Sony BRAVIA 9 II 75 Inch 4K HDR Google TV",
+    "description": "Experience Sony's most advanced home entertainment display with the Sony BRAVIA 9 II PRO True RGB 75 Inch 4K HDR Google TV with Gemini. This flagship 75-inch TV combines revolutionary True RGB LED technology with XR Processor™ AI for exceptional brightness, expanded color volume, deep contrast, and ultra-precise detail. It features lifelike color accuracy with wider viewing angles, minimized glare and reflections with Immersive Black Screen Pro, and smooth motion with XR Motion Clarity™. The Acoustic Multi-Audio+™ with Beam Tweeter creates cinematic sound, and it supports Dolby Vision®, Dolby Atmos®, DTS:X®, and IMAX® Enhanced. Built-in Google TV™ with Gemini, HDMI 2.1 gaming features, PS5® optimization, AirPlay® 2, and Google Cast™ make this a premium centerpiece for modern smart home entertainment.",
+    "brands": [
+      {
+        "id": "PURH",
+        "name": "Sony"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/50d8e681-129a-4cf2-b74e-81f995a32264?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/50d8e681-129a-4cf2-b74e-81f995a32264?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Sony BRAVIA 9 II TV display showing vibrant abstract colors."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4f9197eb-a6ac-4031-aedd-cb05e3c13576?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/4f9197eb-a6ac-4031-aedd-cb05e3c13576?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showing streaming service interface with movie recommendations."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5c5e916b-c296-4cc9-b17e-ed95ddd45d98?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/5c5e916b-c296-4cc9-b17e-ed95ddd45d98?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Back view of a television showing ventilation and ports."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bca69a03-637f-483d-ab79-0f143b036146?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Energy guide specification for a Sony television model."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a47fc786-7762-4361-959b-50e2fa49f3ed?aid=01M73SET67HX10Z86ZGE6CS1QN&mid=mDEv",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Television mounted on a shelf with cables."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "steel"
+    ],
+    "key_features": [
+      "True RGB, the future of color: Powered by a newly evolved RGB Backlight Master Drive Pro built on two decades of innovation, Sony's True RGB is three independently controlled RGB LEDs. It delivers unprecedented color volume, precise color gradation, and significantly wider viewing angles that enhance the movie-watching experience even further.",
+      "A new era of uncompromising color accuracy: Sony unites the color range of our flagship QD-OLED with the high brightness of a Mini LED. This breakthrough enables a new level of color volume and the ability to render even more accurate colors.",
+      "See the hidden depths like never before: From the brightest peak to the darkest shade, Sony's True RGB faithfully reproduces smooth color gradation in even the finest tonal details. It brings the full depth of the story vividly to life on screen.",
+      "Smarter picture in real time: The XR Processor powers the BRAVIA 9 II, using AI scene recognition to optimize color, contrast, and clarity. Every frame is analyzed and refined for lifelike realism.",
+      "Crystal clear pictures with AI upscaling technology: XR Clear Image AI intelligently upscales your favorite content to 4K by restoring details lost during the transmission process. Dynamic frame analysis and zone division work together to minimize noise introduced during signal transmission, resulting in a clearer and more natural image.",
+      "Contrast intensified. Depth amplified. XR Contrast Booster precisely balances light across the screen, adjusting brightness for higher peaks in glare and deeper blacks in shadow. Peak brightness is higher than ever for sublime depth and detail.",
+      "Even fast-moving action stays smooth, bright and clear: Forget about blur. XR Motion Clarity™ analyzes movement across several frames and precisely synchronizes the backlight with on-screen motion so you see clear, bright images, however fast the action.",
+      "Individually calibrated. Consistently flawless. Behind every BRAVIA TV is meticulous craft. By factory calibrating each panel one by one, we remove variations and ensure consistent, high-quality performance you can rely on.",
+      "Cinema-like surround sound, in harmony with the picture. Feel like you're in the cinema. Acoustic Multi-Audio+™ with Beam Tweeter at the top delivers cinematic surround sound. Every sound comes from exactly the right place.",
+      "From stereo to expansive 3D surround. Ordinary sound becomes extraordinary. With our proprietary 3D Surround Upscaling, stereo sound expands into wider, more precise 3D audio, crisper, clearer, and more immersive than ever."
+    ],
+    "colors": [
+      {
+        "hex": "#b31630",
+        "percentage": 0.2593
+      },
+      {
+        "hex": "#23060f",
+        "percentage": 0.1456
+      },
+      {
+        "hex": "#550719",
+        "percentage": 0.1345
+      },
+      {
+        "hex": "#0b0508",
+        "percentage": 0.1307
+      },
+      {
+        "hex": "#c04a5d",
+        "percentage": 0.1299
+      },
+      {
+        "hex": "#dca0ac",
+        "percentage": 0.1059
+      },
+      {
+        "hex": "#561c32",
+        "percentage": 0.0942
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/QDUtp0M-mDEv-S666bu?o=01M0MQZP14G1BMKG3SMTVPXMR2&aid=01M73SET67HX10Z86ZGE6CS1QN",
+        "domain": "audioadvice.com",
+        "price": {
+          "price": 3598,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 1445,
+            "unit": "mm"
+          },
+          "width": {
+            "number": 341,
+            "unit": "mm"
+          },
+          "height": {
+            "number": 906,
+            "unit": "mm"
+          },
+          "weight": {
+            "number": 30.6,
+            "unit": "kg"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/QDUtp0M-Fn95-S666bu?o=01M6MNCKA50J30H6HYSRNXN3ED&aid=01M73SET67HX10Z86ZGE6CS1QN",
+        "domain": "crutchfield.com",
+        "price": {
+          "price": 3599.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 123,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/QDUtp0M-HT4o-S666bu?o=01M65CC74Y99ZBQNVG0A88RCFQ&aid=01M73SET67HX10Z86ZGE6CS1QN",
+        "domain": "skybygramophone.com",
+        "price": {
+          "price": 4598,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/QDUtp0M-oHaU-S666bu?o=01M39FVBB4E6HNEGKBPT3V1VWZ&aid=01M73SET67HX10Z86ZGE6CS1QN",
+        "domain": "bhphotovideo.com",
+        "price": {
+          "price": 6498,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "Mini-LED",
+        "OLED"
+      ],
+      "television-specialized-features": [
+        "Built-in soundbar",
+        "HDR support",
+        "Motion interpolation technology",
+        "Smart TV",
+        "Voice control",
+        "Local dimming",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Noise reduction",
+        "Quantum dot technology",
+        "AI-powered",
+        "Built-in digital tuner"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "vesa-mounting-pattern": [
+        "400 x 400 mm",
+        "300 x 300 mm"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "PCM (Pulse Code Modulation)",
+        "DTS-HD High Resolution Audio",
+        "DTS-HD master audio",
+        "DTS-X",
+        "LPCM (Linear Pulse Code Modulation)",
+        "DTS",
+        "Dolby digital (AC-3)"
+      ],
+      "wi-fi-standard": [
+        "802.11ax",
+        "802.11ac"
+      ],
+      "smart-tv-platform": [
+        "Android TV"
+      ],
+      "pattern": [
+        "Solid",
+        "Abstract"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4K ultra HD"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "compatible-voice-assistant": [
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ]
+    },
+    "ratings": {
+      "value": 4.58,
+      "count": 10,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

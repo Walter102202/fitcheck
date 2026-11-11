@@ -1,0 +1,165 @@
+{
+  "product": {
+    "id": "hqRePco",
+    "title": "QN65S95FAFXZA 65\" OLED 4K UHD Smart TV",
+    "description": "The Samsung QN65S95FAFXZA is a 65-inch 4K UHD Smart TV featuring an OLED display that delivers deep blacks and brilliant highlights. Powered by the NQ4 AI Gen3 Processor with 128 neural networks, it offers AI-enhanced upscaling and optimized sound. The TV includes Glare-Free screen technology for clear viewing in bright environments, a 165Hz refresh rate for smooth gaming and sports, and support for OLED HDR Pro. It runs on the Tizen platform with access to over 2,700 free channels and integrates Samsung Vision AI for personalized recommendations and smart home control via SmartThings.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6b50cd7e-77f2-499a-9e43-e80cee4cfe85?aid=01M73S7DAHYFE9BCHY629FVWQA&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/6b50cd7e-77f2-499a-9e43-e80cee4cfe85?aid=01M73S7DAHYFE9BCHY629FVWQA&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung 65-inch OLED 4K TV displaying abstract blue and yellow fluid motion."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "65\" 4K Ultra HD OLED display",
+      "NQ4 AI Gen3 Processor with 128 AI neural networks",
+      "Glare-Free Screen technology",
+      "165Hz refresh rate with Motion Xcelerator",
+      "OLED HDR Pro and Auto HDR Remastering",
+      "One UI Tizen platform with 2,700+ free channels",
+      "Object Tracking Sound+ and Dolby Atmos",
+      "Pantone Validated color",
+      "Samsung Vision AI Companion",
+      "Integrated SmartThings Hub"
+    ],
+    "colors": [
+      {
+        "hex": "#0c546d",
+        "percentage": 0.1951
+      },
+      {
+        "hex": "#277990",
+        "percentage": 0.1718
+      },
+      {
+        "hex": "#03334b",
+        "percentage": 0.1529
+      },
+      {
+        "hex": "#d4d99b",
+        "percentage": 0.1274
+      },
+      {
+        "hex": "#618675",
+        "percentage": 0.1129
+      },
+      {
+        "hex": "#7ab8b4",
+        "percentage": 0.1067
+      },
+      {
+        "hex": "#1c3a41",
+        "percentage": 0.0806
+      },
+      {
+        "hex": "#2c5c61",
+        "percentage": 0.0526
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/hqRePco-K6RA-S666bu?o=01M3ZT7JBDFHYXJ603M81B0GK5&aid=01M73S7DAHYFE9BCHY629FVWQA",
+        "domain": "macys.com",
+        "price": {
+          "price": 2319,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 56.8,
+            "unit": "in"
+          },
+          "width": {
+            "number": 10.5,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.2,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 63.9,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "HLG"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,225 @@
+{
+  "product": {
+    "id": "G8RQD3T",
+    "title": "Double Ceramic Hair Dryer",
+    "description": "This Conair 1875 Watt Double Ceramic Hair Dryer offers powerful drying with less damage. Its double ceramic technology helps reduce frizz and enhance shine, while the 1875 watts of power ensure quick drying. Features include multiple heat and speed settings, a cool shot button to lock in styles, and a removable air filter for easy maintenance and extended motor life. The dryer comes with a concentrator attachment for targeted styling. Its lightweight and balanced design, along with a standard 110V voltage, make it suitable for everyday use.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/cccdb36b-3635-4649-8c59-b8add7a94c70?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/762201ec-996b-414b-ad60-bec2f719695f?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "White Conair 1875W double ceramic hair dryer with clear concentrator nozzle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d172af47-cd40-4aa9-8b38-9abba2ebe704?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "White Conair 1875 hair dryer with text describing conditioning ions."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b4666dd5-7370-44a7-917a-dd600a1f4d15?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "White Conair 1875 double ceramic dryer features and specifications."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/65e759d9-f627-49ac-82ce-c2d3da6dab30?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the nozzle and heating element of the white Conair 1875 hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/51d939c1-e862-4c09-b1c6-d05d1f6db99b?aid=01M73S7RYRM1MANN590R52M5K0&mid=oeWt",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the concentrator nozzle on the white Conair 1875 hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "ceramic"
+    ],
+    "key_features": [
+      "1875 Watts of power",
+      "Double Ceramic Technology",
+      "Cool Shot Button",
+      "Removable Air Filter",
+      "Concentrator Attachment",
+      "3 Heat Settings",
+      "2 Speed Settings",
+      "Extend motor life",
+      "Conditioning ions",
+      "Infrared heat"
+    ],
+    "colors": [
+      {
+        "hex": "#ebebeb",
+        "percentage": 0.7863
+      },
+      {
+        "hex": "#888888",
+        "percentage": 0.1156
+      },
+      {
+        "hex": "#c6c6c6",
+        "percentage": 0.0981
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/G8RQD3T-oeWt-S666bu?o=01KRP59HQP94HXMWH77MT4NQ90&aid=01M73S7RYRM1MANN590R52M5K0",
+        "domain": "cvs.com",
+        "price": {
+          "price": 36.79,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/G8RQD3T-AjmY-S666bu?o=01M51KDJYEGJZ8GKFTXVAHNC63&aid=01M73S7RYRM1MANN590R52M5K0",
+        "domain": "belk.com",
+        "price": {
+          "price": 43.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/G8RQD3T-Pu5r-S666bu?o=01KR6P9V72B3J7J6HZZ3RG3K2S&aid=01M73S7RYRM1MANN590R52M5K0",
+        "domain": "pcrichard.com",
+        "price": {
+          "price": 34.97,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 8.5,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.6,
+            "unit": "in"
+          },
+          "height": {
+            "number": 12.3,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 3,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/G8RQD3T-p1PB-S666bu?o=01KXQ5M4FQZVGSGSR7VX1PQV4G&aid=01M73S7RYRM1MANN590R52M5K0",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 49.49,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": null,
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "material": [
+        "Ceramic",
+        "Plastic"
+      ],
+      "speed-settings": [
+        "Multiple",
+        "Average",
+        "Comparing"
+      ],
+      "heat-settings": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "suitable-for-hair-type": [
+        "Frizzy",
+        "Fine",
+        "Thick",
+        "Thin",
+        "All hair types"
+      ],
+      "hair-styling-tool-features": [
+        "Ceramic heating system",
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "application-type": [
+        "Pre-wash"
+      ],
+      "conditioner-effect": [
+        "Strengthening",
+        "Shine",
+        "Anti-frizz",
+        "Protection"
+      ]
+    },
+    "ratings": {
+      "value": 4.46,
+      "count": 784,
+      "source_count": 4
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

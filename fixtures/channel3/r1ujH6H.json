@@ -1,0 +1,169 @@
+{
+  "product": {
+    "id": "r1ujH6H",
+    "title": "G6-5 Hair Dryer with Diffuser",
+    "description": "This Yinole G6-5 hair dryer features a 1500W brushless motor that provides 5x faster drying speeds, capable of drying hair in 2-8 minutes. It is infused with 500 million negative ions to reduce frizz and enhance shine. A smart microprocessor monitors and adjusts the temperature 500 times per second to prevent heat damage. Users can choose from 4 heat modes, indicated by color-coded LEDs, and 2 speed settings. The hair dryer weighs only 0.9 lbs and operates at a noise level below 59dB, making it suitable for travel. It includes a magnetic nozzle and a diffuser for professional styling.",
+    "brands": [
+      {
+        "id": "lqCx",
+        "name": "Yinole"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/f7a917b4-807d-4363-ac18-d035e24934e3?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "White hair dryer with diffuser and nozzle shoot, showing airflow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ce91aa28-4c95-47bc-b866-5511576c4163?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing three heat modes: Hot, Cold, Warm."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5be48978-4099-46a6-a36b-505f07119a46?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Hair before and after drying with hair dryer, showing smooth results."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/301cd96d-1605-4f45-a1fe-296d461486e9?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman smiling while using a hairdryer indoors."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cf1f10eb-ead0-4c52-be00-2e88621054a1?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/cf1f10eb-ead0-4c52-be00-2e88621054a1?aid=01M73TC2TY44F7VE2DS25GAM3G&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using a hair dryer on her styled hair."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1500W brushless motor",
+      "150,000 RPM, 36 m/s",
+      "5x faster drying",
+      "500 million negative ions",
+      "Reduces frizz and enhances shine",
+      "Smart microprocessor adjusts temperature 500x/sec",
+      "Prevents heat damage",
+      "4 heat modes with color-coded LED",
+      "2 speed settings",
+      "Weighs only 0.9 lbs",
+      "Quiet operation (<59dB)",
+      "Perfect for travel",
+      "Includes a magnetic nozzle and diffuser"
+    ],
+    "colors": [
+      {
+        "hex": "#eeeaee",
+        "percentage": 0.6542
+      },
+      {
+        "hex": "#a1a4aa",
+        "percentage": 0.1268
+      },
+      {
+        "hex": "#b8c3cd",
+        "percentage": 0.115
+      },
+      {
+        "hex": "#7f5c56",
+        "percentage": 0.1039
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/r1ujH6H-p1PB-S666bu?o=01KY4HSA330W6JN6FNDGJ8RN1W&aid=01M73TC2TY44F7VE2DS25GAM3G",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 59,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 0.9,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "application-type": [
+        "Pre-wash"
+      ],
+      "hair-care-technology": [
+        "Galvanic"
+      ],
+      "hair-dryer-motor-type": [
+        "AC motor"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Diffuser nozzle",
+        "Ionic function"
+      ],
+      "material": [
+        "Plastic"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

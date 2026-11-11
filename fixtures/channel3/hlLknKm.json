@@ -1,0 +1,184 @@
+{
+  "product": {
+    "id": "hlLknKm",
+    "title": "75\" Class Quantum Series 4K QLED Smart TV",
+    "description": "The VIZIO 75\" Class Quantum Series 4K QLED Smart TV is a Limited Edition television featuring Quantum Dot technology for vibrant, true-to-life colors and 4K resolution for superior clarity. It is designed for both streaming and gaming, offering a 60Hz refresh rate, WiFi 6 for reliable connectivity, and support for up to 120fps in 1080p for responsive gameplay. This model is QuickFit® compatible, allowing for easy attachment of compatible VIZIO soundbars without tools. It runs on VIZIO OS with built-in streaming apps and integrates with Google Assistant and Amazon Alexa. The TV comes with a 5-year manufacturer warranty for members.",
+    "brands": [
+      {
+        "id": "LEtI",
+        "name": "VIZIO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d1c61782-b58e-413f-97ac-cd9b94afe8dc?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/d1c61782-b58e-413f-97ac-cd9b94afe8dc?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Vizio 75-inch Quantum 4K QLED Smart TV screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e6a76ad1-fb19-4bba-ab5b-3423bf20e453?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/e6a76ad1-fb19-4bba-ab5b-3423bf20e453?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Vizio 75-inch QLED TV marketing image."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ed80bcac-4af6-4462-8922-c05fd89385c8?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "People enjoying watching TV with a 5-year warranty."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/506b31b7-1610-48b0-927f-0ca9f22a35fb?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Vizio 75\" TV with remote and included accessories."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e51c446a-7d33-4fae-83ee-634a8b06fef0?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/e51c446a-7d33-4fae-83ee-634a8b06fef0?aid=01M73SESZBD85NJ4R5XSZ7FP90&mid=dCgO",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Vizio TV screen menu interface with app icons."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Quantum Dot QLED technology with over a billion shades of color",
+      "4K resolution with Dolby Vision, HDR10+, HDR10, and HLG",
+      "QuickFit® compatibility for tool-less soundbar attachment",
+      "VIZIO OS with built-in streaming apps and free live TV",
+      "60Hz refresh rate and WiFi 6 for smoother streaming and gaming",
+      "Support for up to 120fps in 1080p gaming",
+      "Integration with Apple AirPlay 2, Google Cast, Google Assistant, and Amazon Alexa",
+      "5-year manufacturer warranty (for members)"
+    ],
+    "colors": [
+      {
+        "hex": "#912e06",
+        "percentage": 0.1688
+      },
+      {
+        "hex": "#fdfcf9",
+        "percentage": 0.1675
+      },
+      {
+        "hex": "#ae4a0c",
+        "percentage": 0.1609
+      },
+      {
+        "hex": "#e48527",
+        "percentage": 0.1508
+      },
+      {
+        "hex": "#481406",
+        "percentage": 0.1223
+      },
+      {
+        "hex": "#5a331a",
+        "percentage": 0.0914
+      },
+      {
+        "hex": "#b56a2d",
+        "percentage": 0.0731
+      },
+      {
+        "hex": "#f0cb87",
+        "percentage": 0.0652
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/hlLknKm-dCgO-S666bu?o=01M4FCRHA130C6BSMMZYPFQCB2&aid=01M73SESZBD85NJ4R5XSZ7FP90",
+        "domain": "samsclub.com",
+        "price": {
+          "price": 448,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 65.64,
+            "unit": "in"
+          },
+          "width": {
+            "number": 14.25,
+            "unit": "in"
+          },
+          "height": {
+            "number": 40.43,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 36.91,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-specialized-features": [
+        "HDR support",
+        "Quantum dot technology",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "display-technology": [
+        "QLED"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ]
+    },
+    "ratings": {
+      "value": 4,
+      "count": 1,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

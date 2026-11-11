@@ -1,0 +1,142 @@
+{
+  "product": {
+    "id": "GTuWLZN",
+    "title": "Loewe Stellar 4K OLED Smart TV",
+    "description": "The Loewe Stellar 65\" 4K OLED Smart TV is a luxury display combining high-end performance with premium materials. It features a factory-calibrated Dolby Vision IQ display, a built-in soundbar delivering powerful audio, and the Vidaa OS for seamless streaming of apps like Netflix and YouTube. This specific model is crafted with a brushed aluminum frame and a glass fiber reinforced concrete back, offering a timeless aesthetic. For gaming, it supports HDMI 2.1 with refresh rates up to 144Hz and variable refresh rate for a smooth experience.",
+    "brands": [
+      {
+        "id": "7U4D",
+        "name": "LOEWE"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/c2eee8c4-eaf6-4a06-9569-db8d93e0f746?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c2eee8c4-eaf6-4a06-9569-db8d93e0f746?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Loewe Stellar 65-inch 4K OLED TV on a plain background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2927a541-2e60-4a89-8054-409e363019fb?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2927a541-2e60-4a89-8054-409e363019fb?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Loewe Stellar TV screen showing a starry night and the moon."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/39ab0bd9-d55a-4fbf-8dd4-e9818bb6b8f2?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Side view of the Loewe Stellar TV with a black frame."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0937655a-e872-4741-889f-d4069eea0a46?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/0937655a-e872-4741-889f-d4069eea0a46?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Loewe Stellar TV mounted on a silver stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ac79a1b4-9797-43ad-b2a1-ccc58538d3b9?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ac79a1b4-9797-43ad-b2a1-ccc58538d3b9?aid=01M73S7CV9NQMBPR8F1AYM7PCS&mid=mDEv",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Loewe Stellar TV mounted on a black wall."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "brushed aluminum",
+      "glass fiber reinforced concrete"
+    ],
+    "key_features": [
+      "4K Ultra HD resolution (3840 x 2160)",
+      "OLED panel with master black polarizer",
+      "Factory calibrated for Dolby Vision IQ",
+      "Built-in soundbar (80W–300W)",
+      "Vidaa OS smart streaming (Netflix, YouTube, Disney Plus)",
+      "HDMI 2.1 supporting up to 144Hz for gaming",
+      "Brushed aluminum frame with diamond cut shape",
+      "Glass fiber reinforced concrete back",
+      "Supports Apple AirPlay, Miracast, dlna, and Matter protocols"
+    ],
+    "colors": [
+      {
+        "hex": "#223249",
+        "percentage": 0.4821
+      },
+      {
+        "hex": "#141c29",
+        "percentage": 0.4467
+      },
+      {
+        "hex": "#536476",
+        "percentage": 0.0712
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/GTuWLZN-mDEv-S666bu?o=01M2JXTVTECXH89VD55GR8QTR7&aid=01M73S7CV9NQMBPR8F1AYM7PCS",
+        "domain": "audioadvice.com",
+        "price": {
+          "price": 8995,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-specialized-features": [
+        "Built-in soundbar",
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

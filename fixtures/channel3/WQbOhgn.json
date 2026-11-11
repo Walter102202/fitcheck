@@ -1,0 +1,166 @@
+{
+  "product": {
+    "id": "WQbOhgn",
+    "title": "LG 55\" OLED evo AI 4K C5 Smart TV (OLED55C5PUA, 2025) + Sound Activated Party Lights",
+    "description": "This is a bundle featuring the LG 55-inch OLED evo AI 4K C5 Smart TV (2025 model) and a set of sound-activated party lights. The TV is equipped with the Alpha 9 AI Processor Gen8, supporting 4K Ultra HD resolution, Dolby Vision, Dolby Atmos, and Filmmaker Mode for a cinematic experience. It's designed for gaming with a 0.1ms response time and up to 144Hz refresh rate. The accompanying disco ball light offers 3 sound-activated modes, 7 lighting modes, and remote control for party atmospheres.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      },
+      {
+        "id": "J59a",
+        "name": "Newegg.com"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ca8fafb2-b599-4d0b-a662-41712388ad92?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ca8fafb2-b599-4d0b-a662-41712388ad92?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo AI 4K Smart TV screen display and remote."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7b9cf12d-17ee-44b5-a564-8517861842ec?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/7b9cf12d-17ee-44b5-a564-8517861842ec?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of LG OLED evo AI TV screen with colorful waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cd150fca-e8b7-4300-aa23-d45dff5d00fe?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/cd150fca-e8b7-4300-aa23-d45dff5d00fe?aid=01M73S7CV8TXKF1XDS9EHCC87G&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG TV remote and LED light bar device."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Alpha 9 AI Processor Gen8 for AI Super Upscaling",
+      "OLED technology with 8.3 million self-lit pixels for perfect black",
+      "Dolby Vision and Dolby Atmos support",
+      "Filmmaker Mode for director-intended viewing",
+      "Gaming optimized: 0.1ms response time and 144Hz refresh rate",
+      "Built-in support for ThinQ, Google Assistant, Amazon Alexa, Matter and Apple HomeKit",
+      "Sound-activated party lights with 3 sound modes and 7 lighting modes"
+    ],
+    "colors": [
+      {
+        "hex": "#191b1d",
+        "percentage": 0.2589
+      },
+      {
+        "hex": "#4c5359",
+        "percentage": 0.1569
+      },
+      {
+        "hex": "#edcccb",
+        "percentage": 0.1535
+      },
+      {
+        "hex": "#323134",
+        "percentage": 0.1414
+      },
+      {
+        "hex": "#a66f72",
+        "percentage": 0.1042
+      },
+      {
+        "hex": "#a61e34",
+        "percentage": 0.0966
+      },
+      {
+        "hex": "#44d38c",
+        "percentage": 0.0886
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/WQbOhgn-LPzf-S666bu?o=01M53PWQS3TW73MTMW1DNMVHBF&aid=01M73S7CV8TXKF1XDS9EHCC87G",
+        "domain": "newegg.com",
+        "price": {
+          "price": 1096,
+          "compare_at_price": 1309.98,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 9.1,
+            "unit": "in"
+          },
+          "width": {
+            "number": 48.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 29.8,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-shape": [
+        "Curved"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

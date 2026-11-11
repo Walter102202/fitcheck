@@ -1,0 +1,174 @@
+{
+  "product": {
+    "id": "s7VhFCU",
+    "title": "LG 43-Inch Nano 4K UHD AI NU70 Smart TV (2026)",
+    "description": "The LG 43-Inch Class Nano 4K UHD AI NU70 Smart TV (2026) is a compact smart television designed for spaces like bedrooms or home offices. It is powered by the α7 AI Processor 4K Gen9, featuring Nano Detail Enhancer for lifelike precision and AI Super Upscaling to transform SD and HD content into near-4K clarity. The TV includes HDR10 Pro for dynamic brightness, webOS 26 for personalized content, and LG Channels providing over 400 free channels. Audio is handled by AI Sound Pro, creating a 9.1.2 virtual surround sound experience from built-in 20W speakers. This bundle also includes a Deco Gear 6FT 4K HDMI cable, a home theater essentials guide, and a CPS 1-year extended warranty.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/460ef381-0f91-44e5-bdb0-fecaa43ccd4e?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG Nano 4K UHD TV display with colorful abstract background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ee03c733-65db-4d30-aaa8-e9f637987fa9?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ee03c733-65db-4d30-aaa8-e9f637987fa9?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG Nano 4K UHD TV shown on a stand with colorful background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dc978538-6381-4c56-8409-8fe942ba621c?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG Nano 4K UHD TV shown on a stand with colorful background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/91f114a3-bbb5-46ad-a233-0b8dbc40a058?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG Nano 4K UHD TV showing technology features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6aa15795-d62f-47fc-a63f-f29b650632cb?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/6aa15795-d62f-47fc-a63f-f29b650632cb?aid=01M73SEWB31SFTDTPAY7992AJS&mid=RnUy",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG Nano 4K UHD TV shown on a stand with colorful background."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Α7 AI Processor 4K Gen9 for optimized picture and sound",
+      "Nano Detail Enhancer for lifelike detail and clarity",
+      "4K Ultra HD Resolution (3840 × 2160)",
+      "AI Super Upscaling transforms SD/HD content to near-4K",
+      "HDR10 Pro dynamic brightness adjustment",
+      "WebOS 26 Smart Platform with personalized AI recommendations",
+      "LG Channels with 400+ free channels",
+      "AI Sound Pro 9.1.2 Virtual Surround with 20W speakers",
+      "FILMMAKER MODE™ with Ambient Light Technology",
+      "Game Optimizer for smoother console gaming"
+    ],
+    "colors": [
+      {
+        "hex": "#13393e",
+        "percentage": 0.1816
+      },
+      {
+        "hex": "#5a0a32",
+        "percentage": 0.1601
+      },
+      {
+        "hex": "#260421",
+        "percentage": 0.1453
+      },
+      {
+        "hex": "#b50e58",
+        "percentage": 0.1381
+      },
+      {
+        "hex": "#b7c3a6",
+        "percentage": 0.1243
+      },
+      {
+        "hex": "#161632",
+        "percentage": 0.1079
+      },
+      {
+        "hex": "#706464",
+        "percentage": 0.0837
+      },
+      {
+        "hex": "#843858",
+        "percentage": 0.059
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/s7VhFCU-RnUy-S666bu?o=01M2WY47MB2H7JY64C0W68F6WH&aid=01M73SEWB31SFTDTPAY7992AJS",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 329.99,
+          "compare_at_price": 354.96,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 12882,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "LED"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "hdr-format": [
+        "HDR10"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,125 @@
+{
+  "product": {
+    "id": "cv7t721",
+    "title": "Hair Dryer",
+    "description": "The ANIEKIN 1875W Hair Dryer is built for quick efficient drying with powerful airflow and advanced hair protection technology. Whether you re at home or traveling this compact and lightweight blow dryer delivers smooth salon-quality results for all hair types. Fast Drying with 1875W Power Features a high-performance motor that delivers strong airflow for fast drying. The constant temperature system helps prevent heat damage and promotes healthier hair. Ionic & Ceramic Technology Reduces frizz and static while adding shine. Negative ions lock in moisture and leave hair smooth soft and manageable. Compact & Lightweight Weighs just 0.8 lbs for easy handling and travel. Ergonomic handle ensures comfort and the removable filter prevents hair from getting caught. 2 Styling Attachments Included Comes with a concentrator for precise styling and a diffuser to enhance curls and volume. Ideal for all hair textures. Adjustable Settings & Safety Features Multiple heat and speed options with a cool shot button for setting styles. Built-in overheat protection and auto shut-off for added safety. Note: For use with 110V–120V outlets only. Perfect for daily use or on-the-go styling the ANIEKIN hair dryer brings professional results to your routine.",
+    "brands": [
+      {
+        "id": "iRL5",
+        "name": "ANIQ"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/4d20ab81-a9a7-4d61-99e7-8f4400a00fcc?aid=01M73TC3672209M0EKP9FDHXM7&mid=BsaX",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Hair dryer with diffuser and nozzle on a white background."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1875W high-performance motor for fast drying",
+      "Ionic and ceramic technology to reduce frizz and add shine",
+      "Constant temperature system for hair protection",
+      "Lightweight design weighing 0.8 lbs",
+      "Includes concentrator and diffuser attachments",
+      "Multiple heat and speed options with cool shot button",
+      "Built-in overheat protection and auto shut-off",
+      "Removable filter for easy cleaning"
+    ],
+    "colors": [
+      {
+        "hex": "#686766",
+        "percentage": 0.2389
+      },
+      {
+        "hex": "#848484",
+        "percentage": 0.2089
+      },
+      {
+        "hex": "#a4968d",
+        "percentage": 0.1393
+      },
+      {
+        "hex": "#cebaaf",
+        "percentage": 0.1221
+      },
+      {
+        "hex": "#272524",
+        "percentage": 0.1149
+      },
+      {
+        "hex": "#b18983",
+        "percentage": 0.1138
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/cv7t721-BsaX-S666bu?o=01M384A6WW5D1AWVNZ62H979X6&aid=01M73TC3672209M0EKP9FDHXM7",
+        "domain": "walmart.com",
+        "price": {
+          "price": 29.29,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 0.8,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Diffuser nozzle"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

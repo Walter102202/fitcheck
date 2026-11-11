@@ -1,0 +1,211 @@
+{
+  "product": {
+    "id": "XJTvtel",
+    "title": "Samsung QN75QN80HAFXZA 75 Inch Neo QLED 4K TV",
+    "description": "The Samsung QN75QN80HAFXZA is a 75-inch Neo QLED 4K Smart TV (2026 model) designed for residential use. It features Quantum Mini LED technology with Full Array Local Dimming and is powered by the NQ4 AI Gen2 Processor for enhanced image quality and smoother motion. Key gaming and entertainment features include a 144Hz Motion Xcelerator, 4K AI Upscaling, Dolby Atmos, and Object Tracking Sound Lite. The TV runs on One UI Tizen OS and includes built-in Bixby and Alexa. This bundle comes in Titan Black and includes a 2-year Amber Protection Plan, along with an Amber Protection HDTV Screen Cleaner kit (200ml spray and polar fleece cloth).",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6283a368-40b3-49da-ba96-cdcd38660b98?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung 75 inch Neo QLED TV display with vibrant green and blue abstract colors."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/42acc1af-aa3c-4446-bce4-da223a4451e8?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/42acc1af-aa3c-4446-bce4-da223a4451e8?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung 75 inch Neo QLED TV display with vibrant green and blue abstract colors."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/653ea00e-7de4-4554-95b4-0882494d168c?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/653ea00e-7de4-4554-95b4-0882494d168c?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung 75 inch Neo QLED TV display with vibrant green and blue abstract colors."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/92709ac9-5a9a-4859-ab6e-b788fc601e4c?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "TV rear panel showing connectivity ports like USB, HDMI, and Ethernet."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/27b3eefc-90ee-4d86-9c19-c5f6f693685b?aid=01M73SESZG97TNFAX9ZVTPJ0Q4&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Features overview of the Samsung QN80H TV showing AI and picture enhancements."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Quantum Mini LED Full Array",
+      "NQ4 AI Gen2 Processor",
+      "Motion Xcelerator 144Hz",
+      "4K AI Upscaling",
+      "Dolby Atmos",
+      "Neo Quantum HDR+",
+      "AI Soccer Mode",
+      "One UI Tizen OS",
+      "Object Tracking Sound Lite",
+      "Bixby and Alexa Built-In"
+    ],
+    "colors": [
+      {
+        "hex": "#35e2a4",
+        "percentage": 0.2076
+      },
+      {
+        "hex": "#66c266",
+        "percentage": 0.1574
+      },
+      {
+        "hex": "#91e96c",
+        "percentage": 0.1482
+      },
+      {
+        "hex": "#c8f3a6",
+        "percentage": 0.1194
+      },
+      {
+        "hex": "#0d4a68",
+        "percentage": 0.1108
+      },
+      {
+        "hex": "#259077",
+        "percentage": 0.1058
+      },
+      {
+        "hex": "#67e577",
+        "percentage": 0.0821
+      },
+      {
+        "hex": "#21be7a",
+        "percentage": 0.0687
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/XJTvtel-p1PB-S666bu?o=01M50FXZ221XSJDB8HH0NHE99Y&aid=01M73SESZG97TNFAX9ZVTPJ0Q4",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 1297.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 65.6,
+            "unit": "in"
+          },
+          "width": {
+            "number": 12.6,
+            "unit": "in"
+          },
+          "height": {
+            "number": 39.1,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/XJTvtel-K6RA-S666bu?o=01M473YDDP2T2ZBJ8TKFMKRD84&aid=01M73SESZG97TNFAX9ZVTPJ0Q4",
+        "domain": "macys.com",
+        "price": {
+          "price": 1699.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 65.6,
+            "unit": "in"
+          },
+          "width": {
+            "number": 12.6,
+            "unit": "in"
+          },
+          "height": {
+            "number": 39.1,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "Mini-LED"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Local dimming",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "Quantum dot technology"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

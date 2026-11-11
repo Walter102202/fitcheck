@@ -1,0 +1,187 @@
+{
+  "product": {
+    "id": "rqrwTKF",
+    "title": "Hair Dryer",
+    "description": "The Mermade Hair Dryer is a professional-quality tool designed to create flawless blowouts with a sleek, bespoke design in signature pink. It features ionic airflow technology to increase moisture retention, reduce frizz, and add shine while protecting hair from long-term damage. With 1600W of power, the dryer offers two speed settings, three heat settings (up to 240°F), and a cool shot function. It comes with two concentrator attachments to help shape and define your style.",
+    "brands": [
+      {
+        "id": "rqSO",
+        "name": "Mermade"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/1d68c8c0-39ba-43eb-9bc1-d2edc9897f6c?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "cleaned_url": "https://cdn.trychannel3.com/5732bd39-bb60-435b-a4ab-38c30aa4e97d?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Pink and grey hair dryer on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2457eb73-2a69-49ef-95dd-8bd8eb024f75?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman using a pink hair dryer to dry her hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0033b556-1394-4bea-8166-c704b15f166c?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "cleaned_url": "https://cdn.trychannel3.com/535d76ef-31e1-4ca5-bd29-db3b1de439ce?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman holding a pink hair dryer in a pink setting."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7ea35858-9490-4d8d-a4da-353ba485c306?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "cleaned_url": "https://cdn.trychannel3.com/cfdba3ff-9786-474f-b5b5-b41d76c46694?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Pink hair dryer from a three-quarter view."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/619925b0-ccd7-4896-a23e-4bd50cadd6be?aid=01M73S7SCN7QG646G3V3EX65XV&mid=UefV",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Set of four pink and grey hair dryers."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [
+      "Plastic",
+      "Metal"
+    ],
+    "key_features": [
+      "Two speed settings for fast or regular drying",
+      "Three heat settings: 205°F, 222°F, and 240°F",
+      "Ionic airflow technology for anti-frizz and extra shine",
+      "1600W powerful motor",
+      "Includes two concentrator attachments",
+      "Cool shot function",
+      "US power plug",
+      "Two-year warranty",
+      "Easy styling cord"
+    ],
+    "colors": [
+      {
+        "hex": "#f9ccd8",
+        "percentage": 0.6867
+      },
+      {
+        "hex": "#d8b2bb",
+        "percentage": 0.206
+      },
+      {
+        "hex": "#c0949f",
+        "percentage": 0.1073
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/rqrwTKF-UefV-S666bu?o=01M1BWCVZ7RMNRDSGESMYRPV0G&aid=01M73S7SCN7QG646G3V3EX65XV",
+        "domain": "mermadehair.com",
+        "price": {
+          "price": 55.3,
+          "compare_at_price": 79,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/rqrwTKF-ELn5-S666bu?o=01M6SY9C04DSGHKN18RNSRKKVS&aid=01M73S7SCN7QG646G3V3EX65XV",
+        "domain": "ulta.com",
+        "price": {
+          "price": 59.25,
+          "compare_at_price": 79,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/rqrwTKF-QetO-S666bu?o=01M15ZX4P6DWJC72SF3RBCQAFN&aid=01M73S7SCN7QG646G3V3EX65XV",
+        "domain": "urbanoutfitters.com",
+        "price": {
+          "price": 79,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Damaged",
+        "Frizzy"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "heat-settings": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "hair-care-technology": [
+        "Warm"
+      ],
+      "application-type": [
+        "Leave-in"
+      ]
+    },
+    "ratings": {
+      "value": 4.38,
+      "count": 46,
+      "source_count": 4
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

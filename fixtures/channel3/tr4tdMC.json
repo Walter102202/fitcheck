@@ -1,0 +1,144 @@
+{
+  "product": {
+    "id": "tr4tdMC",
+    "title": "LG 43UK670H0UA 43\" Smart LED-LCD TV",
+    "description": "The LG 43UK670H0UA is a 43-inch Smart LED-LCD TV featuring 4K UHD resolution and High Dynamic Range (HDR) for exceptional picture quality. Designed for versatility, it includes a built-in ATSC digital tuner and supports PC streaming and wireless LAN for easy internet connectivity. The TV is equipped with webOS, AI Sound, and various professional features like Hotel Mode, Pro:Centric SMART, and Google Cast, making it suitable for both home and commercial environments. It comes in a sleek black finish with multiple HDMI and USB ports for comprehensive connectivity.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/c7ab706d-cdeb-43d8-a23d-a6d5e3172000?aid=01M73SEWHF6EG28D2BPHD6Z1J3&mid=TgS4",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c7ab706d-cdeb-43d8-a23d-a6d5e3172000?aid=01M73SEWHF6EG28D2BPHD6Z1J3&mid=TgS4",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "43-inch black smart LED TV displaying a nature scene."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "4K UHD resolution (3840 x 2160)",
+      "High Dynamic Range (HDR) support",
+      "Smart LED-LCD display with webOS",
+      "Wireless LAN and PC streaming capabilities",
+      "ATSC digital tuner for North American regions",
+      "AI Sound and AI Acoustic Tuning",
+      "Hotel Mode and Pro:Centric SMART features",
+      "Google Cast and Miracast Technology support"
+    ],
+    "colors": [
+      {
+        "hex": "#1a4e5a",
+        "percentage": 0.2642
+      },
+      {
+        "hex": "#091a1d",
+        "percentage": 0.2509
+      },
+      {
+        "hex": "#2d3634",
+        "percentage": 0.1473
+      },
+      {
+        "hex": "#3e707a",
+        "percentage": 0.1214
+      },
+      {
+        "hex": "#9fbcc1",
+        "percentage": 0.1116
+      },
+      {
+        "hex": "#0e353c",
+        "percentage": 0.1046
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/tr4tdMC-TgS4-S666bu?o=01M3YX8CFJ1K9NYZ3FP62FVT58&aid=01M73SEWHF6EG28D2BPHD6Z1J3",
+        "domain": "cdw.com",
+        "price": {
+          "price": 589.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 38.07,
+            "unit": "in"
+          },
+          "width": {
+            "number": 2.24,
+            "unit": "in"
+          },
+          "height": {
+            "number": 22.2,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 19.4,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "display-resolution": [
+        "2160p"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "display-technology": [
+        "LED",
+        "LCD"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Screen mirroring"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

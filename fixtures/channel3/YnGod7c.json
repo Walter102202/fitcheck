@@ -1,0 +1,179 @@
+{
+  "product": {
+    "id": "YnGod7c",
+    "title": "S85H 55\" OLED 4K Vision AI Smart TV 2026",
+    "description": "The Samsung S85H is a 55-inch 4K OLED Smart TV from the 2026 range, featuring an NQ4 AI Gen2 Processor for enhanced picture and sound. It offers OLED HDR for deep blacks and vibrant colours, a 120Hz refresh rate for smooth motion, and is powered by the Tizen OS for access to a wide array of streaming apps. Additional features include Dolby Atmos for 3D sound, Vision AI Companion, and dedicated AI Football Mode.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/17d906da-4deb-4c63-96c5-a6c100d8cbd9?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/17d906da-4deb-4c63-96c5-a6c100d8cbd9?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung 2026 OLED 4K TV with vibrant purple and blue abstract waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d324fa81-01a4-4739-8346-894853680f93?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "merchant_information",
+        "alt_text": "Awarded for excellence banner showing Samsung is a No.1 TV brand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/19f7a575-e46e-4a2a-b0bb-ce0da1170e5c?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/19f7a575-e46e-4a2a-b0bb-ce0da1170e5c?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "TV screen showcasing OLED HDR, AI processor features, and color quality."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ed4cd186-cf4a-44f4-9585-8f46c6af6fd7?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Person playing a game on a TV with gaming features active."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1dd5bfbd-24f4-4608-bf94-0cc67d315e7c?aid=01M73S7D3DXF14YM88PFNQT1AC&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "TV displaying a cinematic scene with immersive sound."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "NQ4 AI Gen2 Processor",
+      "OLED HDR for pure blacks and vibrant colours",
+      "120 Hz Refresh rate",
+      "HDMI 2.1 x 4",
+      "Dolby Atmos virtual 3D sound",
+      "Vision AI Companion",
+      "AI Football Mode",
+      "Tizen OS"
+    ],
+    "colors": [
+      {
+        "hex": "#614dc5",
+        "percentage": 0.2159
+      },
+      {
+        "hex": "#9b84ea",
+        "percentage": 0.2065
+      },
+      {
+        "hex": "#3d208f",
+        "percentage": 0.1874
+      },
+      {
+        "hex": "#1f0a4b",
+        "percentage": 0.1749
+      },
+      {
+        "hex": "#cdc2f4",
+        "percentage": 0.0884
+      },
+      {
+        "hex": "#702992",
+        "percentage": 0.0688
+      },
+      {
+        "hex": "#9f57b6",
+        "percentage": 0.0582
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/YnGod7c-B50Y-S666bu?o=01M6RTW7XKJ2KX74533G13K5KS&aid=01M73S7D3DXF14YM88PFNQT1AC",
+        "domain": "selfridges.com",
+        "price": {
+          "price": 1210,
+          "compare_at_price": 1450,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-specialized-features": [
+        "AI-powered",
+        "Smart TV",
+        "Ambient light sensor",
+        "HDR support",
+        "Parental control",
+        "Screen mirroring",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p"
+      ],
+      "energy-efficiency-class-sdr": [
+        "F"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,145 @@
+{
+  "product": {
+    "id": "weUo6Ph",
+    "title": "SpeedStyle Pro Professional Performance High-Velocity Hair Dryer System",
+    "description": "The Shark SpeedStyle Pro Hair Dryer System is designed for professional-grade styling at home, specifically targeting curly and coily hair types. It delivers high-velocity airflow, reaching speeds of 0-100 mph in under a second, to achieve salon-quality blowouts, defined curls, and a high-gloss shine from wet to dry. The system features Scalp Shield technology, which protects new hair growth from extreme heat by regulating temperature 1,000 times per second to ensure it never exceeds 230°F. This ensures no heat damage to the hair. The Defrizzfast Diffuser is designed for quick, even drying and features retractable or extendable prongs to cater to different hair lengths and thicknesses. The Quicksmooth Brush attachment helps create voluminous, straight styles by drying, volumizing, and smoothing simultaneously, with a blend of boar bristles for grip and shine. For finishing touches, the Frizzfighter Finishing Tool uses Coanda airflow technology to attract and smooth flyaways on straightened hair. The IQ Speed Styling & Drying Suite automatically adjusts settings for each accessory to the optimal temperature and airflow for fast, damage-free styling. This bundle is specifically equipped for wavy, curly, and coily hair.",
+    "brands": [
+      {
+        "id": "dEah",
+        "name": "Shark"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/fd7bd9c4-a7d0-4d07-a4b8-1d6ebe123838?aid=01M73TC2JXKYSDC6J3372GH3ZF&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/fd7bd9c4-a7d0-4d07-a4b8-1d6ebe123838?aid=01M73TC2JXKYSDC6J3372GH3ZF&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Close-up of Shark SpeedStyle Pro hair dryer attachments."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Professional Performance Style with high-velocity airflow for wet-to-dry, ultra-fast styling with no heat damage.",
+      "High-Velocity Airflow Style at home with the professional performance that the salon stylists use. Achieve all your favorite looks quickly with airflow speeds reaching 0-100 mph in less than a second, all while protecting your hair health.",
+      "Scalp Shield Mode Activate to instantly reduce air temperatures to the optimum safe level for scalp comfort and root drying. Designed to protect 100% of new hair growth from extreme heat. Developed with dermatologists. Approved by stylists.",
+      "No Heat Damage speedstyle Pro measures and regulates temperature 1,000 times a second, never exceeding 230°F, and never approaching heat damaging temperature of 302°F.",
+      "Defrizzfast Diffuser Dries root-to-tip quickly and easily. Features retractable prongs for shorter, finer hair and less heat, and extendable prongs for longer, thicker hair to lift at the root. Best for defined curls on wavy, curly, coily hair.",
+      "Quicksmooth Brush Your answer for voluminous, straight styles—dry, volumize, and smooth, all at once. Includes combination of volumizing and smoothing boar bristles for grabbing, smoothing, and shining.",
+      "Frizzfighter Finishing Tool Automatically attracts hair, fights frizz, and smooths flyaways. It uses Coanda airflow technology with two streams of air to collect and smooth flyways on dry, straight or straightened hair.",
+      "Iq Speed Styling & Drying Suite speedstyle Pro automatically adjusts settings for each accessory to the ideal temperature and airflow for ultra-fast styling — no heat damage. Includes 4 heat and 3 airflow settings, + cool shot & Scalp Shield.",
+      "For All Hairkind speedstyle Pro is engineered with the power to take on any hair type, from curly, to coily, to wavy, to straight. Find the best accessory bundle for you. This bundle is best equipped for wavy, curly, and coily hair.",
+      "Top Of The Line Technology Styles with faster drying times and higher airflow velocity vs the leading luxury hair dryer* *Third party tested vs. Leading hair dryer over $200."
+    ],
+    "colors": [
+      {
+        "hex": "#5c5b5b",
+        "percentage": 0.2899
+      },
+      {
+        "hex": "#242326",
+        "percentage": 0.2595
+      },
+      {
+        "hex": "#060608",
+        "percentage": 0.2442
+      },
+      {
+        "hex": "#3d3c3c",
+        "percentage": 0.1182
+      },
+      {
+        "hex": "#a5a19f",
+        "percentage": 0.0882
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/weUo6Ph-p1PB-S666bu?o=01KXPYXS6XGTFVX7YTXZ6ECK7X&aid=01M73TC2JXKYSDC6J3372GH3ZF",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 189.99,
+          "compare_at_price": 229.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "material": [
+        "Synthetic"
+      ],
+      "conditioner-effect": [
+        "Repair",
+        "Detangling",
+        "Shine",
+        "Smoothing"
+      ],
+      "hair-styling-tool-features": [
+        "Ionic function",
+        "Auto power-off"
+      ],
+      "application-type": [
+        "Heat-activated"
+      ],
+      "hair-styling-items-included": [
+        "Diffuser attachment",
+        "Hair brush",
+        "Hair clips",
+        "Hair comb"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly",
+        "Dry",
+        "Frizzy",
+        "Straight"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "ratings": {
+      "value": 5,
+      "count": 22,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

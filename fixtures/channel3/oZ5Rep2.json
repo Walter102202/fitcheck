@@ -1,0 +1,129 @@
+{
+  "product": {
+    "id": "oZ5Rep2",
+    "title": "Peewee 1200 Travel Hair Dryer",
+    "description": "The StyleCraft Peewee is a compact, professional-grade travel hair dryer designed for high performance on the go. It features dual voltage capabilities for worldwide use and a folding handle for easy storage. The dryer utilizes Tri-Plex Fusion technology with Nano-keratin proteins and tourmaline to seal the hair cuticle, reduce frizz, and add shine. This set includes a concentrator nozzle, a diffuser attachment, and a velvet storage bag for convenient transport.",
+    "brands": [
+      {
+        "id": "Ux94",
+        "name": "StyleCraft"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/de9719cc-2870-48c6-a78a-c82a2cb06a8f?aid=01M73TC2KKR1KH75KJEC2ESYPX&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/de9719cc-2870-48c6-a78a-c82a2cb06a8f?aid=01M73TC2KKR1KH75KJEC2ESYPX&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black Peewee 1200 folding handle hair dryer head head."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Folding handle for compact storage",
+      "Dual voltage capability for worldwide use",
+      "Tri-Plex Fusion technology with Nano-keratin proteins",
+      "Tourmaline ionic emission to reduce frizz and add shine",
+      "Includes concentrator nozzle and diffuser attachment",
+      "Includes velvet travel/storage case",
+      "Built-in stand for hands-free positioning",
+      "1,000 watts of power"
+    ],
+    "colors": [
+      {
+        "hex": "#1a1d25",
+        "percentage": 0.6324
+      },
+      {
+        "hex": "#555459",
+        "percentage": 0.1502
+      },
+      {
+        "hex": "#3b3c42",
+        "percentage": 0.1243
+      },
+      {
+        "hex": "#98979b",
+        "percentage": 0.0931
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/oZ5Rep2-K6RA-S666bu?o=01M1Q7QA0XV8YH59PPZKSWKYPS&aid=01M73TC2KKR1KH75KJEC2ESYPX",
+        "domain": "macys.com",
+        "price": {
+          "price": 38.21,
+          "compare_at_price": 44.95,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "conditioner-effect": [
+        "Moisturizing",
+        "Shine"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "heat-settings": [
+        "High",
+        "Low"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Diffuser nozzle",
+        "Ionic function",
+        "Travel size"
+      ]
+    },
+    "ratings": {
+      "value": 4.7,
+      "count": 58,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

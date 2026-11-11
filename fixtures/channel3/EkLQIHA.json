@@ -1,0 +1,161 @@
+{
+  "product": {
+    "id": "EkLQIHA",
+    "title": "Panasonic Z95BP Series 65 inch OLED 4K UHD Smart Fire TV + WN10 Neck Speaker Bundle",
+    "description": "The Panasonic Z95BP Series is a 65-inch OLED 4K UHD Smart Fire TV bundle designed for high-end entertainment. It features a Primary RGB Tandem OLED panel with a ThermalFlow cooling system for enhanced brightness and color. Powered by the HCX Pro AI Processor MK II, the TV optimizes picture and sound for sports, games, and movies. It supports multiple HDR formats including HDR10+, Dolby Vision, and HLG, and features 360° Soundscape Pro tuned by Technics. For gamers, it offers Game Mode Extreme with HDMI 2.1, 144Hz refresh rate, VRR, and AMD FreeSync Premium. This bundle includes the Z95BP Series TV, a Panasonic WN10 wireless wearable neck speaker, a 4-year extended warranty, and HDMI cables.",
+    "brands": [
+      {
+        "id": "vlUR",
+        "name": "Panasonic"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/6dc10c77-798f-4d5d-bd84-33b3a9cd1497?aid=01M73S7D279BCTQS4SV4DT0KPQ&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "merchant_information",
+        "alt_text": "Japanese technology branding with a TV screen displaying a landscape."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4061b0cf-4276-4fd6-a525-bc49b3a3a0a4?aid=01M73S7D279BCTQS4SV4DT0KPQ&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Energy guide and estimated yearly electricity cost for the TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4af8c2d0-fde3-4768-8c3d-1a56f1c25e6a?aid=01M73S7D279BCTQS4SV4DT0KPQ&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Diagram showing dimensions and connectivity for a 65-inch TV and remote."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/02a9e97d-a2df-4326-ac93-19b1678e9880?aid=01M73S7D279BCTQS4SV4DT0KPQ&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Floor-standing TV and soundbar product shot."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4d0234d1-13c1-4e0c-9ae5-83166c69578f?aid=01M73S7D279BCTQS4SV4DT0KPQ&mid=RnUy",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing streaming services available on the TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [
+      "OLED Panel (Implied by product description)"
+    ],
+    "key_features": [
+      "Game Mode Extreme",
+      "Game Control Board",
+      "HCX Pro AI Processor MKII",
+      "Optimal Picture and Sound",
+      "Primary RGB Tandem with ThermalFlow",
+      "360° Soundscape Pro Tuned by Technics",
+      "Fire TV Built-in",
+      "Hands-free Alexa",
+      "Fire TV Ambient Experience",
+      "Multi HDR format support including HDR10+, HDR10, Dolby Vision, and HLG"
+    ],
+    "colors": [
+      {
+        "hex": "#363636",
+        "percentage": 0.6828
+      },
+      {
+        "hex": "#131313",
+        "percentage": 0.2334
+      },
+      {
+        "hex": "#828282",
+        "percentage": 0.0838
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/EkLQIHA-RnUy-S666bu?o=01M2YM5KEYPMBZ7SE93W2QV8KH&aid=01M73S7D279BCTQS4SV4DT0KPQ",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 2299.99,
+          "compare_at_price": 3399.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 22226,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Internet TV",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "smart-tv-platform": [
+        "Fire TV"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "HDR10+",
+        "Dolby vision",
+        "HLG",
+        "HDR10"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

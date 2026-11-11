@@ -1,0 +1,130 @@
+{
+  "product": {
+    "id": "L4kSx03",
+    "title": "Professional Hair Dryer",
+    "description": "Achieve a salon-worthy finish in half the time with the GHD Air 1600W Professional Hair Dryer. Its powerful 1600W AC motor and advanced ionic technology work together to reduce frizz and leave your hair smoother and shinier. The dryer features variable power and temperature controls, an ergonomic design for comfort, and a cool shot button to set your style. It also includes an adaptor ring for universal diffuser compatibility and a concentrator nozzle for versatile styling.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/990489fb-0111-4b86-aa03-ff268eaf7285?aid=01M73S7RQGKNFC0DJG5D7RNT8T&mid=ELn5",
+        "cleaned_url": "https://cdn.trychannel3.com/49ba1762-64a1-4f06-b9dd-e9c1cc63b856?aid=01M73S7RQGKNFC0DJG5D7RNT8T&mid=ELn5",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black professional hair dryer with a conical nozzle and ergonomic handle."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Features a powerful 1600W AC motor for reduced frizz and a salon-worthy finish in half the time.*",
+      "Advanced ionic technology reduces frizz and provides smoother, shinier hair.",
+      "Includes variable power and temperature controls to easily adjust to your hair type and style.",
+      "Salon finish in half the time*",
+      "Advanced ionic technology for reduced frizz and flyaways",
+      "Features 1600W AC motor",
+      "Ergonomic design, evenly balanced for easily handling and comfort",
+      "Adaptor ring for universal diffuser",
+      "Includes one concentrator nozzle to create a variety of styles",
+      "Cool shot button fixes your style in place",
+      "1 year warranty",
+      "*Compared to regular consumer hair dryers"
+    ],
+    "colors": [
+      {
+        "hex": "#33373a",
+        "percentage": 0.421
+      },
+      {
+        "hex": "#161718",
+        "percentage": 0.3669
+      },
+      {
+        "hex": "#dbdbdb",
+        "percentage": 0.1496
+      },
+      {
+        "hex": "#7c7f80",
+        "percentage": 0.0625
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/L4kSx03-ELn5-S666bu?o=01KR9JXZFJDP52SJ2NNP81G66R&aid=01M73S7RQGKNFC0DJG5D7RNT8T",
+        "domain": "ulta.com",
+        "price": {
+          "price": 239,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "material": [
+        "Plastic"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "conditioner-effect": [
+        "Anti-frizz",
+        "Shine",
+        "Smoothing"
+      ],
+      "speed-settings": [
+        "Variable"
+      ],
+      "hair-dryer-motor-type": [
+        "AC motor"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ]
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 351,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

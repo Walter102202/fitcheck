@@ -1,0 +1,203 @@
+{
+  "product": {
+    "id": "JsWPLPk",
+    "title": "65 Inch 4K OLED Smart TV with Dolby Atmos",
+    "description": "Experience stunning visuals with the Samsung QN65S90FAFXZA 65\" 4K OLED Smart TV. Featuring a NQ4 AI Gen3 Processor for upscaled 4K resolution and AI Motion Enhancer Pro, this TV delivers a smooth and immersive viewing experience with a 120Hz (up to 144Hz) refresh rate. Enjoy enhanced contrast and vibrant colors with OLED HDR+ and Auto HDR Remastering. The Ultra Viewing Angle and Real Depth Enhancer provide clear, lifelike images from any seat. Immerse yourself in rich sound with Dolby Atmos, OTS Lite, and Q-Symphony Pro. The Tizen Smart TV platform offers easy access to your favorite content, and features like Samsung Health and Eco Sensor enhance your home entertainment. This bundle includes a 4-year Amber Protection Plan, with 1 year of manufacturer coverage and an additional 3 years of protection. The TV comes with a BT SolarCell Remote and has dimensions of 56.9\"W x 1.6\"D x 35.3\"H in Graphite Black.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/4902694a-7246-463a-90c2-1f96fed32c90?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/eb943eb5-1171-46de-b66d-9e508cf42dfd?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Samsung 65-inch QLED OLED TV display."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6b3978f3-9b6a-4409-bff0-3cfd3d356be0?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/4563c0e8-64ae-4e8d-9558-c699702478dd?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "scale_reference",
+        "alt_text": "Dimensions and specifications diagram for 65-inch TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9d72cd30-2f21-45c1-b813-2a21ce23729a?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/204227c0-86c5-49c0-b29c-eea77a7b6793?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black TV stand with a tall, slender stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/267df4ba-46c3-4059-a18b-48a0b24f6486?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/13c86ea3-6c5f-4c96-b248-49e459ad71c2?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Rear view of TV with connection ports."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a2b2e3ef-77fb-4ed5-bcd5-f9a312716da8?aid=01M73RZT0XKZWN17HRTHB0R9JF&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up of Samsung TV processor chip."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "NQ4 AI Gen3 Processor for 4K experience",
+      "OLED HDR+ and 4K AI Upscaling Pro",
+      "Motion Xcelerator 144Hz for VRR gaming and streaming",
+      "Object Tracking Sound Lite and Dolby Atmos",
+      "One UI Tizen for personalized entertainment",
+      "Motion Xcelerator Turbo Ultra",
+      "AI Motion Enhancer Pro",
+      "Auto HDR Remastering",
+      "Active Voice Amplifier Pro And Adaptive Sound Pro",
+      "AI Customization Mode"
+    ],
+    "colors": [
+      {
+        "hex": "#31245d",
+        "percentage": 0.2744
+      },
+      {
+        "hex": "#18113c",
+        "percentage": 0.2377
+      },
+      {
+        "hex": "#9383a6",
+        "percentage": 0.1407
+      },
+      {
+        "hex": "#473d80",
+        "percentage": 0.1208
+      },
+      {
+        "hex": "#6a557d",
+        "percentage": 0.1179
+      },
+      {
+        "hex": "#d5cbd4",
+        "percentage": 0.1086
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/JsWPLPk-p1PB-S666bu?o=01KXPMY2BT86MVS660QB24GAKB&aid=01M73RZT0XKZWN17HRTHB0R9JF",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 1534.99,
+          "compare_at_price": 1867.93,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 56.9,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.3,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/JsWPLPk-K6RA-S666bu?o=01M1AXKAYEHVSA98DG9KRS86YQ&aid=01M73RZT0XKZWN17HRTHB0R9JF",
+        "domain": "macys.com",
+        "price": {
+          "price": 2497.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HDR10+"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4K ultra HD"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Voice control",
+        "AI-powered",
+        "Suitable for gaming",
+        "Built-in soundbar",
+        "Local dimming",
+        "Adjustable viewing angle",
+        "Motion interpolation technology"
+      ],
+      "vesa-mounting-pattern": [
+        "400 x 200 mm",
+        "100 x 200 mm"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "display-technology": [
+        "OLED",
+        "LCoS"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ]
+    },
+    "ratings": {
+      "value": 4.73,
+      "count": 2742,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:24:19.176Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

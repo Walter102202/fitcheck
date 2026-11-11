@@ -1,0 +1,170 @@
+{
+  "product": {
+    "id": "x9UvJeq",
+    "title": "SMART-X High Efficiency Dryer + Diffuser",
+    "description": "This set includes the SMART-X High Efficiency Dryer, which dries hair 75% faster using the power of air and less heat for healthier styling. Its breakthrough SMART-X Technology automatically balances air and temperature 100x per second to prevent damaging heat spikes. The set also comes with the Smart-X Diffuser. The dryer features 3 heat and 3 speed settings with auto-memorization, a lock function to prevent accidental changes, a cool shot button, and a 9ft cord. It also has a 10-year warranty and a self-cleaning function.",
+    "brands": [
+      {
+        "id": "o3Im",
+        "name": "BioIonic"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/cfec9f14-6093-485b-8fe6-f3f70c51d416?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/cfec9f14-6093-485b-8fe6-f3f70c51d416?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Two Ionic hair dryer nozzles and body on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9e53e4fc-0a2e-4219-bbaf-a9060e13bb13?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/9e53e4fc-0a2e-4219-bbaf-a9060e13bb13?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Single Ionic hair dryer in dark blue/gray color."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/08b4fa7a-119b-49b7-8926-dcfc28e3cb47?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/08b4fa7a-119b-49b7-8926-dcfc28e3cb47?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Single Ionic hair dryer in dark blue/gray color from above."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/43a2a0aa-390c-4d5e-b5cb-bcbaebec9249?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing features and technology of the SMART-X hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/187cf0d6-3c0c-447a-985b-0553dfea8bf3?aid=01M73TC3SS5NQ3P7VK406RWFTC&mid=asdf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing how to lock speed and heat settings on the dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "3 heat and 3 speed settings with auto-memorization capability",
+      "Lock function prevents accidental change of style settings",
+      "Cool shot button",
+      "9ft cord",
+      "10-year warranty",
+      "Self-cleaning function to deter dirt particles from motor and hair",
+      "Lightweight and compact design (0.75 lb)",
+      "Includes diffuser to lift, shape and enhance natural hair texture"
+    ],
+    "colors": [
+      {
+        "hex": "#2c3748",
+        "percentage": 0.4923
+      },
+      {
+        "hex": "#4b5567",
+        "percentage": 0.4098
+      },
+      {
+        "hex": "#a9aeb5",
+        "percentage": 0.0979
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/x9UvJeq-asdf-S666bu?o=01M5BJ36WDQWWPCHBJNDPNBFPV&aid=01M73TC3SS5NQ3P7VK406RWFTC",
+        "domain": "nordstrom.com",
+        "price": {
+          "price": 359,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 0.75,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/x9UvJeq-ELn5-S666bu?o=01KRHXSJNNE5G49Q4R8H5TMVB0&aid=01M73TC3SS5NQ3P7VK406RWFTC",
+        "domain": "ulta.com",
+        "price": {
+          "price": 359,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Diffuser nozzle",
+        "Cool shot function"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": {
+      "value": 4.14,
+      "count": 659,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

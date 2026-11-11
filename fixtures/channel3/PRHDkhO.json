@@ -1,0 +1,149 @@
+{
+  "product": {
+    "id": "PRHDkhO",
+    "title": "InfinitiPRO DigitalAIRE Hair Dryer",
+    "description": "The Conair InfinitiPRO DigitalAIRE Hair Dryer offers advanced drying technology for salon-quality results at home. Its digital motor ensures powerful airflow and efficient drying, while multiple heat and speed settings allow for customized styling. This hair dryer is designed for optimal performance and hair health.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ae7ed1f8-67de-4c7f-88a4-3195196e500d?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "cleaned_url": "https://cdn.trychannel3.com/ae6c4bf1-8f12-4868-8e15-8c7bd7b331a0?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "InfinitiPro digital hair dryer with detachable nozzle and brush attachment."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a0409dc8-c163-470d-8cc0-925c02b2fdc3?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "InfinitiPro hair dryer highlighting honeycomb ceramic tech and removable lint filter."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/14d6d866-671a-4a66-bc86-e4d8a1d3ea56?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/14d6d866-671a-4a66-bc86-e4d8a1d3ea56?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the InfinitiPro digital hair dryer body and controls."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6e4b3a6f-aceb-450a-a5cc-a305718b1e1a?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/6e4b3a6f-aceb-450a-a5cc-a305718b1e1a?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Internal view of the InfinitiPro digital hair dryer motor components."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6d52575a-040f-467e-a422-b3aa9a5ac8b6?aid=01M73S7RQN0VJQK316AS1DFWMC&mid=QnTm",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman using the InfinitiPro digital hair dryer to style curly hair."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Digital motor for powerful airflow",
+      "Multiple heat and speed settings for customizable styling",
+      "Designed for optimal performance and hair health"
+    ],
+    "colors": [
+      {
+        "hex": "#7d8a99",
+        "percentage": 0.4044
+      },
+      {
+        "hex": "#dae1e8",
+        "percentage": 0.2577
+      },
+      {
+        "hex": "#acb7c4",
+        "percentage": 0.2532
+      },
+      {
+        "hex": "#54606e",
+        "percentage": 0.0847
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/PRHDkhO-QnTm-S666bu?o=01KBP91NP11NSG99MQWSX63WZB&aid=01M73S7RQN0VJQK316AS1DFWMC",
+        "domain": "target.com",
+        "price": {
+          "price": 129.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "application-type": [
+        "Heat-activated"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "hair-styling-tool-features": [
+        "Ceramic heating system",
+        "Cool shot function"
+      ],
+      "heat-settings": [
+        "Medium"
+      ],
+      "hair-dryer-motor-type": [
+        "DC motor"
+      ],
+      "speed-settings": [
+        "Single"
+      ],
+      "material": [
+        "Synthetic"
+      ],
+      "hair-care-technology": [
+        "Galvanic"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

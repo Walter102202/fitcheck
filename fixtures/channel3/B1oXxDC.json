@@ -1,0 +1,148 @@
+{
+  "product": {
+    "id": "B1oXxDC",
+    "title": "K55XR80 55\" OLED 4K UHD Smart TV",
+    "description": "The Sony BRAVIA 8 (K55XR80) is a 55-inch 4K UHD OLED Smart TV designed for high-fidelity cinematic experiences. It features advanced picture processing via the XR Processor and is IMAX® Enhanced certified, ensuring true-to-life color and contrast. For gamers, it offers specialized settings, including PlayStation® 5 Auto HDR Tone Mapping and Auto Genre Picture Mode for a responsive experience. The TV is powered by Google TV with Google Assistant built-in and utilizes Acoustic Surface Audio+™ technology for immersive sound. It supports Dolby Vision, HDR10, and HLG, and includes multiple connectivity options such as 4x HDMI and 2x USB ports.",
+    "brands": [
+      {
+        "id": "PURH",
+        "name": "Sony"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/4b1e63d4-3236-423b-a517-72d887bdcff1?aid=01M73SEPXQNXDJPMK1MBHGM1AG&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/4b1e63d4-3236-423b-a517-72d887bdcff1?aid=01M73SEPXQNXDJPMK1MBHGM1AG&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Sony Bravia 8 OLED TV with a black bar below it."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "55\" 4K OLED display",
+      "3840 x 2160 resolution",
+      "120Hz refresh rate",
+      "Dolby Vision, HDR10, and HLG support",
+      "Google TV with Google Assistant built-in",
+      "IMAX® Enhanced certified",
+      "Acoustic Surface Audio+™ technology",
+      "XR Processor™ for advanced picture processing",
+      "PlayStation® 5 Auto HDR Tone Mapping and Auto Genre Picture Mode",
+      "Connectivity: 4x HDMI, 2x USB, Ethernet, Optical, RS232C"
+    ],
+    "colors": [
+      {
+        "hex": "#07001a",
+        "percentage": 0.1846
+      },
+      {
+        "hex": "#137fe3",
+        "percentage": 0.1652
+      },
+      {
+        "hex": "#1bb4f2",
+        "percentage": 0.137
+      },
+      {
+        "hex": "#c6cacd",
+        "percentage": 0.1204
+      },
+      {
+        "hex": "#7e7b7f",
+        "percentage": 0.1139
+      },
+      {
+        "hex": "#090f3d",
+        "percentage": 0.1065
+      },
+      {
+        "hex": "#413752",
+        "percentage": 0.0982
+      },
+      {
+        "hex": "#1a1c5f",
+        "percentage": 0.0741
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/B1oXxDC-K6RA-S666bu?o=01M3PS1S2EJEV3F55R89KBWQHF&aid=01M73SEPXQNXDJPMK1MBHGM1AG",
+        "domain": "macys.com",
+        "price": {
+          "price": 3115.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 48.25,
+            "unit": "in"
+          },
+          "width": null,
+          "height": {
+            "number": 28.88,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "OLED"
+      ],
+      "compatible-voice-assistant": [
+        "Google Assistant"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

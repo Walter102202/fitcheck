@@ -1,0 +1,110 @@
+{
+  "product": {
+    "id": "E6H1tqa",
+    "title": "Professional Hair Dryer with Diffuser",
+    "description": "This hairdryer is mainly composed of plastic and metal  and has a compact size and lightweight structure. The hair dryer features an inbuilt negative ion function to tame frizz  while its 1875-watt motor facilitates swift hair drying. The built-in high-density dust screen effectively prevents hair from being sucked in. Additionally  it comes equipped with three attachments to cater to a variety of hairstyles.",
+    "brands": [
+      {
+        "id": "mmw5",
+        "name": "Wavytalk"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2f9970c8-2ce8-4dcc-9976-aba458e77d1d?aid=01M73TC1X3A8W1GY1KM8HNNDTN&mid=BsaX",
+        "cleaned_url": "https://cdn.trychannel3.com/9f47eb1a-b038-4644-bdf5-cbf5d6a70c8d?aid=01M73TC1X3A8W1GY1KM8HNNDTN&mid=BsaX",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black Wavytalk Ionic Hair Dryer and diffuser combo."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": "female",
+    "age": null,
+    "materials": [
+      "plastic",
+      "metal"
+    ],
+    "key_features": [
+      "Inbuilt negative ion function to tame frizz",
+      "1875-watt motor for swift drying",
+      "Compact size and lightweight",
+      "Dust screen to prevent hair suction",
+      "Three attachments included"
+    ],
+    "colors": [
+      {
+        "hex": "#202122",
+        "percentage": 0.4237
+      },
+      {
+        "hex": "#403f42",
+        "percentage": 0.3069
+      },
+      {
+        "hex": "#5c5a5f",
+        "percentage": 0.1517
+      },
+      {
+        "hex": "#828189",
+        "percentage": 0.1045
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/E6H1tqa-BsaX-S666bu?o=01KSR37XPD7K20X1220H69B57J&aid=01M73TC1X3A8W1GY1KM8HNNDTN",
+        "domain": "walmart.com",
+        "price": {
+          "price": 49.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Adjustable thermostat"
+      ],
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ],
+      "material": [
+        "Plastic"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

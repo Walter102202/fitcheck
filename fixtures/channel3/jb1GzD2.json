@@ -1,0 +1,197 @@
+{
+  "product": {
+    "id": "jb1GzD2",
+    "title": "INFINITIPRO BY CONAIR Hair Dryer with Diffuser",
+    "description": "This INFINITIPRO by Conair hair dryer is a professional-grade tool designed for volume and shine. It features a powerful 1875-watt AC motor that provides faster drying times and a longer lifespan than standard motors. Equipped with ceramic and ionic technology, it helps reduce frizz and minimize hair damage. The dryer offers three heat and two speed settings, along with a cold shot button to lock in styles. It comes with both a concentrator for precision styling and a diffuser to enhance curls and waves.",
+    "brands": [
+      {
+        "id": "S8GP",
+        "name": "InfinitiPRO"
+      },
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d4cb61be-9d86-45ae-9996-4512d6677f7a?aid=01M73TC398XJ1M10NKFZ7906Y3&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Close-up of a rose gold hair dryer and nozzle attachment."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7ec6cd30-0a23-47f3-88a6-2e11706968c1?aid=01M73TC398XJ1M10NKFZ7906Y3&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic highlighting hair dryer features: lights, camera, action."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f214bf1c-3c4e-4f17-9b16-7f516cc61769?aid=01M73TC398XJ1M10NKFZ7906Y3&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Hair dryer showing temperature and ceramic technology settings."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ba2c6a89-b679-42b3-9448-396881367d91?aid=01M73TC398XJ1M10NKFZ7906Y3&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Hair dryer demonstrating ionic technology and diffuser attachment."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ab71e511-d320-4258-9a63-82aa89e6d8bc?aid=01M73TC398XJ1M10NKFZ7906Y3&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Hair dryer showing personalized styling options and a cold shot button."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Ceramic",
+      "Plastic"
+    ],
+    "key_features": [
+      "1875 watt AC motor for fast drying",
+      "Ionic technology to reduce frizz and add shine",
+      "Ceramic technology for less heat damage",
+      "3 heat and 2 speed settings",
+      "True cold shot button to set styles",
+      "Includes diffuser and concentrator attachments",
+      "Removable filter to prevent lint buildup"
+    ],
+    "colors": [
+      {
+        "hex": "#3a363a",
+        "percentage": 0.2739
+      },
+      {
+        "hex": "#7d8088",
+        "percentage": 0.1543
+      },
+      {
+        "hex": "#cbc2c2",
+        "percentage": 0.131
+      },
+      {
+        "hex": "#efe8e6",
+        "percentage": 0.1223
+      },
+      {
+        "hex": "#1b191c",
+        "percentage": 0.1103
+      },
+      {
+        "hex": "#a09b9d",
+        "percentage": 0.1066
+      },
+      {
+        "hex": "#616064",
+        "percentage": 0.1017
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/jb1GzD2-LPzf-S666bu?o=01M604EVBSZ1KKBPRND2JD0YW1&aid=01M73TC398XJ1M10NKFZ7906Y3",
+        "domain": "newegg.com",
+        "price": {
+          "price": 70.24,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 8.06,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.56,
+            "unit": "in"
+          },
+          "height": {
+            "number": 12.05,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 1.42,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "suitable-for-hair-type": [
+        "Curly",
+        "Frizzy"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "hair-dryer-motor-type": [
+        "AC motor"
+      ],
+      "hair-styling-tool-features": [
+        "Ceramic heating system",
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Diffuser nozzle",
+        "Ionic function"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "material": [
+        "Ceramic",
+        "Plastic"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

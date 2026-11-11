@@ -1,0 +1,172 @@
+{
+  "product": {
+    "id": "yC3nfVM",
+    "title": "Defrizzion Dryer & Xxl Diffuser",
+    "description": "This is a travel-sized hair dryer and diffuser designed for curly hair. It features a large diffuser attachment to help dry and define curls, waves, and coils without frizz. The dryer has an ergonomic design for comfortable use and is branded with Curlsmith's 'Defrizzion Technology'.",
+    "brands": [
+      {
+        "id": "fnQg",
+        "name": "Curlsmith"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/9b0d20dd-e950-47ba-b70f-589b87b4d80f?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/9b0d20dd-e950-47ba-b70f-589b87b4d80f?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer shown from the side, highlighting the nozzle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/afd6e60c-8a55-47cf-aab4-c945e228b39e?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/afd6e60c-8a55-47cf-aab4-c945e228b39e?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Black hair dryer with box and accessories."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bec1f34b-6949-4c09-b1ea-b60195909664?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Hand holding and using a black hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b2b4c275-1ee9-422f-b8a0-b5c891c29b7c?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman using a hair dryer to dry her curly hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2efa53e5-63b4-449b-95db-7a4c4ab25ac4?aid=01M73TC2KXVGF4ZE8WPJ4TCTTT&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the diffuser and defrizzion technology on hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": "female",
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "Travel size",
+      "Defrizzion Technology",
+      "Large diffuser for curls, coils, and waves",
+      "Ergonomic design"
+    ],
+    "colors": [
+      {
+        "hex": "#2f2c2d",
+        "percentage": 0.6526
+      },
+      {
+        "hex": "#615d5c",
+        "percentage": 0.1386
+      },
+      {
+        "hex": "#a3a09c",
+        "percentage": 0.1064
+      },
+      {
+        "hex": "#131010",
+        "percentage": 0.1024
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/yC3nfVM-TfN6-S666bu?o=01KR18TGD90WSH0WFZG016SBEN&aid=01M73TC2KXVGF4ZE8WPJ4TCTTT",
+        "domain": "sephora.com",
+        "price": {
+          "price": 139,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Tool Type",
+          "values": [
+            {
+              "label": "Hair Dryer",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/9b0d20dd-e950-47ba-b70f-589b87b4d80f",
+              "product_id": "yC3nfVM"
+            },
+            {
+              "label": "Styler",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/bfd1f0fe-f464-48a5-a778-28c922c90a58",
+              "product_id": "GsvHZzS"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Tool Type",
+          "label": "Hair Dryer"
+        }
+      ]
+    },
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Diffuser attachment"
+      ],
+      "hair-styling-tool-features": [
+        "Travel size",
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ]
+    },
+    "ratings": {
+      "value": 4.64,
+      "count": 75,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

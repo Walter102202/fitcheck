@@ -1,0 +1,151 @@
+{
+  "product": {
+    "id": "AiIUDIz",
+    "title": "Conair 1875W Turbo Styler Hair Dryer",
+    "description": "Give your hair long-lasting volume quickly and quietly with the Conair 1875W Turbo Styler Hair Dryer. This sleek and versatile ionic hair dryer features a quiet-tone motor and turbo action to boost volume while conditioning your hair for less frizz and more shine. It comes equipped with a concentrator attachment for pinpoint styling and a diffuser for curly or wavy styles, offering 2 heat and 2 speed settings along with a cool shot button to lock in your look.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/1a263c2d-a052-4309-98f1-6c48a8b6abd8?aid=01M73S7SDFVA230GZEHEVEVBKM&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/1a263c2d-a052-4309-98f1-6c48a8b6abd8?aid=01M73S7SDFVA230GZEHEVEVBKM&mid=oeWt",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Conair Turbo Styler hair dryer in white on a light background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d598abca-3b7d-48cd-8418-c3805d276881?aid=01M73S7SDFVA230GZEHEVEVBKM&mid=oeWt",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/d598abca-3b7d-48cd-8418-c3805d276881?aid=01M73S7SDFVA230GZEHEVEVBKM&mid=oeWt",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Conair Turbo Dryer hair dryer in its yellow and white box."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/3917d387-b847-4fe9-9b68-a24a0a381bf7?aid=01M73S7SDFVA230GZEHEVEVBKM&mid=oeWt",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Diagram showing features of the Conair hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1875 watts",
+      "Ionic conditioning for less frizz and more shine",
+      "Quiet-tone motor",
+      "Concentrator attachment for pinpoint styling",
+      "Diffuser attachment for curly or wavy styles",
+      "2 heat / 2 speed settings",
+      "Cool shot button",
+      "Hinged filter for easy cleaning to extend the life of the dryer",
+      "5-foot power cord"
+    ],
+    "colors": [
+      {
+        "hex": "#66b7b3",
+        "percentage": 0.288
+      },
+      {
+        "hex": "#0c0d0e",
+        "percentage": 0.2722
+      },
+      {
+        "hex": "#e3a11a",
+        "percentage": 0.2624
+      },
+      {
+        "hex": "#d5d6c3",
+        "percentage": 0.1103
+      },
+      {
+        "hex": "#525448",
+        "percentage": 0.0671
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/AiIUDIz-oeWt-S666bu?o=01M61QNXBQEHCWS3J6XNKKRBRY&aid=01M73S7SDFVA230GZEHEVEVBKM",
+        "domain": "cvs.com",
+        "price": {
+          "price": 19.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 4,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "conditioner-effect": [
+        "Anti-frizz",
+        "Shine"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "suitable-for-hair-type": [
+        "Curly"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Diffuser nozzle",
+        "Ionic function"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

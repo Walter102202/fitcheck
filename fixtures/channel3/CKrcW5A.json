@@ -1,0 +1,201 @@
+{
+  "product": {
+    "id": "CKrcW5A",
+    "title": "LG QNED AI QNED85B Mini LED 4K Smart TV 2026",
+    "description": "The LG 75\" Class QNED AI QNED85B is a 2026 4K Smart TV featuring Mini LED technology and Dynamic QNED Color Pro for vivid, accurate colors with 100% Color Volume. Powered by the alpha8 AI Processor 4K Gen3, it offers enhanced picture and sound quality, alongside high-performance gaming features including a 144Hz refresh rate, Motion Booster 288, and AMD FreeSync Premium. It runs on the webOS 26 platform with integrated Google Gemini and provides a cinematic experience with Dolby Vision and Dolby Atmos.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d385804a-509f-4a46-badf-11f98ab49c72?aid=01M73SESZERM08628M4A7FD881&mid=g0qz",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG QNED Mini LED 4k Smart TV displaying colorful abstract graphics."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Dynamic QNED Color Pro delivers richer, true-to-life color with certified 100% Color Volume",
+      "Mini LEDs create picture accuracy for brighter highlights and deeper blacks",
+      "Precision Dimming delivers deeper blacks and sharper highlights",
+      "Faster AI processing for enhanced picture with a8 AI Processor 4K Gen3",
+      "Smoother gameplay with reduced lag with 144Hz Refresh Rate, Motion Booster 288 and AMD FreeSync Premium",
+      "Enjoy movie magic from home with Dolby Vision, Dolby Atmos & FILMMAKER MODE with Ambient Light Technology",
+      "Easy access to game settings for smoother, optimized play",
+      "WebOS delivers smarter, easier streaming, plus Google Gemini at your fingertips"
+    ],
+    "colors": [
+      {
+        "hex": "#7c1b11",
+        "percentage": 0.1633
+      },
+      {
+        "hex": "#d66a1f",
+        "percentage": 0.1628
+      },
+      {
+        "hex": "#26361c",
+        "percentage": 0.1425
+      },
+      {
+        "hex": "#ecc05a",
+        "percentage": 0.115
+      },
+      {
+        "hex": "#d61723",
+        "percentage": 0.1137
+      },
+      {
+        "hex": "#356423",
+        "percentage": 0.1135
+      },
+      {
+        "hex": "#2b1714",
+        "percentage": 0.1035
+      },
+      {
+        "hex": "#5fc034",
+        "percentage": 0.0857
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/CKrcW5A-g0qz-S666bu?o=01M373XYS02DEF6WXJ25PF023G&aid=01M73SESZERM08628M4A7FD881",
+        "domain": "lg.com",
+        "price": {
+          "price": 949.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 65.6,
+            "unit": "in"
+          },
+          "width": {
+            "number": 1.2,
+            "unit": "in"
+          },
+          "height": {
+            "number": 38,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 73.9,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            {
+              "label": "65\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/3e20d1a2-aa5a-47bc-9aad-3cb45983b9f5",
+              "product_id": "8fuVFRo"
+            },
+            {
+              "label": "75\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/d385804a-509f-4a46-badf-11f98ab49c72",
+              "product_id": "CKrcW5A"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Size",
+          "label": "75\""
+        }
+      ]
+    },
+    "structured_attributes": {
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-technology": [
+        "Mini-LED"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Local dimming",
+        "Quantum dot technology",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "compatible-voice-assistant": [
+        "Google Assistant"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "audio-technology": [
+        "AAC",
+        "Dolby atmos",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)",
+        "PCM (Pulse Code Modulation)"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

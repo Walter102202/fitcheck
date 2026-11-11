@@ -1,0 +1,206 @@
+{
+  "product": {
+    "id": "hf3UXkS",
+    "title": "Afar Lightweight Travel Size Hair Dryer",
+    "description": "The T3 Afar Lightweight Travel Size Hair Dryer is designed for both travel convenience and powerful styling. This compact dryer is 25% lighter and 30% smaller than a standard T3 dryer, making it ideal for packing. It features a stowaway folding handle and auto dual voltage for worry-free international use. The T3 IonAir Technology, with its negative ion generator, produces millions of negative ions per second to smooth the hair cuticle, reduce frizz, and enhance shine. It offers 3 heat and 2 speed settings for customized styling across all hair types, while minimizing heat exposure. Additional features include a long-life motor, a concentrator attachment, a cool shot button to lock in styles, and a 9ft. cord with a cord wrap. The dryer comes in a Satin Blush color and includes the dryer and a concentrator.",
+    "brands": [
+      {
+        "id": "E2ma",
+        "name": "T3"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/b9485cdd-78a0-48a6-8a9a-5b15fff39eeb?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/b9485cdd-78a0-48a6-8a9a-5b15fff39eeb?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Light pink hair dryer on a white background, shown from the side."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/fc241da8-1961-4fae-89c0-9feb3646eaab?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/fc241da8-1961-4fae-89c0-9feb3646eaab?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman with curly hair holding a light pink hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/626e08ce-74e6-42ae-95db-b133c9fb1308?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Instructions on how to use the hair dryer for styling hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a46b26af-cda7-4c46-9456-977cee7d9784?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/a46b26af-cda7-4c46-9456-977cee7d9784?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Light pink hair dryer viewed from the front against a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e4c3ba77-2fb8-4fb8-b2a4-0d203c12898d?aid=01M73TC2425T5TW6T9MFRYXP76&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Before and after hair styling comparison using a hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "25% lighter & 30% smaller than a full-size T3 hair dryer",
+      "Stowaway folding handle for easy packing",
+      "Auto dual voltage for worry-free styling abroad",
+      "T3 IonAir Technology with negative ion generator produces 10 million negative ions per second for smooth, shiny results",
+      "3 heat and 2 speed settings for optimal heat and speed combinations",
+      "Minimizes heat exposure",
+      "Long-life motor",
+      "Concentrator",
+      "Cool Shot",
+      "9ft. Cord with Cord Wrap"
+    ],
+    "colors": [
+      {
+        "hex": "#fefefe",
+        "percentage": 0.7112
+      },
+      {
+        "hex": "#e4d6d4",
+        "percentage": 0.2888
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/hf3UXkS-TfN6-S666bu?o=01KRENHWCM7GRNF1C35PVFW39K&aid=01M73TC2425T5TW6T9MFRYXP76",
+        "domain": "sephora.com",
+        "price": {
+          "price": 199.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/hf3UXkS-p1PB-S666bu?o=01M1NZK9WS2S0TBSBGYESR4PX0&aid=01M73TC2425T5TW6T9MFRYXP76",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 199.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/hf3UXkS-TZAa-S666bu?o=01M2G9Z5AZTJ7PC3ZXD3B15VQJ&aid=01M73TC2425T5TW6T9MFRYXP76",
+        "domain": "revolve.com",
+        "price": {
+          "price": 200,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/hf3UXkS-7DeM-S666bu?o=01KT3BGBR7DKMFP43W5SPXC17C&aid=01M73TC2425T5TW6T9MFRYXP76",
+        "domain": "fwrd.com",
+        "price": {
+          "price": 200,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "pattern": [
+        "Solid"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Frizzy",
+        "Curly",
+        "Thick"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Ionic function",
+        "Travel size"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Multiple",
+        "Comparing"
+      ],
+      "heat-settings": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "application-type": [
+        "Leave-in"
+      ],
+      "battery-type": [
+        "Disposable"
+      ],
+      "battery-size": [
+        "Built-in battery"
+      ],
+      "conditioner-effect": [
+        "Volumizing",
+        "Anti-frizz"
+      ],
+      "material": [
+        "Plastic"
+      ]
+    },
+    "ratings": {
+      "value": 4.42,
+      "count": 253,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,270 @@
+{
+  "product": {
+    "id": "giXSDZ7",
+    "title": "BRAVIA 8 K65XR80 65 inch 4K HDR Smart OLED TV",
+    "description": "Experience the pinnacle of visual and auditory immersion with the Sony Bravia 8 Series OLED 4K UHD Smart Google TV. Featuring over 8 million self-lit pixels, this TV delivers pure blacks and stunning contrast, while XR Triluminos Pro technology ensures billions of accurate, real-world colors. The intelligent XR Processor enhances every scene for unparalleled clarity and realism. Enjoy cinematic sound directly from the screen with Acoustic Surface Audio+ and a newly equipped tweeter for an immersive surround feel. The TV's sleek, minimalist design seamlessly blends into any living space, with a Slim One Slate concept and a flush one-piece back for a beautiful aesthetic from every angle. Google TV provides access to over 700,000 movies and TV episodes from your favorite streaming services, all organized for effortless discovery. Perfect for gamers, the Bravia 8 Series offers Auto HDR Tone Mapping and Auto Genre Picture Mode for an optimized PlayStation 5 experience, with HDMI 2.1 features like 4K/120fps, VRR, and ALLM for smooth, responsive gameplay.",
+    "brands": [
+      {
+        "id": "PURH",
+        "name": "Sony"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/12dca279-8b2d-43b7-b844-ce01248c1ba6?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/12dca279-8b2d-43b7-b844-ce01248c1ba6?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Front view of a Sony Bravia 8 OLED TV screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6d28d270-4f67-48ea-8be1-c0dba2593b2e?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "TV displaying YouTube with Super Mario Bros. movie."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c3857f13-a0a3-4d41-9c20-9822f05d301a?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c3857f13-a0a3-4d41-9c20-9822f05d301a?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of a black Sony Bravia 8 OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7622bbf0-841a-4cbe-bd3c-b78d1c7ccdd7?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/7622bbf0-841a-4cbe-bd3c-b78d1c7ccdd7?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of a thin-bezel Sony Bravia 8 OLED TV screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0b15faa1-313a-4c1f-8341-9877935692e5?aid=01M73SEKN44GM76AG6Q95C30FF&mid=Pu5r",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of the vibrant liquid display on a TV screen."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "4K OLED Display with XR Contrast Booster 15",
+      "Cognitive Processor XR",
+      "XR Triluminos Pro Color Technology",
+      "XR OLED Motion for Smooth Fast Action",
+      "XR Clear Image & 4K Upscaling",
+      "Acoustic Surface Audio+",
+      "Dolby Atmos & DTS:X Support",
+      "Voice Zoom 3 for Enhanced Dialogue Clarity",
+      "Studio Calibrated Picture Modes (Netflix Adaptive, Prime Video, SONY PICTURES CORE)",
+      "Google TV OS with Google Assistant"
+    ],
+    "colors": [
+      {
+        "hex": "#4fadec",
+        "percentage": 0.1696
+      },
+      {
+        "hex": "#090629",
+        "percentage": 0.1673
+      },
+      {
+        "hex": "#3880dc",
+        "percentage": 0.1624
+      },
+      {
+        "hex": "#8d827f",
+        "percentage": 0.1323
+      },
+      {
+        "hex": "#282348",
+        "percentage": 0.1113
+      },
+      {
+        "hex": "#414c87",
+        "percentage": 0.0897
+      },
+      {
+        "hex": "#0e1750",
+        "percentage": 0.0895
+      },
+      {
+        "hex": "#a5c0ce",
+        "percentage": 0.078
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/giXSDZ7-Pu5r-S666bu?o=01KR39B0M5E7DCWCMX97YKKHN7&aid=01M73SEKN44GM76AG6Q95C30FF",
+        "domain": "pcrichard.com",
+        "price": {
+          "price": 1698,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 56.87,
+            "unit": "in"
+          },
+          "height": {
+            "number": 32.75,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/giXSDZ7-RnUy-S666bu?o=01KR1E0ZQ6QM2VQX6XRJ245D0Q&aid=01M73SEKN44GM76AG6Q95C30FF",
+        "domain": "beachcamera.com",
+        "price": {
+          "price": 1598,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 1442,
+            "unit": "mm"
+          },
+          "width": null,
+          "height": {
+            "number": 37,
+            "unit": "mm"
+          },
+          "weight": {
+            "number": 22.3,
+            "unit": "kg"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/giXSDZ7-ZQQu-S666bu?o=01KR1XNEH1TPQ48NGDY00FHPHT&aid=01M73SEKN44GM76AG6Q95C30FF",
+        "domain": "focuscamera.com",
+        "price": {
+          "price": 2298,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 56.875,
+            "unit": "in"
+          },
+          "height": {
+            "number": 32.75,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 49.2,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "compatible-voice-assistant": [
+        "Google Assistant",
+        "Apple Siri",
+        "Amazon Alexa"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "DTS",
+        "DTS-X"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Internet TV",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "Voice control",
+        "Adjustable viewing angle",
+        "Built-in digital tuner",
+        "Noise reduction",
+        "Parental control",
+        "VESA mounting support",
+        "Motion interpolation technology"
+      ],
+      "pattern": [
+        "Abstract",
+        "Graphic",
+        "Texture"
+      ],
+      "wi-fi-standard": [
+        "802.11n",
+        "802.11ax",
+        "802.11ac"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p",
+        "4096 x 2160",
+        "1024 x 768"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "smart-tv-platform": [
+        "Android TV"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ]
+    },
+    "ratings": {
+      "value": 4.4,
+      "count": 561,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:24.338Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

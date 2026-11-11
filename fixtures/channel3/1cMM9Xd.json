@@ -1,0 +1,252 @@
+{
+  "product": {
+    "id": "1cMM9Xd",
+    "title": "Lg Qned Evo Ai Qned85a 4k Smart Tv",
+    "description": "Experience vivid colors and stunning contrast with the LG QNED evo AI QNED85A 4K Smart TV. This television features MiniLED backlighting for improved contrast and the Alpha 8 AI Processor Gen2 for optimized images and audio. Enjoy a lifelike picture with Dynamic QNED Color and 100% Color Volume, enhanced by HDR10 Pro and Dolby Vision. For gamers, it offers a 120Hz native refresh rate with VRR up to 144Hz, ALLM, and FreeSync. The smart TV platform powered by webOS provides access to a wide range of apps and LG Channels, with AI Concierge offering personalized recommendations. It's compatible with Matter, HomeKit, Google Assistant, and Amazon Alexa, making it a central hub for your smart home.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/97c63d9b-d970-407b-b5ed-4c1e3148303c?aid=01M73SESZJEPM45DJMZBJJ7QHJ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG 75 inch QNED Evo AI 4K Smart TV display showing vibrant colors."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Mini-LED LCD"
+    ],
+    "key_features": [
+      "With Dynamic QNED Color & 100% Color Volume⁸, see vivid color for a lifelike picture",
+      "MiniLED Backlighting with Dimming Pro improves contrast with more precise lighting control",
+      "The Alpha 8 AI Processor Gen2 provides advanced AI for optimized images and audio",
+      "HDR10 Pro delivers a dramatic visual experience",
+      "See it as the Director intended with FILMMAKER MODE™",
+      "Keep up with the action with a 120Hz refresh rate",
+      "Stay in the action with real-time play and virtually no tearing",
+      "LG’s Award-winning Smart TV platform powered by webOS. Get access to apps & view over 350 free LG Channels. Plus get software updates with webOS Re:New⁴",
+      "4K UHD",
+      "webOS 25"
+    ],
+    "colors": [
+      {
+        "hex": "#238a51",
+        "percentage": 0.1709
+      },
+      {
+        "hex": "#14542c",
+        "percentage": 0.1523
+      },
+      {
+        "hex": "#e6d998",
+        "percentage": 0.1494
+      },
+      {
+        "hex": "#111e13",
+        "percentage": 0.1465
+      },
+      {
+        "hex": "#66ba6e",
+        "percentage": 0.1196
+      },
+      {
+        "hex": "#6c1b20",
+        "percentage": 0.1089
+      },
+      {
+        "hex": "#849266",
+        "percentage": 0.0798
+      },
+      {
+        "hex": "#6c5046",
+        "percentage": 0.0727
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/1cMM9Xd-p1PB-S666bu?o=01KYC89ZXWTWZG0B52SPG4C2W0&aid=01M73SESZJEPM45DJMZBJJ7QHJ",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 831.99,
+          "compare_at_price": 1599.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/1cMM9Xd-g0qz-S666bu?o=01KR7HZ1G5ARYH50242WYA1QN4&aid=01M73SESZJEPM45DJMZBJJ7QHJ",
+        "domain": "lg.com",
+        "price": {
+          "price": 1799,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 1.2,
+            "unit": "in"
+          },
+          "width": {
+            "number": 66,
+            "unit": "in"
+          },
+          "height": {
+            "number": 38,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 72.8,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            {
+              "label": "10\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/1a8324e2-343e-4fd9-9ad7-4238115cbd5d",
+              "product_id": "rQEGLGe"
+            },
+            {
+              "label": "65\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/06f8d3c4-06cd-4138-a055-716f6b01b959",
+              "product_id": "drtJ7A4"
+            },
+            {
+              "label": "75\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/97c63d9b-d970-407b-b5ed-4c1e3148303c",
+              "product_id": "1cMM9Xd"
+            },
+            {
+              "label": "86\"",
+              "exists": true,
+              "available": null,
+              "thumbnail_url": "https://cdn.trychannel3.com/3de741db-c5ee-4059-a40e-dabb3828a6e9",
+              "product_id": "o2Dd8II"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        {
+          "name": "Size",
+          "label": "75\""
+        }
+      ]
+    },
+    "structured_attributes": {
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HLG",
+        "Dolby vision",
+        "HDR10+"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Internet TV",
+        "Local dimming",
+        "Quantum dot technology",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control",
+        "Adjustable viewing angle",
+        "Built-in soundbar"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)",
+        "PCM (Pulse Code Modulation)"
+      ],
+      "vesa-mounting-pattern": [
+        "400 x 400 mm"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "1920 x 1080",
+        "1080p"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "display-technology": [
+        "Mini-LED",
+        "QLED",
+        "LED",
+        "OLED"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": {
+      "value": 4.57,
+      "count": 589,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

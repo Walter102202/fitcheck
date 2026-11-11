@@ -1,0 +1,153 @@
+{
+  "product": {
+    "id": "cWeMJ2d",
+    "title": "Nano Titanium High-Speed Rapido 2.0 Hair Dryer",
+    "description": "The BaBylissPRO Nano Titanium High-Speed Rapido 2.0 is a professional-grade, Italian-made ionic hair dryer designed for customized styling. It is 40% lighter and dries up to 50% faster and quieter than other professional dryers. This versatile tool is suitable for all hair types and textures, providing volume, frizz reduction, and curl enhancement. The package includes a drawstring pouch, two snap-in concentrator nozzles with cool-to-the-touch sides, and a diffuser.",
+    "brands": [
+      {
+        "id": "xjWm",
+        "name": "BaBylissPRO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/3e8e76d6-f0fc-44ea-964f-84f70a1da2b5?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer with diffuser and nozzle on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/456be762-1e18-4b4c-9ef2-15fd19a97f1c?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using a black hair dryer to style long hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/58799fcc-f199-4b2f-820c-abd972ad8b97?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/58799fcc-f199-4b2f-820c-abd972ad8b97?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Hair dryer demonstrating lightweight design features."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/66945056-2a96-459c-b276-87ecd0463ddf?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up of hair dryer showing its features and controls."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/48e16e19-0b87-4022-b710-c99a82c8e99f?aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ&mid=TfN6",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Before and after hair styling comparison using hair dryer attachments."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Italian-made ionic dryer",
+      "Dries up to 50% faster and quieter",
+      "40% lighter than other professional dryers",
+      "Includes drawstring pouch",
+      "Includes two snap-in concentrator nozzles",
+      "Includes diffuser",
+      "Customized styling settings",
+      "Suitable for all hair types and textures"
+    ],
+    "colors": [
+      {
+        "hex": "#3f3d41",
+        "percentage": 0.4476
+      },
+      {
+        "hex": "#242224",
+        "percentage": 0.2552
+      },
+      {
+        "hex": "#0a080a",
+        "percentage": 0.2363
+      },
+      {
+        "hex": "#676567",
+        "percentage": 0.0609
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/cWeMJ2d-TfN6-S666bu?o=01M111VNGVGN7XYVR18BE8Y95Q&aid=01M73TC2WJF9FZ0ZXRXHGPWYRZ",
+        "domain": "sephora.com",
+        "price": {
+          "price": 199.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment",
+        "Hair comb"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Curly",
+        "Fine",
+        "Frizzy",
+        "Straight",
+        "Thick"
+      ]
+    },
+    "ratings": {
+      "value": 2,
+      "count": 1,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

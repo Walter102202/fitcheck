@@ -1,0 +1,162 @@
+{
+  "product": {
+    "id": "Qy43Ugv",
+    "title": "M70H 43\" 4K Mini LED Vision AI Smart TV 2026",
+    "description": "The Samsung M70H is a 43-inch 4K Smart TV from the 2026 range, featuring Mini LED technology for enhanced contrast and bright highlights. It is powered by a Mini LED Processor for crisp 4K upscaling and includes Pure Spectrum Colour for accurate tones. The TV features Object Tracking Sound Lite, a slim MetalStream design, and runs on Tizen OS, providing access to a wide array of apps and cloud gaming via the Gaming Hub. It also includes a Vision AI Companion for interactive search results.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d574179c-978b-433f-b1c5-6b34469e8489?aid=01M73SEWB4PC6NHTJKZ5WFR9EJ&mid=B50Y",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/d574179c-978b-433f-b1c5-6b34469e8489?aid=01M73SEWB4PC6NHTJKZ5WFR9EJ&mid=B50Y",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Hero shot of a 43-inch Mini LED 4K Smart TV displaying colorful abstract art."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "metal"
+    ],
+    "key_features": [
+      "Mini LED technology for sharp contrast & bright highlights",
+      "4K Ultra HD resolution (3840 x 2160p)",
+      "Mini LED Processor 4K for content sharpening",
+      "Pure Spectrum Colour for accurate tones",
+      "Object Tracking Sound Lite",
+      "Tizen OS with integrated apps and services",
+      "Gaming Hub for cloud gaming",
+      "Vision AI Companion",
+      "MetalStream slim design",
+      "HDR10+, HDR10, and Hybrid Log-Gamma (HLG) support"
+    ],
+    "colors": [
+      {
+        "hex": "#f6a354",
+        "percentage": 0.1657
+      },
+      {
+        "hex": "#f8da92",
+        "percentage": 0.134
+      },
+      {
+        "hex": "#2c2276",
+        "percentage": 0.1291
+      },
+      {
+        "hex": "#e22b49",
+        "percentage": 0.1235
+      },
+      {
+        "hex": "#f26a66",
+        "percentage": 0.119
+      },
+      {
+        "hex": "#8fc6d6",
+        "percentage": 0.1177
+      },
+      {
+        "hex": "#6e67a0",
+        "percentage": 0.1104
+      },
+      {
+        "hex": "#949cbb",
+        "percentage": 0.1006
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/Qy43Ugv-B50Y-S666bu?o=01M6RT6A0GE843S075K876CT6A&aid=01M73SEWB4PC6NHTJKZ5WFR9EJ",
+        "domain": "selfridges.com",
+        "price": {
+          "price": 365,
+          "compare_at_price": 425,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-technology": [
+        "Mini-LED"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "energy-efficiency-class-sdr": [
+        "F"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Ambient light sensor",
+        "HDR support",
+        "Parental control",
+        "Screen mirroring",
+        "Smart TV",
+        "VESA mounting support",
+        "Voice control",
+        "Suitable for gaming",
+        "Local dimming"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ],
+      "hdr-format": [
+        "HDR10+",
+        "HDR10",
+        "HLG"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "television-shape": [
+        "Flat",
+        "Curved"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "pattern": [
+        "Abstract"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:32:33.305Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

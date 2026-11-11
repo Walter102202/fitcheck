@@ -1,0 +1,223 @@
+{
+  "product": {
+    "id": "ri9pL2g",
+    "title": "LG G6 OLED evo AI Smart 4K TV",
+    "description": "Experience breathtaking visuals with the LG G6 OLED evo AI Smart 4K TV. This 65-inch television boasts LG's latest OLED evo panel for unparalleled brightness, perfect blacks, and a wider color gamut. Powered by the advanced Alpha 11 Gen 3 AI Processor, it intelligently optimizes picture and sound for a truly immersive experience. Gamers will appreciate the ultra-low input lag and support for 4K/120Hz and 4K/165Hz refresh rates, ensuring smooth and responsive gameplay. The G6 also features advanced AI ThinQ for seamless smart home control and content discovery, making it the ultimate centerpiece for your home entertainment.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/b353ce2e-021b-4407-896f-c903ca88fd38?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/b875c83a-2e6a-4928-8aa7-c13bbd8357a9?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo AI Smart 4k TV display with vibrant color patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/0590b594-5665-4206-94f5-7404243ed3fe?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo AI Smart 4k TV display with vibrant color patterns."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1d23dd82-9aa6-4e93-9ff4-dc0c12cc8ee3?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Side view of a black LG OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/533468e9-fc70-443d-bddc-f7ae432480b6?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/533468e9-fc70-443d-bddc-f7ae432480b6?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Rear view of a black LG OLED TV chassis."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e8df89c8-86f9-4167-a1ea-3b18a279c08b?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "cleaned_url": "https://cdn.trychannel3.com/d995f442-8567-48c0-b53e-d3bba980959f?aid=01M73S7DQK02TNSAED29K3KXHM&mid=Fn95",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Bottom view of the LG OLED TV chassis with ports and branding."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "LG's \"four-stack\" RGB OLED panel for an incredibly bright, high-contrast image with rich color fidelity",
+      "Smooth, lag-free gaming: 4K/120Hz and 4K/165Hz support plus built-in cloud gaming",
+      "Does not come with a stand (flush-mount bracket included)",
+      "Alpha 11 Gen 3 AI Processor 4K with AI Picture Pro improves noise reduction, sharpness, contrast, and color accuracy",
+      "High Dynamic Range (Dolby Vision, HDR10, and HLG) for extended picture contrast and brightness when viewing HDR content",
+      "LG ThinQ® AI makes your TV the hub for all your smart devices",
+      "Stream 4K video sources like Netflix®, Amazon Prime Video, and Disney+",
+      "Game Optimizer gives you quick access to your gaming settings",
+      "4 HDMI 2.1 inputs",
+      "Built-in down-firing 4.2-channel speaker system with AI-powered virtual surround sound"
+    ],
+    "colors": [
+      {
+        "hex": "#12033c",
+        "percentage": 0.1791
+      },
+      {
+        "hex": "#7b0584",
+        "percentage": 0.1641
+      },
+      {
+        "hex": "#d52c81",
+        "percentage": 0.1539
+      },
+      {
+        "hex": "#b7077f",
+        "percentage": 0.1431
+      },
+      {
+        "hex": "#43035c",
+        "percentage": 0.1171
+      },
+      {
+        "hex": "#adc951",
+        "percentage": 0.1128
+      },
+      {
+        "hex": "#b36978",
+        "percentage": 0.0759
+      },
+      {
+        "hex": "#6a256c",
+        "percentage": 0.0541
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/ri9pL2g-Fn95-S666bu?o=01M6MNE6895E93XFTQRVF521YF&aid=01M73S7DQK02TNSAED29K3KXHM",
+        "domain": "crutchfield.com",
+        "price": {
+          "price": 1999.99,
+          "compare_at_price": 3399.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 56.75,
+            "unit": "in"
+          },
+          "height": {
+            "number": 32.5,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 48.5,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "compatible-voice-assistant": [
+        "Google Assistant",
+        "Apple Siri"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "contrast-ratio-typical": [
+        "100000000:1"
+      ],
+      "display-resolution": [
+        "4096 x 2160",
+        "4K ultra HD"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Ambient light sensor",
+        "Built-in digital tuner",
+        "HDR support",
+        "Internet TV",
+        "Noise reduction",
+        "Parental control",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "display-technology": [
+        "OLED",
+        "LED"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "pattern": [
+        "Abstract",
+        "Swirl"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "Dolby digital (AC-3)",
+        "Dolby Digital Plus (E-AC-3)",
+        "DTS",
+        "DTS-X",
+        "LPCM (Linear Pulse Code Modulation)",
+        "PCM (Pulse Code Modulation)"
+      ]
+    },
+    "ratings": {
+      "value": 5,
+      "count": 5,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

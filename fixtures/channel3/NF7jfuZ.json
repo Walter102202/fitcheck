@@ -1,0 +1,152 @@
+{
+  "product": {
+    "id": "NF7jfuZ",
+    "title": "65 Inch 4K OLED Smart TV with a Recessed Ultra-Low Profile Full-Motion Mount",
+    "description": "This bundle includes the Samsung QN65S90FAFXZA 65-inch 4K OLED Smart TV and the Kanto R500 Recessed Ultra-Low Profile Full-Motion Mount, offering a premium viewing experience with advanced picture technology and a sleek, space-saving installation. The TV features a NQ4 AI Gen3 Processor for upscaled 4K resolution, 120Hz refresh rate, and enhanced contrast, while the mount allows for a clean, flush look with adjustable viewing angles and extended arm reach. Also included is an Amber Protection HDTV Screen Cleaner for maintaining your display.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/8b5bd1f4-55f2-45e8-84fb-8dd6ff4f03ba?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/8b5bd1f4-55f2-45e8-84fb-8dd6ff4f03ba?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Close-up of a Samsung 65-inch OLED TV displaying blue abstract waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/70b39238-bd2b-451c-b6b7-9cfad4d5cb9d?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Close-up of a Samsung 65-inch OLED TV displaying blue abstract waves."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ef4bbc37-fb04-48cb-9492-d40f651e3243?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Dimensions and specs for a 48-inch Samsung S90F OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/bfad9cb3-7383-459b-94f8-7f3c4e01dd48?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/29f07a1f-741d-466f-b639-a5748b0c9c13?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up of the Samsung QN4 AI Gen3 Processor chip on the TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ed6cdb65-27fc-4d59-bfbd-6d4e1228b798?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ed6cdb65-27fc-4d59-bfbd-6d4e1228b798?aid=01M73RZSS74ZDPB4H54PXZ829X&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Wall-mounted TV with a Samsung bracket and a wall insert panel."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [],
+    "colors": [
+      {
+        "hex": "#3b3b3b",
+        "percentage": 0.5439
+      },
+      {
+        "hex": "#535353",
+        "percentage": 0.138
+      },
+      {
+        "hex": "#252525",
+        "percentage": 0.1105
+      },
+      {
+        "hex": "#0e0e0e",
+        "percentage": 0.11
+      },
+      {
+        "hex": "#848484",
+        "percentage": 0.0977
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/NF7jfuZ-LPzf-S666bu?o=01KBP7R64W1RNYFJAS4X046PCT&aid=01M73RZSS74ZDPB4H54PXZ829X",
+        "domain": "newegg.com",
+        "price": {
+          "price": 1664.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "audio-technology": [
+        "Dolby atmos",
+        "DTS-HD High Resolution Audio"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm",
+        "400 x 400 mm",
+        "600 x 400 mm"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "hdr-format": [
+        "HDR10"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "VESA mounting support",
+        "Smart TV",
+        "HDR support"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:24:19.176Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

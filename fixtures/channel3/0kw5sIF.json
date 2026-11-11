@@ -1,0 +1,185 @@
+{
+  "product": {
+    "id": "0kw5sIF",
+    "title": "Falco Dryer",
+    "description": "The BaBylissPRO Nano Titanium Professional Italian High-Speed Falco Hair Dryer is a powerful 2000-watt styling tool designed for professional results. It features a high-speed digital motor for quiet yet efficient performance, ionic technology to reduce frizz, and an LED display for precise control over speed and temperature. The dryer includes a memory function for preferred settings, a cold shot button to lock in styles, and an ergonomic design to minimize hand fatigue. It comes with four versatile attachments and a removable magnetic rear filter for easy maintenance.",
+    "brands": [
+      {
+        "id": "xjWm",
+        "name": "BaBylissPRO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/8fd7d4c5-ea23-47ee-8571-38b4ab4fcf98?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/8fd7d4c5-ea23-47ee-8571-38b4ab4fcf98?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black BaBylissPRO Falco hair dryer with nozzle on a gray background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/ee36243e-6450-4355-8d69-85b4dfff1c05?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black BaBylissPRO Falco hair dryer with nozzle on a gray background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/692588f8-d2ec-437e-82dd-0f5b4e2ec1af?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/692588f8-d2ec-437e-82dd-0f5b4e2ec1af?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black BaBylissPRO Falco hair dryer with nozzle on a gray background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/db029e0d-e5e4-4cbb-9357-078c3a5a5d36?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Black hair dryer with multiple attachments and accessories."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/782d9ec5-195c-4de3-8667-18d2fb65c6ea?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/782d9ec5-195c-4de3-8667-18d2fb65c6ea?aid=01M73S7SJE4JDM2MAZV280VW11&mid=asdf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Infographic detailing features of the BaBylissPRO Nano Titanium dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [
+      "Titanium"
+    ],
+    "key_features": [
+      "Innovative design keeps barrel cool for comfort & versatility",
+      "High-speed digital motor engineered for quiet performance",
+      "Removable rear magnetic filter for easy cleaning (replacement included)",
+      "Cold shot button locks in styles",
+      "LED display for precise speed and temperature control",
+      "4 heat/3 speed LED settings",
+      "Memory function to remember your styling preference",
+      "Ergonomic design reduces hand fatigue",
+      "4 Attachments for versatile styling",
+      "Straightening comb compatible with small concentrator nozzle"
+    ],
+    "colors": [
+      {
+        "hex": "#0d0d0d",
+        "percentage": 0.3621
+      },
+      {
+        "hex": "#3b3b3b",
+        "percentage": 0.2627
+      },
+      {
+        "hex": "#545454",
+        "percentage": 0.1359
+      },
+      {
+        "hex": "#727172",
+        "percentage": 0.1252
+      },
+      {
+        "hex": "#a0a1a0",
+        "percentage": 0.1141
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/0kw5sIF-asdf-S666bu?o=01M4Z2AA8VEMD3WBKKH24FPEGQ&aid=01M73S7SJE4JDM2MAZV280VW11",
+        "domain": "nordstrom.com",
+        "price": {
+          "price": 249.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/0kw5sIF-duOP-S666bu?o=01M0SV9DJP13Q3AACQ6CPGQMFF&aid=01M73S7SJE4JDM2MAZV280VW11",
+        "domain": "babylisspro.com",
+        "price": {
+          "price": 249.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-styling-items-included": [
+        "Hair brush",
+        "Concentrator nozzle",
+        "Diffuser attachment",
+        "Hair comb"
+      ],
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function",
+        "Concentrator nozzle",
+        "Diffuser nozzle"
+      ],
+      "hair-dryer-motor-type": [
+        "Digital motor"
+      ],
+      "conditioner-effect": [
+        "Detangling"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "application-type": [
+        "Overnight treatment"
+      ],
+      "battery-size": [
+        "Built-in battery"
+      ]
+    },
+    "ratings": {
+      "value": 3.6,
+      "count": 20,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

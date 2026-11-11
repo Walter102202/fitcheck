@@ -1,0 +1,170 @@
+{
+  "product": {
+    "id": "LAFlS99",
+    "title": "S84F OLED Series 4K Vision AI Smart TV",
+    "description": "The Samsung S84F OLED Series is a 55-inch 4K Smart TV featuring Vision AI for enhanced picture and sound. It utilizes an NQ4 AI Gen2 Processor to upscale content to 4K resolution and offers OLED HDR for deep blacks and vibrant contrast. Key gaming features include a 120Hz refresh rate with Motion Xcelerator, AMD FreeSync Premium, and a dedicated Gaming Hub. The TV also supports Dolby Atmos and Object Tracking Sound Lite for an immersive audio experience. This bundle from Costco includes an Allstate 3-Year Protection Plan for a total of 5 years of coverage.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/d3ea78cf-052b-4142-8ac4-731e66d18a34?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "product_information",
+        "alt_text": "Energy guide information for Samsung QN55S84FAF TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/67da91d0-4a78-4cb0-9853-13a4832251f3?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV screen with vibrant purple and blue wave pattern."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/aceb9cf3-60f5-4921-8536-41dbd6c12c88?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Samsung OLED TV screen with vibrant purple and blue wave pattern."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/911442dd-74cd-41f7-9259-2f8e8c45eba8?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "cleaned_url": "https://cdn.trychannel3.com/e327f32b-8a7d-4572-8a40-187fbec6adf1?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Profile view of a thin bezel Samsung OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5ca4f901-c7bd-4fda-87b8-485d8ee8cf8c?aid=01M73S7D8ZEEGCD7T7RJ89GXH7&mid=ZO25",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Back panel ports and connections of a Samsung TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "NQ4 AI Gen2 Processor for 4K AI Upscaling",
+      "OLED HDR for enhanced brightness and contrast",
+      "Motion Xcelerator 120Hz for smooth gaming and sports",
+      "Dolby Atmos and Object Tracking Sound Lite",
+      "Gaming Hub for console-free gaming",
+      "Pantone Validated color accuracy",
+      "Tizen Smart TV platform",
+      "SolarCell Remote"
+    ],
+    "colors": [],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/LAFlS99-ZO25-S666bu?o=01M49WGNJYTRQQ8YYRVG6XA0R1&aid=01M73S7D8ZEEGCD7T7RJ89GXH7",
+        "domain": "costco.com",
+        "price": {
+          "price": 799.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 48.2,
+            "unit": "in"
+          },
+          "width": {
+            "number": 9.3,
+            "unit": "in"
+          },
+          "height": {
+            "number": 30.1,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 27.8,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "tuner-type": [
+        "ATSC",
+        "QAM"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "vesa-mounting-pattern": [
+        "200 x 200 mm"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "display-resolution": [
+        "4K ultra HD",
+        "2160p"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ]
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 2,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

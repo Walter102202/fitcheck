@@ -1,0 +1,169 @@
+{
+  "product": {
+    "id": "ct1Pygj",
+    "title": "Flight+ Travel Hair Dryer",
+    "description": "The ghd Flight+ Travel Hair Dryer is a powerful, premium, and portable hair tool designed for travel. Weighing less than 1lb, it features a foldable handle for easy packing and a compact motor that delivers 77% of the power of a full-size dryer. It comes with 2 speed and temperature settings, a removable nozzle, and an exclusive luxurious travel protective case.",
+    "brands": [
+      {
+        "id": "YcYn",
+        "name": "ghd"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/9ad7c2cb-1a96-460a-8f72-255bf4ec6447?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/9ad7c2cb-1a96-460a-8f72-255bf4ec6447?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black flight+ travel hair dryer shown from the side."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/66506a84-7afc-4f17-b020-bfd2306b1e34?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the hair dryer nozzle with round discs."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/e1b52441-7bc2-4da6-a7fa-24026ee55b50?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Black hair dryer next to a black travel bag."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5f82fa05-e6b8-46b2-af58-92004948311f?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Hair dryer with airline and class notations."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1288fcb5-3b23-4622-a3ee-1f1342361b58?aid=01M73TC38MVHX413TR5RN9CGM8&mid=7DeM",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using hair dryer on an airplane."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "2 speed & temperature settings",
+      "Removable nozzle",
+      "Dual-voltage (240V and 120V)",
+      "Foldable handle",
+      "Safeguard technology to prevent overheating",
+      "Compact powerful motor with 77% of the power of a full size hair dryer",
+      "Includes exclusive luxurious travel protective case"
+    ],
+    "colors": [
+      {
+        "hex": "#343234",
+        "percentage": 0.5276
+      },
+      {
+        "hex": "#171617",
+        "percentage": 0.2238
+      },
+      {
+        "hex": "#4b4a4c",
+        "percentage": 0.1627
+      },
+      {
+        "hex": "#908f8f",
+        "percentage": 0.0859
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/ct1Pygj-7DeM-S666bu?o=01M13ZBZZAM848WCJ5P8NYS4PM&aid=01M73TC38MVHX413TR5RN9CGM8",
+        "domain": "fwrd.com",
+        "price": {
+          "price": 129,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 1,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/ct1Pygj-KIdG-S666bu?o=01M5Z4MARGKAASKKV6HJDJC9WZ&aid=01M73TC38MVHX413TR5RN9CGM8",
+        "domain": "goop.com",
+        "price": {
+          "price": 51.6,
+          "compare_at_price": 129,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Adjustable thermostat",
+        "Travel size"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Variable",
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "Frizzy"
+      ],
+      "pattern": [
+        "Solid"
+      ]
+    },
+    "ratings": {
+      "value": 4.33,
+      "count": 6,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,180 @@
+{
+  "product": {
+    "id": "XqarMNE",
+    "title": "LG OLED55G66LS (2026) OLED evo HDR 4K Ultra HD Smart AI TV, 55 inch",
+    "description": "The LG OLED55G66LS (2026) is a 55-inch 4K Ultra HD Smart AI TV featuring OLED evo technology for exceptional picture quality with deep blacks and vibrant colors. Powered by the α11 AI Processor 4K Gen3 and Brightness Booster Pro, it delivers enhanced brightness and cinematic realism. The TV is equipped with Dolby Vision HDR and Dolby Atmos for an immersive audio-visual experience. Designed for gamers, it supports 4K@165Hz, VRR, ALLM, and has a 0.1ms response time. It runs on the webOS smart platform and features a slim design in Satin Silver, including a tabletop stand.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ab98943c-0cc9-48be-aafa-d52a87e77dde?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ab98943c-0cc9-48be-aafa-d52a87e77dde?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG OLED evo AI TV displaying colorful abstract waves on a black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6e4a2598-3ab4-45ac-8af1-50071a9b0f5e?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing key features of the LG TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/b0da48ec-da56-4041-a261-f8cdc4960230?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "size_chart",
+        "alt_text": "Diagram showing the dimensions of the 55-inch LG TV and stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4f32afe1-0672-46d7-8441-82eef5929dc8?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Specification of the backports and connectivity options on the TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a2cdff84-3463-4b83-b540-a5b9f6814d26?aid=01M73S7D9CAX2HC2Y4WY6XRDB0&mid=B50Y",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Close-up of a black cat demonstrating perfect black display."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Α11 AI Processor 4K Gen3",
+      "Brightness Booster Pro technology",
+      "4K OLED Screen with Dolby Vision HDR",
+      "Dolby Atmos 3D surround sound",
+      "Reflection Free premium anti-reflection technology",
+      "WebOS smart platform with AI Chatbot and Voice ID",
+      "Gaming features: 4K@165Hz, VRR, ALLM, and 0.1ms response time",
+      "LG Gallery+ for digital artwork"
+    ],
+    "colors": [
+      {
+        "hex": "#b11d91",
+        "percentage": 0.2978
+      },
+      {
+        "hex": "#1d0414",
+        "percentage": 0.2052
+      },
+      {
+        "hex": "#60046f",
+        "percentage": 0.1285
+      },
+      {
+        "hex": "#a7bf57",
+        "percentage": 0.1083
+      },
+      {
+        "hex": "#220357",
+        "percentage": 0.1056
+      },
+      {
+        "hex": "#452246",
+        "percentage": 0.0978
+      },
+      {
+        "hex": "#9d6074",
+        "percentage": 0.0569
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/XqarMNE-B50Y-S666bu?o=01M6QYHC6RT5W2FC3VYN4MCJ71&aid=01M73S7D9CAX2HC2Y4WY6XRDB0",
+        "domain": "selfridges.com",
+        "price": {
+          "price": 2175,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "Smart TV",
+        "HDR support",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "energy-efficiency-class-sdr": [
+        "E"
+      ],
+      "vesa-mounting-pattern": [
+        "100 x 200 mm"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HLG"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ]
+    },
+    "ratings": {
+      "value": 4.7,
+      "count": 1322,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

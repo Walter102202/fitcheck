@@ -1,0 +1,146 @@
+{
+  "product": {
+    "id": "kqElcJP",
+    "title": "Ceramix Xtreme Hair Dryer",
+    "description": "The BaBylissPRO Ceramix Xtreme Hair Dryer is a professional-grade tool featuring a powerful 2000-watt motor and ceramic technology. This technology generates extra-gentle, even, far-infrared heat to protect hair from damage while ensuring efficient drying. Designed for performance, it is lightweight and includes two temperature settings, a cool shot button, and a removable rear filter. The dryer comes with a concentrator nozzle for precision styling.",
+    "brands": [
+      {
+        "id": "xjWm",
+        "name": "BaBylissPRO"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/97d1e0ed-ddf9-491b-9b52-58281fee77c5?aid=01M73S7SJD4JDM2MAZV280VW10&mid=MMoD",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black BabylissPRO Ceramix Extreme Dryer on white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/dad3a8ea-0cbf-4277-b41c-1803d1129dd1?aid=01M73S7SJD4JDM2MAZV280VW10&mid=MMoD",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black BabylissPRO Ceramix Extreme Dryer on white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/82879482-e016-4529-a9db-70e1dbf1dbce?aid=01M73S7SJD4JDM2MAZV280VW10&mid=MMoD",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/82879482-e016-4529-a9db-70e1dbf1dbce?aid=01M73S7SJD4JDM2MAZV280VW10&mid=MMoD",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black BabylissPRO Ceramix Extreme Dryer on white background."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "ceramic"
+    ],
+    "key_features": [
+      "2000-watt powerful motor",
+      "Ceramic technology for gentle, even far-infrared heat",
+      "Adjustable heat and speed controls",
+      "Professional grade design",
+      "Professional lightweight motor",
+      "2 temperature settings",
+      "Cool shot button",
+      "Includes concentrator nozzle",
+      "Removable rear filter"
+    ],
+    "colors": [
+      {
+        "hex": "#36353a",
+        "percentage": 0.9115
+      },
+      {
+        "hex": "#868689",
+        "percentage": 0.0885
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/kqElcJP-MMoD-S666bu?o=01M36B1AETM3TZ5NESA2EF4XXR&aid=01M73S7SJD4JDM2MAZV280VW10",
+        "domain": "fragrancenet.com",
+        "price": {
+          "price": 111.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/kqElcJP-bEzo-S666bu?o=01M2BW4BR17BSPZFSKEBRZE2F9&aid=01M73S7SJD4JDM2MAZV280VW10",
+        "domain": "hbbeautybar.com",
+        "price": {
+          "price": 69.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 1814,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

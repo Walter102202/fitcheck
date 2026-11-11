@@ -1,0 +1,178 @@
+{
+  "product": {
+    "id": "rouNkGk",
+    "title": "Westinghouse 55-inch 4K UHD QLED Roku Smart TV",
+    "description": "The Westinghouse 55-inch 4K UHD QLED Roku Smart TV offers stunning visual clarity with Quantum Dot technology for vibrant colors and enhanced contrast. It supports Dolby Vision and HDR10+ for cinematic detail with deep blacks and bright highlights. Integrated with Roku, it provides access to thousands of apps and over 350 free live channels. The TV features a sleek, edgeless bezel design and supports smart home integration with Apple AirPlay, HomeKit, Alexa, and Google Assistant.",
+    "brands": [
+      {
+        "id": "N0QP",
+        "name": "Westinghouse"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/46e9ca70-4cc8-41e5-80e7-f5e78b73e7bf?aid=01M73S7CKSHT9AXXRGRYJJH9MQ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "QLED display showing vibrant colors and a colorful hot air balloon."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/36f0d3ee-04f9-447d-9a0e-86769b5c11e6?aid=01M73S7CKSHT9AXXRGRYJJH9MQ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Westinghouse TV displaying a scenic landscape with edge-less design."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/041cec5b-b862-4aee-86fc-94866d301d50?aid=01M73S7CKSHT9AXXRGRYJJH9MQ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Smartphone controlling Westinghouse Roku TV via mobile app."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/5879a3a7-291c-431d-8cac-4a849a6cb9f4?aid=01M73S7CKSHT9AXXRGRYJJH9MQ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman enjoying streaming entertainment with a mobile device."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9e20e7cc-72b5-40c0-ad35-47f780475e52?aid=01M73S7CKSHT9AXXRGRYJJH9MQ&mid=p1PB",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic comparing HDR10, Dolby Vision, and SDR features."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "4K UHD resolution with QLED Quantum Color",
+      "Supports Dolby Vision and HDR10+",
+      "Integrated Roku Smart TV platform with 350+ free live channels",
+      "Full View Edgeless Design",
+      "Compatible with Apple AirPlay, HomeKit, Alexa, and Google Assistant",
+      "Includes Roku Voice Remote"
+    ],
+    "colors": [
+      {
+        "hex": "#d49e13",
+        "percentage": 0.3051
+      },
+      {
+        "hex": "#ab7a0c",
+        "percentage": 0.1796
+      },
+      {
+        "hex": "#2d2417",
+        "percentage": 0.1242
+      },
+      {
+        "hex": "#614c1b",
+        "percentage": 0.1179
+      },
+      {
+        "hex": "#716c44",
+        "percentage": 0.1064
+      },
+      {
+        "hex": "#ebb92a",
+        "percentage": 0.0982
+      },
+      {
+        "hex": "#b2932b",
+        "percentage": 0.0687
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/rouNkGk-p1PB-S666bu?o=01M3YZ2G5DTD45EB5ZA2DNKQQQ&aid=01M73S7CKSHT9AXXRGRYJJH9MQ",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 379.99,
+          "compare_at_price": 399.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 48.3,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.5,
+            "unit": "in"
+          },
+          "height": {
+            "number": 28,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Quantum dot technology",
+        "Screen mirroring",
+        "Smart TV",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "display-resolution": [
+        "2160p"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Google Assistant"
+      ],
+      "display-technology": [
+        "QLED"
+      ],
+      "hdr-format": [
+        "Dolby vision",
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

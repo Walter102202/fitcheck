@@ -1,0 +1,122 @@
+{
+  "product": {
+    "id": "D3zo5Gp",
+    "title": "Travel Pro Hair Dryer",
+    "description": "The Bellami Travel Pro Hair Dryer is a compact yet powerful styling tool designed for professional results on the go. Featuring a high-speed brushless motor with 110,000 rotations per minute, it significantly reduces drying time to prevent heat damage. Integrated ionic technology infuses the hair with negative ions to minimize frizz and create a sleeker, shinier finish. This ultra-lightweight dryer folds at the handle for easy portability, making it an ideal companion for vacations or professional appointments.",
+    "brands": [
+      {
+        "id": "DlaU",
+        "name": "Bellamihair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/2846ecbc-dd3b-4aeb-852c-6ad9913b4fe8?aid=01M73TC3HR7H9WRQQFNPGH8F9X&mid=OwnD",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/2846ecbc-dd3b-4aeb-852c-6ad9913b4fe8?aid=01M73TC3HR7H9WRQQFNPGH8F9X&mid=OwnD",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black Bellami hair dryer with detachable nozzles shown separately."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c0eeae6c-6598-4499-9cfd-6d7d38e61123?aid=01M73TC3HR7H9WRQQFNPGH8F9X&mid=OwnD",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c0eeae6c-6598-4499-9cfd-6d7d38e61123?aid=01M73TC3HR7H9WRQQFNPGH8F9X&mid=OwnD",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black Bellami travel hair dryer in a close-up view."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "High-speed brushless motor with 110,000 rotations per minute",
+      "Ionic technology to reduce frizz and add shine",
+      "Ultra-lightweight and compact design",
+      "Foldable handle for easy travel and storage",
+      "Professional-grade drying performance"
+    ],
+    "colors": [
+      {
+        "hex": "#333334",
+        "percentage": 0.4075
+      },
+      {
+        "hex": "#1b1a1c",
+        "percentage": 0.2274
+      },
+      {
+        "hex": "#716c68",
+        "percentage": 0.1406
+      },
+      {
+        "hex": "#4f4a47",
+        "percentage": 0.1142
+      },
+      {
+        "hex": "#b1ada9",
+        "percentage": 0.1103
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/D3zo5Gp-OwnD-S666bu?o=01M25WHR7G1C74WMWBWWA49BVW&aid=01M73TC3HR7H9WRQQFNPGH8F9X",
+        "domain": "bellamihair.com",
+        "price": {
+          "price": 118.99,
+          "compare_at_price": 169.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "suitable-for-hair-type": [
+        "Frizzy"
+      ],
+      "hair-dryer-motor-type": [
+        "Brushless DC motor (BLDC)"
+      ],
+      "hair-styling-tool-features": [
+        "Ionic function",
+        "Travel size"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

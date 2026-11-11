@@ -1,0 +1,164 @@
+{
+  "product": {
+    "id": "EktPbLz",
+    "title": "Foldable Dual-Power Mini Travel Dryer",
+    "description": "This portable hair dryer is designed for travelers who want to maintain their style on the go. It features dual voltage for use anywhere in the world, along with two speed and two heat settings to customize your drying experience. The anti-frizz technology helps to enhance shine, while the foldable design and lightweight construction make it easy to pack and carry.",
+    "brands": [
+      {
+        "id": "lSQk",
+        "name": "Brocchi"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/5fe7f288-25f5-4c7f-a9db-e42008ecc10e?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/5fe7f288-25f5-4c7f-a9db-e42008ecc10e?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black handheld mini travel dryer on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2c5ffebb-b644-408a-a02f-c6e497b23e98?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Hand holding a black handheld mini travel dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2ca5de37-a258-445c-8bcd-ee0b0b244db1?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Box packaging for the foldable mini blow dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4259bf5f-8edd-4b2c-b3b9-ea97bdec1cf1?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/4259bf5f-8edd-4b2c-b3b9-ea97bdec1cf1?aid=01M73TC3224PP9SNCVPXJSMRHS&mid=cvfe",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black handheld mini travel dryer from the side view."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": "female",
+    "age": "adult",
+    "materials": [
+      "Plastic"
+    ],
+    "key_features": [
+      "2 Speed Settings",
+      "2 Heat Settings",
+      "Anti-Frizz Technology",
+      "Dual Voltage Design",
+      "Lightweight",
+      "Foldable",
+      "Dual-power",
+      "Mini",
+      "125-250V International Dryer",
+      "Ionic & Ceramic Technology"
+    ],
+    "colors": [
+      {
+        "hex": "#3a383b",
+        "percentage": 0.5219
+      },
+      {
+        "hex": "#171618",
+        "percentage": 0.2391
+      },
+      {
+        "hex": "#555456",
+        "percentage": 0.1575
+      },
+      {
+        "hex": "#919192",
+        "percentage": 0.0815
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/EktPbLz-cvfe-S666bu?o=01KVYRP6FV3XZCRB95HMRFRYT2&aid=01M73TC3224PP9SNCVPXJSMRHS",
+        "domain": "nordstromrack.com",
+        "price": {
+          "price": 26.97,
+          "compare_at_price": 39.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      },
+      {
+        "url": "https://buy.trychannel3.com/EktPbLz-djzF-S666bu?o=01KR2AT3NBRXD1K2M4KGMA0AFX&aid=01M73TC3224PP9SNCVPXJSMRHS",
+        "domain": "ecosmetics.com",
+        "price": {
+          "price": 72.08,
+          "compare_at_price": 199.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "application-type": [
+        "Leave-in"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "heat-settings": [
+        "High",
+        "Low"
+      ],
+      "hair-styling-tool-features": [
+        "Auto power-off",
+        "Ceramic heating system",
+        "Ionic function",
+        "Travel size"
+      ],
+      "conditioner-effect": [
+        "Anti-frizz"
+      ]
+    },
+    "ratings": {
+      "value": 3.7,
+      "count": 3,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

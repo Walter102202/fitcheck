@@ -1,0 +1,154 @@
+{
+  "product": {
+    "id": "atc4QJi",
+    "title": "C6 Oled Evo Ai 4k Smart Tv 2026 55\"",
+    "description": "The LG C6 OLED evo AI 4K Smart TV (2026 model) features a 55-inch display designed to bring flagship OLED picture quality into the home. It is powered by the Alpha 11 AI Processor Gen3 and includes a Brightness Booster for clear, accurate images in various lighting conditions. To ensure a cinematic experience, the TV supports Dolby Vision, Dolby Atmos, and FILMMAKER MODE.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ac057b29-b808-4cff-8a5e-d0a6f4c5ac7c?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/ac057b29-b808-4cff-8a5e-d0a6f4c5ac7c?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG C6 OLED evo AI 4k Smart TV displaying vibrant color swirls."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f1bedc84-0707-4d26-8018-35cba63a64b9?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/f1bedc84-0707-4d26-8018-35cba63a64b9?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of a black LG OLED TV."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/6aea3f78-b23d-477e-8f8f-d0afda402609?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/6aea3f78-b23d-477e-8f8f-d0afda402609?aid=01M73SEQ3Y10ES2QN14WZGYQ13&mid=4t3X",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Side and bottom detail of a black LG OLED TV."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Alpha 11 AI Processor Gen3",
+      "Brightness Booster",
+      "Dolby Vision",
+      "Dolby Atmos",
+      "FILMMAKER MODE",
+      "4K Resolution"
+    ],
+    "colors": [
+      {
+        "hex": "#030204",
+        "percentage": 0.3828
+      },
+      {
+        "hex": "#333b6e",
+        "percentage": 0.2029
+      },
+      {
+        "hex": "#d8c953",
+        "percentage": 0.1482
+      },
+      {
+        "hex": "#ac4675",
+        "percentage": 0.1438
+      },
+      {
+        "hex": "#601657",
+        "percentage": 0.0664
+      },
+      {
+        "hex": "#928769",
+        "percentage": 0.0559
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/atc4QJi-4t3X-S666bu?o=01M5EA6CCC6230HYAXFXJZ38B2&aid=01M73SEQ3Y10ES2QN14WZGYQ13",
+        "domain": "cityhome.com",
+        "price": {
+          "price": 999.99,
+          "compare_at_price": 1699.99,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 7.4,
+            "unit": "in"
+          },
+          "width": {
+            "number": 53.5,
+            "unit": "in"
+          },
+          "height": {
+            "number": 31.9,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Smart TV"
+      ],
+      "hdr-format": [
+        "Dolby vision"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ]
+    },
+    "ratings": {
+      "value": 4.75,
+      "count": 816,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:27.782Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

@@ -1,0 +1,125 @@
+{
+  "product": {
+    "id": "2LoqzC8",
+    "title": "Freego Hair Dryer (Travel-friendly)",
+    "description": "The JMW Freego Hair Dryer is a professional-grade, travel-friendly hair dryer featuring a powerful BLDC motor and true dual voltage (100V-240V) for global use. It is designed to significantly reduce drying time with strong airflow and utilizes advanced ceramic technology to release negative ions, reducing frizz and static. The dryer includes an anti-scald dual layer cool nozzle for safety and a compact twist-fold design for easy transport.",
+    "brands": [
+      {
+        "id": "BHWN",
+        "name": "JMW"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/c836cc41-8a50-4ff3-bc0b-eb89aed8f352?aid=01M73TC3M8W3VKXQF6QJ698KX0&mid=Qcap",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/c836cc41-8a50-4ff3-bc0b-eb89aed8f352?aid=01M73TC3M8W3VKXQF6QJ698KX0&mid=Qcap",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "White Freego hair dryer with purple accent on the nozzle."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "ceramic"
+    ],
+    "key_features": [
+      "True dual voltage (100V-240V)",
+      "Powerful BLDC motor",
+      "Negative ion ceramic technology",
+      "Anti-scald dual layer cool nozzle",
+      "Compact twist-fold design"
+    ],
+    "colors": [
+      {
+        "hex": "#c9c0c3",
+        "percentage": 0.267
+      },
+      {
+        "hex": "#251d1f",
+        "percentage": 0.2669
+      },
+      {
+        "hex": "#be9fbe",
+        "percentage": 0.2507
+      },
+      {
+        "hex": "#543625",
+        "percentage": 0.1263
+      },
+      {
+        "hex": "#7d523f",
+        "percentage": 0.0891
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/2LoqzC8-Qcap-S666bu?o=01M2PPX9V6GT0TGASJN2MCDYQZ&aid=01M73TC3M8W3VKXQF6QJ698KX0",
+        "domain": "stylekorean.com",
+        "price": {
+          "price": 151.2,
+          "compare_at_price": 168,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 560,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "hair-dryer-motor-type": [
+        "Brushless DC motor (BLDC)"
+      ],
+      "hair-styling-tool-features": [
+        "Ionic function",
+        "Travel size"
+      ],
+      "material": [
+        "Ceramic"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

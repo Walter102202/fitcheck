@@ -1,0 +1,169 @@
+{
+  "product": {
+    "id": "9l1FFSE",
+    "title": "Supersonic Hair Dryer",
+    "description": "The Dyson Supersonic hair dryer is a high-velocity styling tool designed for fast drying without extreme heat damage. It features a motor located in the handle for better balance and reduced arm fatigue, along with a temperature gauge that monitors heat levels 20 times per second. This model comes in a White/Silver finish and includes various magnetic attachments, including a smoothing nozzle, styling concentrator, and a diffuser to suit different hair types and styles.",
+    "brands": [
+      {
+        "id": "uMKS",
+        "name": "Dyson"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/4d19ed3a-0c37-44b1-9653-37cc84345039?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/cfa6e145-6a75-49ed-9e29-43907db27786?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "is_main_image": true,
+        "shot_type": "detail",
+        "alt_text": "Diagram showing three hairdryer airflow settings."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/30e66648-48b3-41e5-bc10-ae8c800df239?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/af903092-9114-4730-8d1c-1d431d5ba3ee?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the hairdryer motor and airflow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c5904592-b897-445c-a029-a28ebcaf17e3?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/4ab36342-c76e-44f7-92e5-0f7060a66265?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the hairdryer nozzle and airflow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/18069e20-6bd2-426c-82ac-162500b798a9?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/87f27c4f-ae84-4d68-a2a2-37212c66f19b?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up of the hairdryer motor and airflow."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2381ac70-e1ec-4efe-9f59-b2c2499e11d2?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "cleaned_url": "https://cdn.trychannel3.com/d669035e-7cb0-4e55-95d4-d3a24635628e?aid=01M73S7S4TFA4XGWGWTRSHJC1W&mid=p1PB",
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Woman with curly hair using a pink hairdryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Helps prevent extreme heat damage by measuring air temperature over 40 times per second",
+      "High-velocity airflow for fast drying",
+      "Magnetic attachments for quick and easy adjustments",
+      "Includes smoothing nozzle, styling concentrator, and diffuser",
+      "Motor located in the handle for improved balance and ergonomics",
+      "Acoustically tuned motor to reduce audible noise",
+      "3 precise speed settings"
+    ],
+    "colors": [
+      {
+        "hex": "#f7d6e5",
+        "percentage": 0.5238
+      },
+      {
+        "hex": "#3f3d41",
+        "percentage": 0.129
+      },
+      {
+        "hex": "#8c878d",
+        "percentage": 0.1266
+      },
+      {
+        "hex": "#615c63",
+        "percentage": 0.1191
+      },
+      {
+        "hex": "#cdafbd",
+        "percentage": 0.1016
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/9l1FFSE-p1PB-S666bu?o=01M16DVSMBGK13K58F197JMZ76&aid=01M73S7S4TFA4XGWGWTRSHJC1W",
+        "domain": "bestbuy.com",
+        "price": {
+          "price": 549,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": {
+            "number": 3.1,
+            "unit": "in"
+          },
+          "height": null,
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function",
+        "Concentrator nozzle",
+        "Diffuser nozzle"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types",
+        "Thick"
+      ],
+      "hair-dryer-motor-type": [
+        "Digital motor"
+      ]
+    },
+    "ratings": {
+      "value": 4.32,
+      "count": 18878,
+      "source_count": 2
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

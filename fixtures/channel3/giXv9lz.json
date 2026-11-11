@@ -1,0 +1,163 @@
+{
+  "product": {
+    "id": "giXv9lz",
+    "title": "TCL 65” Class S4 (65S451) 4K UHD HDR Smart TV with Roku TV",
+    "description": "The TCL 4-Series Roku TV offers stunning 4K picture quality with four times the resolution of Full HD for enhanced clarity and detail as well as endless entertainment with thousands of streaming channels. High dynamic range (HDR) technology delivers bright and accurate colors for a lifelike viewing experience. In addition your favorite HD shows movies and sporting events are enhanced to near Ultra HD resolution with 4K Upscaling. Your favorite broadcast TV streaming channels gaming console and other devices are front-and-center within a simple customizable home screen. There’s no more flipping through inputs or wading through complicated menus. The super-simple remote—with about half the number of buttons on a traditional TV remote—puts you in control of your favorite entertainment and includes one-touch shortcuts to popular channels like Netflix.",
+    "brands": [
+      {
+        "id": "Astw",
+        "name": "TCL"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/f3ef3640-f3fd-4175-8b5d-c0bdaad4ca51?aid=01M73S7D165XAD1G12N9C69GRF&mid=nSgk",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "TCL 65-inch 4K UHD Smart TV screen showing Roku interface."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "metal",
+      "glass"
+    ],
+    "key_features": [
+      "4K Ultra HD resolution with 4K Upscaling",
+      "HDR10+, HDR, and HLG support",
+      "Roku Smart TV platform with customizable home screen",
+      "FullView edge-to-edge glass design with sleek metal finish",
+      "Integrated voice control (Siri, Alexa, Google Assistant)",
+      "Apple AirPlay support",
+      "4 HDMI inputs (including 1 ARC)",
+      "Dual-band WiFi and Ethernet port",
+      "65"
+    ],
+    "colors": [
+      {
+        "hex": "#2c69af",
+        "percentage": 0.2972
+      },
+      {
+        "hex": "#0a0d11",
+        "percentage": 0.2435
+      },
+      {
+        "hex": "#3b444f",
+        "percentage": 0.155
+      },
+      {
+        "hex": "#2e282e",
+        "percentage": 0.1156
+      },
+      {
+        "hex": "#415f89",
+        "percentage": 0.0972
+      },
+      {
+        "hex": "#8ba7c3",
+        "percentage": 0.0914
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/giXv9lz-nSgk-S666bu?o=01M73QA544P3RCQB2J3F6TNE8N&aid=01M73S7D165XAD1G12N9C69GRF",
+        "domain": "rcwilley.com",
+        "price": {
+          "price": 329.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 56.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 11.8,
+            "unit": "in"
+          },
+          "height": {
+            "number": 34.8,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 49,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/giXv9lz-BsaX-S666bu?o=01M5T2VFWXWT29BKHEC4FSHTMY&aid=01M73S7D165XAD1G12N9C69GRF",
+        "domain": "walmart.com",
+        "price": {
+          "price": 338,
+          "compare_at_price": 378,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "compatible-voice-assistant": [
+        "Amazon Alexa",
+        "Apple Siri",
+        "Google Assistant"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Screen mirroring",
+        "Smart TV",
+        "Voice control",
+        "Suitable for gaming"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HDR10+",
+        "HLG"
+      ],
+      "smart-tv-platform": [
+        "Roku TV"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "television-shape": [
+        "Flat"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

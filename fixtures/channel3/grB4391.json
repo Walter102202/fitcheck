@@ -1,0 +1,149 @@
+{
+  "product": {
+    "id": "grB4391",
+    "title": "Professional Hair Dryer",
+    "description": "The Luseta Beauty Professional Hair Dryer is a powerful styling tool designed for salon-quality results at home. It features a 1875 Watt DC motor and Tourmaline technology to reduce frizz and enhance shine. Equipped with ionic and far-infrared benefits, it offers 3 heat settings and 2 speed settings for customizable styling, all powered by a professional 8-foot cord.",
+    "brands": [
+      {
+        "id": "4aGy",
+        "name": "Luseta"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/9f0fd957-aeeb-44cb-a878-cfdf1a7670f9?aid=01M73S7S52C46M3VB1G1DFRXRX&mid=29R3",
+        "cleaned_url": "https://cdn.trychannel3.com/946f4158-3468-426e-81b9-b0d8291e5608?aid=01M73S7S52C46M3VB1G1DFRXRX&mid=29R3",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black hair dryer with rose gold nozzle, shown from the side."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d7ef7b30-9ee2-4fb5-a792-6409c2ffcdab?aid=01M73S7S52C46M3VB1G1DFRXRX&mid=29R3",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "White hair dryer with rose gold nozzle, shown from the side."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Tourmaline Technology",
+      "Powerful 1875 Watt DC Motor",
+      "Ionic & Far Infrared Benefits",
+      "3 Heat Settings",
+      "2 Speed Settings",
+      "8' Professional Cord"
+    ],
+    "colors": [
+      {
+        "hex": "#403a37",
+        "percentage": 0.3888
+      },
+      {
+        "hex": "#66605b",
+        "percentage": 0.2555
+      },
+      {
+        "hex": "#968c88",
+        "percentage": 0.1377
+      },
+      {
+        "hex": "#c6c3c0",
+        "percentage": 0.1145
+      },
+      {
+        "hex": "#1f1714",
+        "percentage": 0.1036
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/grB4391-29R3-S666bu?o=01M0QA504GQ85E7QVHE278A2Y8&aid=01M73S7S52C46M3VB1G1DFRXRX",
+        "domain": "lusetabeauty.com",
+        "price": {
+          "price": 39.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": {
+      "options": [
+        {
+          "name": "Color",
+          "values": [
+            {
+              "label": "Black",
+              "exists": true,
+              "available": "InStock",
+              "thumbnail_url": null,
+              "product_id": null
+            },
+            {
+              "label": "White",
+              "exists": true,
+              "available": "OutOfStock",
+              "thumbnail_url": null,
+              "product_id": null
+            }
+          ]
+        }
+      ],
+      "selected": []
+    },
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Ionic function"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "hair-dryer-motor-type": [
+        "DC motor"
+      ]
+    },
+    "ratings": {
+      "value": 4.6,
+      "count": 46,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

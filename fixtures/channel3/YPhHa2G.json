@@ -1,0 +1,167 @@
+{
+  "product": {
+    "id": "YPhHa2G",
+    "title": "Mini Travel Hair Dryer Dual Voltage Europe, High-Speed Foldable",
+    "description": "A high-speed, foldable mini travel hair dryer designed for global use with dual voltage (110-240V). This compact device features 1300W of power and negative ionic technology to reduce frizz and lock in moisture for a smooth finish. It includes both a diffuser for curls and a concentrator for polished blowouts, and offers 4 heat and 2 speed settings, including a cool shot for styling. Weighing only 1.16 lbs, it is highly portable and ideal for travel.",
+    "brands": [
+      {
+        "id": "J59a",
+        "name": "Newegg.com"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/815b488f-f19b-4a84-a5db-7b01b2510974?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/815b488f-f19b-4a84-a5db-7b01b2510974?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Product set including hair dryer, nozzles, and storage pouch on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/54519176-d8ed-49c2-be75-b46ed352a0f5?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Product dimensions and specifications showing the size of the dryer and the phone."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/f73aec58-35c6-4c1a-af26-c56258c551cd?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/f73aec58-35c6-4c1a-af26-c56258c551cd?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using a black hair dryer to style her long, wavy hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/a3340ba2-d7ef-4bbb-8071-c16b231e16bf?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "in_use",
+        "alt_text": "Before and after comparison of hair styling with a heat control hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2378e1d8-22d3-4622-a17e-e7a302bf23f2?aid=01M73TC2CD681ZHRQQ0BJDDX92&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Display of the 8 operating modes and heat settings for the hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1300W powerful yet compact",
+      "Negative ionic technology to reduce frizz",
+      "Dual voltage 110-240V for global use",
+      "Foldable ultra-compact design",
+      "Includes diffuser and concentrator",
+      "4 heat and 2 speed settings",
+      "Cool setting for style locking"
+    ],
+    "colors": [
+      {
+        "hex": "#424242",
+        "percentage": 0.3775
+      },
+      {
+        "hex": "#1e1e1e",
+        "percentage": 0.3675
+      },
+      {
+        "hex": "#626262",
+        "percentage": 0.1803
+      },
+      {
+        "hex": "#a3a5a6",
+        "percentage": 0.0748
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/YPhHa2G-LPzf-S666bu?o=01M60WJKKWPAHV2F9873TS4S09&aid=01M73TC2CD681ZHRQQ0BJDDX92",
+        "domain": "newegg.com",
+        "price": {
+          "price": 79.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 9.69,
+            "unit": "in"
+          },
+          "width": {
+            "number": 3.07,
+            "unit": "in"
+          },
+          "height": {
+            "number": 5.32,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 2.47,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "Frizzy"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Diffuser nozzle",
+        "Ionic function",
+        "Travel size"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

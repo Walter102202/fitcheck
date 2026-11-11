@@ -1,0 +1,182 @@
+{
+  "product": {
+    "id": "Qxt4Ypf",
+    "title": "Dual Voltage Hair Dryer, Compact Folding Handle Design, 1600W",
+    "description": "The Conair 124NL is a compact, blue travel hair dryer designed for on-the-go styling. It features a powerful 1600W motor for fast drying and a dual voltage switch for worldwide compatibility. The lightweight 0.75 lb design includes a folding handle for easy storage and portability. It offers multiple heat and speed settings, as well as a Cool Shot feature to seal hair cuticles for a lasting hold.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/8dd276e4-5288-4a9b-883a-ff26ad26e51a?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/8dd276e4-5288-4a9b-883a-ff26ad26e51a?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Blue hair dryer shown from the side with the cord."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9f76d5f4-6234-49a8-b403-f965fd2d7351?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of the blue hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/7b752dac-309f-45eb-8409-88a6ab6120df?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "lifestyle",
+        "alt_text": "Before and after hair styling demonstration using a hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/898a0761-a6aa-4227-a286-daf736cfed82?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Close-up showing heat and speed settings controls on the hair dryer."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/cff9eaee-59ce-4ab6-9ae7-d954d982eef9?aid=01M73TC2JS2XY6YSB5GSGNHX69&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using a blue hair dryer to style her hair."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Plastic"
+    ],
+    "key_features": [
+      "1600 watts of drying power",
+      "Dual voltage design for worldwide travel",
+      "Compact folding handle for easy storage",
+      "Lightweight design (0.75 lb)",
+      "Multiple heat and airflow combinations",
+      "Cool Shot feature for lasting hold",
+      "5 ft. cord"
+    ],
+    "colors": [
+      {
+        "hex": "#728bb5",
+        "percentage": 0.4025
+      },
+      {
+        "hex": "#a4b8d8",
+        "percentage": 0.2518
+      },
+      {
+        "hex": "#28292b",
+        "percentage": 0.1243
+      },
+      {
+        "hex": "#495a77",
+        "percentage": 0.114
+      },
+      {
+        "hex": "#c5d6ed",
+        "percentage": 0.1073
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/Qxt4Ypf-LPzf-S666bu?o=01M4CEAXRMCD43HV9HBGG4N3YR&aid=01M73TC2JS2XY6YSB5GSGNHX69",
+        "domain": "newegg.com",
+        "price": {
+          "price": 37.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 10.1,
+            "unit": "in"
+          },
+          "width": {
+            "number": 10.1,
+            "unit": "in"
+          },
+          "height": {
+            "number": 2.7,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 0.75,
+            "unit": "lb"
+          }
+        }
+      },
+      {
+        "url": "https://buy.trychannel3.com/Qxt4Ypf-wAe3-S666bu?o=01KBP7REN2EW9XK4KFY018PB6Y&aid=01M73TC2JS2XY6YSB5GSGNHX69",
+        "domain": "acehardware.com",
+        "price": {
+          "price": 16.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "OutOfStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Travel size",
+        "Cool shot function"
+      ],
+      "heat-settings": [
+        "Medium"
+      ],
+      "application-type": [
+        "Leave-in"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ],
+      "material": [
+        "Plastic"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

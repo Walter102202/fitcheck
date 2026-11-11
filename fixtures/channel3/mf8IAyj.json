@@ -1,0 +1,122 @@
+{
+  "product": {
+    "id": "mf8IAyj",
+    "title": "5336U Hair Dryer Elegance",
+    "description": "The BaByliss 5336U Hair Dryer Elegance is a powerful 2100W hair dryer designed for fast drying and frizz reduction. It features an advanced ionic system that neutralizes static electricity for sleek, glossy hair and utilizes heat-balancing ceramic technology to distribute heat evenly and prevent hot spots. Its lightweight design ensures comfortable handling during styling, and it offers 3 heat and 2 speed settings along with a cool shot for professional results.",
+    "brands": [
+      {
+        "id": "vMY4",
+        "name": "BaByliss"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/67c8ddbd-0bc2-438a-a5fb-7123e0df3c8d?aid=01M73S7RQMFMSM7XCAKPE5RGYX&mid=CFtV",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/67c8ddbd-0bc2-438a-a5fb-7123e0df3c8d?aid=01M73S7RQMFMSM7XCAKPE5RGYX&mid=CFtV",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Pink Babyliss hair dryer shown from the side on a white background."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "Ceramic"
+    ],
+    "key_features": [
+      "2100W advanced airflow technology for ultra-quick drying",
+      "Frizz-taming ionic system for sleek, glossy hair",
+      "Heat-balancing ceramic technology for even heat distribution",
+      "Lightweight body for comfortable handling",
+      "3 heat and 2 speed settings plus a cool shot"
+    ],
+    "colors": [
+      {
+        "hex": "#e2c3bc",
+        "percentage": 0.3835
+      },
+      {
+        "hex": "#9f7d77",
+        "percentage": 0.2464
+      },
+      {
+        "hex": "#85605c",
+        "percentage": 0.1661
+      },
+      {
+        "hex": "#bf9f99",
+        "percentage": 0.1233
+      },
+      {
+        "hex": "#513b37",
+        "percentage": 0.0808
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/mf8IAyj-CFtV-S666bu?o=01M55ZDQ2R42KDRGBY6MPXKQFZ&aid=01M73S7RQMFMSM7XCAKPE5RGYX",
+        "domain": "fruugo.us",
+        "price": {
+          "price": 46.95,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Cool shot function",
+        "Ionic function"
+      ],
+      "suitable-for-hair-type": [
+        "Frizzy"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:40.913Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

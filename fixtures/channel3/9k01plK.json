@@ -1,0 +1,188 @@
+{
+  "product": {
+    "id": "9k01plK",
+    "title": "4K UHD AI Smart TV",
+    "description": "Bring home 4K resolution in an impressive range of screen sizes with LG UHD TVs. Enjoy swift easy browsing and tons of personalized recommendations including over 400 free LG channels.* Spend less time searching and more time streaming with LG webOS 25. Focus on the screen with a slim and simple-to-mount design for a stylish view no matter where you hang it. For gamers you can quickly customize your gaming experience in one location with the LG Game Optimizer. And with GeForce NOW & Xbox Cloud Gaming included you can automatically stream and get in the game.** *Internet connection and subscriptions to streaming services are required; number of LG Channels subject to change. **Subscription and compatible gaming controller are required.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/927deccd-d465-4fc0-8cdf-3dfa23d5e6d0?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/927deccd-d465-4fc0-8cdf-3dfa23d5e6d0?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "LG 75-inch TV displaying vibrant colorful spheres on a reflective surface."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/187ec075-99ae-4b5b-b9cf-ef08d533f31d?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/187ec075-99ae-4b5b-b9cf-ef08d533f31d?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "is_main_image": false,
+        "shot_type": "scale_reference",
+        "alt_text": "Diagram showing the dimensions of the 75 inch TV and its stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4679d16f-c38f-4e54-af51-7dc96d7b397c?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/4679d16f-c38f-4e54-af51-7dc96d7b397c?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Front view of a black LG LED TV and its stand."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/2693c180-aead-4ed0-9853-6fdf4ef8ae51?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "TV connectivity ports and input options shown on the side panel."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/51a4b77d-714f-4838-a507-6190a0b9c500?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/da1853eb-04bd-4838-910e-ca6b84b74896?aid=01M73SESZDNSVXY38RWZP339YD&mid=BsaX",
+        "is_main_image": false,
+        "shot_type": "product_information",
+        "alt_text": "Infographic showing Superb movies with HDR 10 Pro and Filmmaker Mode."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [
+      "LED"
+    ],
+    "key_features": [
+      "4K UHD resolution",
+      "AI Smart TV capabilities",
+      "LG webOS 25",
+      "Over 400 free LG channels",
+      "Slim and simple-to-mount design",
+      "LG Game Optimizer",
+      "GeForce NOW & Xbox Cloud Gaming support"
+    ],
+    "colors": [
+      {
+        "hex": "#1f4855",
+        "percentage": 0.1637
+      },
+      {
+        "hex": "#202933",
+        "percentage": 0.1416
+      },
+      {
+        "hex": "#5c143a",
+        "percentage": 0.139
+      },
+      {
+        "hex": "#b11550",
+        "percentage": 0.1236
+      },
+      {
+        "hex": "#ced4bd",
+        "percentage": 0.1218
+      },
+      {
+        "hex": "#240d28",
+        "percentage": 0.1185
+      },
+      {
+        "hex": "#94847c",
+        "percentage": 0.1066
+      },
+      {
+        "hex": "#894b56",
+        "percentage": 0.0852
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/9k01plK-BsaX-S666bu?o=01M37YYZKY4Z60WX3VY0GMRJXN&aid=01M73SESZDNSVXY38RWZP339YD",
+        "domain": "walmart.com",
+        "price": {
+          "price": 528,
+          "compare_at_price": 578,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "energy-efficiency-class-sdr": [
+        "G"
+      ],
+      "wi-fi-standard": [
+        "802.11ac"
+      ],
+      "vesa-mounting-pattern": [
+        "300 x 300 mm"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ],
+      "pattern": [
+        "Solid"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ],
+      "display-resolution": [
+        "1920 x 1080",
+        "4K ultra HD"
+      ],
+      "television-specialized-features": [
+        "HDR support",
+        "Smart TV",
+        "AI-powered"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "hdr-format": [
+        "HDR10",
+        "HLG"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "display-technology": [
+        "LED"
+      ]
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 2786,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:32:30.950Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

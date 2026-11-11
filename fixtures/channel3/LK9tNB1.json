@@ -1,0 +1,171 @@
+{
+  "product": {
+    "id": "LK9tNB1",
+    "title": "InfinitiPRO Infrared Hair Dryer + Diffuser",
+    "description": "The InfinitiPRO by Conair Infrared Hair Dryer is a professional-grade tool designed for fast drying and frizz control. It utilizes advanced infrared heat technology to dry hair from the inside out, reducing surface damage. This dryer features dual ionic conditioning to smooth the cuticle and boost shine. It is highly versatile, coming with both a diffuser attachment for curly and wavy hair and a concentrator nozzle for sleek styles. Users can customize their experience with 3 heat and 3 speed settings, plus a cool shot button to lock in the style. The lightweight design and 7-foot power cord provide comfort and flexibility for salon-quality results at home.",
+    "brands": [
+      {
+        "id": "TxsY",
+        "name": "Conair"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/dd98d25e-543e-4490-b2b9-05798bae8415?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/dd98d25e-543e-4490-b2b9-05798bae8415?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "InfinitiPRO hair dryer head and diffuser attachment on white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/fe366dcb-bbe1-4b47-b98a-f3999454f0b0?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/fe366dcb-bbe1-4b47-b98a-f3999454f0b0?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "InfinitiPRO hair dryer showing technology features on a white background."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/06ddbdb5-cfae-49cf-9e9b-a6742addb826?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman holding and using the InfinitiPRO hair dryer to style hair."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/65f8c126-e0e5-418a-820a-a66796ce1a72?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "InfinitiPRO hair dryer focusing on dual ion technology to reduce frizz."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/d49d703c-6b50-4ff7-8ab1-4ce4c22cc27e?aid=01M73TC31703MZ7E84KGSWE3QH&mid=LPzf",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "on_model",
+        "alt_text": "Woman using the concentrator attachment of the InfinitiPRO hair dryer."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "Infrared heat technology for faster results with less damage",
+      "Dual ionic conditioning to reduce frizz and boost shine",
+      "Includes diffuser and concentrator attachments",
+      "3 heat settings and 3 speed settings",
+      "Cool shot button to lock in style",
+      "Lightweight, balanced design",
+      "7-foot power cord"
+    ],
+    "colors": [
+      {
+        "hex": "#f7f2df",
+        "percentage": 0.5711
+      },
+      {
+        "hex": "#1c1918",
+        "percentage": 0.1626
+      },
+      {
+        "hex": "#583e43",
+        "percentage": 0.1295
+      },
+      {
+        "hex": "#5e252b",
+        "percentage": 0.0904
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/LK9tNB1-LPzf-S666bu?o=01M5XHSCETZM6B4Q5HM77TCXQ6&aid=01M73TC31703MZ7E84KGSWE3QH",
+        "domain": "newegg.com",
+        "price": {
+          "price": 125.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 4.125,
+            "unit": "in"
+          },
+          "width": {
+            "number": 12.25,
+            "unit": "in"
+          },
+          "height": {
+            "number": 9.875,
+            "unit": "in"
+          },
+          "weight": null
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-care-technology": [
+        "Warm"
+      ],
+      "suitable-for-hair-type": [
+        "Curly",
+        "Frizzy"
+      ],
+      "hair-styling-tool-features": [
+        "Concentrator nozzle",
+        "Cool shot function",
+        "Diffuser nozzle",
+        "Ionic function"
+      ],
+      "conditioner-effect": [
+        "Shine",
+        "Anti-frizz"
+      ],
+      "speed-settings": [
+        "Multiple"
+      ],
+      "heat-settings": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle",
+        "Diffuser attachment"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

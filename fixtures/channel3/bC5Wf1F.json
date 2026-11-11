@@ -1,0 +1,152 @@
+{
+  "product": {
+    "id": "bC5Wf1F",
+    "title": "O2VOYAGE Professional Travel Hair Dryer",
+    "description": "The O2 Professional O2VOYAGE is a professional-grade travel hair dryer designed for high performance in a compact, folding size. It features 1200W dual voltage and ionic ceramic technology to dry hair faster while controlling frizz. The dryer offers two speed heat settings and comes complete with a nozzle, diffuser, and a travel bag, making it ideal for the gym, travel, or on-the-go use.",
+    "brands": [
+      {
+        "id": "5r1i",
+        "name": "O2"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/ef4cd9af-e788-46ba-a5a9-79ac9e70358b?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "cleaned_url": null,
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "Black O2 Voyage hair dryer from a three-quarter angle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1e6026bf-54f2-4e60-b344-66c5ffdbc77e?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "packaging",
+        "alt_text": "Hair dryer and accessories in its retail packaging."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/c8e46300-66fe-47b7-8112-1e5e8529136a?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black O2 Voyage hair dryer from a three-quarter angle."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/1251999f-127f-49da-976d-96ec00a89e17?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/1251999f-127f-49da-976d-96ec00a89e17?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "is_main_image": false,
+        "shot_type": "detail",
+        "alt_text": "Close-up detail of the hair dryer nozzle attachment."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/9c3d3024-cb47-4949-9b2f-4566fe265837?aid=01M73TC33931FXNEAVX163T5DX&mid=bEzo",
+        "cleaned_url": null,
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black O2 Voyage travel hair dryer with cup on a white background."
+      }
+    ],
+    "category": {
+      "slug": "hair-dryers",
+      "title": "Hair Dryers",
+      "path": [
+        {
+          "slug": "health-beauty",
+          "title": "Health & Beauty"
+        },
+        {
+          "slug": "personal-care",
+          "title": "Personal Care"
+        },
+        {
+          "slug": "hair-care",
+          "title": "Hair Care"
+        },
+        {
+          "slug": "hair-styling-tools",
+          "title": "Hair Styling Tools"
+        },
+        {
+          "slug": "hair-dryers",
+          "title": "Hair Dryers"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "1200W Dual Voltage",
+      "Ionic Ceramic Technology",
+      "2 speed heat settings",
+      "Compact folding travel size",
+      "Includes nozzle, diffuser, and travel bag"
+    ],
+    "colors": [
+      {
+        "hex": "#333334",
+        "percentage": 0.5394
+      },
+      {
+        "hex": "#1b1818",
+        "percentage": 0.2241
+      },
+      {
+        "hex": "#b1b1b2",
+        "percentage": 0.1244
+      },
+      {
+        "hex": "#616162",
+        "percentage": 0.1121
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/bC5Wf1F-bEzo-S666bu?o=01M2JM8BD89ZN5Q76NQVVNKMTV&aid=01M73TC33931FXNEAVX163T5DX",
+        "domain": "hbbeautybar.com",
+        "price": {
+          "price": 99.95,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "weight": {
+            "number": 250,
+            "unit": "g"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "hair-styling-tool-features": [
+        "Ionic function",
+        "Ceramic heating system",
+        "Travel size"
+      ],
+      "hair-styling-items-included": [
+        "Concentrator nozzle"
+      ],
+      "material": [
+        "Ceramic"
+      ],
+      "suitable-for-hair-type": [
+        "All hair types"
+      ]
+    },
+    "ratings": {
+      "value": 5,
+      "count": 1,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:48:31.208Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

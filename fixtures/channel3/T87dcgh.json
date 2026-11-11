@@ -1,0 +1,151 @@
+{
+  "product": {
+    "id": "T87dcgh",
+    "title": "LG UN777H 65\" Smart 4K Ultra TV for Hospitality",
+    "description": "65-inch UHD Smart TV designed for hospitality environments with Pro:Centric Direct hotel content management, Pro:Idiom DRM, built-in Wi-Fi, and Apple AirPlay compatibility. Features 4K UHD resolution (3840x2160), smart TV capabilities, and a sleek design suitable for hotel rooms. Note: This product is currently out of stock on Staples.",
+    "brands": [
+      {
+        "id": "WmyR",
+        "name": "LG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/4fdb294b-88f0-431d-961e-8eaa8ef5cfc3?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "cleaned_url": "https://cdn.trychannel3.com/0247538d-4d25-41d1-8ca4-5eaa6e164501?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "55-inch UHD commercial Lite TV displaying a vibrant ocean and tropical landscape."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/8e1bb5e4-6add-45fd-8e15-85811303fe8f?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/8e1bb5e4-6add-45fd-8e15-85811303fe8f?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black flat-screen television displaying a blank black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/4de9d2b1-316b-4a15-bfb8-1a1ad1b908e8?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "cleaned_url": "https://cdn.trychannel3.com/4284cb1b-f61b-4c0c-be30-4ebb8014bc58?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black flat-screen television displaying a blank black screen."
+      },
+      {
+        "url": "https://cdn.trychannel3.com/80cf9285-e44b-4234-98b4-d3f655289c23?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/80cf9285-e44b-4234-98b4-d3f655289c23?aid=01M73S7DGZX8T651JTG5BAXRY6&mid=LFnL",
+        "is_main_image": false,
+        "shot_type": "hero",
+        "alt_text": "Black flat-screen television displaying a blank black screen."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": "adult",
+    "materials": [],
+    "key_features": [
+      "65\" Smart TV with Built-in Speakers, WIFI and Bluetooth",
+      "Display resolution - 3,840 × 2,160 (4K UHD)",
+      "Featuring Pro:Centric Direct hotel content management solution"
+    ],
+    "colors": [
+      {
+        "hex": "#054772",
+        "percentage": 0.1508
+      },
+      {
+        "hex": "#d2eeed",
+        "percentage": 0.1444
+      },
+      {
+        "hex": "#60936b",
+        "percentage": 0.1437
+      },
+      {
+        "hex": "#0a2c44",
+        "percentage": 0.1307
+      },
+      {
+        "hex": "#29584e",
+        "percentage": 0.1281
+      },
+      {
+        "hex": "#7ebd96",
+        "percentage": 0.11
+      },
+      {
+        "hex": "#051633",
+        "percentage": 0.1067
+      },
+      {
+        "hex": "#368176",
+        "percentage": 0.0857
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/T87dcgh-LFnL-S666bu?o=01KPF0EJ70P3VN6ER06VS6GTYS&aid=01M73S7DGZX8T651JTG5BAXRY6",
+        "domain": "staples.com",
+        "price": {
+          "price": 981.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": null
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "television-shape": [
+        "Flat"
+      ],
+      "tuner-type": [
+        "ATSC"
+      ],
+      "wi-fi-standard": [
+        "802.11ac",
+        "802.11n"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "smart-tv-platform": [
+        "webOS"
+      ],
+      "television-specialized-features": [
+        "Smart TV",
+        "Voice control",
+        "Screen mirroring",
+        "Built-in digital tuner",
+        "HDR support"
+      ],
+      "display-technology": [
+        "LED"
+      ]
+    },
+    "ratings": null
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}

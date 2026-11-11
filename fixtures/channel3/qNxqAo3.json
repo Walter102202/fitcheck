@@ -1,0 +1,177 @@
+{
+  "product": {
+    "id": "qNxqAo3",
+    "title": "Samsung S90H 65\" OLED 4K UHD Smart TV (2026)",
+    "description": "The Samsung S90H 65\" OLED 4K UHD Smart TV (2026) features a stunning OLED display with Glare Free technology to minimize reflections. Powered by the NQ4 AI Gen3 processor, it delivers AI-enhanced picture and sound quality, complemented by immersive Dolby Atmos audio. Designed for versatility, it includes a Gaming Hub with support for VRR, ALLM, FreeSync Premium Pro, and NVIDIA G-SYNC, making it an ideal choice for streaming, sports, and high-performance gaming.",
+    "brands": [
+      {
+        "id": "Mbqx",
+        "name": "Samsung"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://cdn.trychannel3.com/a4f82715-9a21-46d8-be31-42fd69b5d476?aid=01M73S7D2AW4GBRKZ21F8S8CP0&mid=K6RA",
+        "cleaned_url": "https://cdn.trychannel3.com/cleaned/v1/a4f82715-9a21-46d8-be31-42fd69b5d476?aid=01M73S7D2AW4GBRKZ21F8S8CP0&mid=K6RA",
+        "is_main_image": true,
+        "shot_type": "hero",
+        "alt_text": "48-inch OLED TV displaying a vibrant blue and orange landscape."
+      }
+    ],
+    "category": {
+      "slug": "televisions",
+      "title": "Televisions",
+      "path": [
+        {
+          "slug": "electronics",
+          "title": "Electronics"
+        },
+        {
+          "slug": "video",
+          "title": "Video"
+        },
+        {
+          "slug": "televisions",
+          "title": "Televisions"
+        }
+      ],
+      "has_children": false
+    },
+    "gender": null,
+    "age": null,
+    "materials": [],
+    "key_features": [
+      "65\" OLED 4K UHD display",
+      "Glare Free technology to reduce distracting reflections",
+      "NQ4 AI Gen3 processor for AI-enhanced picture and sound",
+      "Dolby Atmos audio and Object Tracking Sound Lite",
+      "165Hz refresh rate",
+      "Supports HDR10+, OLED HDR+, and Auto HDR Remastering",
+      "Gaming features: VRR, ALLM, FreeSync Premium Pro, and NVIDIA G-SYNC",
+      "One UI Tizen, Samsung TV Plus, Gaming Hub, and Cloud Gaming",
+      "Connectivity: 4 HDMI, 3 USB-A, LAN, optical, RF, RS-232C"
+    ],
+    "colors": [
+      {
+        "hex": "#76cfe8",
+        "percentage": 0.165
+      },
+      {
+        "hex": "#0b141b",
+        "percentage": 0.1566
+      },
+      {
+        "hex": "#364950",
+        "percentage": 0.1359
+      },
+      {
+        "hex": "#0f2c3f",
+        "percentage": 0.1199
+      },
+      {
+        "hex": "#3d86a5",
+        "percentage": 0.1167
+      },
+      {
+        "hex": "#c0e5e6",
+        "percentage": 0.1155
+      },
+      {
+        "hex": "#262725",
+        "percentage": 0.1065
+      },
+      {
+        "hex": "#7596a0",
+        "percentage": 0.0838
+      }
+    ],
+    "offers": [
+      {
+        "url": "https://buy.trychannel3.com/qNxqAo3-K6RA-S666bu?o=01M63FMR1XNZENKY5C630QRG9K&aid=01M73S7D2AW4GBRKZ21F8S8CP0",
+        "domain": "macys.com",
+        "price": {
+          "price": 1584.99,
+          "compare_at_price": null,
+          "currency": "USD"
+        },
+        "availability": "InStock",
+        "condition": "new",
+        "dimensions": {
+          "length": {
+            "number": 56.9,
+            "unit": "in"
+          },
+          "width": {
+            "number": 10.4,
+            "unit": "in"
+          },
+          "height": {
+            "number": 35.3,
+            "unit": "in"
+          },
+          "weight": {
+            "number": 44.97,
+            "unit": "lb"
+          }
+        }
+      }
+    ],
+    "variants": null,
+    "structured_attributes": {
+      "smart-tv-platform": [
+        "Tizen"
+      ],
+      "television-shape": [
+        "Flat"
+      ],
+      "vesa-mounting-pattern": [
+        "75 x 75 mm",
+        "200 x 200 mm"
+      ],
+      "display-technology": [
+        "OLED"
+      ],
+      "hdr-format": [
+        "HDR10+"
+      ],
+      "audio-technology": [
+        "Dolby atmos"
+      ],
+      "native-aspect-ratio": [
+        "16:9"
+      ],
+      "wi-fi-standard": [
+        "802.11ax"
+      ],
+      "television-specialized-features": [
+        "AI-powered",
+        "HDR support",
+        "Screen mirroring",
+        "Smart TV",
+        "Suitable for gaming",
+        "VESA mounting support",
+        "Voice control"
+      ],
+      "display-resolution": [
+        "4K ultra HD"
+      ],
+      "compatible-voice-assistant": [
+        "Amazon Alexa"
+      ],
+      "energy-efficiency-class-sdr": [
+        "E"
+      ],
+      "energy-efficiency-class-hdr": [
+        "G"
+      ]
+    },
+    "ratings": {
+      "value": 4.7,
+      "count": 207,
+      "source_count": 1
+    }
+  },
+  "fetchedAt": "2026-11-10T22:28:28.760Z",
+  "source": "recorded",
+  "recordedOn": "2026-11-10"
+}
