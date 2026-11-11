@@ -11,7 +11,7 @@ deploys only after its CI run passes (`autoDeployTrigger: checksPass`).
 | Variable        | Value      | What visitors get                                                         |
 |-----------------|------------|---------------------------------------------------------------------------|
 | `PAYPAL_MODE`   | `sandbox`  | Without a client id and secret, each session runs on simulated PayPal, and the site says "PayPal is simulated on this site." |
-| `LLM_PROVIDER`  | `mock`     | The four demo requests are read from recorded intents (`apps/backend/src/review/recordings`). |
+| `LLM_PROVIDER`  | `mock`     | The four demo requests are read from recorded answers (`apps/backend/src/review/recordings`). While those are hand-written, the site says the requirements are scripted; once they are recorded from Claude Sonnet 5.5, it names the model. |
 | `CHANNEL3_MODE` | `recorded` | Product records come from the copy recorded on 2026-11-10 (`fixtures/channel3`). |
 
 1. In the Render dashboard: **New → Blueprint**, pick this repository, apply. Render creates the
@@ -21,7 +21,8 @@ deploys only after its CI run passes (`autoDeployTrigger: checksPass`).
    slash) for PayPal return URLs and the cookie's Secure flag.
 3. Smoke test on the service URL:
    - `GET /healthz` answers `{"ok":true}`;
-   - `GET /api/config` reports `paypalMode: simulated`, `channel3Mode: recorded`;
+   - `GET /api/config` reports `paypalMode: simulated`, `channel3Mode: recorded`, and
+     `reviewSource: scripted` (hand-written recordings) or `recorded`;
    - the four purchases on the home page end as described in the README.
 
 ## Step 2: real services
@@ -44,7 +45,7 @@ deploys only after its CI run passes (`autoDeployTrigger: checksPass`).
 
 ## Smoke test with real services
 
-- `GET /api/config` reports `sandbox`, `live` and `claude-sonnet-5-5`.
+- `GET /api/config` reports `sandbox`, `live`, `claude-sonnet-5-5` and `reviewSource: live`.
 - Approve the cap on PayPal's sandbox page with the buyer account; the four purchases end as in
   the README. The sandbox dashboard shows one authorization of $3,000.00 and a partial capture
   per paid purchase. The PayPal panel shows the real capture ids.

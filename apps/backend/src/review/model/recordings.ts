@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -42,6 +42,25 @@ export const DEFAULT_RECORDINGS_DIR = join(
 );
 
 const SAFE_KEY = /^[A-Za-z0-9_-]+$/;
+
+/**
+ * The model that wrote every recording in `dir`, or null when there are none, they disagree, or
+ * any was written by hand (`model: "hand"`). The site names a model only when it really answered.
+ */
+export function recordedModel(dir: string = DEFAULT_RECORDINGS_DIR): string | null {
+  const models = new Set<string>();
+  for (const kind of ['intent', 'citation']) {
+    const sub = join(dir, kind);
+    if (!existsSync(sub)) continue;
+    for (const name of readdirSync(sub)) {
+      if (!name.endsWith('.json')) continue;
+      const rec = JSON.parse(readFileSync(join(sub, name), 'utf8')) as Partial<RecordingFile>;
+      models.add(rec.model ?? 'hand');
+    }
+  }
+  const [only] = models;
+  return models.size === 1 && only !== undefined && only !== 'hand' ? only : null;
+}
 
 /** <dir>/<kind>/<key>.json = { kind, key, input, model, recordedAt, attempts: { "1", "2"? } }. */
 export function createFileRecordingStore(dir: string): RecordingStore {
