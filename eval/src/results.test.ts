@@ -97,6 +97,15 @@ describe('results', () => {
     expect(r.rows.map((row) => row.label)).toEqual(LABELS);
     expect(r.rows.map((row) => row.capOnly)).toEqual([14, 4, 0, 7, null, 32]);
     expect(r.rows.map((row) => row.of)).toEqual([16, 4, 12, 7, 0, 32]);
+    // Only the mean row says so; a count row leaves `unit` out (ResultsRow.unit).
+    expect(r.rows.map((row) => row.unit)).toEqual([
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      'mean',
+      undefined,
+    ]);
     expect(r.rows.every((row) => row.fitcheck === null)).toBe(true);
     for (const row of r.rows) {
       expect(row.squares.fitcheck.every((s) => s === 'pending')).toBe(true);

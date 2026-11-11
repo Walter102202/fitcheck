@@ -103,6 +103,7 @@ export function computeRows(cases: EvalCase[], outcomes: CaseRunOutcome[]): Resu
       id: 'questions_per_held',
       label: 'Questions per held purchase',
       of: held.length,
+      unit: 'mean',
       capOnly: null,
       fitcheck:
         held.length === 0 ? null : round1(held.reduce((sum, o) => sum + o.lines, 0) / held.length),
