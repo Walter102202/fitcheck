@@ -1,0 +1,64 @@
+# Render Blueprint: one web service (API, PayPal webhooks and the built web in one Node process) and
+# one Postgres instance. Modeled on DealingWith's Blueprint as read on 2026-11-11; the plans are
+# confirmed against Walter's Render credit check before the Blueprint is applied.
+services:
+  - type: web
+    name: fitcheck
+    runtime: node
+    plan: 0.5c-512mb
+    region: oregon
+    branch: main
+    # A commit on main deploys only after its CI run passes.
+    autoDeployTrigger: checksPass
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    startCommand: node apps/backend/dist/index.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # corepack must not wait for a confirmation when it downloads the pinned pnpm.
+      - key: COREPACK_ENABLE_DOWNLOAD_PROMPT
+        value: "0"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: fitcheck-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      # Each visitor session approves its own spending cap on the real PayPal sandbox.
+      - key: PAYPAL_MODE
+        value: sandbox
+      # Secrets: typed into the Render dashboard, never into this file.
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      # Registered once the service has its URL.
+      - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      # The sandbox buyer account shown on the cap screen, so judges can approve the cap.
+      - key: SANDBOX_BUYER_EMAIL
+        sync: false
+      - key: SANDBOX_BUYER_PASSWORD
+        sync: false
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: REVIEW_MODEL
+        value: claude-sonnet-5-5
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      # Live product records. Without a key, boot fails on purpose and Render keeps the previous
+      # deploy; an invalid key or a Channel3 outage falls back to the recorded copy with a notice.
+      - key: CHANNEL3_MODE
+        value: live
+      - key: CHANNEL3_API_KEY
+        sync: false
+      - key: CAP_AMOUNT_CENTS
+        value: "300000"
+      # APP_URL is left unset: the backend uses Render's RENDER_EXTERNAL_URL (https, no slash).
+
+databases:
+  - name: fitcheck-db
+    plan: 0.1c-256mb
+    region: oregon
+    postgresMajorVersion: "17"

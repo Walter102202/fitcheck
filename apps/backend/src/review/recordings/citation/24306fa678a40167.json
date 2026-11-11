@@ -1,0 +1,26 @@
+{
+  "kind": "citation",
+  "key": "24306fa678a40167",
+  "input": {
+    "productId": "UXXAg59",
+    "requirements": ["tv.screen_size"]
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T04:10:00.000Z",
+  "attempts": {
+    "1": {
+      "citations": [
+        {
+          "requirement": "tv.screen_size",
+          "path": "title",
+          "quote": "65 inch"
+        },
+        {
+          "requirement": "tv.screen_size",
+          "path": "key_features[3]",
+          "quote": "Screen Size Class: 55 Inch"
+        }
+      ]
+    }
+  }
+}

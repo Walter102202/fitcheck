@@ -7,8 +7,9 @@ export const ResultsRowSchema = z.object({
   id: z.string(),
   label: z.string(),
   of: z.number().int().nonnegative(),
-  capOnly: z.number().int().nonnegative().nullable(),
-  fitcheck: z.number().int().nonnegative().nullable(),
+  /** A count, or a mean such as questions per held purchase (one decimal). */
+  capOnly: z.number().nonnegative().nullable(),
+  fitcheck: z.number().nonnegative().nullable(),
   squares: z.object({
     capOnly: z.array(SquareStateSchema),
     fitcheck: z.array(SquareStateSchema),

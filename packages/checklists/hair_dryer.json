@@ -79,7 +79,7 @@
       "check": "code_with_model_citation",
       "ifMissing": "ask",
       "onBroken": "return_to_agent",
-      "reasonTemplate": "The listing says it only works on 110-120 V outlets; you are taking it abroad.",
+      "reasonTemplate": "The listing says it only works on 110-120 V outlets; the buyer is taking it abroad. Pick an offer whose listing states 220-240 V or dual voltage.",
       "line": {
         "unbacked": "The listing does not say this dryer works on 220-240 V outlets, which Europe and most of the world use. Is that OK?"
       }

@@ -1,0 +1,28 @@
+{
+  "kind": "intent",
+  "key": "5c42c4735aa1fb9e",
+  "input": {
+    "category": "hair_dryer",
+    "request": "A hair dryer for my trip to Spain next week. Under $40."
+  },
+  "model": "hand",
+  "recordedAt": "2026-11-11T03:50:00.000Z",
+  "attempts": {
+    "1": {
+      "budget": {
+        "quote": "Under $40"
+      },
+      "quantity": null,
+      "acceptUsed": null,
+      "stores": [],
+      "stated": [],
+      "triggered": [
+        {
+          "requirement": "hair_dryer.dual_voltage",
+          "quote": "my trip to Spain"
+        }
+      ],
+      "unsupported": []
+    }
+  }
+}
