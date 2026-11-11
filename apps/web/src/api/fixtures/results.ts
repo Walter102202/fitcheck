@@ -1,6 +1,7 @@
 import type { ResultsJson, ResultsRow, SquareState } from '@fitcheck/contracts';
 
-// The "Spending cap only" rows are the mockup's; Fitcheck's rows wait for the held-out run.
+// Mirrors eval/results/expected.json, what GET /api/results serves before the held-out run.
+// Squares show what happened to each payment (eval/src/measures.ts computeRows).
 
 function squares(...runs: [SquareState, number][]): SquareState[] {
   return runs.flatMap(([state, n]) => Array<SquareState>(n).fill(state));
@@ -31,20 +32,37 @@ export const FIXTURE_RESULTS: ResultsJson = {
       squares(['paid_bad', 14], ['not_paid', 2]),
     ),
     row(
-      'unbacked_paid',
-      'Purchases the listing could not back, paid without asking',
+      'unbacked_paid_unasked',
+      'Purchases the product data could not back, paid unasked',
       4,
       squares(['paid_bad', 4]),
     ),
-    row('good_blocked', 'Correct purchases blocked by mistake', 0, squares(['not_paid', 12])),
+    row('correct_blocked', 'Correct purchases blocked by mistake', 0, squares(['paid_good', 12])),
     row(
-      'good_unasked',
-      'Correct purchases where the buyer was asked nothing',
+      'correct_asked_nothing',
+      'Correct purchases where the buyer was asked for nothing',
       7,
       squares(['paid_good', 7]),
     ),
+    {
+      id: 'questions_per_held',
+      label: 'Questions per held purchase',
+      of: 0,
+      unit: 'mean',
+      capOnly: null,
+      fitcheck: null,
+      squares: { capOnly: [], fitcheck: [] },
+    },
+    {
+      id: 'consistent',
+      label: 'Same outcome in all 3 runs',
+      of: 32,
+      capOnly: 32,
+      fitcheck: null,
+      squares: { capOnly: [], fitcheck: [] },
+    },
   ],
   notes: [
-    'The buyer here is simulated and always reads the question. We chose the mix of right and wrong purchases, so these are not rates you would see in production. Labels are judged against the Channel3 record, not the physical product. “Spending cap only” is the same payment flow with the review switched off. “Paid” means a capture exists in the payment ledger.',
+    'Spending cap only numbers are what the set is built to show. Fitcheck numbers appear after the held-out run.',
   ],
 };

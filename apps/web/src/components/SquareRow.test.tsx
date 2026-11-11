@@ -73,11 +73,12 @@ test('a mean shows the number alone; a missing value is not measured yet unless 
   expect(screen.getByRole('img', { name: `Does not apply: ${label}` })).toBeInTheDocument();
 });
 
-test('the legend names each square, and the pending one only when needed', () => {
+test('the legend names each square in words about payment, and the pending one only when needed', () => {
   const { unmount } = render(<SquareLegend pending={false} />);
-  expect(screen.getByText('Happened, and it is bad')).toBeInTheDocument();
-  expect(screen.getByText('Happened, and it is good')).toBeInTheDocument();
-  expect(screen.getByText('Did not happen')).toBeInTheDocument();
+  expect(screen.getByText('Paid, and it should not have been')).toBeInTheDocument();
+  expect(screen.getByText('Paid, and it should have been')).toBeInTheDocument();
+  expect(screen.getByText('Not paid')).toBeInTheDocument();
+  expect(screen.queryByText(/Happened|Did not happen/)).toBeNull();
   expect(screen.queryByText('Not measured yet')).toBeNull();
   unmount();
   render(<SquareLegend pending />);

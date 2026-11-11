@@ -10,9 +10,9 @@ test('every metric has two rows with counts', async () => {
   renderApp({ route: '/results' });
   for (const row of FIXTURE_RESULTS.rows)
     expect(await screen.findByRole('heading', { level: 2, name: row.label })).toBeInTheDocument();
-  expect(screen.getAllByText('Spending cap only')).toHaveLength(4);
+  expect(screen.getAllByText('Spending cap only')).toHaveLength(6);
   expect(screen.getByText('14 of 16')).toBeInTheDocument();
-  expect(screen.getAllByText('Not measured yet').length).toBeGreaterThanOrEqual(4);
+  expect(screen.getAllByText('Not measured yet').length).toBeGreaterThanOrEqual(6);
   expect(
     screen.getByRole('heading', {
       level: 1,
@@ -25,8 +25,9 @@ test('every metric has two rows with counts', async () => {
 test('the legend shows the pending square while anything is pending', async () => {
   renderApp({ route: '/results' });
   await screen.findByText('14 of 16');
-  expect(screen.getByText('Happened, and it is bad')).toBeInTheDocument();
-  expect(screen.getAllByText('Not measured yet').length).toBe(5);
+  expect(screen.getByText('Paid, and it should not have been')).toBeInTheDocument();
+  // Six Fitcheck rows, plus the legend.
+  expect(screen.getAllByText('Not measured yet').length).toBe(7);
 });
 
 test('the notes appear under What this does not show', async () => {

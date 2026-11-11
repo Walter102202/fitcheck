@@ -52,9 +52,9 @@ export function SquareRow({
 }
 
 const LEGEND: { state: SquareState; text: string }[] = [
-  { state: 'paid_bad', text: 'Happened, and it is bad' },
-  { state: 'paid_good', text: 'Happened, and it is good' },
-  { state: 'not_paid', text: 'Did not happen' },
+  { state: 'paid_bad', text: 'Paid, and it should not have been' },
+  { state: 'paid_good', text: 'Paid, and it should have been' },
+  { state: 'not_paid', text: 'Not paid' },
 ];
 
 export function SquareLegend({ pending }: { pending: boolean }) {

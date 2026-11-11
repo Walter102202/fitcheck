@@ -224,20 +224,32 @@ test('config plays the simulated fallback with the $3,000.00 cap', async () => {
   });
 });
 
-test('results have four rows, nothing measured yet for Fitcheck', async () => {
+test('results mirror the server before the held-out run: six rows, Fitcheck not measured', async () => {
   const results = await createFakeApi().getResults();
   expect(results).toEqual(FIXTURE_RESULTS);
   expect(results.rows.map((r) => [r.id, r.capOnly, r.of])).toEqual([
     ['wrong_paid', 14, 16],
-    ['unbacked_paid', 4, 4],
-    ['good_blocked', 0, 12],
-    ['good_unasked', 7, 7],
+    ['unbacked_paid_unasked', 4, 4],
+    ['correct_blocked', 0, 12],
+    ['correct_asked_nothing', 7, 7],
+    ['questions_per_held', null, 0],
+    ['consistent', 32, 32],
   ]);
   for (const row of results.rows) {
     expect(row.fitcheck).toBeNull();
+    if (row.squares.capOnly.length === 0) continue;
     expect(row.squares.capOnly).toHaveLength(row.of);
-    expect(row.squares.fitcheck.every((s) => s === 'pending')).toBe(true);
+    expect(row.squares.fitcheck).toEqual(Array(row.of).fill('pending'));
   }
+});
+
+// eval/src/measures.ts: squares show what happened to the payment, so the 12 correct purchases
+// the cap never blocked are 12 paid squares, not 12 empty ones.
+test('correct purchases blocked by mistake: 0 of 12, and all 12 squares paid', async () => {
+  const results = await createFakeApi().getResults();
+  const row = results.rows.find((r) => r.id === 'correct_blocked');
+  expect(row?.capOnly).toBe(0);
+  expect(row?.squares.capOnly).toEqual(Array(12).fill('paid_good'));
 });
 
 test('persist keeps the state across instances and reset restores it', async () => {
