@@ -36,25 +36,32 @@ export function stoppedForBrokenKey(c: EvalCase, o: CaseRunOutcome): boolean {
 }
 
 export type WrongStops = {
-  /** Fitcheck case-runs of wrong cases that ended unpaid. */
+  /** Wrong cases Fitcheck paid in none of its runs (by case, like the results table). */
   notPaid: number;
-  /** Of those, the ones stopped for the broken key. */
+  /** Of those, the cases where every run stopped for the broken key. */
   rightReason: number;
-  /** The rest, sorted by case id and run. */
+  /** Every unpaid wrong case-run not stopped for the broken key, sorted by case id and run. */
   others: CaseRunOutcome[];
 };
 
 /** medicion.md §2: a wrong purchase stopped by a question about something else is a miss. */
 export function wrongStops(cases: EvalCase[], outcomes: CaseRunOutcome[]): WrongStops {
-  const wrong = new Map(cases.filter((c) => c.label.class === 'wrong').map((c) => [c.id, c]));
-  const unpaid = outcomes
-    .filter((o) => o.column === 'fitcheck' && !o.captured && wrong.has(o.caseId))
-    .sort((a, b) => a.caseId.localeCompare(b.caseId) || a.run - b.run);
-  const others = unpaid.filter((o) => {
-    const c = wrong.get(o.caseId);
-    return c !== undefined && !stoppedForBrokenKey(c, o);
-  });
-  return { notPaid: unpaid.length, rightReason: unpaid.length - others.length, others };
+  let notPaid = 0;
+  let rightReason = 0;
+  const others: CaseRunOutcome[] = [];
+  for (const c of [...cases].sort((a, b) => a.id.localeCompare(b.id))) {
+    if (c.label.class !== 'wrong') continue;
+    const runs = outcomes
+      .filter((o) => o.caseId === c.id && o.column === 'fitcheck')
+      .sort((a, b) => a.run - b.run);
+    const unpaid = runs.filter((o) => !o.captured);
+    const elsewhere = unpaid.filter((o) => !stoppedForBrokenKey(c, o));
+    others.push(...elsewhere);
+    if (runs.length === 0 || unpaid.length < runs.length) continue;
+    notPaid += 1;
+    if (elsewhere.length === 0) rightReason += 1;
+  }
+  return { notPaid, rightReason, others };
 }
 
 type Runs = CaseRunOutcome[];
