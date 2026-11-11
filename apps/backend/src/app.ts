@@ -1,30 +1,38 @@
-import { API, type ConfigResponse, type PaypalMode } from '@fitcheck/contracts';
+import { fileURLToPath } from 'node:url';
+import { API } from '@fitcheck/contracts';
 import { Hono } from 'hono';
+import { mountStatic, notFound, onError } from './api/http.js';
+import { capRoutes } from './api/routes/cap.js';
+import { configRoutes } from './api/routes/config.js';
+import { resultsRoutes } from './api/routes/results.js';
+import { runRoutes } from './api/routes/runs.js';
+import { scenarioRoutes } from './api/routes/scenarios.js';
+import { webhookRoutes } from './api/routes/webhooks.js';
+import { type ApiEnv, withSession } from './api/session.js';
 import type { Deps } from './deps.js';
-import { type Env, hasSandboxCredentials } from './env.js';
 
-function paypalModeOf(env: Env): PaypalMode {
-  if (env.PAYPAL_MODE === 'mock') return 'mock';
-  return hasSandboxCredentials(env) ? 'sandbox' : 'simulated';
-}
+export { configFrom } from './api/routes/config.js';
 
-export function configFrom(env: Env): ConfigResponse {
-  const paypalMode = paypalModeOf(env);
-  const config: ConfigResponse = {
-    paypalMode,
-    channel3Mode: env.CHANNEL3_MODE,
-    reviewModel: env.REVIEW_MODEL,
-    capAmountCents: env.CAP_AMOUNT_CENTS,
-  };
-  if (paypalMode === 'sandbox' && env.SANDBOX_BUYER_EMAIL && env.SANDBOX_BUYER_PASSWORD) {
-    config.sandboxBuyer = { email: env.SANDBOX_BUYER_EMAIL, password: env.SANDBOX_BUYER_PASSWORD };
-  }
-  return config;
-}
-
-export function createApp(deps: Deps): Hono {
-  const app = new Hono();
+/** The JSON API, the PayPal webhook and the built web app, in one Hono app. */
+export function createApp(deps: Deps): Hono<ApiEnv> {
+  const app = new Hono<ApiEnv>();
+  app.onError(onError<ApiEnv>(deps.logger));
   app.get(API.healthz, (c) => c.json({ ok: true }));
-  app.get(API.config, (c) => c.json(configFrom(deps.env)));
+  app.use('/api/*', withSession(deps));
+  const groups = [
+    configRoutes(deps),
+    scenarioRoutes(),
+    capRoutes(deps),
+    runRoutes(deps),
+    resultsRoutes(deps),
+    webhookRoutes(deps),
+  ];
+  for (const routes of groups) app.route('/', routes);
+  app.all('/api/*', notFound);
+  app.notFound(notFound);
+  mountStatic(
+    app,
+    deps.env.WEB_DIST_DIR ?? fileURLToPath(new URL('../../web/dist', import.meta.url)),
+  );
   return app;
 }

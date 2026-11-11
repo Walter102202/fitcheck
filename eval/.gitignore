@@ -1,0 +1,3 @@
+# Dev checks and replays re-derive committed numbers; only live results are committed.
+results/dev/
+results/replay/
