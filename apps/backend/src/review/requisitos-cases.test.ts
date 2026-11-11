@@ -195,10 +195,13 @@ describe('requisitos real cases', () => {
     if (c.lines) expect(r.card?.lines.map((l) => [l.requirement, l.type])).toEqual(c.lines);
     if (c.lineIds) expect(r.card?.lines.map((l) => l.lineId)).toEqual(c.lineIds);
     if (c.reasons) expect(r.reasons).toEqual(expect.arrayContaining(c.reasons));
-    if (c.answer) {
+    const answer = c.answer;
+    if (answer) {
       if (!r.card) throw new Error('expected a card');
-      const answers = Object.fromEntries(r.card.lines.map((l) => [l.lineId, c.answer?.value]));
-      expect(applyAnswers(r.card, answers, {}).decision).toBe(c.answer.decision);
+      const answers: Record<string, Answer> = Object.fromEntries(
+        r.card.lines.map((l) => [l.lineId, answer.value]),
+      );
+      expect(applyAnswers(r.card, answers, {}).decision).toBe(answer.decision);
     }
   });
 });
