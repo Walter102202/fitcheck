@@ -1,4 +1,4 @@
-import type { Scenario } from '@fitcheck/contracts';
+import type { RunResponse, Scenario } from '@fitcheck/contracts';
 import { Fragment, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useAppConfig } from '../../api/config.js';
@@ -9,6 +9,7 @@ import { Button } from '../../components/Button.js';
 import { Notices } from '../../components/Notices.js';
 import { PaypalPanel } from '../../components/PaypalPanel.js';
 import { ReviewSwitch } from '../../components/ReviewSwitch.js';
+import { StartOverButton } from '../../components/StartOver.js';
 import { pickLabel } from '../../lib/format.js';
 import { ledgerDelayMs } from '../../lib/motion.js';
 import { AttemptSection, shownRows } from './AttemptSection.js';
@@ -23,6 +24,32 @@ function NextLink({ scenarios, current }: { scenarios: Scenario[]; current: numb
   const next = current >= 0 ? scenarios[current + 1] : undefined;
   if (!next) return <Link to="/">Back to all purchases</Link>;
   return <Link to={`/run/${next.id}`}>Next purchase: {next.title}</Link>;
+}
+
+/**
+ * The ledger refused what the review allowed (no answers, and the review did not send it back),
+ * and the cap is the reason: too little left, or no longer active. Only a new cap goes on.
+ */
+export function capRanOut(run: RunResponse): boolean {
+  const last = run.attempts.at(-1);
+  if (last?.outcome?.decision !== 'return_to_agent' || last.answers) return false;
+  if (
+    run.review === 'on' &&
+    (last.review.failedClosed || last.review.decision === 'return_to_agent')
+  )
+    return false;
+  return run.cap.status !== 'active' || run.cap.availableCents < last.pick.priceCents;
+}
+
+function StartOverAction() {
+  return (
+    <>
+      <StartOverButton variant="primary">Start over</StartOverButton>
+      <span className="note">
+        Starting over releases this cap and asks you to approve a new one.
+      </span>
+    </>
+  );
 }
 
 export function RunScreen() {
@@ -137,6 +164,7 @@ function RunView({ scenarioId }: { scenarioId: string }) {
                       review={run.review}
                       canAnswer={run.status === 'awaiting_answers' && last}
                       onAnswer={sendAnswers}
+                      {...(last && capRanOut(run) ? { action: <StartOverAction /> } : {})}
                       {...(last && run.status === 'done' && list
                         ? { next: <NextLink scenarios={list} current={index} /> }
                         : {})}

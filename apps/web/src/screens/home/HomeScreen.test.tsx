@@ -175,13 +175,41 @@ test('when the purchases fail, the band says so and Try again reloads them', asy
   expect(load).toHaveBeenCalledTimes(2);
 });
 
-test('Start over resets the session and reloads', async () => {
+test('Start over resets the session and reloads home with a confirmation', async () => {
   const api = createFakeApi();
   const reset = vi.spyOn(api, 'resetSession');
   renderApp({ route: '/', api });
   fireEvent.click(
     screen.getByRole('button', { name: 'Start over: release my cap and clear my purchases' }),
   );
-  await waitFor(() => expect(goTo).toHaveBeenCalledWith('/'));
+  await waitFor(() => expect(goTo).toHaveBeenCalledWith('/?reset=done'));
   expect(reset).toHaveBeenCalledTimes(1);
+});
+
+test('after Start over, home confirms the cap was released, once', async () => {
+  renderApp({ route: '/?reset=done' });
+  const notice = await screen.findByText(/^You started over\./);
+  expect(notice.closest('[role="status"]')).not.toBeNull();
+  expect(notice).toHaveTextContent(
+    'You started over. Your spending cap was released and your purchases were cleared. The next purchase asks you to approve a new cap.',
+  );
+  // The flag leaves the URL, so a reload does not confirm again.
+  await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/'));
+  expect(screen.getByText(/^You started over\./)).toBeInTheDocument();
+});
+
+test('a Start over that fails says so and stays on the page', async () => {
+  const api = createFakeApi();
+  vi.spyOn(api, 'resetSession').mockRejectedValueOnce(new Error('down'));
+  renderApp({ route: '/', api });
+  fireEvent.click(
+    screen.getByRole('button', { name: 'Start over: release my cap and clear my purchases' }),
+  );
+  expect(await screen.findByRole('alert')).toHaveTextContent(
+    'Start over did not go through. Try again.',
+  );
+  expect(goTo).not.toHaveBeenCalled();
+  expect(
+    screen.getByRole('button', { name: 'Start over: release my cap and clear my purchases' }),
+  ).toBeEnabled();
 });

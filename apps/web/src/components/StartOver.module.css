@@ -1,0 +1,5 @@
+.failed {
+  color: var(--broken);
+  font-size: var(--t-xs);
+  font-weight: 600;
+}

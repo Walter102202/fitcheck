@@ -76,6 +76,13 @@
   align-items: flex-start;
 }
 
+.action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+}
+
 .returned svg {
   flex: none;
   margin-top: 3px;

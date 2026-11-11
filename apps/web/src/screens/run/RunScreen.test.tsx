@@ -12,6 +12,7 @@ import { ApiRequestError } from '../../api/errors.js';
 import { activeFixtureCap, createFakeApi } from '../../api/fixtures/fake-api.js';
 import { failedClosedRun, fixtureRun } from '../../api/fixtures/runs.js';
 import { FIXTURE_SCENARIOS } from '../../api/fixtures/scenarios.js';
+import { goTo } from '../../lib/browser.js';
 import { renderApp } from '../../test/render.js';
 
 vi.mock('../../lib/browser.js', () => ({ goTo: vi.fn(), postForm: vi.fn() }));
@@ -353,6 +354,50 @@ test('a hold the cap refused shows not captured in step 3 too, and no card', asy
   expect(within(steps).queryByText('The payment waits and the buyer gets one card.')).toBeNull();
   expect(within(steps).queryByText('On hold')).toBeNull();
   expect(screen.queryByRole('button', { name: 'Send answers' })).toBeNull();
+});
+
+/** The same refusal with the cap really short: $168.81 left, less than the TV. */
+function sonyCapRanOut(): RunResponse {
+  const run = sonyRefusedByCap();
+  const available = 16881;
+  return {
+    ...run,
+    cap: {
+      ...run.cap,
+      heldCents: 0,
+      capturedCents: run.cap.amountCents - available,
+      availableCents: available,
+    },
+    notices: ['The spending cap has $168.81 left.'],
+  };
+}
+
+test('when the cap has too little left, the run offers Start over with one line on what it does', async () => {
+  const api = createFakeApi({ cap: activeFixtureCap(), runs: { 'tv-sony': sonyCapRanOut() } });
+  const reset = vi.spyOn(api, 'resetSession');
+  renderApp({ route: '/run/tv-sony', api });
+  const button = await screen.findByRole('button', { name: 'Start over' });
+  const strip = document.querySelector('[data-kind="not_captured"]');
+  expect(strip).toContainElement(button);
+  expect(strip).toHaveTextContent(
+    'Starting over releases this cap and asks you to approve a new one.',
+  );
+  fireEvent.click(button);
+  await waitFor(() => expect(goTo).toHaveBeenCalledWith('/?reset=done'));
+  expect(reset).toHaveBeenCalledTimes(1);
+});
+
+test('a refusal with enough cap left, or one the review made, offers no Start over', async () => {
+  const first = renderApp({
+    route: '/run/tv-sony',
+    api: createFakeApi({ cap: activeFixtureCap(), runs: { 'tv-sony': sonyRefusedByCap() } }),
+  });
+  await waitFor(() => expect(document.querySelector('[data-kind="not_captured"]')).not.toBeNull());
+  expect(screen.queryByRole('button', { name: 'Start over' })).toBeNull();
+  first.unmount();
+  renderApp({ route: '/run/dryer-spain', api: withCap() });
+  await screen.findByText('Second pick');
+  expect(screen.queryByRole('button', { name: 'Start over' })).toBeNull();
 });
 
 test('with the review off, the strip follows what PayPal did, not the cap-only forecast', async () => {

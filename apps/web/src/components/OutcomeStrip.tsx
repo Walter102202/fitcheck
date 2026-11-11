@@ -53,6 +53,7 @@ export function OutcomeStrip({
   product,
   reason,
   agentMessage,
+  action,
   children,
 }: {
   kind: Kind;
@@ -61,6 +62,8 @@ export function OutcomeStrip({
   product: string;
   reason: Reason;
   agentMessage?: string;
+  /** A way forward when the purchase cannot go on, such as Start over when the cap ran out. */
+  action?: ReactNode;
   children?: ReactNode;
 }) {
   const captured = kind !== 'not_captured';
@@ -91,6 +94,7 @@ export function OutcomeStrip({
             </span>
           </div>
         )}
+        {action && <div className={styles.action}>{action}</div>}
         {children && <p className="note">{children}</p>}
       </div>
     </div>

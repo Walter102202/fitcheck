@@ -1,8 +1,7 @@
 import { runDryerSpain } from '@fitcheck/contracts';
-import { useRef, useState } from 'react';
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Link, useSearchParams } from 'react-router';
 import { useAppConfig } from '../../api/config.js';
-import { useFitcheckApi } from '../../api/context.js';
 import type { FitcheckApi } from '../../api/types.js';
 import { useQuery } from '../../api/use-query.js';
 import { Button, ButtonLink } from '../../components/Button.js';
@@ -10,7 +9,7 @@ import { PaymentChip } from '../../components/PaymentChip.js';
 import { RequirementChip } from '../../components/RequirementChip.js';
 import { ScenarioRow } from '../../components/ScenarioRow.js';
 import { SquareRow } from '../../components/SquareRow.js';
-import { goTo } from '../../lib/browser.js';
+import { RESET_NOTICE, StartOverButton } from '../../components/StartOver.js';
 import { modelName } from '../../lib/model.js';
 import styles from './HomeScreen.module.css';
 import { Specimen } from './Specimen.js';
@@ -20,29 +19,20 @@ const loadResults = (api: FitcheckApi) => api.getResults();
 
 const COUNT_WORD = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six'];
 
-function StartOver() {
-  const api = useFitcheckApi();
-  const [busy, setBusy] = useState(false);
-  const guard = useRef(false);
-  async function startOver() {
-    if (guard.current) return;
-    guard.current = true;
-    setBusy(true);
-    try {
-      await api.resetSession();
-    } finally {
-      goTo('/');
-    }
-  }
-  return (
-    <Button variant="quiet" size="small" onClick={startOver} disabled={busy}>
-      Start over: release my cap and clear my purchases
-    </Button>
-  );
+/** After Start over: confirm it once, and drop the flag so a reload does not repeat it. */
+function useResetNotice(): boolean {
+  const [params, setParams] = useSearchParams();
+  const flagged = params.get('reset') === 'done';
+  const [shown] = useState(flagged);
+  useEffect(() => {
+    if (flagged) setParams({}, { replace: true });
+  }, [flagged, setParams]);
+  return shown;
 }
 
 export function HomeScreen() {
   const config = useAppConfig().data;
+  const resetDone = useResetNotice();
   const scenarios = useQuery(loadScenarios, 'scenarios');
   const results = useQuery(loadResults, 'results');
   const list = scenarios.data ?? [];
@@ -64,6 +54,11 @@ export function HomeScreen() {
 
   return (
     <div className="wrap">
+      {resetDone && (
+        <p className={styles.resetNotice} role="status">
+          {RESET_NOTICE}
+        </p>
+      )}
       <section className={styles.hero}>
         <div>
           <h1>Your agent can pay. Fitcheck checks what it’s paying for.</h1>
@@ -205,8 +200,8 @@ export function HomeScreen() {
           shipping, returns, warranty or tax. The store in this demo is a PayPal sandbox account;
           nothing is ordered from the real stores.
         </p>
-        <p>
-          <StartOver />
+        <p className={styles.startOver}>
+          <StartOverButton>Start over: release my cap and clear my purchases</StartOverButton>
         </p>
       </footer>
     </div>

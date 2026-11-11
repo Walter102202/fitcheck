@@ -69,6 +69,7 @@ export function AttemptSection({
   review,
   canAnswer,
   onAnswer,
+  action,
   next,
 }: {
   attempt: Attempt;
@@ -79,6 +80,8 @@ export function AttemptSection({
   review: 'on' | 'off';
   canAnswer: boolean;
   onAnswer: (attemptNo: number, answers: Record<string, Answer>) => Promise<void>;
+  /** Given to the last strip when the run cannot go on, such as Start over when the cap ran out. */
+  action?: ReactNode;
   /** The "Next purchase" link, given to the last strip once the run is done. */
   next?: ReactNode;
 }) {
@@ -146,6 +149,7 @@ export function AttemptSection({
         product={product}
         reason="review"
         {...(offMessage === undefined ? {} : { agentMessage: offMessage })}
+        {...(action ? { action } : {})}
       >
         {next}
       </OutcomeStrip>
@@ -173,6 +177,7 @@ export function AttemptSection({
         product={product}
         reason={result.failedClosed ? 'failed_closed' : attempt.answers ? 'answers' : 'review'}
         {...(agentMessage === undefined ? {} : { agentMessage })}
+        {...(action ? { action } : {})}
       >
         {next}
       </OutcomeStrip>
