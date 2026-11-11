@@ -1,0 +1,19 @@
+/*
+ * Atkinson Hyperlegible Next and Mono, self-hosted: latin subset, variable weight 200-800.
+ * Both are SIL Open Font License 1.1; the licence texts sit next to the files.
+ */
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../assets/fonts/atkinson-hyperlegible-next-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  src: url("../assets/fonts/atkinson-hyperlegible-mono-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
