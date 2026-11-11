@@ -6,6 +6,7 @@
   "description": "Fitcheck web: the demo purchases, the spending cap and the measurement.",
   "scripts": {
     "dev": "vite",
+    "dev:fixtures": "vite --mode fixtures",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",

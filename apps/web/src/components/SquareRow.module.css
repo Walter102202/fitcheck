@@ -1,0 +1,86 @@
+/* Mockup fitcheck.css lines 632-718, and .unit-row from the 980 px block. */
+.unitRow {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 110px;
+  gap: var(--s-4);
+  align-items: center;
+}
+
+.who {
+  font-weight: 700;
+}
+
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.sq {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 2px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.sq[data-state="paid_bad"] {
+  background: var(--broken);
+  border-color: var(--broken);
+}
+
+.sq[data-state="paid_good"] {
+  background: var(--backed);
+  border-color: var(--backed);
+}
+
+.sq[data-state="pending"] {
+  border-style: dashed;
+}
+
+.count {
+  font-family: var(--mono);
+  font-size: var(--t-lg);
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* "Not measured yet" is wider than "14 of 16": small body type keeps it inside the 110px column. */
+.count[data-pending] {
+  font-family: inherit;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--ink-2);
+  white-space: normal;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+  align-items: center;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend .sq {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 980px) {
+  .unitRow {
+    grid-template-columns: 1fr;
+  }
+
+  .count {
+    text-align: left;
+  }
+}

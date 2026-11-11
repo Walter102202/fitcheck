@@ -1,0 +1,48 @@
+/* Mockup fitcheck.css lines 223-258. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  min-height: 44px;
+  padding: 0 var(--s-5);
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #2a2f3b;
+}
+
+.btn[data-variant="quiet"] {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn[data-variant="quiet"]:hover {
+  background: var(--page);
+}
+
+.btn[data-size="small"] {
+  min-height: 36px;
+  padding: 0 var(--s-4);
+  font-size: var(--t-xs);
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* The mockup's 36 px small button stays on desktop; a finger gets the spec's 44 px target. */
+@media (pointer: coarse) {
+  .btn[data-size="small"] {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,19 @@
+/* Mockup fitcheck.css lines 876-878 (.checks) and 927-936 (.verdict). */
+.checks {
+  display: grid;
+}
+
+.verdict {
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 2px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+  font-weight: 600;
+}
+
+.verdict :global(.note) {
+  font-weight: 400;
+}
