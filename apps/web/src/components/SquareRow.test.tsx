@@ -41,6 +41,30 @@ test('a row not measured yet says so', () => {
   expect(container.querySelectorAll('i[data-state="pending"]')).toHaveLength(16);
 });
 
+test('a mean shows the number alone, and a missing mean does not apply', () => {
+  const label = 'Questions per held purchase';
+  const { unmount } = render(
+    <SquareRow who="Fitcheck" squares={[]} count={1.2} of={9} label={label} unit="mean" />,
+  );
+  expect(screen.getByText('1.2')).not.toHaveAttribute('data-pending');
+  expect(screen.queryByText(/of 9/)).toBeNull();
+  expect(screen.getByRole('img', { name: `1.2: ${label}` })).toBeInTheDocument();
+  unmount();
+  render(
+    <SquareRow
+      who="Spending cap only"
+      squares={[]}
+      count={null}
+      of={9}
+      label={label}
+      unit="mean"
+    />,
+  );
+  expect(screen.getByText('Does not apply')).toHaveAttribute('data-pending');
+  expect(screen.queryByText('Not measured yet')).toBeNull();
+  expect(screen.getByRole('img', { name: `Does not apply: ${label}` })).toBeInTheDocument();
+});
+
 test('the legend names each square, and the pending one only when needed', () => {
   const { unmount } = render(<SquareLegend pending={false} />);
   expect(screen.getByText('Happened, and it is bad')).toBeInTheDocument();

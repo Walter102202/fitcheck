@@ -1,3 +1,4 @@
+import type { ResultsRow } from '@fitcheck/contracts';
 import { render, screen } from '@testing-library/react';
 import { expect, test } from 'vitest';
 import { FIXTURE_RESULTS } from '../../api/fixtures/results.js';
@@ -12,6 +13,22 @@ test('each metric has its heading and two rows of squares', () => {
   expect(
     screen.getByRole('img', { name: '0 of 12: Correct purchases blocked by mistake' }),
   ).toBeDefined();
+});
+
+test('a mean row passes its unit down: the value alone, and cap-only does not apply', () => {
+  const row: ResultsRow = {
+    id: 'questions_per_held',
+    label: 'Questions per held purchase',
+    of: 9,
+    unit: 'mean',
+    capOnly: null,
+    fitcheck: 1.2,
+    squares: { capOnly: [], fitcheck: [] },
+  };
+  render(<ResultsMetrics rows={[row]} headingLevel={2} />);
+  expect(screen.getByText('1.2')).toBeInTheDocument();
+  expect(screen.getByText('Does not apply')).toBeInTheDocument();
+  expect(screen.queryByText(/of 9/)).toBeNull();
 });
 
 test('the heading level follows the page', () => {

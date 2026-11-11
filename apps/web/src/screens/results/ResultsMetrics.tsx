@@ -13,27 +13,32 @@ export function ResultsMetrics({
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   return (
     <>
-      {rows.map((row) => (
-        <div key={row.id} className={styles.metric}>
-          <Heading>{row.label}</Heading>
-          <div className={styles.units}>
-            <SquareRow
-              who="Spending cap only"
-              squares={row.squares.capOnly}
-              count={row.capOnly}
-              of={row.of}
-              label={row.label}
-            />
-            <SquareRow
-              who="Fitcheck"
-              squares={row.squares.fitcheck}
-              count={row.fitcheck}
-              of={row.of}
-              label={row.label}
-            />
+      {rows.map((row) => {
+        const unit = row.unit ? { unit: row.unit } : {};
+        return (
+          <div key={row.id} className={styles.metric}>
+            <Heading>{row.label}</Heading>
+            <div className={styles.units}>
+              <SquareRow
+                who="Spending cap only"
+                squares={row.squares.capOnly}
+                count={row.capOnly}
+                of={row.of}
+                label={row.label}
+                {...unit}
+              />
+              <SquareRow
+                who="Fitcheck"
+                squares={row.squares.fitcheck}
+                count={row.fitcheck}
+                of={row.of}
+                label={row.label}
+                {...unit}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </>
   );
 }
