@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "category": "hair_dryer",
+  "title": "Hair dryer",
+  "channel3CategorySlugs": ["hair-dryers"],
+  "facts": {
+    "voltage": {
+      "label": "voltage",
+      "type": "enum",
+      "values": ["dual", "us_only"],
+      "exclusive": true,
+      "normalizer": "voltage",
+      "evidence": ["title", "key_features[]", "description"],
+      "synonyms": {
+        "dual": [
+          "dual voltage",
+          "dual-voltage",
+          "dual-power",
+          "universal voltage",
+          "worldwide voltage",
+          "100-240V",
+          "110-240V",
+          "120V/240V",
+          "125V/240V"
+        ],
+        "us_only": [
+          "for use with 110V-120V outlets only",
+          "120V only",
+          "standard 110V voltage",
+          "120V compatibility"
+        ]
+      },
+      "contradictionsObserved": "0 of 65"
+    },
+    "diffuserIncluded": {
+      "label": "diffuser",
+      "type": "boolean",
+      "normalizer": "diffuser",
+      "evidence": [
+        "structured_attributes.hair-styling-items-included",
+        "structured_attributes.hair-styling-tool-features",
+        "title",
+        "key_features[]"
+      ],
+      "absence": "items-included is populated and no field mentions a diffuser: backed absence (broken when the request needs one).",
+      "contradictionsObserved": "2 of 65 mention a diffuser in features or text while the items-included list has only a concentrator (L4kSx03, bC5Wf1F)."
+    }
+  },
+  "requirements": [
+    {
+      "id": "hair_dryer.dual_voltage",
+      "name": "Works on 220-240 V outlets abroad",
+      "origin": "triggered",
+      "failureType": "compatibility",
+      "appliesWhen": {
+        "cues": [
+          "travel",
+          "trip",
+          "abroad",
+          "overseas",
+          "international",
+          "Europe",
+          "study abroad",
+          "vacation",
+          "honeymoon",
+          "carry-on",
+          "UK",
+          "Spain",
+          "France",
+          "Italy",
+          "Asia"
+        ]
+      },
+      "test": {
+        "fact": "voltage",
+        "op": "eq",
+        "value": "dual"
+      },
+      "check": "code_with_model_citation",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The listing says it only works on 110-120 V outlets; you are taking it abroad.",
+      "line": {
+        "unbacked": "The listing does not say this dryer works on 220-240 V outlets, which Europe and most of the world use. Is that OK?"
+      }
+    },
+    {
+      "id": "hair_dryer.diffuser",
+      "name": "Comes with a diffuser",
+      "origin": "triggered",
+      "failureType": "hard_requirement",
+      "appliesWhen": {
+        "cues": ["curly", "curls", "wavy", "waves", "coily", "kinky", "diffuser"]
+      },
+      "test": {
+        "fact": "diffuserIncluded",
+        "op": "eq",
+        "value": true
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The list of what comes in the box has no diffuser.",
+      "line": {
+        "unbacked": "The listing does not say whether a diffuser comes in the box. Is that OK?",
+        "contradictory": "The listing mentions a diffuser, but the list of what comes in the box does not include one. Is that OK?"
+      }
+    }
+  ],
+  "outOfScope": [
+    {
+      "id": "hair_dryer.gentle_heat",
+      "name": "Low heat setting",
+      "reason": "Removed 2026-11-10 (simplicity rule): a preference.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "hair_dryer.ionic",
+      "name": "Ionic",
+      "reason": "Removed 2026-11-10 (simplicity rule): a preference.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "hair_dryer.wattage",
+      "name": "Power in watts",
+      "reason": "Removed 2026-11-10 (simplicity rule): a preference; stated in 49% of listings.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "hair_dryer.noise",
+      "name": "Noise level",
+      "reason": "Stated in 4 of 65 listings.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "hair_dryer.weight",
+      "name": "Weight",
+      "reason": "A preference; offer weight in 49% of listings.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "hair_dryer.cord_length",
+      "name": "Cord length",
+      "reason": "Stated in 12 of 65 listings.",
+      "handling": "Not checked."
+    }
+  ]
+}

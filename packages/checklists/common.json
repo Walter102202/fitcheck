@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "category": "common",
+  "title": "Checks that apply to every purchase, and the rules every checklist follows",
+  "pathGrammar": {
+    "title": "Product title. Free text: a citation must carry a verbatim quote of at most 160 characters.",
+    "description": "Product description. Free text: verbatim quote of at most 160 characters. Also scanned for contradictions.",
+    "key_features[]": "Any item of key_features. A citation names the index and quotes the item.",
+    "structured_attributes.<key>": "Any value in that attribute's list.",
+    "brands[].name": "Any brand name on the product.",
+    "category.slug": "Channel3 category slug of the product.",
+    "variants.selected[<Name>|<Name>]": "Selected label of the variant option whose name matches one of the names (case-insensitive).",
+    "variants.options[]": "Variant options the product offers.",
+    "offer.<field>": "The offer the agent selected, matched by domain: price.price, availability, condition, domain, dimensions.*",
+    "offers[].<field>": "All offers of the product. Used only for contradiction scans, never as backing."
+  },
+  "contradictionRule": {
+    "text": "Every test and every askWhen condition is evaluated over every candidate value code finds in the requirement's evidence paths, not only the cited one. All candidates pass: pass. All fail: broken. Mixed: contradictory, which goes into the question showing each value and the field it came from.",
+    "examples": [
+      "RAM 16 GB and 32 GB (two configurations), buyer needs at least 16: pass.",
+      "Screen 65 and 55 inches, buyer asked for 65: contradictory.",
+      "Resolution '4K ultra HD' and '1920 x 1080': not a contradiction, resolution is read as a maximum (see tv.json).",
+      "Synonyms ('4K ultra HD' and '2160p') normalize to one value before comparing."
+    ]
+  },
+  "reasonTypes": {
+    "broken": "Backed by the listing and violated (for example the selected variant is 83 inches and the buyer asked for 65). Goes back to the agent. No question.",
+    "unbacked": "The listing does not give the value. Goes into the question.",
+    "contradictory": "The listing gives values that lead to different results. Goes into the question.",
+    "never_asked": "A requirement the buyer never stated but the request makes relevant (the request mentions the wall, so the TV's mount pattern must fit; it mentions a trip, so the dryer must take 220-240 V), and the listing gives a value the buyer must confirm. Goes into the question. Since 2026-11-10 no requirement applies 'always': every one is stated or triggered by the request.",
+    "payment": "An offer or payment check from this file (price, stock, condition, quantity, variant, store, duplicate, amount). Goes back to the agent, except price_unchanged and an unknown condition, which go into the question."
+  },
+  "question": {
+    "perPurchase": 1,
+    "maxLines": 3,
+    "lineAnswers": ["yes", "no", "dont_know"],
+    "polarity": "Every line describes the gap and asks whether it is OK. yes = OK, pay as far as this line goes. no = not OK. dont_know = not sure.",
+    "outcome": "Capture only if every line is answered yes. Any no or dont_know: not captured, back to the agent with the reasons.",
+    "memory": "Answers persist for the whole task. yes marks the requirement not needed; no marks it needed (a later product that breaks it goes back to the agent without a question); dont_know leaves it open.",
+    "overflow": "More than 3 lines: no question. Back to the agent with all reasons and the message 'Too many points in this listing cannot be verified; choose a better documented offer.'",
+    "order": "payment, then contradictory, then unbacked, then never_asked."
+  },
+  "holdOutput": {
+    "example": {
+      "decision": "ask",
+      "purchaseId": "pur_123",
+      "reasons": [
+        {
+          "requirement": "tv.wall_mount",
+          "type": "never_asked",
+          "evidence": [
+            {
+              "path": "structured_attributes.vesa-mounting-pattern",
+              "values": ["300 x 300 mm"]
+            }
+          ]
+        },
+        {
+          "requirement": "tv.screen_size",
+          "type": "contradictory",
+          "evidence": [
+            {
+              "path": "title",
+              "quote": "Sony BRAVIA 8 K65XR80 65 inch",
+              "value": 65
+            },
+            {
+              "path": "key_features[3]",
+              "quote": "Screen Size Class: 55 Inch",
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "question": {
+        "lines": [
+          {
+            "requirement": "tv.screen_size",
+            "type": "contradictory",
+            "text": "The listing gives two screen sizes: 65 inches (title) and 55 inches (features). Is that OK?",
+            "answers": ["yes", "no", "dont_know"]
+          },
+          {
+            "requirement": "tv.wall_mount",
+            "type": "never_asked",
+            "text": "This TV uses the VESA 300 x 300 mm wall-mount pattern (the hole spacing on its back). Does your mount support it?",
+            "answers": ["yes", "no", "dont_know"]
+          }
+        ]
+      }
+    },
+    "decisions": ["capture", "ask", "return_to_agent"]
+  },
+  "facts": {
+    "categorySlug": {
+      "label": "product type",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "lowercase",
+      "evidence": ["category.slug"]
+    },
+    "brand": {
+      "label": "brand",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "brandName",
+      "evidence": ["brands[].name", "title"]
+    },
+    "priceCents": {
+      "label": "price",
+      "type": "number",
+      "unit": "USD_cents",
+      "exclusive": true,
+      "normalizer": "usdCents",
+      "evidence": ["offer.price.price"]
+    },
+    "availability": {
+      "label": "stock",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "lowercase",
+      "evidence": ["offer.availability"]
+    },
+    "condition": {
+      "label": "condition",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "condition",
+      "evidence": ["offer.condition", "structured_attributes.cosmetic-condition", "title"]
+    },
+    "domain": {
+      "label": "store",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "lowercase",
+      "evidence": ["offer.domain"]
+    }
+  },
+  "requirements": [
+    {
+      "id": "common.category_match",
+      "name": "It is the kind of product asked for",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "categorySlug",
+        "op": "in",
+        "valueFrom": "checklist.channel3CategorySlugs"
+      },
+      "check": "code",
+      "ifMissing": "return_to_agent",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The agent picked a {categorySlug}, not a {category}."
+    },
+    {
+      "id": "common.budget",
+      "name": "Within budget",
+      "origin": "stated",
+      "failureType": "budget",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "intentHas": "budgetCents"
+      },
+      "test": {
+        "fact": "priceCents",
+        "op": "max",
+        "valueFrom": "intent.budgetCents",
+        "multiplyBy": "intent.quantity"
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "{price} is over the {budget} budget."
+    },
+    {
+      "id": "common.price_unchanged",
+      "name": "Price has not changed since the agent chose it",
+      "origin": "always",
+      "failureType": "budget",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "priceCents",
+        "op": "eq",
+        "valueFrom": "purchase.priceSeenCents"
+      },
+      "check": "code",
+      "onBroken": "ask",
+      "line": {
+        "payment": "The price changed from {priceSeen} to {price} since the agent chose it. Is that OK?"
+      }
+    },
+    {
+      "id": "common.amount_matches",
+      "name": "Charged amount equals the offer price",
+      "origin": "always",
+      "failureType": "budget",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "priceCents",
+        "op": "eq",
+        "valueFrom": "purchase.amountCents",
+        "multiplyBy": "intent.quantity"
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The agent asked to charge {amount}; the offer price is {price}."
+    },
+    {
+      "id": "common.in_stock",
+      "name": "In stock",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "availability",
+        "op": "eq",
+        "value": "instock"
+      },
+      "check": "code",
+      "ifMissing": "return_to_agent",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "{domain} lists it as out of stock."
+    },
+    {
+      "id": "common.condition_new",
+      "name": "New, unless the buyer accepted used",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "condition",
+        "op": "in",
+        "value": ["new"],
+        "orIntentFlag": "acceptUsed"
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The {domain} offer is {condition}.",
+      "line": {
+        "payment": "{domain} does not say whether this one is new. Is that OK?"
+      }
+    },
+    {
+      "id": "common.quantity",
+      "name": "Quantity asked for",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "purchase.quantity",
+        "op": "eq",
+        "valueFrom": "intent.quantity",
+        "default": 1
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The agent ordered {purchaseQuantity}; you asked for {quantity}."
+    },
+    {
+      "id": "common.variant_pinned",
+      "name": "The variant is chosen",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "productHas": "variants.options[]"
+      },
+      "test": {
+        "everyOptionNamed": ["Size", "Display", "RAM", "Memory", "Storage", "Capacity", "Voltage"],
+        "mustBeIn": "variants.selected"
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "The listing has several {option} options and the agent did not pin one."
+    },
+    {
+      "id": "common.merchant",
+      "name": "The store is the one the agent chose and one the buyer allows",
+      "origin": "always",
+      "failureType": "hard_requirement",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "fact": "domain",
+        "op": "eq",
+        "valueFrom": "purchase.domain",
+        "andIn": "intent.stores"
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "{domain} is not among the stores you allowed."
+    },
+    {
+      "id": "common.no_duplicate",
+      "name": "Not already bought in this task",
+      "origin": "always",
+      "failureType": "never_established",
+      "reasonType": "payment",
+      "appliesWhen": {
+        "always": true
+      },
+      "test": {
+        "noEarlierCaptureFor": "product.id",
+        "within": "task"
+      },
+      "check": "code",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "This product was already bought in this task."
+    },
+    {
+      "id": "common.brand",
+      "name": "Brand",
+      "origin": "stated",
+      "failureType": "hard_requirement",
+      "reasonType": "broken",
+      "appliesWhen": {
+        "intentHas": "common.brand"
+      },
+      "test": {
+        "fact": "brand",
+        "op": "in",
+        "valueFrom": "intent"
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "It is a {brand}; you asked for {intentBrand}.",
+      "line": {
+        "unbacked": "The listing does not name the brand. Is that OK?"
+      }
+    }
+  ],
+  "outOfScope": [
+    {
+      "id": "common.return_policy",
+      "name": "Return policy",
+      "reason": "Channel3 has no store policy data.",
+      "handling": "Shown once on the intent card as not checked. Never asked at payment."
+    },
+    {
+      "id": "common.warranty",
+      "name": "Warranty",
+      "reason": "No structured field.",
+      "handling": "Shown on the intent card as not checked."
+    },
+    {
+      "id": "common.shipping",
+      "name": "Shipping cost and delivery time",
+      "reason": "Not in Channel3 offers.",
+      "handling": "Shown on the intent card as not checked."
+    },
+    {
+      "id": "common.tax",
+      "name": "Sales tax and total price",
+      "reason": "Not in Channel3 offers.",
+      "handling": "Budget is checked on item price; the card says so."
+    },
+    {
+      "id": "common.membership",
+      "name": "Membership prices",
+      "reason": "Not in Channel3 offers.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "common.merchant_trust",
+      "name": "Store trustworthiness",
+      "reason": "Channel3 gives only the domain.",
+      "handling": "Not checked; the buyer can restrict stores in the intent."
+    },
+    {
+      "id": "common.bundle",
+      "name": "Bundle agreed in conversation (Visa pattern 5)",
+      "reason": "Needs a task-level list of items, not product data.",
+      "handling": "Not built for the hackathon."
+    }
+  ]
+}

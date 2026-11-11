@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "category": "tv",
+  "title": "Television",
+  "channel3CategorySlugs": ["televisions"],
+  "facts": {
+    "screenSizeIn": {
+      "label": "screen size",
+      "type": "number",
+      "unit": "in",
+      "exclusive": true,
+      "tolerance": 1,
+      "normalizer": "inches",
+      "evidence": ["variants.selected[Size]", "title", "key_features[]", "description"],
+      "contradictionsObserved": "6 of 53 give two sizes. Real examples: 3KRsP5G (selected variant 83\", key feature 65\"), UXXAg59 (title '65 inch', key feature 'Screen Size Class: 55 Inch', store width 48.2 in in all three offers, which is a 55-inch TV), BNmn7U3 (key feature 55\", description 65-inch).",
+      "normalization": "Accept N\", N”, N inch, N-inch, N-in, N\" class, N cm (divide by 2.54). Ignore numbers followed by W, H or D (cabinet dimensions) and ranges such as 'fits 43 to 98 inch TVs' (mount bundles)."
+    },
+    "resolutionMax": {
+      "label": "resolution",
+      "type": "orderedEnum",
+      "values": ["720p", "1080p", "4k", "8k"],
+      "semantics": "max",
+      "exclusive": false,
+      "normalizer": "resolutionClass",
+      "evidence": ["structured_attributes.display-resolution", "title", "key_features[]"],
+      "synonyms": {
+        "4k": ["4K ultra HD", "2160p", "3840 x 2160", "4096 x 2160", "UHD", "Ultra HD"],
+        "1080p": ["1920 x 1080", "Full HD", "FHD"],
+        "8k": ["7680 x 4320", "8K"]
+      }
+    },
+    "panelFamily": {
+      "label": "screen type",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "panelFamily",
+      "evidence": ["structured_attributes.display-technology", "title", "key_features[]"],
+      "synonyms": {
+        "oled": ["OLED", "QD-OLED", "OLED evo"],
+        "lcd": ["LED", "LCD", "QLED", "Mini-LED", "QNED", "Neo QLED"],
+        "projector": ["LCoS", "DLP"]
+      },
+      "contradictionsObserved": "2 of 25: JsWPLPk (OLED and LCoS), ri9pL2g (OLED and LED)"
+    },
+    "vesaPattern": {
+      "label": "wall-mount pattern",
+      "type": "enum",
+      "exclusive": true,
+      "normalizer": "vesaPattern",
+      "evidence": ["structured_attributes.vesa-mounting-pattern"],
+      "contradictionsObserved": "7 of 53 list two or three patterns (for example JsWPLPk: '400 x 200 mm' and '100 x 200 mm')."
+    },
+    "widthIn": {
+      "label": "width",
+      "type": "number",
+      "unit": "in",
+      "exclusive": true,
+      "tolerance": 1.5,
+      "normalizer": "widthFromOfferDimensions",
+      "evidence": ["offer.dimensions"],
+      "contradictionScan": ["offers[].dimensions"],
+      "contradictionsObserved": "4 of 53 have offers whose widths differ by more than 1.5 in (for example YQfWgKT: 56.7, 42.2 and 65.4 in)."
+    }
+  },
+  "requirements": [
+    {
+      "id": "tv.screen_size",
+      "name": "Screen size",
+      "origin": "stated",
+      "failureType": "hard_requirement",
+      "appliesWhen": {
+        "intentHas": "tv.screen_size"
+      },
+      "test": {
+        "fact": "screenSizeIn",
+        "op": "eq",
+        "valueFrom": "intent",
+        "tolerance": 1
+      },
+      "check": "code_with_model_citation",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "It is a {screenSizeIn}-inch TV; you asked for {intentValue} inches.",
+      "line": {
+        "unbacked": "The listing does not confirm the screen size. Is that OK?",
+        "contradictory": "The listing gives two screen sizes: {conflicts}. Is that OK?"
+      }
+    },
+    {
+      "id": "tv.resolution",
+      "name": "Resolution",
+      "origin": "stated",
+      "failureType": "hard_requirement",
+      "appliesWhen": {
+        "intentHas": "tv.resolution"
+      },
+      "test": {
+        "fact": "resolutionMax",
+        "op": "min",
+        "valueFrom": "intent"
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "It is {resolutionMax}; you asked for {intentValue}.",
+      "line": {
+        "unbacked": "The listing does not confirm the resolution is {intentValue}. Is that OK?"
+      }
+    },
+    {
+      "id": "tv.panel_type",
+      "name": "Panel type (OLED, QLED/LED)",
+      "origin": "stated",
+      "failureType": "hard_requirement",
+      "appliesWhen": {
+        "intentHas": "tv.panel_type"
+      },
+      "test": {
+        "fact": "panelFamily",
+        "op": "eq",
+        "valueFrom": "intent"
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "reasonTemplate": "It is an {panelFamily} TV; you asked for {intentValue}.",
+      "line": {
+        "unbacked": "The listing does not say what kind of screen it has. Is that OK?",
+        "contradictory": "The listing says {conflicts}, which are different screen technologies. Is that OK?"
+      }
+    },
+    {
+      "id": "tv.wall_mount",
+      "name": "Fits the wall mount the buyer already has",
+      "origin": "unasked",
+      "failureType": "compatibility",
+      "appliesWhen": {
+        "cues": ["wall", "mount", "mounted", "bracket", "hang", "hanging"]
+      },
+      "askWhen": {
+        "always": true
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "whenStatedValue": "If the request gives the mount's pattern or its maximum ('our mount takes up to 200 x 200'), it is a stated requirement: a listing whose pattern does not fit is broken and goes back to the agent without a question.",
+      "line": {
+        "never_asked": "This TV uses the VESA {vesaPattern} wall-mount pattern (the hole spacing on its back). Does your mount support it?",
+        "unbacked": "The listing does not give the wall-mount pattern (VESA). Is that OK?",
+        "contradictory": "The listing gives two wall-mount patterns: {conflicts}. Is that OK?"
+      }
+    },
+    {
+      "id": "tv.fits_space",
+      "name": "Fits the spot it goes in",
+      "origin": "unasked",
+      "failureType": "compatibility",
+      "appliesWhen": {
+        "cues": [
+          "replace",
+          "replacement",
+          "same spot",
+          "same place",
+          "cabinet",
+          "stand",
+          "niche",
+          "nook",
+          "built-in",
+          "entertainment center",
+          "between the speakers",
+          "fit",
+          "space for"
+        ],
+        "unlessAlsoApplies": "tv.wall_mount"
+      },
+      "askWhen": {
+        "always": true
+      },
+      "check": "code",
+      "ifMissing": "ask",
+      "onBroken": "return_to_agent",
+      "whenStatedValue": "If the request gives the available width ('the cabinet opening is 50 inches'), it is a stated requirement: a wider TV is broken and goes back to the agent without a question.",
+      "line": {
+        "never_asked": "This TV is {widthIn} inches wide. Is there room for that in the spot it goes?",
+        "unbacked": "The store does not give this TV's width. Is that OK?",
+        "contradictory": "The stores give different widths for this TV: {conflicts}. Is that OK?"
+      }
+    }
+  ],
+  "outOfScope": [
+    {
+      "id": "tv.picture_formats",
+      "name": "Dolby Vision, HDR10+, HDR formats",
+      "reason": "Removed on 2026-11-10 (Walter). Quality preferences: non-Dolby Vision TVs still play iPhone HDR video as HLG; HDR10+ and Dolby Vision streaming fall back to HDR10. Sources: https://developer.apple.com/av-foundation/Incorporating-HDR-video-with-Dolby-Vision-into-your-apps.pdf and https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/",
+      "handling": "Not checked."
+    },
+    {
+      "id": "tv.refresh_rate",
+      "name": "120 Hz for game consoles",
+      "reason": "Removed on 2026-11-10 (Walter). PS5 and Xbox Series X run at 60 Hz on a 60 Hz TV; 120 Hz is a preference.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "tv.hdmi_ports",
+      "name": "Number of HDMI ports, HDMI 2.1, eARC",
+      "reason": "Stated in 6 of 25 listings or fewer.",
+      "handling": "Not checked."
+    },
+    {
+      "id": "tv.energy",
+      "name": "Energy use",
+      "reason": "3 of 25 listings carry an energy class.",
+      "handling": "Not checked."
+    }
+  ]
+}
