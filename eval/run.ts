@@ -182,13 +182,16 @@ for (const row of measured.rows) {
 }
 
 if (p.kind === 'live' && split === 'heldout') {
-  publishHeldout({
+  const latest = publishHeldout({
     resultsDir,
     errataFile: join(EVAL_DIR, 'cases', 'errata.md'),
     detail: results,
     cases,
   });
   console.log('Wrote eval/results/latest.json and eval/results/misses.md.');
+  // Counts only: the sentence under the README table.
+  const stops = latest.notes.find((note) => note.startsWith('Of the '));
+  if (stops) console.log(stops);
 }
 
 if (p.kind === 'replay' && p.committed) {

@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { type ResultsJson, ResultsJsonSchema } from '@fitcheck/contracts';
 import { describe, expect, it } from 'vitest';
 import type { EvalCase } from './case-schema.js';
-import { type CaseRunOutcome, computeRows } from './measures.js';
+import { type CaseRunOutcome, computeRows, wrongStops } from './measures.js';
 import {
   expectedResults,
   FIXED_NOTES,
@@ -43,10 +43,17 @@ function outcome(
     reasons: [],
     failedClosed: false,
     unavailable: null,
+    cardRequirements: [],
+    capRefused: false,
     ...o,
   };
 }
-const evalCase = (id: string, cls: EvalCase['label']['class'], failure?: string): EvalCase => ({
+const evalCase = (
+  id: string,
+  cls: EvalCase['label']['class'],
+  failure?: string,
+  brokenKey = 'tv.screen_size',
+): EvalCase => ({
   id,
   split: 'heldout',
   category: 'tv',
@@ -65,7 +72,7 @@ const evalCase = (id: string, cls: EvalCase['label']['class'], failure?: string)
     class: cls,
     should_end_paid: cls === 'correct' || cls === 'correct_with_question',
     evidence: 'e',
-    ...(failure ? { failure, broken_key: 'tv.screen_size' } : {}),
+    ...(failure ? { failure, broken_key: brokenKey } : {}),
   },
 });
 
@@ -82,7 +89,74 @@ const detail = (outcomes: CaseRunOutcome[], cases: EvalCase[]): RunDetail => ({
   rows: computeRows(cases, outcomes),
 });
 
+const STOPS_HEADING = '## Wrong purchases stopped for another reason';
+
+/** Five unpaid wrong case-runs: three stopped for the broken key, two for something else. */
+function stopsFixture() {
+  const cases = [
+    evalCase('h-tv-01', 'wrong', 'compat_owned', 'tv.wall_mount'),
+    evalCase('h-tv-02', 'wrong', 'over_cap', 'common.amount_matches'),
+    evalCase('h-tv-03', 'wrong', 'space', 'tv.screen_size'),
+    evalCase('h-tv-04', 'correct'),
+    evalCase('h-tv-05', 'unbacked', 'absent', 'tv.wall_mount'),
+  ];
+  const card = (requirements: string[]) => ({
+    asked: true,
+    lines: requirements.length,
+    decision: 'ask' as const,
+    cardRequirements: requirements,
+  });
+  const outcomes = [
+    outcome('h-tv-01', 'cap_only', 1, false),
+    outcome('h-tv-01', 'fitcheck', 1, false, {
+      reasons: [{ requirement: 'tv.wall_mount', type: 'contradictory' }],
+    }),
+    outcome('h-tv-01', 'fitcheck', 2, false, card(['tv.wall_mount'])),
+    outcome('h-tv-01', 'fitcheck', 3, true),
+    outcome('h-tv-02', 'fitcheck', 1, false, { capRefused: true }),
+    outcome('h-tv-03', 'fitcheck', 1, false, card(['tv.wall_mount'])),
+    outcome('h-tv-03', 'fitcheck', 2, false, { failedClosed: true, unavailable: 'model_error' }),
+    outcome('h-tv-04', 'fitcheck', 1, false),
+    outcome('h-tv-05', 'fitcheck', 1, false),
+  ];
+  return { cases, outcomes };
+}
+const STOPS_SENTENCE =
+  'Of the 5 wrong purchases Fitcheck did not pay, 3 were stopped for the requirement that made them wrong; the rest are listed in eval/results/misses.md.';
+
 describe('results', () => {
+  it('counts unpaid wrong case-runs stopped for the requirement that made them wrong', () => {
+    const { cases, outcomes } = stopsFixture();
+    const stops = wrongStops(cases, outcomes);
+    expect(stops.notPaid).toBe(5);
+    expect(stops.rightReason).toBe(3);
+    expect(stops.others.map((o) => `${o.caseId}#${o.run}`)).toEqual(['h-tv-03#1', 'h-tv-03#2']);
+  });
+
+  it('the stops sentence is a results note and sits right under the README table', () => {
+    const { cases, outcomes } = stopsFixture();
+    const stops = wrongStops(cases, outcomes);
+    const r = toResultsJson(detail(outcomes, cases), { stops });
+    expect(r.notes.slice(FIXED_NOTES.length)).toEqual([STOPS_SENTENCE]);
+    const lines = readmeTable(r).split('\n');
+    const at = lines.indexOf(STOPS_SENTENCE);
+    expect(lines[at - 1]).toBe('');
+    expect(lines[at - 2]).toMatch(/^\| Same outcome in all 3 runs/);
+    expect(readmeTable(expectedResults())).not.toContain('Of the ');
+    const none = toResultsJson(detail(outcomes, cases), { stops: { notPaid: 0, rightReason: 0 } });
+    expect(none.notes).toEqual(FIXED_NOTES);
+  });
+
+  it('misses.md lists the wrong purchases stopped for another reason, run by run', () => {
+    const { cases, outcomes } = stopsFixture();
+    const md = missesMarkdown(detail(outcomes, cases), cases);
+    expect(md.indexOf(STOPS_HEADING)).toBeGreaterThan(0);
+    const section = md.slice(md.indexOf(STOPS_HEADING));
+    expect(section.split('\n').filter((l) => l.startsWith('- '))).toEqual([
+      '- h-tv-03 · wrong/space · broke tv.screen_size · run 1: card line tv.wall_mount; run 2: unavailable: model_error',
+    ]);
+  });
+
   it('expectedResults has cap-only 14, 4, 0, 7, n/a, 32 and no Fitcheck numbers', () => {
     const r = expectedResults();
     expect(r).toMatchObject({
@@ -220,7 +294,10 @@ describe('results', () => {
       outcome('h-tv-04', 'fitcheck', 1, true),
     ];
     const md = missesMarkdown(detail(outcomes, cases), cases);
-    const lines = md.split('\n').filter((l) => l.startsWith('- '));
+    const lines = md
+      .split(STOPS_HEADING)[0]
+      ?.split('\n')
+      .filter((l) => l.startsWith('- '));
     expect(lines).toEqual([
       '- h-tv-01 · wrong/variant · paid in run 2 of 2 · reasons: none',
       '- h-tv-02 · correct · not paid in run 1 of 1 · reasons: contradictory',
@@ -257,6 +334,7 @@ describe('results', () => {
     writeFileSync(errataFile, '# Errata\n\n- 2026-11-12 h-tv-01: before 1, after 0.\n');
     const again = publishHeldout({ resultsDir: dir, errataFile, detail: rerun, cases });
     expect(again.notes.slice(FIXED_NOTES.length)).toEqual([
+      'Of the 1 wrong purchase Fitcheck did not pay, 0 were stopped for the requirement that made it wrong; the rest are listed in eval/results/misses.md.',
       'Rerun heldout-rerun-1.json after "citation crash". Fitcheck numbers in table order: heldout.json 1 / 0 / 0 / 0 / n/a / 1; heldout-rerun-1.json 0 / 0 / 0 / 0 / n/a / 1. Both files are in eval/results/.',
       'Erratum: 2026-11-12 h-tv-01: before 1, after 0.',
     ]);

@@ -73,6 +73,8 @@ export async function runCase(
         reasons: [],
         failedClosed: true,
         unavailable: reason,
+        cardRequirements: [],
+        capRefused: false,
       };
     }
   } else {
@@ -101,16 +103,21 @@ export async function runCase(
     ...(column === 'cap_only' && c.allowed_stores ? { allowedStores: c.allowed_stores } : {}),
   });
   const review = out.attempt.review;
-  if (review.decision === 'ask' && review.card) {
+  let endedBy = out.endedBy;
+  let cardRequirements: string[] = [];
+  // Only a held attempt shows its card; a hold the cap refused never reaches the buyer.
+  if (out.endedBy === 'waiting' && review.card) {
     const buyer = simulatedBuyer(c.dossier);
     const answers = Object.fromEntries(review.card.lines.map((l) => [l.lineId, buyer(l)]));
-    await answerAttempt(deps, {
+    const answered = await answerAttempt(deps, {
       runId,
       capId: cap.capId,
       attempt: out.attempt,
       answers,
       memory: out.memory,
     });
+    endedBy = answered.endedBy;
+    cardRequirements = review.card.lines.map((l) => l.requirement);
   }
   return {
     ...base,
@@ -121,6 +128,8 @@ export async function runCase(
     reasons: review.reasons,
     failedClosed: review.failedClosed === true,
     unavailable: null,
+    cardRequirements,
+    capRefused: endedBy === 'cap',
   };
 }
 

@@ -48,6 +48,8 @@ function outcome(
     reasons: [],
     failedClosed: false,
     unavailable: null,
+    cardRequirements: [],
+    capRefused: false,
   };
 }
 

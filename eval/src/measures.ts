@@ -17,7 +17,45 @@ export type CaseRunOutcome = {
   reasons: { requirement: string; type: ReasonType }[];
   failedClosed: boolean;
   unavailable: UnavailableReason | null;
+  /** The requirements of the card lines the buyer answered; empty when no card reached them. */
+  cardRequirements: string[];
+  /** The ledger refused the hold or the capture: the cap was short, inactive, or PayPal declined. */
+  capRefused: boolean;
 };
+
+/**
+ * Was this unpaid case-run stopped for the requirement that made the purchase wrong? Yes when a
+ * review reason or a card line names the broken key, or, for an over-cap purchase, when the cap
+ * refused it (the cap is what that purchase breaks).
+ */
+export function stoppedForBrokenKey(c: EvalCase, o: CaseRunOutcome): boolean {
+  if (c.label.failure === 'over_cap' && o.capRefused) return true;
+  const key = c.label.broken_key;
+  if (key === undefined) return false;
+  return o.reasons.some((r) => r.requirement === key) || o.cardRequirements.includes(key);
+}
+
+export type WrongStops = {
+  /** Fitcheck case-runs of wrong cases that ended unpaid. */
+  notPaid: number;
+  /** Of those, the ones stopped for the broken key. */
+  rightReason: number;
+  /** The rest, sorted by case id and run. */
+  others: CaseRunOutcome[];
+};
+
+/** medicion.md §2: a wrong purchase stopped by a question about something else is a miss. */
+export function wrongStops(cases: EvalCase[], outcomes: CaseRunOutcome[]): WrongStops {
+  const wrong = new Map(cases.filter((c) => c.label.class === 'wrong').map((c) => [c.id, c]));
+  const unpaid = outcomes
+    .filter((o) => o.column === 'fitcheck' && !o.captured && wrong.has(o.caseId))
+    .sort((a, b) => a.caseId.localeCompare(b.caseId) || a.run - b.run);
+  const others = unpaid.filter((o) => {
+    const c = wrong.get(o.caseId);
+    return c !== undefined && !stoppedForBrokenKey(c, o);
+  });
+  return { notPaid: unpaid.length, rightReason: unpaid.length - others.length, others };
+}
 
 type Runs = CaseRunOutcome[];
 const BAD: SquareState = 'paid_bad';
