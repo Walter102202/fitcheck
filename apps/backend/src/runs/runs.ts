@@ -3,11 +3,12 @@ import { and, desc, eq, gt } from 'drizzle-orm';
 import { type ScenarioScript, scenarioById } from '../agent/scenarios.js';
 import { pickFor } from '../agent/scripted-agent.js';
 import { AppError } from '../api/errors.js';
-import { caps, runs } from '../db/schema.js';
+import { caps, purchases, runs } from '../db/schema.js';
 import type { Deps } from '../deps.js';
 import { getCap, latestCapForSession } from '../ledger/caps.js';
+import { SENTENCES } from '../ledger/events.js';
 import { listRunEvents, purchaseFor, releaseHold } from '../ledger/purchases.js';
-import { answerAttempt, processAttempt } from './attempt.js';
+import { answerAttempt, PENDING_NOTICE, processAttempt } from './attempt.js';
 import type { UnavailableReason } from './ports.js';
 import { singleFlight } from './single-flight.js';
 
@@ -21,6 +22,51 @@ type RunRow = typeof runs.$inferSelect;
 
 const notFound = () => new AppError('not_found', 'Run not found', { status: 404 });
 
+/**
+ * A capture outcome as the ledger has it now: a PayPal PENDING capture is stored as captured 0,
+ * and becomes Captured (or Not paid, if PayPal denied it) once the webhook settles it.
+ */
+async function settledAttempts(
+  d: Deps,
+  row: RunRow,
+): Promise<{ attempts: Attempt[]; pending: boolean }> {
+  if (!row.attempts.some((a) => a.outcome?.decision === 'capture')) {
+    return { attempts: row.attempts, pending: false };
+  }
+  const bought = await d.db
+    .select({
+      attemptNo: purchases.attemptNo,
+      status: purchases.status,
+      amountCents: purchases.amountCents,
+    })
+    .from(purchases)
+    .where(eq(purchases.runId, row.id));
+  let pending = false;
+  const attempts = row.attempts.map((a): Attempt => {
+    if (a.outcome?.decision !== 'capture') return a;
+    const purchase = bought.find((p) => p.attemptNo === a.attemptNo);
+    if (purchase?.status === 'pending' || purchase?.status === 'capturing') {
+      pending = true;
+      return { ...a, outcome: { decision: 'capture', amountCents: 0 } };
+    }
+    if (purchase?.status === 'captured') {
+      return { ...a, outcome: { decision: 'capture', amountCents: purchase.amountCents } };
+    }
+    if (purchase?.status === 'declined') {
+      return {
+        ...a,
+        outcome: {
+          decision: 'return_to_agent',
+          amountCents: 0,
+          agentMessage: `Not paid. ${SENTENCES.declined}`,
+        },
+      };
+    }
+    return a;
+  });
+  return { attempts, pending };
+}
+
 async function toResponse(d: Deps, row: RunRow): Promise<RunResponse> {
   const cap = await getCap(d, row.capId);
   const events = await listRunEvents(d.db, { capId: row.capId, runId: row.id });
@@ -28,16 +74,17 @@ async function toResponse(d: Deps, row: RunRow): Promise<RunResponse> {
     .select({ fallback: caps.fallback })
     .from(caps)
     .where(eq(caps.id, row.capId));
+  const { attempts, pending } = await settledAttempts(d, row);
   const notices = [
     ...new Set([...(capRow?.fallback ? [PAYPAL_SIMULATED_NOTICE] : []), ...row.notices]),
-  ];
+  ].filter((n) => pending || n !== PENDING_NOTICE);
   return {
     runId: row.id,
     scenarioId: row.scenarioId,
     review: row.review,
     intent: row.intent,
     checks: row.checks,
-    attempts: row.attempts,
+    attempts,
     status: row.status,
     cap,
     events,
@@ -110,7 +157,9 @@ async function advance(
       break;
     }
     const nextPick =
-      row.review === 'on' && out.endedBy === 'review' && !out.attempt.review.failedClosed;
+      row.review === 'on' &&
+      ((out.endedBy === 'review' && !out.attempt.review.failedClosed) ||
+        out.endedBy === 'offer_missing');
     if (!nextPick) break;
   }
   return saveRun(d, row.id, { attempts, notices, memory, cursor, status });
@@ -249,16 +298,17 @@ export async function submitAnswers(
     const row = await loadRun(d, i.sessionId, i.runId);
     const attempt = row.attempts.find((a) => a.attemptNo === i.body.attemptNo);
     if (!attempt) throw new AppError('not_found', 'Attempt not found', { status: 404 });
-    // Answers already sent, or the purchase already ended (a new run released its hold): the
-    // stored run, unchanged, even if these answers differ.
-    const released = attempt.review.decision === 'ask' && attempt.outcome !== undefined;
-    if (attempt.answers || released) return toResponse(d, row);
+    // Only the attempt on its card takes answers. Anything else (answers sent twice, a judge
+    // going Back to a finished attempt, a hold the cap refused, a purchase a new run released)
+    // gets the stored run unchanged: no review, no capture, no next pick.
     const card = attempt.review.card;
-    if (attempt.review.decision !== 'ask' || !card) {
-      throw new AppError('answers_not_expected', 'This purchase is not waiting for answers.', {
-        status: 409,
-      });
-    }
+    const waiting =
+      row.status === 'awaiting_answers' &&
+      row.attempts.at(-1)?.attemptNo === attempt.attemptNo &&
+      !attempt.outcome &&
+      !attempt.answers &&
+      attempt.review.decision === 'ask';
+    if (!waiting || !card) return toResponse(d, row);
     const expected = card.lines.map((l) => l.lineId).sort();
     const given = Object.keys(i.body.answers).sort();
     if (expected.length !== given.length || expected.some((id, n) => id !== given[n])) {

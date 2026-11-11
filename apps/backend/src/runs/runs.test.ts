@@ -11,6 +11,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { FIXTURES_DIR } from '../agent/scenarios.js';
 import { createSession } from '../db/sessions.js';
 import { createCap } from '../ledger/caps.js';
+import { PENDING_NOTICE, processAttempt } from './attempt.js';
 import { activeCap, createHarness } from './harness.js';
 import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
 import { getRun, startRun, submitAnswers } from './runs.js';
@@ -414,10 +415,124 @@ describe('runs', () => {
       code: 'invalid_answers',
       status: 400,
     });
-    const spain = await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
-    await expect(answer(sessionId, spain, {})).rejects.toMatchObject({
-      code: 'answers_not_expected',
-      status: 409,
+  });
+
+  it('answers on a finished dryer-silent run change nothing', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-silent', review: 'on' });
+    const done = await answer(sessionId, run, allNo(run));
+    expect(done.attempts).toHaveLength(2);
+    const captures = h.paypal.calls('capture').length;
+    // The judge goes Back and sends different answers to the first, finished attempt.
+    const back = await submitAnswers(h.deps, {
+      sessionId,
+      runId: run.runId,
+      body: { attemptNo: 1, answers: allYes(run) },
     });
+    expect(back).toEqual(done);
+    // And answers to an attempt that never had a card.
+    const second = await submitAnswers(h.deps, {
+      sessionId,
+      runId: run.runId,
+      body: { attemptNo: 2, answers: {} },
+    });
+    expect(second).toEqual(done);
+    expect(h.paypal.calls('capture')).toHaveLength(captures);
+  });
+
+  it('answers to a card whose hold the cap refused change nothing', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps, { amountCents: 1000 });
+    const run = await startRun(h.deps, { sessionId, scenarioId: 'tv-wall', review: 'on' });
+    expect(run.status).toBe('done');
+    const again = await answer(sessionId, run, allNo(run));
+    expect(again).toEqual(run);
+  });
+
+  it('a PENDING capture shows on hold, then captured once PayPal settles it', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    h.paypal.failNext('capture', 'PENDING');
+    const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
+    expect(run.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 0 });
+    expect(run.notices).toContain(PENDING_NOTICE);
+    expect(PENDING_NOTICE).toBe('PayPal is still confirming this capture.');
+    const pending = h.paypal.events().find((e) => e.event_type === 'PAYMENT.CAPTURE.PENDING');
+    await h.paypal.settlePending(String(pending?.resource.id), 'COMPLETED');
+    const settled = await getRun(h.deps, { sessionId, runId: run.runId });
+    expect(settled.attempts[1]?.outcome).toEqual({ decision: 'capture', amountCents: 2020 });
+    expect(settled.notices).not.toContain(PENDING_NOTICE);
+    expect(settled.cap.capturedCents).toBe(2020);
+  });
+
+  it('a PENDING capture PayPal later denies shows not paid', async () => {
+    h = await createHarness();
+    const { sessionId } = await activeCap(h.deps);
+    h.paypal.failNext('capture', 'PENDING');
+    const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
+    const pending = h.paypal.events().find((e) => e.event_type === 'PAYMENT.CAPTURE.PENDING');
+    await h.paypal.settlePending(String(pending?.resource.id), 'DENIED');
+    const denied = await getRun(h.deps, { sessionId, runId: run.runId });
+    expect(denied.attempts[1]?.outcome).toEqual({
+      decision: 'return_to_agent',
+      amountCents: 0,
+      agentMessage: 'Not paid. PayPal declined the capture.',
+    });
+    expect(denied.notices).not.toContain(PENDING_NOTICE);
+    expect(denied.cap.heldCents).toBe(0);
+  });
+
+  /** The review allows the ANIQ, but its walmart.com offer is gone when Fitcheck re-fetches. */
+  function offerVanishes() {
+    const aniq = fixture('cv7t721');
+    const gone = structuredClone(aniq);
+    for (const offer of gone.product.offers) offer.domain = 'elsewhere.example';
+    const allow = runDryerSpain.attempts[1]?.review;
+    if (!allow) throw new Error('example has no LURA review');
+    return {
+      review: createStubReviewPort({ byProduct: { cv7t721: allow } }),
+      channel3: createRecordedChannel3({ overrides: { cv7t721: [aniq, gone] } }),
+    };
+  }
+
+  it('an allowed capture with no offer at re-fetch ends offer_missing', async () => {
+    h = await createHarness(offerVanishes());
+    const { cap } = await activeCap(h.deps);
+    const pickRecord = await h.deps.channel3.getProduct('cv7t721');
+    const out = await processAttempt(h.deps, {
+      runId: h.deps.newId(),
+      capId: cap.capId,
+      attemptNo: 1,
+      reviewMode: 'on',
+      intent: runDryerSpain.intent,
+      pick: {
+        productId: 'cv7t721',
+        title: 'ANIQ',
+        domain: 'walmart.com',
+        priceCents: 2929,
+        image: null,
+        agentSays: '',
+      },
+      quantity: 1,
+      memory: {},
+      capturedProductIds: [],
+      pickRecord,
+    });
+    expect(out.endedBy).toBe('offer_missing');
+    expect(out.attempt.outcome).toEqual({
+      decision: 'return_to_agent',
+      amountCents: 0,
+      agentMessage: 'Fitcheck could not check this listing.',
+    });
+    expect(h.paypal.calls('capture')).toEqual([]);
+  });
+
+  it('after an offer_missing attempt the run plays the next pick', async () => {
+    h = await createHarness(offerVanishes());
+    const { sessionId } = await activeCap(h.deps);
+    const run = await startRun(h.deps, { sessionId, scenarioId: 'dryer-spain', review: 'on' });
+    expect(run.attempts.map((a) => a.outcome?.decision)).toEqual(['return_to_agent', 'capture']);
+    expect(run.attempts[1]?.outcome?.amountCents).toBe(2020);
   });
 });

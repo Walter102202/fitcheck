@@ -25,6 +25,8 @@ import type { UnavailableReason } from './ports.js';
 
 export const COULD_NOT_CHECK = 'Fitcheck could not check this listing.';
 export const NEW_CAP_NOTICE = 'Approve a new spending cap to keep buying.';
+/** A PayPal PENDING capture: nothing is captured yet, so the purchase shows on hold. */
+export const PENDING_NOTICE = 'PayPal is still confirming this capture.';
 
 export type AttemptInput = {
   runId: string;
@@ -45,7 +47,8 @@ export type AttemptInput = {
 };
 export type AttemptOutcome = {
   attempt: Attempt;
-  endedBy: 'capture' | 'review' | 'answers' | 'cap' | 'waiting';
+  /** `offer_missing`: the review allowed it, but the offer was gone at the re-fetch. */
+  endedBy: 'capture' | 'review' | 'answers' | 'cap' | 'waiting' | 'offer_missing';
   purchaseId: string;
   memory: TaskMemory;
   notices: string[];
@@ -58,12 +61,22 @@ function fromLedger(
   memory: TaskMemory,
 ): AttemptOutcome {
   const common = { purchaseId: result.purchaseId, memory };
-  if (result.outcome === 'captured' || result.outcome === 'pending') {
+  if (result.outcome === 'captured') {
     return {
       ...common,
       attempt: { ...base, outcome: { decision: 'capture', amountCents: result.amountCents } },
       endedBy: 'capture',
       notices: [],
+    };
+  }
+  if (result.outcome === 'pending') {
+    // PayPal accepted the capture but has not confirmed it: captured is 0 until it settles,
+    // and reading the run derives the final outcome from the purchase (runs.ts).
+    return {
+      ...common,
+      attempt: { ...base, outcome: { decision: 'capture', amountCents: 0 } },
+      endedBy: 'capture',
+      notices: [PENDING_NOTICE],
     };
   }
   // The ledger refused what the review allowed: the cap is short, inactive, or PayPal declined.
@@ -197,9 +210,10 @@ export async function processAttempt(d: Deps, i: AttemptInput): Promise<AttemptO
     (review.decision === 'capture' && offerCents === null)
   ) {
     await refusePurchase(d, { ...ref, amountCents, sentence: SENTENCES.notSent, reason: 'review' });
-    const message =
-      review.decision === 'capture' ? COULD_NOT_CHECK : (review.agentMessage ?? COULD_NOT_CHECK);
-    return withNotices(returned(message));
+    if (review.decision === 'capture') {
+      return withNotices({ ...returned(COULD_NOT_CHECK), endedBy: 'offer_missing' });
+    }
+    return withNotices(returned(review.agentMessage ?? COULD_NOT_CHECK));
   }
   if (review.decision === 'capture') {
     const result = await capturePurchase(d, { ...ref, amountCents: offerCents ?? amountCents });
