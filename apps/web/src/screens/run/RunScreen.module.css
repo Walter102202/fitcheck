@@ -1,0 +1,106 @@
+/* Mockup fitcheck.css lines 721-752 and 783-789 (head, grid), 1112-1127 (pick separator),
+   and the 980 px part from 1336-1346. */
+.head {
+  padding: var(--s-6) 0 var(--s-5);
+  display: grid;
+  gap: var(--s-4);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.switchLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.request {
+  font-size: var(--t-2xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  max-width: 26em;
+  quotes: "\201C" "\201D";
+}
+
+.request::before {
+  content: open-quote;
+}
+
+.request::after {
+  content: close-quote;
+}
+
+.missing {
+  font-size: var(--t-2xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--s-5);
+  align-items: start;
+  padding-bottom: var(--s-8);
+}
+
+.steps {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.aside {
+  position: sticky;
+  top: var(--s-4);
+}
+
+.attempt {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  color: var(--ink-2);
+  margin: var(--s-4) 0 calc(var(--s-2) * -1);
+}
+
+.attempt::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.error {
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-panel);
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-4);
+  justify-items: start;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    position: static;
+  }
+
+  .request {
+    font-size: var(--t-xl);
+  }
+}
