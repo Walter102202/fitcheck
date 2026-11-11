@@ -125,6 +125,9 @@ pnpm measure --replay
 To run against the real services, copy `.env.example` to `.env` and set `PAYPAL_MODE=sandbox`,
 `LLM_PROVIDER=anthropic` and `CHANNEL3_MODE=live` with their keys.
 
+More: [deploying on Render](docs/deploy.md), [how the measurement works](docs/measurement.md),
+and [a guide to the code](CLAUDE.md).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
