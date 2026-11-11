@@ -40,8 +40,9 @@ export const FactTestSchema = z.looseObject({
 
 export const TestSpecSchema = z.union([
   FactTestSchema,
-  z.looseObject({ everyOptionNamed: z.array(z.string()).min(1), mustBeIn: z.string() }),
-  z.looseObject({ noEarlierCaptureFor: z.string(), within: z.string() }),
+  // closed shapes so TypeScript can narrow on the key
+  z.object({ everyOptionNamed: z.array(z.string()).min(1), mustBeIn: z.string() }),
+  z.object({ noEarlierCaptureFor: z.string(), within: z.string() }),
 ]);
 
 export const RequirementSpecSchema = z.looseObject({
