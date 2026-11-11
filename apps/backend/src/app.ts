@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url';
 import { API } from '@fitcheck/contracts';
 import { Hono } from 'hono';
 import { mountStatic, notFound, onError } from './api/http.js';
+import { capRoutes } from './api/routes/cap.js';
 import { configRoutes } from './api/routes/config.js';
 import { runRoutes } from './api/routes/runs.js';
 import { scenarioRoutes } from './api/routes/scenarios.js';
@@ -16,7 +17,7 @@ export function createApp(deps: Deps): Hono<ApiEnv> {
   app.onError(onError<ApiEnv>(deps.logger));
   app.get(API.healthz, (c) => c.json({ ok: true }));
   app.use('/api/*', withSession(deps));
-  for (const routes of [configRoutes(deps), scenarioRoutes(), runRoutes(deps)]) {
+  for (const routes of [configRoutes(deps), scenarioRoutes(), capRoutes(deps), runRoutes(deps)]) {
     app.route('/', routes);
   }
   app.all('/api/*', notFound);

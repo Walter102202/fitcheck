@@ -39,11 +39,15 @@ export function notFound(c: Context): Response {
   return c.json(body('not_found', 'Route not found'), 404);
 }
 
-/** Parses a JSON body with a contracts schema; a mismatch is a 400 `invalid_request`. */
+/**
+ * Parses a JSON body with a contracts schema; a mismatch is a 400 `invalid_request`. An empty
+ * body reads as `{}`, so a request whose fields are all optional needs no body.
+ */
 export async function parseBody<T>(c: Context, schema: z.ZodType<T>): Promise<T> {
   let raw: unknown;
   try {
-    raw = await c.req.json();
+    const text = await c.req.text();
+    raw = text.trim() === '' ? {} : JSON.parse(text);
   } catch {
     throw new AppError('invalid_request', 'The request body must be valid JSON.', { status: 400 });
   }

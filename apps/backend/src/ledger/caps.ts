@@ -3,6 +3,7 @@ import { and, desc, eq } from 'drizzle-orm';
 import { AppError } from '../api/errors.js';
 import { caps, purchases } from '../db/schema.js';
 import type { Deps } from '../deps.js';
+import { paypalModeFor } from '../env.js';
 import { gatewayFor, PAYPAL_PATHS, PaypalError } from '../paypal/index.js';
 import { listCapEvents, SENTENCES, type Tx, writeEvent } from './events.js';
 
@@ -136,6 +137,40 @@ export async function createCap(
   if (i.mode !== 'mock') return toCap(row);
   await d.paypal.simulated.approve(order.orderId);
   return completeApproval(d, { orderId: order.orderId });
+}
+
+/**
+ * The session's spending cap: the open one if there is one, else a new one. The server picks
+ * the PayPal mode, never the client: mock in tests, sandbox with credentials, and simulated
+ * (with the fallback notice) without them or when the sandbox refuses to create the order.
+ */
+export async function openCap(
+  d: LedgerDeps,
+  i: { sessionId: string; returnScenarioId: string | null },
+): Promise<Cap> {
+  const latest = await latestCapForSession(d, i.sessionId);
+  if (latest && (latest.status === 'pending_approval' || latest.status === 'active')) return latest;
+  const base = {
+    sessionId: i.sessionId,
+    amountCents: d.env.CAP_AMOUNT_CENTS,
+    returnScenarioId: i.returnScenarioId,
+  };
+  if (paypalModeFor(d.env) === 'mock')
+    return createCap(d, { ...base, mode: 'mock', fallback: false });
+  if (!d.paypal.sandbox) return createCap(d, { ...base, mode: 'simulated', fallback: true });
+  try {
+    return await createCap(d, { ...base, mode: 'sandbox', fallback: false });
+  } catch (error) {
+    if (!(error instanceof PaypalError)) throw error;
+    d.logger.warn('paypal.sandbox_fallback', { code: error.code, status: error.status });
+    return createCap(d, { ...base, mode: 'simulated', fallback: true });
+  }
+}
+
+/** The cap that owns this PayPal order (the `token` on the approval return). */
+export async function findCapByOrder(d: Pick<Deps, 'db'>, orderId: string): Promise<CapRow | null> {
+  const [row] = await d.db.select().from(caps).where(eq(caps.orderId, orderId));
+  return row ?? null;
 }
 
 /**
