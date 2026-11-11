@@ -9,21 +9,26 @@ import type {
   RunResponse,
   TaskMemory,
 } from '@fitcheck/contracts';
+import { Channel3UnavailableError, createChannel3Gateway } from '../channel3/index.js';
 import type { Env } from '../env.js';
 import type { Logger } from '../logger.js';
-import { createRecordedChannel3, createStubReviewPort } from './review-stub.js';
+import {
+  applyAnswers,
+  checksFor,
+  createModelPort,
+  extractIntent,
+  failClosed,
+  type ModelPort,
+  ReviewUnavailableError,
+  review,
+} from '../review/index.js';
 
 /**
- * The seam to Lane B. The shapes mirror 03-lane-b-review "Exports for lane C"; only this file
- * and eval/src/model.ts touch them, so wiring Lane B changes no caller.
+ * The seam to Lane B. Callers see only these two ports; the C4 orchestration tests run on
+ * createStubReviewPort and createRecordedChannel3 instead (runs/review-stub.ts).
  */
 
-/** Lane B's model port, structurally, until its type is imported (C12 step 6). */
-export type ModelPort = {
-  readonly modelName: string;
-  readonly recorded: boolean;
-  complete(call: unknown): Promise<unknown>;
-};
+export type { ModelPort };
 
 /** Why the review could not run. Every one of them fails the purchase closed. */
 export type UnavailableReason = 'model_error' | 'invalid_output' | 'no_recording' | 'channel3';
@@ -55,15 +60,54 @@ export type ReviewPort = {
 };
 
 /**
- * The single switch point between the stub and Lane B's review. Until Lane B lands, the stub
- * answers with the foundation's example runs and the recorded Channel3 products.
+ * Lane B's review and Channel3 behind the ports. The model defaults to the env's provider
+ * (mock replays Lane B's recordings). Live Channel3 or the Anthropic provider without a key
+ * throws here, so a misconfigured server fails at boot instead of failing every purchase.
+ * `citations: false` (the measurement) leaves the model out of the review: citations only
+ * pick which quote is shown, never a decision.
  */
 export function createPorts(
   env: Env,
-  _o: { now: () => Date; logger?: Logger; model?: ModelPort; citations?: boolean },
+  o: { now: () => Date; logger?: Logger; model?: ModelPort; citations?: boolean },
 ): { channel3: Channel3Port; review: ReviewPort } {
+  const model =
+    o.model ??
+    createModelPort({
+      LLM_PROVIDER: env.LLM_PROVIDER,
+      REVIEW_MODEL: env.REVIEW_MODEL,
+      ...(env.ANTHROPIC_API_KEY ? { ANTHROPIC_API_KEY: env.ANTHROPIC_API_KEY } : {}),
+    });
+  const channel3 = createChannel3Gateway(
+    {
+      CHANNEL3_MODE: env.CHANNEL3_MODE,
+      CHANNEL3_DAILY_SEARCH_LIMIT: env.CHANNEL3_DAILY_SEARCH_LIMIT,
+      ...(env.CHANNEL3_API_KEY ? { CHANNEL3_API_KEY: env.CHANNEL3_API_KEY } : {}),
+    },
+    { now: o.now, ...(o.logger ? { logger: o.logger } : {}) },
+  );
+  const logger = o.logger ? { logger: o.logger } : {};
   return {
-    channel3: createRecordedChannel3({ mode: env.CHANNEL3_MODE }),
-    review: createStubReviewPort(),
+    channel3: {
+      mode: channel3.mode,
+      getProduct: (productId) => channel3.getProduct(productId),
+      noticeFor: (record) => channel3.noticeFor(record),
+    },
+    review: {
+      extractIntent: (request, category) => extractIntent(request, category, { model, ...logger }),
+      checksFor,
+      review: (input) =>
+        review(input, {
+          now: o.now,
+          ...logger,
+          ...(o.citations === false ? {} : { citations: model }),
+        }),
+      applyAnswers,
+      failClosed,
+      unavailableReason(err) {
+        if (err instanceof ReviewUnavailableError) return err.reason;
+        if (err instanceof Channel3UnavailableError) return 'channel3';
+        return null;
+      },
+    },
   };
 }
