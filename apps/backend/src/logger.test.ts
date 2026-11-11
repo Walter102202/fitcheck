@@ -15,6 +15,12 @@ describe('redact', () => {
     expect(JSON.stringify(out)).not.toMatch(/"[a-g]"|Bearer/);
   });
 
+  it('keeps an Error readable instead of turning it into {}', () => {
+    const out = redact({ err: new TypeError('fetch failed') }) as { err: Record<string, unknown> };
+    expect(out.err.name).toBe('TypeError');
+    expect(out.err.message).toBe('fetch failed');
+  });
+
   it('keeps ids that only look like secrets', () => {
     expect(redact({ authorizationId: '0VF52814937998046', captureId: 'x' })).toEqual({
       authorizationId: '0VF52814937998046',
