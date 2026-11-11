@@ -1,0 +1,30 @@
+/* Mockup fitcheck.css lines 847-874, and the 980 px part from 1384-1395. */
+.pick {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  gap: var(--s-4);
+  align-items: center;
+}
+
+.pick h3 {
+  font-size: var(--t-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.price {
+  font-family: var(--mono);
+  font-size: var(--t-xl);
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .pick {
+    grid-template-columns: 80px minmax(0, 1fr);
+  }
+
+  .price {
+    grid-column: 2;
+  }
+}
